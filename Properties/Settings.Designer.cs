@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace System_Cont_Att.Properties
+namespace System_Cont.Properties
 {
 
 

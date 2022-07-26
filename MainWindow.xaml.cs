@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace System_Cont_Att
+namespace System_Cont
 {
     /// <summary>
     /// Interação lógica para MainWindow.xam

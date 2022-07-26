@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace System_Cont_Att
+namespace System_Cont
 {
     /// <summary>
     /// Interação lógica para App.xaml
