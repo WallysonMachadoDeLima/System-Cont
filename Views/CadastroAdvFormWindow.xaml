@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:System_Cont.Views"
         mc:Ignorable="d"
-        Title="CadastroAdvFormWindow" Height="450" Width="400" Padding="3,3,3,3">
+        Title="CadastroAdvFormWindow" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None"  Padding="3,3,3,3">
     <Grid>
+
         
     </Grid>
 </Window>

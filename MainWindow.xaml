@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:System_Cont"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="400" Padding="0,0,0,0" Margin="4,0,0,0" WindowStyle="SingleBorderWindow">
-    <Grid>
-        
+        Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized" Padding="0,0,0,0" Margin="4,0,0,0" ToolBar.OverflowMode="AsNeeded">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="320"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Background="Black">
+            
+        </StackPanel>
     </Grid>
 </Window>
