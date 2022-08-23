@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:System_Cont.Views"
         mc:Ignorable="d"
-        Title="CadastroAdvFormWindow" Height="1080" Width="1920" WindowState="Maximized" WindowStyle="None"  Padding="3,3,3,3">
+        Title="CadastroAdvFormWindow" Height="850" Width="690" WindowState="Maximized" WindowStyle="None"  Padding="3,3,3,3">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         
+        <StackPanel Grid.Row="0">
+            <Label Content="Cadastro" FontSize="25"/>
+        </StackPanel>
     </Grid>
 </Window>

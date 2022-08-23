@@ -6,15 +6,26 @@
         xmlns:local="clr-namespace:System_Cont"
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized" Padding="0,0,0,0" Margin="4,0,0,0" ToolBar.OverflowMode="AsNeeded">
-    <Grid Background="Black">
+    <Grid Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
-            <RowDefinition Height="320"/>
+            <RowDefinition Height="120"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Background="Black">
-            
+            <Label Content="Judicial" Foreground="White" FontSize="40" HorizontalAlignment="Left" FontFamily="Bahnschrift SemiBold SemiCondensed" Margin="80 30 0 0"/>
+            <Button x:Name="btnLogin" Content="Log In" Margin="0 -42 200 0" Width="200" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="22" Background="Transparent" BorderThickness="0" BorderBrush="White" Cursor="Hand"/>
+            <Button x:Name="btnSobre" Content="Sobre" Margin="0 -42 320 0" Width="200" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="22" Background="Transparent" BorderThickness="0" BorderBrush="White" Cursor="Hand"/>
+            <Button x:Name="btnServicos" Content="Serviços" Margin="0 -42 440 0" Width="200" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="22" Background="Transparent" BorderThickness="0" BorderBrush="White" Cursor="Hand"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" >
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFD749B"/>
+                    <GradientStop Color="#FF281AC8" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+
         </StackPanel>
     </Grid>
 </Window>
