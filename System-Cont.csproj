@@ -121,6 +121,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Database\Conexao.cs" />
+    <Compile Include="Helpers\DAOHelper.cs" />
     <Compile Include="Views\CadastroAdvFormWindow.xaml.cs">
       <DependentUpon>CadastroAdvFormWindow.xaml</DependentUpon>
     </Compile>
