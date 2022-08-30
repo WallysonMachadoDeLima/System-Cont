@@ -125,6 +125,9 @@
     <Compile Include="Views\CadastroAdvFormWindow.xaml.cs">
       <DependentUpon>CadastroAdvFormWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\LoginAdvFormWindow.xaml.cs">
+      <DependentUpon>LoginAdvFormWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -138,6 +141,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\CadastroAdvFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginAdvFormWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

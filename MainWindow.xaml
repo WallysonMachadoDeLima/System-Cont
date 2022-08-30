@@ -14,7 +14,7 @@
 
         <StackPanel Grid.Row="0" Background="Black">
             <Label Content="Judicial" Foreground="White" FontSize="40" HorizontalAlignment="Left" FontFamily="Bahnschrift SemiBold SemiCondensed" Margin="80 30 0 0"/>
-            <Button x:Name="btnLogin" Content="Log In" Margin="0 -42 200 0" Width="200" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="22" Background="Transparent" BorderThickness="0" BorderBrush="White" Cursor="Hand"/>
+            <Button x:Name="btnLogin" Content="Log In" Margin="0 -42 200 0" Width="200" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="22" Background="Transparent" BorderThickness="0" BorderBrush="White" Cursor="Hand" Click="btnLogin_Click"/>
             <Button x:Name="btnSobre" Content="Sobre" Margin="0 -42 320 0" Width="200" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="22" Background="Transparent" BorderThickness="0" BorderBrush="White" Cursor="Hand"/>
             <Button x:Name="btnServicos" Content="Serviços" Margin="0 -42 440 0" Width="200" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="22" Background="Transparent" BorderThickness="0" BorderBrush="White" Cursor="Hand"/>
         </StackPanel>
