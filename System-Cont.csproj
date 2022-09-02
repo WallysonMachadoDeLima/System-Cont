@@ -125,8 +125,26 @@
     <Compile Include="Views\CadastroAdvFormWindow.xaml.cs">
       <DependentUpon>CadastroAdvFormWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CadastroCliFormWindow.xaml.cs">
+      <DependentUpon>CadastroCliFormWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CadMovimentacaoFormWindow.xaml.cs">
+      <DependentUpon>CadMovimentacaoFormWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EscritorioFormWindow.xaml.cs">
+      <DependentUpon>EscritorioFormWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GestaoDadosFormWindow.xaml.cs">
+      <DependentUpon>GestaoDadosFormWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoginAdvFormWindow.xaml.cs">
       <DependentUpon>LoginAdvFormWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PagInicialFormWindow.xaml.cs">
+      <DependentUpon>PagInicialFormWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PerfilAdvFormWindow.xaml.cs">
+      <DependentUpon>PerfilAdvFormWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -144,7 +162,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\CadastroCliFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CadMovimentacaoFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EscritorioFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GestaoDadosFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\LoginAdvFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PagInicialFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PerfilAdvFormWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

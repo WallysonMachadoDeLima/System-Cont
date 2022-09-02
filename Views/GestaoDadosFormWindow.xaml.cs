@@ -15,24 +15,13 @@ using System.Windows.Shapes;
 namespace System_Cont.Views
 {
     /// <summary>
-    /// Lógica interna para LoginAdvFormWindow.xaml
+    /// Lógica interna para GestaoDadosFormWindow.xaml
     /// </summary>
-    public partial class LoginAdvFormWindow : Window
+    public partial class GestaoDadosFormWindow : Window
     {
-        public LoginAdvFormWindow()
+        public GestaoDadosFormWindow()
         {
             InitializeComponent();
-        }
-
-        private void btnNoAccount_Click(object sender, RoutedEventArgs e)
-        {
-            CadastroAdvFormWindow view = new CadastroAdvFormWindow();
-            view.ShowDialog();
-        }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }
