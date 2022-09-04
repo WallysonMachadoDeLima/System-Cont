@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace System_Cont.Views
 {
     /// <summary>
-    /// Lógica interna para CadastroCliFormWindow.xaml
+    /// Interação lógica para EscritorioFormPage.xam
     /// </summary>
-    public partial class CadastroCliFormWindow : Window
+    public partial class EscritorioFormPage : Page
     {
-        public CadastroCliFormWindow()
+        public EscritorioFormPage()
         {
             InitializeComponent();
         }

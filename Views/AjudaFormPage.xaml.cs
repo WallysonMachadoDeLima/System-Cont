@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace System_Cont.Views
 {
     /// <summary>
-    /// Lógica interna para PerfilAdvFormWindow.xaml
+    /// Interação lógica para AjudaFormPage.xam
     /// </summary>
-    public partial class PerfilAdvFormWindow : Window
+    public partial class AjudaFormPage : Page
     {
-        public PerfilAdvFormWindow()
+        public AjudaFormPage()
         {
             InitializeComponent();
         }

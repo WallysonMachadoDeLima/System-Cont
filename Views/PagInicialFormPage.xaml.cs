@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace System_Cont.Views
 {
     /// <summary>
-    /// Lógica interna para PagInicialFormWindow.xaml
+    /// Interação lógica para PagInicialFormPage.xam
     /// </summary>
-    public partial class PagInicialFormWindow : Window
+    public partial class PagInicialFormPage : Page
     {
-        public PagInicialFormWindow()
+        public PagInicialFormPage()
         {
             InitializeComponent();
         }

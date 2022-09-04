@@ -122,29 +122,35 @@
     </ApplicationDefinition>
     <Compile Include="Database\Conexao.cs" />
     <Compile Include="Helpers\DAOHelper.cs" />
+    <Compile Include="Views\AjudaFormPage.xaml.cs">
+      <DependentUpon>AjudaFormPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CadastroAdvFormWindow.xaml.cs">
       <DependentUpon>CadastroAdvFormWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CadastroCliFormWindow.xaml.cs">
-      <DependentUpon>CadastroCliFormWindow.xaml</DependentUpon>
+    <Compile Include="Views\CadastroCliFormPage.xaml.cs">
+      <DependentUpon>CadastroCliFormPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\CadMovimentacaoFormWindow.xaml.cs">
       <DependentUpon>CadMovimentacaoFormWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\EscritorioFormWindow.xaml.cs">
-      <DependentUpon>EscritorioFormWindow.xaml</DependentUpon>
+    <Compile Include="Views\EscritorioFormPage.xaml.cs">
+      <DependentUpon>EscritorioFormPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\GestaoDadosFormWindow.xaml.cs">
-      <DependentUpon>GestaoDadosFormWindow.xaml</DependentUpon>
+    <Compile Include="Views\GestaoDadosFormPage.xaml.cs">
+      <DependentUpon>GestaoDadosFormPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginAdvFormWindow.xaml.cs">
       <DependentUpon>LoginAdvFormWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PagInicialFormWindow.xaml.cs">
-      <DependentUpon>PagInicialFormWindow.xaml</DependentUpon>
+    <Compile Include="Views\NavTopBarFormWindow.xaml.cs">
+      <DependentUpon>NavTopBarFormWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PerfilAdvFormWindow.xaml.cs">
-      <DependentUpon>PerfilAdvFormWindow.xaml</DependentUpon>
+    <Compile Include="Views\PagInicialFormPage.xaml.cs">
+      <DependentUpon>PagInicialFormPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PerfilAdvFormPage.xaml.cs">
+      <DependentUpon>PerfilAdvFormPage.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -158,11 +164,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\AjudaFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\CadastroAdvFormWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CadastroCliFormWindow.xaml">
+    <Page Include="Views\CadastroCliFormPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -170,11 +180,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\EscritorioFormWindow.xaml">
+    <Page Include="Views\EscritorioFormPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\GestaoDadosFormWindow.xaml">
+    <Page Include="Views\GestaoDadosFormPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -182,11 +192,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\PagInicialFormWindow.xaml">
+    <Page Include="Views\NavTopBarFormWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\PerfilAdvFormWindow.xaml">
+    <Page Include="Views\PagInicialFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PerfilAdvFormPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

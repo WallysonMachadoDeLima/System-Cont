@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace System_Cont.Views
 {
     /// <summary>
-    /// Lógica interna para GestaoDadosFormWindow.xaml
+    /// Interação lógica para PerfilAdvFormPage.xam
     /// </summary>
-    public partial class GestaoDadosFormWindow : Window
+    public partial class PerfilAdvFormPage : Page
     {
-        public GestaoDadosFormWindow()
+        public PerfilAdvFormPage()
         {
             InitializeComponent();
         }

@@ -32,7 +32,8 @@ namespace System_Cont.Views
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            
+            NavTopBarFormWindow view = new NavTopBarFormWindow();
+            view.ShowDialog();
         }
     }
 }
