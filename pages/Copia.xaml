@@ -8,14 +8,15 @@
         Title="Copia" Height="450" Width="800">
     <Grid>
         <TextBox x:Name="txtsource" HorizontalAlignment="Left" Margin="291,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="31"/>
-        <Button Content="...&#xD;&#xA;" HorizontalAlignment="Left" Margin="478,32,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.099,-4.657" Height="28" Width="48" Click="Button_Click"/>
-        <Label Content="SOURCE&#xD;&#xA;" HorizontalAlignment="Left" Margin="209,32,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txttargt" HorizontalAlignment="Left" Margin="291,111,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="31"/>
-        <Label Content="TARGT&#xD;&#xA;" HorizontalAlignment="Left" Margin="209,114,0,0" VerticalAlignment="Top"/>
-        <Button Content="...&#xA;" HorizontalAlignment="Left" Margin="488,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.099,-4.657" Height="28" Width="48"/>
-        <ProgressBar HorizontalAlignment="Left" Height="38" Margin="209,262,0,0" VerticalAlignment="Top" Width="364"/>
-        <Label Content="0%&#xD;&#xA;" HorizontalAlignment="Left" Margin="538,228,0,0" VerticalAlignment="Top"/>
+        <Button Content="Select file&#xA;" HorizontalAlignment="Left" Margin="478,32,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.099,-4.657" Height="28" Width="82" Click="Button_Click"/>
+        <Label Content="FIle name&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="209,32,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txttargt" HorizontalAlignment="Left" Margin="291,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="31"/>
+        <Label Content="File Path&#xA;" HorizontalAlignment="Left" Margin="209,78,0,0" VerticalAlignment="Top"/>
+        <Button Content="Select file&#xA;" HorizontalAlignment="Left" Margin="488,147,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.099,-4.657" Height="28" Width="72" Click="Button_Click_2"/>
         <Button Content="COPY&#xA;" HorizontalAlignment="Left" Margin="512,322,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.099,-4.657" Height="28" Width="48"/>
+        <TextBox x:Name="txttargt_Copy" HorizontalAlignment="Left" Margin="291,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="31"/>
+        <Label Content="Folder Destination&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="156,144,0,0" VerticalAlignment="Top"/>
+        <Button Content="Copy&#xA;" HorizontalAlignment="Left" Margin="488,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.099,-4.657" Height="43" Width="109" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

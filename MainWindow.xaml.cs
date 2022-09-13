@@ -46,25 +46,12 @@ namespace TESTETOPBAR
             ofd1.RestoreDirectory = true;
             ofd1.ReadOnlyChecked = true;
             ofd1.ShowReadOnly = true;
-            DialogResult dr = ofd1.ShowDialog();
-            if (dr == DialogResult.OK)
-            {
-                //atribui o nome do arquivo ao arquivo texto
-                txtArquivo.Text = ofd1.FileName;
-            }
+         
         }
 
         private void BtnSelecionaDiretorio_Click_1(object sender, RoutedEventArgs e)
         {
-            FolderBrowserDialog fbd1 = new FolderBrowserDialog();
-            fbd1.Description = "Selecione o diretório de destino";
-            //define pasta inicial
-            fbd1.RootFolder = Environment.SpecialFolder.MyComputer;
-            fbd1.ShowNewFolderButton = true;
-            if (fbd1.ShowDialog() == DialogResult.OK)
-            {
-                // Exibe a pasta selecionada
-                txtDiretorio.Text = fbd1.SelectedPath;
-            }
+          
+        }
     }
 }
