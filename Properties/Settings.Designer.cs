@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace System_Cont.Properties
+namespace TESTETOPBAR.Properties
 {
 
 
