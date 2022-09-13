@@ -15,29 +15,21 @@
 
         <Grid Grid.Row="0" Background="#FF1C1C24">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="500"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="500"/>
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="btnPagInicial" Content="Página Inicial" Width="118" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnPagInicial_Click"/>
-            </StackPanel>
-            <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="btnEscritório" Content="Escritório" Width="95" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnEscritório_Click"/>
-            </StackPanel>
-            <StackPanel Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="btnGestaoDeDados" Content="Gestão de Dados" Width="142" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnGestaoDeDados_Click"/>
-            </StackPanel>
-            <StackPanel Grid.Column="4" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="btnCliente" Content="Cliente" Width="81" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnCliente_Click"/>
-            </StackPanel>
-            <StackPanel Grid.Column="5" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="btnAjuda" Content="Ajuda" Width="70" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnAjuda_Click" HorizontalAlignment="Stretch" VerticalAlignment="Center" FlowDirection="LeftToRight" RenderTransformOrigin="0.5,0.5"/>
+                <Button x:Name="btnPagInicial" Content="Página Inicial" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnPagInicial_Click"/>
+
+                <Button x:Name="btnEscritório" Content="Escritório" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnEscritório_Click"/>
+
+                <Button x:Name="btnGestaoDeDados" Content="Gestão de Dados" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnGestaoDeDados_Click"/>
+
+                <Button x:Name="btnCliente" Content="Cliente" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnCliente_Click"/>
+
+                <Button x:Name="btnAjuda" Content="Ajuda" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnAjuda_Click" HorizontalAlignment="Stretch" VerticalAlignment="Center" FlowDirection="LeftToRight" RenderTransformOrigin="0.5,0.5"/>
+
+                <Button x:Name="btnForms" Content="Forms" Width="140" Foreground="White" Click="btnForms_Click"/>
             </StackPanel>
         </Grid>
 
