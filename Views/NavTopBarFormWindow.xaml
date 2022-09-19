@@ -15,10 +15,11 @@
 
         <Grid Grid.Row="0" Background="#FF1C1C24">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="203*"/>
+                <ColumnDefinition Width="37*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="610,0,0,0">
                 <Button x:Name="btnPagInicial" Content="Página Inicial" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnPagInicial_Click"/>
 
                 <Button x:Name="btnEscritório" Content="Escritório" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnEscritório_Click"/>
@@ -28,9 +29,14 @@
                 <Button x:Name="btnCliente" Content="Cliente" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnCliente_Click"/>
 
                 <Button x:Name="btnAjuda" Content="Ajuda" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnAjuda_Click" HorizontalAlignment="Stretch" VerticalAlignment="Center" FlowDirection="LeftToRight" RenderTransformOrigin="0.5,0.5"/>
-
-                <Button x:Name="btnForms" Content="Forms" Width="140" Foreground="White" Click="btnForms_Click"/>
             </StackPanel>
+
+
+            <Image Width="50" Height="50"  HorizontalAlignment="Right" Margin="0 0 100 0" Source="/Views/useICO.ico" OpacityMask="White" Grid.Column="1"/>
+            <Rectangle Width="150" Height="50" HorizontalAlignment="Right" Margin="0 0 150 0" RadiusX="20" RadiusY="20" Fill="#FF2D2D3A" Grid.ColumnSpan="2"/>
+            <Rectangle Width="40" Height="40" HorizontalAlignment="Right" Margin="0 0 -50 0" RadiusX="10" RadiusY="10" Fill="#FF4447E2"/>
+            <TextBlock Text="Amem" HorizontalAlignment="Right" Foreground="White" Width="60" Height="30" VerticalAlignment="Center" Margin="0 10 -120 0" FontSize="20" FontWeight="Bold" FontFamily="Bahnschrift SemiBold"/>
+
         </Grid>
 
         <StackPanel Grid.Row="1" Background="#1E1E1E">

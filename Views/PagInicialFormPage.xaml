@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0">
-            <Rectangle Width="529" Height="279" Fill="#FF0A0D10" HorizontalAlignment="Left" Margin="300 150 0 0" RadiusX="15" RadiusY="15">
+            <Rectangle Width="593" Height="337" Fill="#FF0A0D10" HorizontalAlignment="Left" Margin="300 150 0 0" RadiusX="15" RadiusY="15">
                 <Rectangle.LayoutTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -25,7 +25,7 @@
                     </TransformGroup>
                 </Rectangle.LayoutTransform>
             </Rectangle>
-            
+
         </StackPanel>
 
     </Grid>
