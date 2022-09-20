@@ -16,6 +16,7 @@
 
         <StackPanel Grid.Row="0">
             <Label Content="Gestão de Dados" FontWeight="Normal" FontSize="50" Foreground="#DDFFFFFF"/>
+            <Button Content="Converter Txt" FontSize="22" Padding="10" Width="180" Height="50" Margin="1500 0 0 0" Cursor="Hand" Click="Button_Click"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -24,5 +24,12 @@ namespace System_Cont.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ligacaoPythonTest chama = new ligacaoPythonTest();
+
+            chama.ShowDialog();
+        }
     }
 }
