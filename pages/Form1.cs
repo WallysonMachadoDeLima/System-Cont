@@ -30,27 +30,37 @@ namespace TESTETOPBAR.pages
 
         private void populete()
         {
-            ImageList imgs = new ImageList();
-            imgs.ImageSize = new Size(100, 100);
+            ImageList imgList = new ImageList();
+            imgList.ImageSize = new Size(100, 100);
 
             String[] paths = { };
-            paths = Directory.GetFiles("C:\\Users\\macha\\OneDrive\\Imagens\\img");
+            string appPath = Directory.GetCurrentDirectory();
+            appPath = appPath.Substring(0, appPath.Length - 9) + @"Imagens\";
+            paths = Directory.GetFiles(@"C:\TESTE");
+
+            //listView1.SmallImageList = imgs;
+            //listView1.Items.Add("mapa", 0);
+            //listView1.Items.Add("mapa", 1);
 
             try
             {
-                foreach(String path in paths)
+                var i = 0;
+                foreach(string path in paths)
                 {
-                    imgs.Images.Add(Image.FromFile(path));
+                    //MessageBox.Show(path);
+                    imgList.Images.Add(Image.FromFile(path));
+
+                    var item = new ListViewItem(path);
+
+                    listView1.Items.Add(item, i);
+                    i++;
                 }
-            }catch(Exception ex)
+
+                //listView1.SmallImageList = imgList;
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-            {
-                listView1.SmallImageList = imgs;
-                listView1.Items.Add("mapa", 0);
-                listView1.Items.Add("mapa", 1);
-
             }
         }
 

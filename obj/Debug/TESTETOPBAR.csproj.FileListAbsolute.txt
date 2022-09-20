@@ -57,3 +57,34 @@ C:\Users\macha\OneDrive\Área de Trabalho\PROJETOS\System-Cont\obj\Debug\TESTETO
 C:\Users\macha\OneDrive\Área de Trabalho\PROJETOS\System-Cont\obj\Debug\TESTETOPBAR.csproj.GenerateResource.cache
 C:\Users\macha\OneDrive\Área de Trabalho\PROJETOS\System-Cont\obj\Debug\TESTETOPBAR.csproj.CoreCompileInputs.cache
 C:\Users\macha\OneDrive\Área de Trabalho\PROJETOS\System-Cont\obj\Debug\TESTETOPBAR.pages.Form1.resources
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\bin\Debug\TESTETOPBAR.exe.config
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\bin\Debug\TESTETOPBAR.exe
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\bin\Debug\TESTETOPBAR.pdb
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\TESTETOPBAR.csproj.AssemblyReference.cache
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\TESTETOPBAR.csproj.SuggestedBindingRedirects.cache
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\MainWindow.g.cs
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\pag3.g.cs
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\pages\Copia.g.cs
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\pages\navigation1.g.cs
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\pages\navigation2.g.cs
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\pages\pag1.g.cs
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\pages\pag2.g.cs
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\pages\Window1.g.cs
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\App.g.cs
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\TESTETOPBAR_MarkupCompile.cache
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\TESTETOPBAR_MarkupCompile.lref
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\MainWindow.baml
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\pag3.baml
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\pages\Copia.baml
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\pages\navigation1.baml
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\pages\navigation2.baml
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\pages\pag1.baml
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\pages\pag2.baml
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\pages\Window1.baml
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\TESTETOPBAR.g.resources
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\TESTETOPBAR.pages.Form1.resources
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\TESTETOPBAR.Properties.Resources.resources
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\TESTETOPBAR.csproj.GenerateResource.cache
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\TESTETOPBAR.csproj.CoreCompileInputs.cache
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\TESTETOPBAR.exe
+C:\Users\2020102011001-4\Desktop\projetos\System-Cont\obj\Debug\TESTETOPBAR.pdb
