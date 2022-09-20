@@ -10,12 +10,70 @@
 
     <Grid Background="#1E1E1E">
         <Grid.RowDefinitions>
-            <RowDefinition Height="550"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0">
-            <Label Content="Escritório" FontWeight="Normal" FontSize="50" Foreground="#DDFFFFFF"/>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Rectangle Width="593" Height="337" Fill="#FF0A0D10" HorizontalAlignment="Left" Margin="200 50 0 0" RadiusX="15" RadiusY="15">
+                <Rectangle.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Rectangle.LayoutTransform>
+            </Rectangle>
+
+            <Rectangle Width="593" Height="337" Fill="#FF0A0D10" HorizontalAlignment="Left" Margin="200 50 0 0" RadiusX="15" RadiusY="15">
+                <Rectangle.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Rectangle.LayoutTransform>
+            </Rectangle>
+        </StackPanel>
+
+        <StackPanel Grid.Row ="1" Orientation="Horizontal">
+
+            <Rectangle Width="293" Height="337" Fill="#FF0A0D10" HorizontalAlignment="Left" Margin="200 80 -130 0" RadiusX="15" RadiusY="15">
+                <Rectangle.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Rectangle.LayoutTransform>
+            </Rectangle>
+
+            <TextBlock Text="Recebimentos" Foreground="White" FontSize="25" Width="180" Height="50" Margin="-100 -200 50 0" FontWeight="Bold"/>
+
+            <Rectangle Width="293" Height="337" Fill="#FF0A0D10" HorizontalAlignment="Left" Margin="20 80 0 0" RadiusX="15" RadiusY="15">
+                <Rectangle.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Rectangle.LayoutTransform>
+            </Rectangle>
+
+            <Rectangle Width="593" Height="337" Fill="#FF0A0D10" HorizontalAlignment="Left" Margin="200 80 0 0" RadiusX="15" RadiusY="15">
+                <Rectangle.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Rectangle.LayoutTransform>
+            </Rectangle>
         </StackPanel>
     </Grid>
 </Page>

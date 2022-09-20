@@ -19,7 +19,7 @@
                 <ColumnDefinition Width="37*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="610,0,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="center" Margin="310,0,0,0">
                 <Button x:Name="btnPagInicial" Content="Página Inicial" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnPagInicial_Click"/>
 
                 <Button x:Name="btnEscritório" Content="Escritório" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnEscritório_Click"/>
@@ -43,8 +43,14 @@
             <Frame x:Name="fraPaginas" NavigationUIVisibility="Hidden"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Background="#FF1C1C24">
-
-        </StackPanel>
+        <Grid Grid.Row="2" Background="#FF1C1C24">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0">
+                <TextBlock Text="All Rights Licensed @2022" Foreground="White" VerticalAlignment="Center" FontStyle="Italic"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
