@@ -7,16 +7,17 @@
         mc:Ignorable="d"
         Title="Copia" Height="450" Width="800">
     <Grid>
-        <TextBox x:Name="txtsource" HorizontalAlignment="Left" Margin="291,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="31"/>
-        <Button Content="Select file&#xA;" HorizontalAlignment="Left" Margin="478,32,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.099,-4.657" Height="28" Width="82" Click="Button_Click"/>
-        <Label Content="FIle name&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="209,32,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txttargt" HorizontalAlignment="Left" Margin="291,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="31"/>
-        <Label Content="File Path&#xA;" HorizontalAlignment="Left" Margin="209,78,0,0" VerticalAlignment="Top"/>
-        <Button Content="Select file&#xA;" HorizontalAlignment="Left" Margin="488,147,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.099,-4.657" Height="28" Width="72" Click="Button_Click_2"/>
-        <Button Content="COPY&#xA;" HorizontalAlignment="Left" Margin="512,322,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.099,-4.657" Height="28" Width="48"/>
-        <TextBox x:Name="txttargt_Copy" HorizontalAlignment="Left" Margin="291,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="31"/>
-        <Label Content="Folder Destination&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="156,144,0,0" VerticalAlignment="Top"/>
-        <Button Content="Copy&#xA;" HorizontalAlignment="Left" Margin="488,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.099,-4.657" Height="43" Width="109" Click="Button_Click_1"/>
+        <TextBox x:Name="txtsource" HorizontalAlignment="Left" Margin="494,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="31"/>
+        <Button Content="Select file&#xA;" HorizontalAlignment="Left" Margin="681,11,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.099,-4.657" Height="28" Width="82" Click="Button_Click"/>
+        <Label Content="FIle name&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="412,11,0,0" VerticalAlignment="Top"/>
+        <Button Content="Copy&#xA;" HorizontalAlignment="Left" Margin="668,73,0,0" VerticalAlignment="Top" RenderTransformOrigin="4.099,-4.657" Height="43" Width="108" Click="Button_Click_1"/>
+        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,24,542,32" SelectionChanged="ListView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>

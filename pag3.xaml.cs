@@ -39,14 +39,20 @@ namespace TESTETOPBAR
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            Window1 open = new Window1();
-            open.ShowDialog();
+            Form1 form = new Form1();
+            form.ShowDialog();
         }
 
         private void Button_Click4(object sender, RoutedEventArgs e)
         {
             Copia open = new Copia();
             open.ShowDialog();
+        }
+
+        private void Button_Click_LIST(object sender, RoutedEventArgs e)
+        {
+            Form1 form = new Form1();
+            form.ShowDialog();
         }
     }
 }

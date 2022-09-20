@@ -67,6 +67,11 @@ namespace TESTETOPBAR.pages
 
         }
 
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             File.Copy(txtsource.Text, saida + fileName, true);

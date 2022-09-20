@@ -17,6 +17,7 @@
         <Button Content="RECORTADOR IMAGEM" Height="50" Margin="115,10,546,374" Click="Button_Click_1"/>
         <Button Content="NAVEGAÇÃO" Height="50" Margin="287,10,374,374" Click="Button_Click_2"/>
         <Button Content="COPIADOR DE ARQUIVOS" Margin="456,10,193,366" Click="Button_Click4"/>
+        <Button Content="LISTVIEW&#xD;&#xA;" Height="50" Margin="612,14,49,370" Click="Button_Click_LIST"/>
 
     </Grid>
 </Window>
