@@ -30,14 +30,16 @@ namespace System_Cont.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            String[] paths = { };
+            string appPath = Directory.GetCurrentDirectory();
+            appPath = appPath.Substring(0, appPath.Length - 9) + @"python\";
 
             var p = new Process
             {
                 StartInfo =
                  {
                      FileName = "main.py",
-                     WorkingDirectory = @"D:\IFRO\Projeto Cont\System-Cont\python\",
+                     WorkingDirectory = appPath,
                  }
             }.Start();
         }
