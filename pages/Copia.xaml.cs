@@ -25,6 +25,8 @@ namespace TESTETOPBAR.pages
     public partial class Copia : Window
     {
         BackgroundWorker worker = new BackgroundWorker();
+        string fileName = "", sourcePath = "", saida = "C:\\Users\\macha\\OneDrive\\Área de Trabalho\\PROJETOS\\System-Cont\\Gerenciador_arquivos\\Arquivos\\";
+        
         public Copia()
         {
             InitializeComponent();
@@ -35,21 +37,7 @@ namespace TESTETOPBAR.pages
             worker.DoWork += Worker_DoWork;
         }
 
-        void CopyFile (string source, string des)
-        {
-            FileStream fsOut = new FileStream(des, FileMode.Create);
-            FileStream fsin = new FileStream(source, FileMode.Open);
-            byte[] bt = new byte[1048756];
-            int readBytes;
-
-            while((readBytes = fsOut.Read(bt , 0, bt.Length)) > 0)
-                {
-                fsOut.Write(bt, 0, readBytes);
-                worker.ReportProgress((int)(fsin.Position * 100 / fsin.Length));
-            }
-            fsin.Close();
-            fsOut.Close();
-        }
+        
 
         public void Worker_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -63,8 +51,15 @@ namespace TESTETOPBAR.pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog o = new OpenFileDialog();
-           
+            
+            OpenFileDialog opf = new OpenFileDialog();
+            if (opf.ShowDialog() == true)
+            {
+                txtsource.Text = opf.FileName;
+                sourcePath = opf.FileName;
+                fileName = opf.SafeFileName;
+            }
+
         }
 
         private void ProgressBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -74,7 +69,7 @@ namespace TESTETOPBAR.pages
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            File.Copy(txtsource.Text, saida + fileName, true);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

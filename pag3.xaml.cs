@@ -45,7 +45,7 @@ namespace TESTETOPBAR
 
         private void Button_Click4(object sender, RoutedEventArgs e)
         {
-            Form1 open = new Form1();
+            Copia open = new Copia();
             open.ShowDialog();
         }
     }
