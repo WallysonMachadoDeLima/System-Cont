@@ -27,19 +27,7 @@ namespace System_Cont.Views
         {
             InitializeComponent();
         }
-        /*  
-         *              ScriptEngine engine = Python.CreateEngine();
-            engine.ExecuteFile(@"D:\IFRO\Projeto Cont\python\main.py");
-         *  
-                    var engine = Python.CreateEngine();
 
-            var script = @"D:\IFRO\Projeto Cont\python\main.py";
-            var source = engine.CreateScriptSourceFromFile(script);
-
-            var scope = engine.CreateScope();
-            source.Execute(scope);
-
-        */
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -49,7 +37,7 @@ namespace System_Cont.Views
                 StartInfo =
                  {
                      FileName = "main.py",
-                     WorkingDirectory = @"D:\IFRO\Projeto Cont\python\",
+                     WorkingDirectory = @"D:\IFRO\Projeto Cont\System-Cont\python\",
                  }
             }.Start();
         }
