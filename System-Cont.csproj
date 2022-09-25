@@ -148,6 +148,9 @@
     <Compile Include="Views\GestaoDadosFormPage.xaml.cs">
       <DependentUpon>GestaoDadosFormPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ListarCliFormPage.xaml.cs">
+      <DependentUpon>ListarCliFormPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoginAdvFormWindow.xaml.cs">
       <DependentUpon>LoginAdvFormWindow.xaml</DependentUpon>
     </Compile>
@@ -193,6 +196,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\GestaoDadosFormPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListarCliFormPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
