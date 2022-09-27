@@ -251,7 +251,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Imagens\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -259,6 +258,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\useICO.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\telaUser.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\telaUser.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />

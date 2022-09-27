@@ -9,7 +9,6 @@
       Title="PerfilAdvFormPage">
 
     <Grid Background="#1E1E1E">
-        <Button Content="TESTE 2" Width="300" Cursor="Hand"/>
-        <Button Content="GRANOLAA" Width="300" Margin="0 500 0 0" Cursor="Hand"/>
+        
     </Grid>
 </Page>
