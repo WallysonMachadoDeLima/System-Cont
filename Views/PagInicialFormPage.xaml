@@ -15,9 +15,18 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0">
-            <Label Content="Página Inicial" FontWeight="Normal" FontSize="50" Foreground="#DDFFFFFF"/>
-            <Rectangle Width="400" Height="200" Fill="#FF0A0D10" HorizontalAlignment="Left" Margin="300 150 0 0"/>
+            <Rectangle Width="593" Height="337" Fill="#FF0A0D10" HorizontalAlignment="Left" Margin="300 150 0 0" RadiusX="15" RadiusY="15">
+                <Rectangle.LayoutTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </Rectangle.LayoutTransform>
+            </Rectangle>
+
         </StackPanel>
-        
+
     </Grid>
 </Page>

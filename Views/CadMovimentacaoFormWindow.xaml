@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="CadMovimentacaoFormWindow" Height="450" Width="800">
     <Grid>
-        
+        <Image Height="100" Width="100"/>
+
     </Grid>
 </Window>

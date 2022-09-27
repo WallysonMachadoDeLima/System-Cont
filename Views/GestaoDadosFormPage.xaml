@@ -16,6 +16,7 @@
 
         <StackPanel Grid.Row="0">
             <Label Content="Gestão de Dados" FontWeight="Normal" FontSize="50" Foreground="#DDFFFFFF"/>
+            
         </StackPanel>
     </Grid>
 </Page>
