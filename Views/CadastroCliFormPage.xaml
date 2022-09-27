@@ -9,18 +9,16 @@
       Title="CadastroCliFormPage">
 
     <Grid Background="#1E1E1E">
-
-
-        <StackPanel x:Name="txtNomeCli" Grid.Row="0">
-            <Label Content="Clientes" FontWeight="Normal" FontSize="50" Foreground="#DDFFFFFF"/>
-
-        </StackPanel>
-        <Button Content="+" Height="80" Margin="1790,307,27,28" Background="#FF1D66C9" BorderBrush="#FF1566AE" FontSize="48" Cursor="Hand" Click="Button_Click_1" Grid.Row="1"/>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="550"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+
+        <StackPanel x:Name="txtNomeCli" Grid.Row="0">
+            <Label Content="Clientes" FontWeight="Normal" FontSize="50" Foreground="#DDFFFFFF"/>
+        </StackPanel>
+        <Button Content="+" Height="80" Margin="1790,307,27,28" Background="#FF1D66C9" BorderBrush="#FF1566AE" FontSize="48" Cursor="Hand" Click="Button_Click_1" Grid.Row="1"/>
 
         <TextBox x:Name="txtRgCli" HorizontalAlignment="Left" Margin="1236,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="368" Height="78" FontSize="36" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
         <Label Content="RG" HorizontalAlignment="Left" Margin="1236,72,0,0" VerticalAlignment="Top" Height="62" Width="292" Foreground="#DDFFFFFF" FontSize="36"/>
