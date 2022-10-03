@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:System_Cont.Views"
         mc:Ignorable="d"
-        Title="NavTopBarFormWindow" Height="1080" Width="1920" WindowState="Maximized" Padding="0,0,0,0" ToolBar.OverflowMode="AsNeeded">
+        Title="NavTopBarFormWindow" Height="720" Width="1080" WindowState="Maximized" Padding="0,0,0,0" ToolBar.OverflowMode="AsNeeded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
@@ -19,7 +19,7 @@
                 <ColumnDefinition Width="37*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="center" Margin="310,0,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="center" Margin="150,0,0,0">
                 <Button x:Name="btnPagInicial" Content="Página Inicial" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnPagInicial_Click"/>
 
                 <Button x:Name="btnEscritório" Content="Escritório" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnEscritório_Click"/>
@@ -31,7 +31,7 @@
                 <Button x:Name="btnAjuda" Content="Ajuda" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnAjuda_Click" HorizontalAlignment="Stretch" VerticalAlignment="Center" FlowDirection="LeftToRight" RenderTransformOrigin="0.5,0.5"/>
             </StackPanel>
 
-
+            <Button x:Name="btnAcessarPerfil" Width="45" Height="45" HorizontalAlignment="Right" Margin="0 0 100 0" Grid.Column="1" Opacity="100" BorderBrush="{x:Null}" />
             <Image Width="50" Height="50"  HorizontalAlignment="Right" Margin="0 0 100 0" Source="/Views/useICO.ico" OpacityMask="White" Grid.Column="1"/>
             <Rectangle Width="150" Height="50" HorizontalAlignment="Right" Margin="0 0 150 0" RadiusX="20" RadiusY="20" Fill="#FF2D2D3A" Grid.ColumnSpan="2"/>
             <Rectangle Width="40" Height="40" HorizontalAlignment="Right" Margin="0 0 -50 0" RadiusX="10" RadiusY="10" Fill="#FF4447E2"/>
