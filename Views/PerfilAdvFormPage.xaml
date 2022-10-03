@@ -9,6 +9,24 @@
       Title="PerfilAdvFormPage">
 
     <Grid Background="#1E1E1E">
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="750"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Border Margin="0, 80, 0, 0" Width="390" Height="490">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FF282828"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Image HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" Height="350" Width="350" Source="\Imagens\avatar.jpg"/>
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="30" RadiusY="30" Rect="0,0,400,500"/>
+                </Border.Clip>
+            </Border>
+
+        </StackPanel>
     </Grid>
 </Page>
