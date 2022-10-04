@@ -20,15 +20,16 @@ namespace System_Cont.Models
                 var comando = _conn.Query();
 
                 comando.CommandText = "INSERT INTO Cliente VALUES " +
-                "(null, @nome_cliente, @telefone, @rg, @nacionalidade, @renda, @email, @local);";
+                "(null, @nome_cliente, @telefone, @rg, @cpf, @nacionalidade, @renda, @email, @local);";
 
                 comando.Parameters.AddWithValue("@nome_cliente", cliente.NomeCliente);
                 comando.Parameters.AddWithValue("@telefone", cliente.Telefone);
                 comando.Parameters.AddWithValue("@rg", cliente.Rg);
-                comando.Parameters.AddWithValue("@nacionalidade", cliente.Cpf);
-                comando.Parameters.AddWithValue("@renda", cliente.Nacionalidade);
+                comando.Parameters.AddWithValue("@cpf", cliente.Cpf);
+                comando.Parameters.AddWithValue("@nacionalidade", cliente.Nacionalidade);
+                comando.Parameters.AddWithValue("@renda", cliente.Renda);
                 comando.Parameters.AddWithValue("@email", cliente.Email);
-                comando.Parameters.AddWithValue("@local", cliente.Renda);
+                comando.Parameters.AddWithValue("@local", cliente.Local);
 
 
                 var resultado = comando.ExecuteNonQuery();
@@ -64,6 +65,7 @@ namespace System_Cont.Models
                     cliente.NomeCliente = DAOHelper.GetString(reader, "nome_cli");
                     cliente.Telefone = DAOHelper.GetString(reader, "telefone_cli");
                     cliente.Rg = DAOHelper.GetString(reader, "rg_cli");
+                    cliente.Cpf = DAOHelper.GetString(reader, "cpf_cli");
                     cliente.Nacionalidade = DAOHelper.GetString(reader, "nacionalidade_cli");
                     cliente.Renda = DAOHelper.GetString(reader, "renda_cli");
                     cliente.Email = DAOHelper.GetString(reader, "email_cli");

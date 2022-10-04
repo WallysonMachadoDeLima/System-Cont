@@ -37,7 +37,7 @@ namespace System_Cont.Views
 
         private void RecortarImagem_Click(object sender, RoutedEventArgs e)
         {
-            _frame.Content = new CadastroCliFormPage();
+            _frame.Content = new PerfilAdvFormPage();
         }
     }
 }

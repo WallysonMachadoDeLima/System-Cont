@@ -31,7 +31,7 @@
                     <Border Margin="0, 0, 0, 0" Width="500" Height="765" CornerRadius="0, 80, 0, 0">
                         <Border.Background>
                             <LinearGradientBrush>
-                                <GradientStop Color="#FF202025"/>
+                                <GradientStop Color="#FF2D2D3A"/>
                             </LinearGradientBrush>
                         </Border.Background>
                         <ListView Width="500" Height="765" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListView_SelectionChanged" Foreground="#DDFFFFFF">
@@ -51,7 +51,7 @@
             </Grid>
 
             <Grid Grid.Column="1">
-                <Button Content="DropZone" Width="1420" Height="765" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="0, 0, 0, 0" Background="#FF2D2D3A" FontSize="72"/>
+                <Button Content="DropZone" Width="1420" Height="765" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="0, 0, 0, 0" Background="#FF25252F" FontSize="72" Cursor="Hand"/>
             </Grid>
         </Grid>
     </Grid>

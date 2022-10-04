@@ -36,6 +36,7 @@ namespace System_Cont.Views
             txtNomeCli.Text = _cliente.NomeCliente;
             txtTelefoneCli.Text = _cliente.Telefone;
             txtRgCli.Text = _cliente.Rg;
+            txtCpfCli.Text = _cliente.Cpf;
             txtNacionalidadeCli.Text = _cliente.Nacionalidade;
             txtRendaCli.Text = _cliente.Renda;
             txtEmailCli.Text = _cliente.Email;
@@ -67,6 +68,7 @@ namespace System_Cont.Views
             _cliente.NomeCliente = txtNomeCli.Text;
             _cliente.Telefone = txtTelefoneCli.Text;
             _cliente.Rg = txtRgCli.Text;
+            _cliente.Cpf = txtCpfCli.Text;
             _cliente.Nacionalidade = txtNacionalidadeCli.Text;
             _cliente.Renda = txtRendaCli.Text;
             _cliente.Email = txtEmailCli.Text;

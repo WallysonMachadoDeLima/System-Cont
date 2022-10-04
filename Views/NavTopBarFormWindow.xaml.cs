@@ -37,7 +37,7 @@ namespace System_Cont.Views
 
         private void btnCliente_Click(object sender, RoutedEventArgs e)
         {
-           
+            fraPaginas.Content = new CadastroCliFormPage();
         }
 
         private void btnAjuda_Click(object sender, RoutedEventArgs e)
@@ -48,6 +48,7 @@ namespace System_Cont.Views
         private void btnGestaoDeDados_Click(object sender, RoutedEventArgs e)
         {
             fraPaginas.Content = new GestaoDadosFormPage();
+            //fraPaginas.Content = new Page1(fraPaginas);
         }
 
         private void btnForms_Click(object sender, RoutedEventArgs e)
