@@ -15,8 +15,8 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <Button Content="Button" Width="100" Height="70" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Center" Margin="0, 0, 5, 0"/>
-            <Button x:Name ="RecortarImagem" Content="RECORTAR" Width="100" Height="70" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Center" Margin="0, 0, 115, 0" Click="RecortarImagem_Click" Cursor="Hand"/>
+            <Button Content="PDF PARA IMG" Width="150" Height="70" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Center" Margin="0, 0, 5, 0" Click="PDFpIMG_Click"/>
+            <Button x:Name ="RecortarImagem" Content="RECORTAR" Width="100" Height="70" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Center" Margin="0, 0, 165, 0" Click="RecortarImagem_Click" Cursor="Hand"/>
             <Button Content="Button" Width="100" Height="70" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Margin="5, 0, 0, 0"/>
         </Grid>
 
@@ -51,7 +51,7 @@
             </Grid>
 
             <Grid Grid.Column="1">
-                <Button Content="DropZone" Width="1420" Height="700" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Bottom" Margin="0, 0, 0, 0" Background="#FF25252F" FontSize="72" Cursor="Hand" BorderBrush="#FF25252F"/>
+                <Button Content="DropZone" Width="1420" Height="700" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Bottom" Margin="0, 0, 0, 0" Background="#FF25252F" FontSize="72" Cursor="Hand" BorderBrush="#FF25252F" Click="SelecionarArquivos_Click"/>
             </Grid>
         </Grid>
     </Grid>

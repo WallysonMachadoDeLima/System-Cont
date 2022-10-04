@@ -53,7 +53,7 @@ namespace System_Cont.Views
 
         private void btnForms_Click(object sender, RoutedEventArgs e)
         {
-            fraPaginas.Content = new Aplica();
+            
         }
 
         private void btnListaCliente_Click(object sender, RoutedEventArgs e)
