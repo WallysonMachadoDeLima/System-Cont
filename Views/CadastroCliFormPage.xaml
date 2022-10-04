@@ -52,7 +52,6 @@
         <Grid Grid.Column="1">
             <StackPanel>
 
-<<<<<<< HEAD
                 <StackPanel>
                     <Label Content="RG" Foreground="#FF5F5F6E" FontSize="14" Margin="0 100 450 0" Width="150" Height="30" FontWeight="Bold" FontFamily="Arial"/>
                     <StackPanel Margin="0 0 0 0" Height="70">
@@ -137,7 +136,7 @@
         </Grid>
         <Grid Grid.Column="2">
             <StackPanel>
-                
+
                 <StackPanel>
                     <Label Content="NACIONALIDADE" Foreground="#FF5F5F6E" FontSize="14" Margin="0 100 450 0" Width="150" Height="30" FontWeight="Bold" FontFamily="Arial"/>
                     <StackPanel Margin="0 0 0 0" Height="80">
@@ -206,25 +205,5 @@
 
 
         </Grid>
-=======
-        <TextBox x:Name="txtRgCli" HorizontalAlignment="Left" Margin="1108,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
-        <Label Content="RG" HorizontalAlignment="Left" Margin="1108,32,0,0" VerticalAlignment="Top" Height="50" Width="98" Foreground="#DDFFFFFF" FontSize="22"/>
-        <TextBox x:Name="txtTelefoneCli" HorizontalAlignment="Left" Margin="785,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Height="39" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
-        <Label Content="TELEFONE" HorizontalAlignment="Left" Margin="785,34,0,0" VerticalAlignment="Top" Height="50" Width="286" Foreground="#DDFFFFFF" FontSize="22"/>
-        <TextBox x:Name="txtNomeCli" HorizontalAlignment="Left" Margin="364,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="293" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
-        <Label Content="NOME" HorizontalAlignment="Left" Margin="364,34,0,0" VerticalAlignment="Top" Height="47" Width="159" Foreground="#DDFFFFFF" FontSize="22"/>
-        <TextBox x:Name="txtCpfCli" HorizontalAlignment="Left" Margin="328,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
-        <Label Content="CPF" HorizontalAlignment="Left" Margin="328,216,0,0" VerticalAlignment="Top" Height="40" Width="286" Foreground="#DDFFFFFF" FontSize="22"/>
-        <TextBox x:Name="txtNacionalidadeCli" HorizontalAlignment="Left" Margin="594,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="370" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA" Cursor="Arrow"/>
-        <Label Content="NACIONALIDADE" HorizontalAlignment="Left" Margin="594,208,0,0" VerticalAlignment="Top" Height="38" Width="218" Foreground="#DDFFFFFF" FontSize="22"/>
-        <TextBox x:Name="txtEmailCli" HorizontalAlignment="Left" Margin="37,432,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" Height="33" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA" Cursor="Arrow"/>
-        <Label Content="EMAIL" HorizontalAlignment="Left" Margin="37,384,0,0" VerticalAlignment="Top" Height="34" Width="307" Foreground="#DDFFFFFF" FontSize="22"/>
-        <TextBox x:Name="txtLocalCli" HorizontalAlignment="Left" Margin="410,423,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369" Height="36" FontSize="20" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA" Cursor="Arrow"/>
-        <Label Content="LOCAL&#xD;&#xA;" HorizontalAlignment="Left" Margin="438,381,0,0" VerticalAlignment="Top" Height="37" Width="164" Foreground="#DDFFFFFF" FontSize="22"/>
-        <Image HorizontalAlignment="Left" Height="220" Margin="16,34,0,0" VerticalAlignment="Top" Width="254" Source="/Views/UserICO.png"/>
-        <Button x:Name="btnLimpar" Content="-" Height="80" Margin="1016,423,396,47" Background="#FFC91D1D" BorderBrush="#FF1566AE" FontSize="48" Cursor="Hand" Click="btnLimpar_Click"/>
-        <TextBox x:Name="txtRendaCli" HorizontalAlignment="Left" Margin="1078,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" Height="32" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
-        <Label Content="RENDA" HorizontalAlignment="Left" Margin="1092,222,0,0" VerticalAlignment="Top" Height="38" Width="96" Foreground="#DDFFFFFF" FontSize="22"/>
->>>>>>> Front-End
     </Grid>
 </Page>
