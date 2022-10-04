@@ -24,5 +24,10 @@ namespace System_Cont.Views
         {
             InitializeComponent();
         }
+
+        private void Button_BadgeChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+
+        }
     }
 }

@@ -285,7 +285,7 @@
     <Resource Include="Imagens\avatar.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagens\dinheiro.jpg" />
+    <Resource Include="Imagens\iconDinheiro.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />
