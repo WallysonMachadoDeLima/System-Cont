@@ -24,5 +24,15 @@ namespace System_Cont.Views
         {
             InitializeComponent();
         }
+
+        private void RecortarImagem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

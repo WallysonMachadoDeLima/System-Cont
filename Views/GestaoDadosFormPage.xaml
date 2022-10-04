@@ -5,18 +5,54 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:System_Cont.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="965" d:DesignWidth="1920"
+      d:DesignHeight="865" d:DesignWidth="1920"
       Title="GestaoDadosFormPage">
 
-    <Grid Background="#1E1E1E">
+    <Grid Background="#FF1F2121">
         <Grid.RowDefinitions>
-            <RowDefinition Height="550"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0">
-            <Label Content="Gestão de Dados" FontWeight="Normal" FontSize="50" Foreground="#DDFFFFFF"/>
-            
-        </StackPanel>
+        <Grid Grid.Row="0">
+            <Button Content="Button" Width="100" Height="70" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Center" Margin="0, 0, 5, 0"/>
+            <Button x:Name ="RecortarImagem" Content="RECORTAR" Width="100" Height="70" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Center" Margin="0, 0, 115, 0" Click="RecortarImagem_Click" Cursor="Hand"/>
+            <Button Content="Button" Width="100" Height="70" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Margin="5, 0, 0, 0"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <StackPanel >
+                    <Border Margin="0, 0, 0, 0" Width="500" Height="765" CornerRadius="0, 80, 0, 0">
+                        <Border.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#FF2D2D3A"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <ListView Width="500" Height="765" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListView_SelectionChanged" Foreground="#DDFFFFFF">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <Border.Clip>
+                            <RectangleGeometry  RadiusX="0" RadiusY="50" Rect="0,0,500,765"/>
+                        </Border.Clip>
+                    </Border>
+                </StackPanel>
+
+
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Button Content="DropZone" Width="1420" Height="700" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Bottom" Margin="0, 0, 0, 0" Background="#FF25252F" FontSize="72" Cursor="Hand" BorderBrush="#FF25252F"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>
