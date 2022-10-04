@@ -68,22 +68,107 @@
         </StackPanel>
         <StackPanel Grid.Column="1">
             <StackPanel>
-                <Label Content="Social Media" Foreground="White" FontSize="14" Margin="0 50 200 0" Width="150" Height="30" FontWeight="Bold" FontFamily="Arial"/>
+                <Label Content="Nome" Foreground="#FF5F5F6E" FontSize="14" Margin="0 140 450 0" Width="150" Height="30" FontWeight="Bold" FontFamily="Arial"/>
                 <StackPanel Margin="0 0 0 0" Height="70">
-                    <Border Margin="0, 0, 0, 0" Width="390" Height="70">
+                    <Border Margin="0, 0, 0, 0" Width="600" Height="80">
                         <Border.Background>
                             <LinearGradientBrush>
-                                <GradientStop Color="#FF202025"/>
+                                <GradientStop Color="#FF2D2D3A"/>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <Button Content="Facebook" Margin="0 0 0 0" Height="40" Width="390"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="19"/>
+                        <Label Content="Rafael Felipe de Oliveira Aguiar" VerticalContentAlignment="Center" Margin="0 0 0 0" Width="600" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="24"/>
                         <Border.Clip>
-                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,390,70"/>
+                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,600,70"/>
+                        </Border.Clip>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="CPF" Foreground="#FF5F5F6E" FontSize="14" Margin="0 50 450 0" Width="150" Height="30" FontWeight="Bold" FontFamily="Arial"/>
+                <StackPanel Margin="0 0 0 0" Height="70">
+                    <Border Margin="0, 0, 0, 0" Width="600" Height="80">
+                        <Border.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#FF2D2D3A"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Label Content="057.661.348-80" VerticalContentAlignment="Center" Margin="0 0 0 0" Width="600" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="24"/>
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,600,70"/>
+                        </Border.Clip>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="E-Mail" Foreground="#FF5F5F6E" FontSize="14" Margin="0 50 450 0" Width="150" Height="30" FontWeight="Bold" FontFamily="Arial"/>
+                <StackPanel Margin="0 0 0 0" Height="70">
+                    <Border Margin="0, 0, 0, 0" Width="600" Height="80">
+                        <Border.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#FF2D2D3A"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Label Content="rafaguiar2005@gmail.com" VerticalContentAlignment="Center" Margin="0 0 0 0" Width="600" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="24"/>
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,600,70"/>
                         </Border.Clip>
                     </Border>
                 </StackPanel>
             </StackPanel>
             
+            <Label Content="Password menagemet" Foreground="#FF5F5F6E" FontSize="23" Margin="0 50 450 0" Width="260" Height="30" FontWeight="Bold" FontFamily="Arial"/>
+               
+            <StackPanel>
+                <Label Content="Password" Foreground="#FF5F5F6E" FontSize="14" Margin="0 20 450 0" Width="150" Height="30" FontWeight="Bold" FontFamily="Arial"/>
+                <StackPanel Margin="0 0 0 0" Height="70">
+                    <Border Margin="0, 0, 0, 0" Width="600" Height="80">
+                        <Border.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#FF2D2D3A"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Label Content="*************************" VerticalContentAlignment="Center" Margin="0 0 0 0" Width="600" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="34"/>
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,600,70"/>
+                        </Border.Clip>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel>
+                <Label Content="Confirm Password" Foreground="#FF5F5F6E" FontSize="14" Margin="0 20 450 0" Width="150" Height="30" FontWeight="Bold" FontFamily="Arial"/>
+                <StackPanel Margin="0 0 0 0" Height="70">
+                    <Border Margin="0, 0, 0, 0" Width="600" Height="80">
+                        <Border.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#FF2D2D3A"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <Label Content="*************************" VerticalContentAlignment="Center" Margin="0 0 0 0" Width="600" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="34"/>
+                        <Border.Clip>
+                            <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,600,70"/>
+                        </Border.Clip>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <Label Content="Personal Statiscic" Foreground="#FF5F5F6E" FontSize="14" Margin="0 140 450 0" Width="150" Height="30" FontWeight="Bold" FontFamily="Arial"/>
+            <StackPanel Margin="0 0 0 0" Height="90">
+                <Border Margin="0, 0, 0, 0" Width="500" Height="90">
+                    <Border.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#FF2D2D3A"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <StackPanel>
+                        <Label Content="$ 1456,23" VerticalContentAlignment="Top" Margin="0 0 0 0" Width="170" Height="42" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="28"/>
+                        <Label Content="Real money spent" VerticalContentAlignment="Top" Margin="0 0 0 0" Width="170" Height="42" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="18"/>
+                    </StackPanel>
+                    <Border.Clip>
+                        <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,500,90"/>
+                    </Border.Clip>
+                </Border>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>
