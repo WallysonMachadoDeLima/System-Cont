@@ -5,8 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:System_Cont.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="965" d:DesignWidth="1920"
-      Title="CadastroCliFormPage">
+      d:DesignHeight="589" d:DesignWidth="1500"
+      Title="CadastroCliFormPage" MinHeight="589">
 
     <Grid Background="#1E1E1E">
         <Grid.RowDefinitions>
@@ -15,35 +15,28 @@
         </Grid.RowDefinitions>
 
 
-        <StackPanel x:Name="txtNomeCli" Grid.Row="0">
+        <StackPanel x:Name="txtNomeCli" Grid.Row="0" Margin="-1259,227,1259,-188" Grid.RowSpan="2">
             <Label Content="Clientes" FontWeight="Normal" FontSize="50" Foreground="#DDFFFFFF"/>
         </StackPanel>
-        <Button Content="+" Height="80" Margin="1790,307,27,28" Background="#FF1D66C9" BorderBrush="#FF1566AE" FontSize="48" Cursor="Hand" Click="Button_Click_1" Grid.Row="1"/>
+        <Button Content="+" Height="80" Margin="1225,423,182,47" Background="#FF1D66C9" BorderBrush="#FF1566AE" FontSize="48" Cursor="Hand" Click="Button_Click_1"/>
 
-        <TextBox x:Name="txtRgCli" HorizontalAlignment="Left" Margin="1236,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="368" Height="78" FontSize="36" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
-        <Label Content="RG" HorizontalAlignment="Left" Margin="1236,72,0,0" VerticalAlignment="Top" Height="62" Width="292" Foreground="#DDFFFFFF" FontSize="36"/>
-        <TextBox x:Name="txtTelefoneCli" HorizontalAlignment="Left" Margin="807,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="368" Height="78" FontSize="36" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
-        <Label Content="TELEFONE" HorizontalAlignment="Left" Margin="807,72,0,0" VerticalAlignment="Top" Height="62" Width="292" Foreground="#DDFFFFFF" FontSize="36"/>
-        <TextBox x:Name="txtRgCli_Copy" HorizontalAlignment="Left" Margin="378,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="370" Height="78" FontSize="36" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
-        <Label Content="NOME" HorizontalAlignment="Left" Margin="378,72,0,0" VerticalAlignment="Top" Height="62" Width="292" Foreground="#DDFFFFFF" FontSize="36"/>
-        <TextBox x:Name="txtCpfCli" HorizontalAlignment="Left" Margin="76,427,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="369" Height="78" FontSize="36" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
-        <Label Content="CPF" HorizontalAlignment="Left" Margin="76,360,0,0" VerticalAlignment="Top" Height="62" Width="292" Foreground="#DDFFFFFF" FontSize="36"/>
-        <TextBox x:Name="txtNascionalidadeCli" HorizontalAlignment="Left" Margin="564,456,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="369" Height="78" FontSize="36" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
-        <Label Content="NASCIONALIDADE" HorizontalAlignment="Left" Margin="564,388,0,0" VerticalAlignment="Top" Height="62" Width="319" Foreground="#DDFFFFFF" FontSize="36"/>
-        <TextBox x:Name="txtEmailCli" HorizontalAlignment="Left" Margin="1076,444,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="369" Height="78" FontSize="36" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
-        <Label Content="EMAIL" HorizontalAlignment="Left" Margin="1076,376,0,0" VerticalAlignment="Top" Height="62" Width="319" Foreground="#DDFFFFFF" FontSize="36"/>
-        <TextBox x:Name="txtLocalCli" HorizontalAlignment="Left" Margin="1503,447,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="369" Height="78" FontSize="36" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
-        <Label Content="LOCAL&#xD;&#xA;" HorizontalAlignment="Left" Margin="1503,379,0,0" VerticalAlignment="Top" Height="62" Width="319" Foreground="#DDFFFFFF" FontSize="36"/>
-        <Image HorizontalAlignment="Left" Height="220" Margin="38,91,0,0" VerticalAlignment="Top" Width="254" Source="/Views/UserICO.png"/>
-        <ListView HorizontalAlignment="Left" Height="270" Margin="64,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="1319" d:ItemsSource="{d:SampleData ItemCount=5}" Foreground="#DDFFFFFF" Background="#FFF6F6F6" OpacityMask="#FFF1F1F1" BorderBrush="#89F1F1F1" BorderThickness="1,1,1,1" FontSize="20">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Button Content="-" Height="80" Margin="1662,307,154,28" Background="#FFC91D1D" BorderBrush="#FF1566AE" FontSize="48" Cursor="Hand" Click="Button_Click_1" Grid.Row="1"/>
-        <TextBox x:Name="txtRendaCli" HorizontalAlignment="Left" Margin="1679,56,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="258" Height="78" FontSize="36" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
-        <Label Content="RENDA" HorizontalAlignment="Left" Margin="1688,0,0,0" VerticalAlignment="Top" Height="62" Width="204" Foreground="#DDFFFFFF" FontSize="36"/>
+        <TextBox x:Name="txtRgCli" HorizontalAlignment="Left" Margin="1108,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+        <Label Content="RG" HorizontalAlignment="Left" Margin="1108,32,0,0" VerticalAlignment="Top" Height="50" Width="98" Foreground="#DDFFFFFF" FontSize="22"/>
+        <TextBox x:Name="txtTelefoneCli" HorizontalAlignment="Left" Margin="785,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Height="39" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+        <Label Content="TELEFONE" HorizontalAlignment="Left" Margin="785,34,0,0" VerticalAlignment="Top" Height="50" Width="286" Foreground="#DDFFFFFF" FontSize="22"/>
+        <TextBox x:Name="txtRgCli_Copy" HorizontalAlignment="Left" Margin="364,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="293" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+        <Label Content="NOME" HorizontalAlignment="Left" Margin="364,34,0,0" VerticalAlignment="Top" Height="47" Width="159" Foreground="#DDFFFFFF" FontSize="22"/>
+        <TextBox x:Name="txtCpfCli" HorizontalAlignment="Left" Margin="328,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+        <Label Content="CPF" HorizontalAlignment="Left" Margin="328,216,0,0" VerticalAlignment="Top" Height="40" Width="286" Foreground="#DDFFFFFF" FontSize="22"/>
+        <TextBox x:Name="txtNascionalidadeCli" HorizontalAlignment="Left" Margin="594,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="370" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+        <Label Content="NASCIONALIDADE" HorizontalAlignment="Left" Margin="594,208,0,0" VerticalAlignment="Top" Height="38" Width="218" Foreground="#DDFFFFFF" FontSize="22"/>
+        <TextBox x:Name="txtEmailCli" HorizontalAlignment="Left" Margin="37,432,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="325" Height="33" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+        <Label Content="EMAIL" HorizontalAlignment="Left" Margin="37,384,0,0" VerticalAlignment="Top" Height="34" Width="307" Foreground="#DDFFFFFF" FontSize="22"/>
+        <TextBox x:Name="txtLocalCli" HorizontalAlignment="Left" Margin="410,423,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="369" Height="36" FontSize="20" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA" Cursor="Arrow"/>
+        <Label Content="LOCAL&#xD;&#xA;" HorizontalAlignment="Left" Margin="438,381,0,0" VerticalAlignment="Top" Height="37" Width="164" Foreground="#DDFFFFFF" FontSize="22"/>
+        <Image HorizontalAlignment="Left" Height="220" Margin="16,34,0,0" VerticalAlignment="Top" Width="254" Source="/Views/UserICO.png"/>
+        <Button Content="-" Height="80" Margin="1016,423,396,47" Background="#FFC91D1D" BorderBrush="#FF1566AE" FontSize="48" Cursor="Hand" Click="Button_Click_1"/>
+        <TextBox x:Name="txtRendaCli" HorizontalAlignment="Left" Margin="1078,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="258" Height="32" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+        <Label Content="RENDA" HorizontalAlignment="Left" Margin="1092,222,0,0" VerticalAlignment="Top" Height="38" Width="96" Foreground="#DDFFFFFF" FontSize="22"/>
     </Grid>
 </Page>

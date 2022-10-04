@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:System_Cont.Views"
         mc:Ignorable="d"
-        Title="NavTopBarFormWindow" Height="720" Width="1080" WindowState="Maximized" Padding="0,0,0,0" ToolBar.OverflowMode="AsNeeded">
+        
+        Title="NavTopBarFormWindow" Height="720" Width="1920" WindowState="Maximized" Padding="0,0,0,0" ToolBar.OverflowMode="AsNeeded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
@@ -39,9 +40,12 @@
 
         </Grid>
 
+
         <StackPanel Grid.Row="1" Background="#1E1E1E">
-            <Frame x:Name="fraPaginas" NavigationUIVisibility="Hidden"/>
+            <Frame x:Name="fraPaginas" NavigationUIVisibility="Hidden" />
         </StackPanel>
+
+
 
         <Grid Grid.Row="2" Background="#FF1C1C24">
             <Grid.ColumnDefinitions>
