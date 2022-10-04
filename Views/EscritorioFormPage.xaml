@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:System_Cont.Views"
       mc:Ignorable="d" 
-      Title="EscritorioFormPage" Height="620" Width="1380">
+      Title="EscritorioFormPage" Height="865" Width="1380">
 
     <Grid Background="#1E1E1E">
         <Grid.RowDefinitions>
@@ -13,66 +13,35 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <Rectangle Width="513" Height="206" Fill="#FF0A0D10" Margin="100 0 0 0" RadiusX="15" RadiusY="15">
-                <Rectangle.LayoutTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform X="0" Y="0"/>
-                    </TransformGroup>
-                </Rectangle.LayoutTransform>
-            </Rectangle>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        
+        <ScrollViewer Grid.RowSpan="2">
+            <StackPanel>
+                <StackPanel Grid.Row="0" Orientation="Horizontal">
+                    <DataGrid Height="417" Width="1361" x:Name="dataGridCliente" IsReadOnly="true" Foreground="White"
+                      AutoGenerateColumns="False" AlternatingRowBackground="#1E1E1E" AlternationCount="2" Grid.ColumnSpan="2" Background="#FF1E1E1E" FontSize="40" BorderBrush="#FF1F1F1F" 
+                      FontStyle="Normal" FontWeight="Normal">>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Recebimentos" Binding="{Binding NomeCliente}" Foreground="White" FontSize="24"  Width="680"/>
+                            <DataGridTextColumn Header="Despesas" Binding="{Binding NomeCliente}" Foreground="White" FontSize="24"/>
+                        </DataGrid.Columns>
+                        
+                    </DataGrid>
 
-            <Rectangle Width="604" Height="206" Fill="#FF0A0D10" Margin="100 0 0 0" RadiusX="15" RadiusY="15">
-                <Rectangle.LayoutTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform X="0" Y="0"/>
-                    </TransformGroup>
-                </Rectangle.LayoutTransform>
-            </Rectangle>
-        </StackPanel>
+                </StackPanel>
 
-        <StackPanel Grid.Row ="1" Orientation="Horizontal">
+                <StackPanel Grid.Row = "1" Orientation="Horizontal">
+                    <StackPanel Grid.Column="2">
+                        <Label Content="Cadastrar Recebimento"/>
+                    </StackPanel>
 
-            <Rectangle Width="252" Height="307" Fill="#FF0A0D10" HorizontalAlignment="Left" Margin="100 0 -130 0" RadiusX="15" RadiusY="15">
-                <Rectangle.LayoutTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform X="0" Y="0"/>
-                    </TransformGroup>
-                </Rectangle.LayoutTransform>
-            </Rectangle>
-
-            <TextBlock Text="Recebimentos" Foreground="White" FontSize="25" Width="180" Height="50" Margin="-100 -200 50 0" FontWeight="Bold"/>
-
-            <Rectangle Width="252" Height="307" Fill="#FF0A0D10" HorizontalAlignment="Left" Margin="20 0 0 0" RadiusX="15" RadiusY="15">
-                <Rectangle.LayoutTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform X="0" Y="0"/>
-                    </TransformGroup>
-                </Rectangle.LayoutTransform>
-            </Rectangle>
-
-            <Rectangle Width="649" Height="200" Fill="#FF0A0D10" Margin="50 0 0 0" RadiusX="15" RadiusY="15">
-                <Rectangle.LayoutTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform X="0" Y="0"/>
-                    </TransformGroup>
-                </Rectangle.LayoutTransform>
-            </Rectangle>
-        </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

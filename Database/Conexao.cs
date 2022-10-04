@@ -19,7 +19,7 @@ namespace System_Cont.Database
         //Star@pixel4862+!  &   root  & Star@pixel4268!(notebook)
         private static string password = "Star@pixel4862+!";
 
-        private static string dbname = "";
+        private static string dbname = "bd_advocacia";
 
         private static MySqlConnection connection;
 

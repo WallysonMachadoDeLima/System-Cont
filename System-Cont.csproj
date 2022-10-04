@@ -124,6 +124,8 @@
     </ApplicationDefinition>
     <Compile Include="Database\Conexao.cs" />
     <Compile Include="Helpers\DAOHelper.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\ClienteDAO.cs" />
     <Compile Include="Views\AjudaFormPage.xaml.cs">
       <DependentUpon>AjudaFormPage.xaml</DependentUpon>
     </Compile>
@@ -159,6 +161,9 @@
     </Compile>
     <Compile Include="Views\Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PageDefault.xaml.cs">
+      <DependentUpon>PageDefault.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PagInicialFormPage.xaml.cs">
       <DependentUpon>PagInicialFormPage.xaml</DependentUpon>
@@ -218,6 +223,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\PageDefault.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\PagInicialFormPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -257,9 +266,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Views\UserICO.png" />
   </ItemGroup>

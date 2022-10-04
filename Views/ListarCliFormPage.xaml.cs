@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System_Cont.Models;
+using System_Cont.Views;
 
 namespace System_Cont.Views
 {
@@ -23,14 +25,48 @@ namespace System_Cont.Views
         public ListarCliFormPage()
         {
             InitializeComponent();
+            Loaded += ListarCliFormPage_Loaded;
         }
 
-     
-
-        private void ButtonAddCliente_Click_(object sender, RoutedEventArgs e)
+        private void ListarCliFormPage_Loaded(object sender, RoutedEventArgs e)
         {
-            NavTopBarFormWindow obj = new NavTopBarFormWindow();
-            obj.fraPaginas.Content = new CadastroCliFormPage();
+            CarregarListagem();
+        }
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new ClienteDAO();
+                List<Cliente> listaClientes = dao.List();
+
+                dataGridCliente.ItemsSource = listaClientes;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnExcluirCliente_Click(object sender, RoutedEventArgs e)
+        {
+            var clienteSelected = dataGridCliente.SelectedItem as Cliente;
+
+            var result = MessageBox.Show($"Deseja realmente excluir o Cliente '{clienteSelected.NomeCliente}'?", "Confirmação de Exclusão",
+                    MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao = new ClienteDAO();
+                    dao.Delete(clienteSelected);
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

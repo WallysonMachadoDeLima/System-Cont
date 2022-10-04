@@ -54,5 +54,10 @@ namespace System_Cont.Views
         {
             fraPaginas.Content = new Aplica();
         }
+
+        private void btnListaCliente_Click(object sender, RoutedEventArgs e)
+        {
+            fraPaginas.Content = new ListarCliFormPage();
+        }
     }
 }
