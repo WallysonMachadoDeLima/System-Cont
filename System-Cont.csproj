@@ -266,7 +266,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Logo Justice.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\UserICO.png" />
   </ItemGroup>

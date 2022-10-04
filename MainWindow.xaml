@@ -25,7 +25,7 @@
                     <GradientStop Color="#FF281AC8" Offset="1"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
-
+            <Image Width="500" Height="500" Source="/Logo Justice.png" RenderTransformOrigin="0.356,1.128" HorizontalAlignment="Left" Margin="200 160 0 0"/>
         </StackPanel>
     </Grid>
 </Window>

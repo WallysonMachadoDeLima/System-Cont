@@ -13,7 +13,7 @@
             <RowDefinition Height="311*"/>
             <RowDefinition Height="554*"/>
         </Grid.RowDefinitions>
-        <ScrollViewer Grid.RowSpan="2" >
+        <ScrollViewer Grid.RowSpan="2" Height="850">
             <StackPanel>
                 <StackPanel Grid.Column="0">
                     <Label Content="Profile" Foreground="White" FontSize="35" Margin="0 50 290 0" Width="120" Height="50" FontWeight="Bold"/>

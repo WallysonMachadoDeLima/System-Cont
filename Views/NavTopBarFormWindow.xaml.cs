@@ -59,5 +59,10 @@ namespace System_Cont.Views
         {
             fraPaginas.Content = new ListarCliFormPage();
         }
+
+        private void btnAcessarPerfil_Click(object sender, RoutedEventArgs e)
+        {
+            fraPaginas.Content = new PerfilAdvFormPage();
+        }
     }
 }
