@@ -36,7 +36,7 @@
                 <DataGridTextColumn Header="Telefone" Binding="{Binding Telefone}" Foreground="White" FontSize="24"/>
                 <DataGridTextColumn Header="Rg" Binding="{Binding Rg}" Foreground="White" FontSize="24"/>
                 <DataGridTextColumn Header="Cpf" Binding="{Binding Cpf}" Foreground="White" FontSize="24"/>
-                <DataGridTextColumn Header="Nacionlidade" Binding="{Binding Nacionalidade}" Foreground="White" FontSize="24"/>
+                <DataGridTextColumn Header="Nacionalidade" Binding="{Binding Nacionalidade}" Foreground="White" FontSize="24"/>
                 <DataGridTextColumn Header="Renda" Binding="{Binding Renda}" Foreground="White" FontSize="24"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding Email}" Foreground="White" FontSize="24"/>
                 <DataGridTextColumn Header="Local" Binding="{Binding Local}" Foreground="White" FontSize="24"/>

@@ -126,6 +126,8 @@
     <Compile Include="Helpers\DAOHelper.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ClienteDAO.cs" />
+    <Compile Include="Models\Recebimento.cs" />
+    <Compile Include="Models\RecebimentoDAO.cs" />
     <Compile Include="Views\AjudaFormPage.xaml.cs">
       <DependentUpon>AjudaFormPage.xaml</DependentUpon>
     </Compile>
