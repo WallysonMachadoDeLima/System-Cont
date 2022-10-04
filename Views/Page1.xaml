@@ -10,62 +10,52 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="311*"/>
-            <RowDefinition Height="554*"/>
+            <RowDefinition Height="100"/> 
+            <RowDefinition Height="*"/>
+            
         </Grid.RowDefinitions>
-        <ScrollViewer Grid.RowSpan="2" Height="850">
-            <StackPanel>
-                <StackPanel Grid.Column="0">
-                    <Label Content="Profile" Foreground="White" FontSize="35" Margin="0 50 290 0" Width="120" Height="50" FontWeight="Bold"/>
-                    <StackPanel>
-                        <Border Margin="0, 20, 0, 0" Width="390" Height="420">
-                            <Border.Background>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="#FF202025"/>
-                                </LinearGradientBrush>
-                            </Border.Background>
-                            <StackPanel>
-                                <Image HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" Height="330" Width="320" Source="\Imagens\avatar.jpg"/>
-                                <StackPanel>
-                                    <Button Content="+ Upload new photo" Margin="0 0 0 10" Height="40" Width="300" BorderBrush="#FF2D2D3A" Background="{x:Null}"/>
-                                </StackPanel>
-                            </StackPanel>
-                            <Border.Clip>
-                                <RectangleGeometry RadiusX="30" RadiusY="30" Rect="0,0,390,420"/>
-                            </Border.Clip>
-                        </Border>
-                    </StackPanel>
+        
+        <Grid Grid.Row="0">
+            <Button Content="Button" Width="100" Height="70" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Center" Margin="0, 0, 5, 0"/>
+            <Button x:Name ="RecortarImagem" Content="RECORTAR" Width="100" Height="70" HorizontalAlignment="Right" Grid.Row="1" VerticalAlignment="Center" Margin="0, 0, 115, 0" Click="RecortarImagem_Click"/>
+            <Button Content="Button" Width="100" Height="70" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Margin="5, 0, 0, 0"/>
+        </Grid>
 
-                    <Label Content="Social Media" Foreground="White" FontSize="24" Margin="0 50 200 0" Width="200" Height="50" FontWeight="Bold" FontFamily="Arial"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="500"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-                    <StackPanel Height="100">
-                        <Border Margin="0, 30, 0, 0" Width="390" Height="70">
-                            <Border.Background>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="#FF202025"/>
-                                </LinearGradientBrush>
-                            </Border.Background>
-                            <Button Content="Facebook" Margin="0 0 0 0" Height="40" Width="390"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="19"/>
-                            <Border.Clip>
-                                <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,390,70"/>
-                            </Border.Clip>
-                        </Border>
-                    </StackPanel>
-                    <StackPanel Height="100">
-                        <Border Margin="0, 30, 0, 0" Width="390" Height="70">
-                            <Border.Background>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="#FF202025"/>
-                                </LinearGradientBrush>
-                            </Border.Background>
-                            <Button Content="Twitter" Margin="0 0 0 0" Height="40" Width="390"  Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White"  FontSize="19"/>
-                            <Border.Clip>
-                                <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,390,70"/>
-                            </Border.Clip>
-                        </Border>
-                    </StackPanel>
+            <Grid Grid.Column="0">
+                <StackPanel >
+                    <Border Margin="0, 0, 0, 0" Width="500" Height="765" CornerRadius="0, 80, 0, 0">
+                        <Border.Background>
+                            <LinearGradientBrush>
+                                <GradientStop Color="#FF202025"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <ListView Width="500" Height="765" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListView_SelectionChanged" Foreground="#DDFFFFFF">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <Border.Clip>
+                            <RectangleGeometry  RadiusX="0" RadiusY="50" Rect="0,0,500,765"/>
+                        </Border.Clip>
+                    </Border>
                 </StackPanel>
-            </StackPanel>
-        </ScrollViewer>
+
+
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <Button Content="DropZone" Width="1420" Height="765" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="0, 0, 0, 0" Background="#FF2D2D3A" FontSize="72"/>
+            </Grid>
+        </Grid>
+        
+
     </Grid>
 </Page>

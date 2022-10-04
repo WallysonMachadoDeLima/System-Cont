@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System_Cont.Views;
 
 namespace System_Cont.Views
 {
@@ -20,9 +21,23 @@ namespace System_Cont.Views
     /// </summary>
     public partial class Page1 : Page
     {
-        public Page1()
+
+        private Frame _frame;
+
+        public Page1(Frame frame)
         {
             InitializeComponent();
+            _frame = frame;
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void RecortarImagem_Click(object sender, RoutedEventArgs e)
+        {
+            _frame.Content = new CadastroCliFormPage();
         }
     }
 }
