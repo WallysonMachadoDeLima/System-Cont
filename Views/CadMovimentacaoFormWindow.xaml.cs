@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System_Cont.Views;
 
-namespace System_Cont
+namespace System_Cont.Views
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Lógica interna para CadMovimentacaoFormWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CadMovimentacaoFormWindow : Window
     {
-        public MainWindow()
+        public CadMovimentacaoFormWindow()
         {
             InitializeComponent();
-        }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            LoginAdvFormWindow view = new LoginAdvFormWindow();
-            view.ShowDialog();
         }
     }
 }
