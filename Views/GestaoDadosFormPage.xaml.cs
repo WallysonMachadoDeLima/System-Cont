@@ -25,6 +25,8 @@ namespace System_Cont.Views
     public partial class GestaoDadosFormPage : Page
     {
         BackgroundWorker worker = new BackgroundWorker();
+
+        string sourcePath = "", fileName = "";
         public GestaoDadosFormPage()
         {
             InitializeComponent();
@@ -35,23 +37,9 @@ namespace System_Cont.Views
 
         }
 
-        public void SelecionarArquivos()
-        {
-            string sourcePath = "", fileName = "";
-            string saida = Directory.GetCurrentDirectory();
-            saida = saida.Substring(0, saida.Length - 9) + @"Files\ListView\";
-
-            OpenFileDialog opf = new OpenFileDialog();
-            if (opf.ShowDialog() == true)
-            {
-                sourcePath = opf.FileName;
-                fileName = opf.SafeFileName;
-            }
-        }
-
         private void SelecionarArquivos_Click(object sender, RoutedEventArgs e)
         {
-            string sourcePath = "", fileName = "";
+           
             string saida = Directory.GetCurrentDirectory();
             saida = saida.Substring(0, saida.Length - 9) + @"Files\ListView\";
 
@@ -77,18 +65,20 @@ namespace System_Cont.Views
 
         private void PDFpIMG_Click(object sender, RoutedEventArgs e)
         {
-            /*string sourcePath = "", fileName = "";
+            
             string saida = Directory.GetCurrentDirectory();
+            sourcePath = saida.Substring(0, saida.Length - 9) + @"Files\ListView\";
             saida = saida.Substring(0, saida.Length - 9) + @"Files\Alterar\";
-
-            if (opf.ShowDialog() == true)
+           
+            /*if (opf.ShowDialog() == true)
             {
                 sourcePath = opf.FileName;
                 fileName = opf.SafeFileName;
 
                 if (sourcePath != "") File.Move(sourcePath, saida + fileName);
-            }
-            */
+            }*/
+            
+            
         }
     }
 }
