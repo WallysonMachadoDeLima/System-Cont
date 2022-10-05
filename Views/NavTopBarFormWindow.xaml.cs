@@ -22,7 +22,8 @@ namespace System_Cont.Views
         public NavTopBarFormWindow()
         {
             InitializeComponent();
-            
+            fraPaginas.Content = new PagInicialFormPage();
+
         }
 
         private void btnPagInicial_Click(object sender, RoutedEventArgs e)
