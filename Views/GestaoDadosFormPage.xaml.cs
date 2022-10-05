@@ -70,15 +70,8 @@ namespace System_Cont.Views
             sourcePath = saida.Substring(0, saida.Length - 9) + @"Files\ListView\";
             saida = saida.Substring(0, saida.Length - 9) + @"Files\Alterar\";
            
-            /*if (opf.ShowDialog() == true)
-            {
-                sourcePath = opf.FileName;
-                fileName = opf.SafeFileName;
+            File.Move(sourcePath, saida + fileName);
 
-                if (sourcePath != "") File.Move(sourcePath, saida + fileName);
-            }*/
-            
-            
         }
     }
 }

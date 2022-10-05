@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="885" d:DesignWidth="1920"
       Title="CadastroCliFormPage" MinHeight="589">
-
+    
     <Grid Background="#1E1E1E">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="510"/>

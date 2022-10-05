@@ -42,7 +42,8 @@ namespace System_Cont.Views
 
         private void btnAjuda_Click(object sender, RoutedEventArgs e)
         {
-            fraPaginas.Content = new AjudaFormPage();
+            //fraPaginas.Content = new AjudaFormPage();
+            fraPaginas.Content = new Page1(fraPaginas);
         }
 
         private void btnGestaoDeDados_Click(object sender, RoutedEventArgs e)
