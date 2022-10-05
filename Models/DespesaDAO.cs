@@ -3,28 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System_Cont.Database;
 using MySql.Data.MySqlClient;
+using System_Cont.Database;
 using System_Cont.Helpers;
 
 namespace System_Cont.Models
 {
-    internal class RecebimentoDAO
+    internal class DespesaDAO
     {
+
         private static Conexao _conn = new Conexao();
 
-        public void Insert(Recebimento recebimento)
+        public void Insert(Despesa despesa)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "INSERT INTO Recebimento VALUES " +
-                "(null, @descricao, @valor, @data_recebimento);";
+                comando.CommandText = "INSERT INTO Despesa VALUES " +
+                "(null, @descricao, @valor, @data_despesa);";
 
-                comando.Parameters.AddWithValue("@descricao", recebimento.DescricaoRec);
-                comando.Parameters.AddWithValue("@valor", recebimento.ValorRec);
-                comando.Parameters.AddWithValue("@data_recebimento", recebimento.Data_Recebimento?.ToString("yyyy-MM-dd"));
+                comando.Parameters.AddWithValue("@descricao", despesa.DescricaoDes);
+                comando.Parameters.AddWithValue("@valor", despesa.ValorDes);
+                comando.Parameters.AddWithValue("@data_despesa", despesa.Data_Despesa?.ToString("yyyy-MM-dd"));
 
 
 
@@ -43,27 +44,27 @@ namespace System_Cont.Models
             }
         }
 
-        public List<Recebimento> List()
+        public List<Despesa> List()
         {
             try
             {
-                var lista = new List<Recebimento>();
+                var lista = new List<Despesa>();
                 var comando = _conn.Query();
 
-                comando.CommandText = "SELECT * FROM Recebimento";
+                comando.CommandText = "SELECT * FROM Despesa";
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    var recebimento = new Recebimento();
+                    var despesa = new Despesa();
 
-                    recebimento.Id = reader.GetInt32("id_rec");
-                    recebimento.DescricaoRec = DAOHelper.GetString(reader, "descricao_rec");
-                    recebimento.ValorRec = DAOHelper.GetDouble(reader, "valor_rec");
-                    recebimento.Data_Recebimento = DAOHelper.GetDateTime(reader, "data_recebimento_rec");
+                    despesa.Id = reader.GetInt32("id_des");
+                    despesa.DescricaoDes = DAOHelper.GetString(reader, "descricao_des");
+                    despesa.ValorDes = DAOHelper.GetDouble(reader, "valor_des");
+                    despesa.Data_Despesa = DAOHelper.GetDateTime(reader, "data_despesa_des");
 
-                    lista.Add(recebimento);
+                    lista.Add(despesa);
                 }
                 reader.Close();
                 return lista;
@@ -75,12 +76,12 @@ namespace System_Cont.Models
             }
         }
 
-        public void Delete(Recebimento t)
+        public void Delete(Despesa t)
         {
             try
             {
                 var comando = _conn.Query();
-                comando.CommandText = "delete from Recebimento where id_rec = @id";
+                comando.CommandText = "delete from Despesa where id_des = @id";
 
                 comando.Parameters.AddWithValue("@id", t.Id);
 

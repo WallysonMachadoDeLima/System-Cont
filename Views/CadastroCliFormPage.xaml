@@ -178,7 +178,7 @@
                                     <GradientStop Color="#FF2D2D3A"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <Button x:Name="btnSalvarCliente" Content="+" Height="80" Margin="1225,423,182,47" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="48" Cursor="Hand" Click="btnSalvarCliente_Click" Foreground="{x:Null}"/>
+                            <Button x:Name="btnSalvarCliente" Content="+" Height="80" Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="48" Cursor="Hand" Click="btnSalvarCliente_Click" Foreground="{x:Null}"/>
                             <Border.Clip>
                                 <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,500,70"/>
                             </Border.Clip>
@@ -194,7 +194,7 @@
                                     <GradientStop Color="#FF2D2D3A"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <Button x:Name="btnLimpar" Content="-" Height="80" Margin="1016,423,396,47" Background="#FFC91D1D" BorderBrush="#FF1566AE" FontSize="48" Cursor="Hand" Click="btnLimpar_Click"/>
+                            <Button x:Name="btnLimpar" Content="-" Height="80" Margin="0,0,0,0" Background="{x:Null}" BorderBrush="#FF1566AE" FontSize="48" Cursor="Hand" Click="btnLimpar_Click"/>
                             <Border.Clip>
                                 <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,500,70"/>
                             </Border.Clip>

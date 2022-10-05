@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace System_Cont.Models
 {
-    internal class Recebimento
+    internal class Despesa
     {
         public int Id { get; set; }
-        public string DescricaoRec { get; set; }
-        public double ValorRec { get; set; }
-        public DateTime? Data_Recebimento { get; set; }
+        public string DescricaoDes { get; set; }
+        public double ValorDes { get; set; }
+        public DateTime? Data_Despesa { get; set; }
     }
 }

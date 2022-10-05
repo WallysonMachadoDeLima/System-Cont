@@ -32,6 +32,7 @@ namespace System_Cont.Views
         {
             CarregarListagem();
         }
+
         private void CarregarListagem()
         {
             try
