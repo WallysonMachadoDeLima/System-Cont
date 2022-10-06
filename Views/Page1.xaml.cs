@@ -14,25 +14,30 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System_Cont.Views;
 
-namespace System_Cont
+namespace System_Cont.Views
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Interação lógica para Page1.xam
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Page1 : Page
     {
-        public MainWindow()
+
+        private Frame _frame;
+
+        public Page1(Frame frame)
         {
             InitializeComponent();
-          
-            
+            _frame = frame;
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            LoginAdvFormWindow view = new LoginAdvFormWindow();
-            view.ShowDialog();
-           
+
+        }
+
+        private void RecortarImagem_Click(object sender, RoutedEventArgs e)
+        {
+            _frame.Content = new PerfilAdvFormPage();
         }
     }
 }

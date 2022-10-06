@@ -12,27 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System_Cont.Views;
 
-namespace System_Cont
+namespace System_Cont.Views
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Interação lógica para PerfilAdvFormPage.xam
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PerfilAdvFormPage : Page
     {
-        public MainWindow()
+        public PerfilAdvFormPage()
         {
             InitializeComponent();
-          
-            
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        private void Button_BadgeChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
-            LoginAdvFormWindow view = new LoginAdvFormWindow();
-            view.ShowDialog();
-           
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+         
         }
     }
 }

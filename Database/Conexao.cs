@@ -17,9 +17,9 @@ namespace System_Cont.Database
 
         private static string user = "root";
         //Star@pixel4862+!  &   root  & Star@pixel4268!(notebook)
-        private static string password = "Star@pixel4862+!";
+        private static string password = "r@fa-el.20MySqL05";
 
-        private static string dbname = "";
+        private static string dbname = "bd_advocacia";
 
         private static MySqlConnection connection;
 

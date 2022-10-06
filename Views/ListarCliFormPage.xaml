@@ -1,0 +1,58 @@
+﻿<Page x:Class="System_Cont.Views.ListarCliFormPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:System_Cont.Views"
+      mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+      d:DesignHeight="965" d:DesignWidth="1920"
+      Title="ListarCliFormPage">
+
+    <Grid Background="#1E1E1E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Lista de CLientes"
+               Background="#FF1C1C24"
+               Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+               Padding="10" Foreground="White"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" Margin="5,5,5,5" x:Name="dataGridCliente" IsReadOnly="true" Foreground="White"
+                      AutoGenerateColumns="False" AlternatingRowBackground="#1E1E1E" AlternationCount="2" Grid.ColumnSpan="2" Background="#FF1E1E1E" FontSize="22" BorderBrush="#FF1F1F1F" FontStyle="Normal" FontWeight="Normal">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nome do Cliente" Binding="{Binding NomeCliente}" Foreground="White" FontSize="24"/>
+                <DataGridTextColumn Header="Telefone" Binding="{Binding Telefone}" Foreground="White" FontSize="24"/>
+                <DataGridTextColumn Header="Rg" Binding="{Binding Rg}" Foreground="White" FontSize="24"/>
+                <DataGridTextColumn Header="Cpf" Binding="{Binding Cpf}" Foreground="White" FontSize="24"/>
+                <DataGridTextColumn Header="Nacionalidade" Binding="{Binding Nacionalidade}" Foreground="White" FontSize="24"/>
+                <DataGridTextColumn Header="Renda" Binding="{Binding Renda}" Foreground="White" FontSize="24"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Foreground="White" FontSize="24"/>
+                <DataGridTextColumn Header="Local" Binding="{Binding Local}" Foreground="White" FontSize="24"/>
+
+                <DataGridTemplateColumn Header="Ações">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnExcluirCliente" 
+                                        Content="Deletar Cliente"
+                                        ToolTip="Excluir Registro" Click="btnExcluirCliente_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
