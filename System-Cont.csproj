@@ -289,13 +289,25 @@
     <Resource Include="Imagens\iconDinheiro.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Files\Alterar\" />
-    <Folder Include="Files\Finalizado\" />
+    <Folder Include="Files\Change\" />
+    <Folder Include="Files\Finished\" />
     <Folder Include="Files\ListView\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagens\cartoon-woman-pretty.png" />
     <Resource Include="Imagens\IA-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\docx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\pptx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\txt.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />
