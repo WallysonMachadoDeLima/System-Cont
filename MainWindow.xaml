@@ -18,14 +18,8 @@
             <Button x:Name="btnSobre" Content="Sobre" Margin="0 -42 320 0" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="22" Background="Transparent" BorderThickness="0" BorderBrush="White" Cursor="Hand"/>
             <Button x:Name="btnServicos" Content="Serviços" Margin="0 -42 440 0" Width="110" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="22" Background="Transparent" BorderThickness="0" BorderBrush="White" Cursor="Hand"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" >
-            <StackPanel.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFFD749B"/>
-                    <GradientStop Color="#FF281AC8" Offset="1"/>
-                </LinearGradientBrush>
-            </StackPanel.Background>
-            <Image Width="500" Height="500" Source="/Logo Justice.png" RenderTransformOrigin="0.356,1.128" HorizontalAlignment="Left" Margin="200 160 0 0"/>
+        <StackPanel Grid.Row="1" Background="#1E1E1E">
+            
         </StackPanel>
     </Grid>
 </Window>
