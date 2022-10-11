@@ -289,8 +289,8 @@
     <Resource Include="Imagens\iconDinheiro.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Files\Alterar\" />
-    <Folder Include="Files\Finalizado\" />
+    <Folder Include="Files\Change\" />
+    <Folder Include="Files\Finished\" />
     <Folder Include="Files\ListView\" />
   </ItemGroup>
   <ItemGroup>
