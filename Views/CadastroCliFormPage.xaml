@@ -7,8 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="885" d:DesignWidth="1920"
       Title="CadastroCliFormPage" MinHeight="589">
-    
-    <Grid Background="#1E1E1E">
+
+    <Grid Background="#131419">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="510"/>
             <ColumnDefinition Width="830"/>
@@ -25,7 +25,7 @@
                                 <GradientStop Color="#FF202025"/>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <Image HorizontalAlignment="Center" Height="220"  VerticalAlignment="Center" Width="254" Source="/Views/UserICO.png"/>
+                        <Image HorizontalAlignment="Center" Height="250"  VerticalAlignment="Center" Width="250" Source="/Views/UserICO.png"/>
                         <Border.Clip>
                             <RectangleGeometry RadiusX="30" RadiusY="30" Rect="0,0,390,420"/>
                         </Border.Clip>
@@ -40,7 +40,7 @@
                                     <GradientStop Color="#FF2D2D3A"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <TextBox x:Name="txtNomeCli" TextWrapping="Wrap" VerticalAlignment="Center" Width="293" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+                            <TextBox x:Name="txtNomeCli" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
                             <Border.Clip>
                                 <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,400,70"/>
                             </Border.Clip>
@@ -61,7 +61,7 @@
                                     <GradientStop Color="#FF2D2D3A"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <TextBox x:Name="txtRgCli" HorizontalAlignment="Center"  TextWrapping="Wrap" VerticalAlignment="Center" Width="210" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+                            <TextBox x:Name="txtRgCli" HorizontalAlignment="Center"  TextWrapping="Wrap" VerticalAlignment="Center" Width="580" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
                             <Border.Clip>
                                 <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,600,70"/>
                             </Border.Clip>
@@ -77,7 +77,7 @@
                                     <GradientStop Color="#FF2D2D3A"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <TextBox x:Name="txtCpfCli" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+                            <TextBox x:Name="txtCpfCli" TextWrapping="Wrap" VerticalAlignment="Center" Width="580" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
                             <Border.Clip>
                                 <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,600,70"/>
                             </Border.Clip>
@@ -93,7 +93,7 @@
                                     <GradientStop Color="#FF2D2D3A"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <TextBox x:Name="txtRendaCli" TextWrapping="Wrap" VerticalAlignment="Center" Width="258" Height="32" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+                            <TextBox x:Name="txtRendaCli" TextWrapping="Wrap" VerticalAlignment="Center" Width="580" Height="32" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
                             <Border.Clip>
                                 <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,600,70"/>
                             </Border.Clip>
@@ -109,7 +109,7 @@
                                     <GradientStop Color="#FF2D2D3A"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <TextBox x:Name="txtTelefoneCli" TextWrapping="Wrap" VerticalAlignment="Center" Width="240" Height="39" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+                            <TextBox x:Name="txtTelefoneCli" TextWrapping="Wrap" VerticalAlignment="Center" Width="580" Height="39" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
                             <Border.Clip>
                                 <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,600,70"/>
                             </Border.Clip>
@@ -125,7 +125,7 @@
                                     <GradientStop Color="#FF2D2D3A"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <TextBox x:Name="txtEmailCli" HorizontalAlignment="Center"  TextWrapping="Wrap" VerticalAlignment="Center" Width="325" Height="33" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+                            <TextBox x:Name="txtEmailCli" HorizontalAlignment="Center"  TextWrapping="Wrap" VerticalAlignment="Center" Width="580" Height="33" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
                             <Border.Clip>
                                 <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,600,70"/>
                             </Border.Clip>
@@ -146,7 +146,7 @@
                                     <GradientStop Color="#FF2D2D3A"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <TextBox x:Name="txtNacionalidadeCli" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="370" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+                            <TextBox x:Name="txtNacionalidadeCli" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="480" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
                             <Border.Clip>
                                 <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,500,70"/>
                             </Border.Clip>
@@ -162,7 +162,7 @@
                                     <GradientStop Color="#FF2D2D3A"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <TextBox x:Name="txtLocalCli" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="369" Height="36" FontSize="20" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA" Cursor="Arrow"/>
+                            <TextBox x:Name="txtLocalCli" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="480" Height="36" FontSize="20" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA" Cursor="Arrow"/>
                             <Border.Clip>
                                 <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,500,70"/>
                             </Border.Clip>
@@ -172,15 +172,15 @@
                 <StackPanel>
                     <Label Content="Salvar" Foreground="#FF5F5F6E" FontSize="14" Margin="0 20 0 0" Width="150" Height="30" FontWeight="Bold" FontFamily="Arial"/>
                     <StackPanel Margin="0 0 0 0" Height="80">
-                        <Border Margin="0, 0, 0, 0" Width="500" Height="80">
+                        <Border Margin="0, 0, 0, 0" Width="200" Height="80">
                             <Border.Background>
                                 <LinearGradientBrush>
                                     <GradientStop Color="#FF2D2D3A"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <Button x:Name="btnSalvarCliente" Content="+" Height="80" Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="48" Cursor="Hand" Click="btnSalvarCliente_Click" Foreground="{x:Null}"/>
+                            <Button x:Name="btnSalvarCliente" Width="200" Height="80" Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="48" Cursor="Hand" Click="btnSalvarCliente_Click" Foreground="{x:Null}"/>
                             <Border.Clip>
-                                <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,500,70"/>
+                                <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,200,70"/>
                             </Border.Clip>
                         </Border>
                     </StackPanel>
@@ -188,15 +188,15 @@
                 <StackPanel>
                     <Label Content="Limpar" Foreground="#FF5F5F6E" FontSize="14" Margin="0 20 0 0" Width="150" Height="30" FontWeight="Bold" FontFamily="Arial"/>
                     <StackPanel Margin="0 0 0 0" Height="80">
-                        <Border Margin="0, 0, 0, 0" Width="500" Height="80">
+                        <Border Margin="0, 0, 0, 0" Width="200" Height="80">
                             <Border.Background>
                                 <LinearGradientBrush>
                                     <GradientStop Color="#FF2D2D3A"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <Button x:Name="btnLimpar" Content="-" Height="80" Margin="0,0,0,0" Background="{x:Null}" BorderBrush="#FF1566AE" FontSize="48" Cursor="Hand" Click="btnLimpar_Click"/>
+                            <Button x:Name="btnLimpar" Width="200" Height="80" Margin="0,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="48" Cursor="Hand" Click="btnLimpar_Click" Foreground="{x:Null}"/>
                             <Border.Clip>
-                                <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,500,70"/>
+                                <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,200,70"/>
                             </Border.Clip>
                         </Border>
                     </StackPanel>

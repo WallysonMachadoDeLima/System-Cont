@@ -8,7 +8,7 @@
       Title="EscritorioFormPage" Height="865" Width="1380">
 
     <ScrollViewer CanContentScroll="True" Width="1380" Height="700">
-        <Grid Background="#1E1E1E">
+        <Grid Background="#131419">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="*"/>
