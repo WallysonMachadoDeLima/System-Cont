@@ -89,11 +89,7 @@ namespace System_Cont.Views
             };
             Labels = new[] { "Feb 7", "Feb 8", "Feb 9", "Feb 10" };
             Formatter = value => value.ToString();
-            DataContext = this;
-            string imgCartoon = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.ToString()}\\Imagens\\cartoon-woman-pretty.png";
-            string imglogo = $"{Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.ToString()}\\Imagens\\IA-logo.png";
-            
-            
+            DataContext = this;    
         }
     }
 }
