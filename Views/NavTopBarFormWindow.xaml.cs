@@ -22,6 +22,8 @@ namespace System_Cont.Views
         public NavTopBarFormWindow()
         {
             InitializeComponent();
+            fraPaginas.Content = new PagInicialFormPage();
+
         }
 
         private void btnPagInicial_Click(object sender, RoutedEventArgs e)
@@ -41,12 +43,29 @@ namespace System_Cont.Views
 
         private void btnAjuda_Click(object sender, RoutedEventArgs e)
         {
-            fraPaginas.Content = new AjudaFormPage();
+            //fraPaginas.Content = new AjudaFormPage();
+            fraPaginas.Content = new Page1(fraPaginas);
         }
 
         private void btnGestaoDeDados_Click(object sender, RoutedEventArgs e)
         {
             fraPaginas.Content = new GestaoDadosFormPage();
+            //fraPaginas.Content = new Page1(fraPaginas);
+        }
+
+        private void btnForms_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btnListaCliente_Click(object sender, RoutedEventArgs e)
+        {
+            fraPaginas.Content = new ListarCliFormPage();
+        }
+
+        private void btnAcessarPerfil_Click(object sender, RoutedEventArgs e)
+        {
+            fraPaginas.Content = new PerfilAdvFormPage();
         }
     }
 }

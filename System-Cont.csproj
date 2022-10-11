@@ -67,6 +67,12 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="MahApps.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
       <HintPath>packages\MahApps.Metro.2.0.0\lib\net47\MahApps.Metro.dll</HintPath>
     </Reference>
@@ -103,6 +109,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
@@ -117,6 +124,7 @@
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -143,6 +151,12 @@
     </ApplicationDefinition>
     <Compile Include="Database\Conexao.cs" />
     <Compile Include="Helpers\DAOHelper.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\ClienteDAO.cs" />
+    <Compile Include="Models\Despesa.cs" />
+    <Compile Include="Models\DespesaDAO.cs" />
+    <Compile Include="Models\Recebimento.cs" />
+    <Compile Include="Models\RecebimentoDAO.cs" />
     <Compile Include="Views\AjudaFormPage.xaml.cs">
       <DependentUpon>AjudaFormPage.xaml</DependentUpon>
     </Compile>
@@ -161,14 +175,20 @@
     <Compile Include="Views\GestaoDadosFormPage.xaml.cs">
       <DependentUpon>GestaoDadosFormPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ligacaoPythonTest.xaml.cs">
-      <DependentUpon>ligacaoPythonTest.xaml</DependentUpon>
+    <Compile Include="Views\ListarCliFormPage.xaml.cs">
+      <DependentUpon>ListarCliFormPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginAdvFormWindow.xaml.cs">
       <DependentUpon>LoginAdvFormWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\NavTopBarFormWindow.xaml.cs">
       <DependentUpon>NavTopBarFormWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PageDefault.xaml.cs">
+      <DependentUpon>PageDefault.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PagInicialFormPage.xaml.cs">
       <DependentUpon>PagInicialFormPage.xaml</DependentUpon>
@@ -212,15 +232,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\ligacaoPythonTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\LoginAdvFormWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\NavTopBarFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PageDefault.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -261,10 +285,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <Resource Include="Logo Justice.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />

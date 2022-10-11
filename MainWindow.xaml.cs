@@ -24,12 +24,15 @@ namespace System_Cont
         public MainWindow()
         {
             InitializeComponent();
+          
+            
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             LoginAdvFormWindow view = new LoginAdvFormWindow();
             view.ShowDialog();
+           
         }
     }
 }
