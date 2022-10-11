@@ -42,7 +42,7 @@
         </Grid>
 
 
-        <StackPanel Grid.Row="1" Background="#1E1E1E">
+        <StackPanel Grid.Row="1" Background="#131419">
             <Frame x:Name="fraPaginas" NavigationUIVisibility="Hidden" />
         </StackPanel>
 

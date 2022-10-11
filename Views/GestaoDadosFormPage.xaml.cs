@@ -126,7 +126,6 @@ namespace System_Cont.Views
 
                     
                     Listimg.Items.Remove(Listimg.SelectedItem);
-                    MessageBox.Show(imagemSelecionada);
                     File.Move(imagemSelecionada, saida + nomefile);
 
 
