@@ -7,11 +7,13 @@
       mc:Ignorable="d" 
       d:DesignHeight="865" d:DesignWidth="1920"
       Title="GestaoDadosFormPage">
-
+    
+    
     <Grid Background="#FF1F2121">
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
@@ -26,7 +28,7 @@
                         <Border Margin="0, 0, 0, 0" Width="300" Height="765" CornerRadius="0, 50, 0, 0">
                             <Border.Background>
                                 <LinearGradientBrush>
-                                    <GradientStop Color="#FF2D2D3A"/>
+                                    <GradientStop Color="#1C1D31"/>
                                 </LinearGradientBrush>
                             </Border.Background>
 
@@ -56,7 +58,6 @@
 
             </Grid>
 
-           
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="180"/>
@@ -65,31 +66,31 @@
 
                 <Grid Grid.Row="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="220"/>
-                        <ColumnDefinition Width="220"/>
-                        <ColumnDefinition Width="220"/>
+                        <ColumnDefinition Width="280"/>
+                        <ColumnDefinition Width="280"/>
+                        <ColumnDefinition Width="280"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    
+
                     <!--// Button Converter PDF in IMAGEM //-->
                     <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20">    
+                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20">
 
-                                <Border.Background>
+                            <Border.Background>
 
-                                    <LinearGradientBrush StartPoint="0.75,0"
+                                <LinearGradientBrush StartPoint="0.75,0"
                                          EndPoint="0,1">
 
-                                        <GradientStop Color="#DF208F"
+                                    <GradientStop Color="#DF208F"
                                       Offset="0.1" />
 
-                                        <GradientStop Color="#DFCF20"
+                                    <GradientStop Color="#DFCF20"
                                       Offset="0.8" />
 
-                                    </LinearGradientBrush>
-                                </Border.Background>
-                                <Grid>
-                                    <Border 
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Grid>
+                                <Border 
                                         Background="#FFFFFF"
                                         Height="110"
                                         Width="150"
@@ -100,27 +101,27 @@
                                         Margin="10,10,20,30" 
                                     />
 
-                                    <TextBlock
+                                <TextBlock
                                         Foreground="#FFFFFF"
                                         FontFamily="Oswald"
                                         FontSize="20"
                                         VerticalAlignment="Top"
                                         HorizontalAlignment="Left"
                                         Margin="30,20,0,0" ><Run Text="CONVERT"/><LineBreak/><Run Text=""/>
-                                    </TextBlock>
-                                    <TextBlock
+                                </TextBlock>
+                                <TextBlock
                                        Foreground="#FFFFFF"
                                        FontFamily="Oswald"
                                        FontSize="15"
                                        VerticalAlignment="Top"
                                        HorizontalAlignment="Left"
                                        Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
-                                    </TextBlock>
-                                    <Button x:Name ="PDFpIMG" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="PDFpIMG_Click" Cursor="Hand"/>
+                                </TextBlock>
+                                <Button x:Name ="PDFpIMG" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="PDFpIMG_Click" Cursor="Hand"/>
 
-                                </Grid>
-                           
-                            </Border>
+                            </Grid>
+
+                        </Border>
                     </StackPanel>
 
                     <!--// Button XXXXX //-->
@@ -229,289 +230,189 @@
                 </Grid>
 
                 <Grid Grid.Row="1">
+                    <Button Content="DropZone" Width="700" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0" Background="#1C1D31" FontSize="72" Cursor="Hand" BorderBrush="#FF25252F" Click="SelecionarArquivos_Click"/>
+                </Grid>
+            </Grid>
+            
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="280"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="280"/>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="280"/>
                     </Grid.ColumnDefinitions>
 
-                    <Grid Grid.Column="0">
-                        <Button Content="DropZone" Width="700" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0" Background="#FF25252F" FontSize="72" Cursor="Hand" BorderBrush="#FF25252F" Click="SelecionarArquivos_Click"/>
-                    </Grid>
-                    <Grid Grid.Column="1">
-                        <!--// Background //-->
+                    <!--// Button XXXX //-->
+                    <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20">
 
-                        <Border Background="#1C1D31"
-                            CornerRadius="25" 
-                        />
+                            <Border.Background>
 
-                        <!--// Main Grid //-->
-
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="280" />
-                                <ColumnDefinition Width="280" />
-                                <ColumnDefinition Width="280" />
-                                <ColumnDefinition Width="280" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="140" />
-                                <RowDefinition Height="360" />
-                                <RowDefinition Height="170" />
-                                <RowDefinition Height="70" />
-                            </Grid.RowDefinitions>
-
-                            <!--// Panel 1 //-->
-
-                            <Border Grid.Row="1"
-                    Grid.Column="1"
-                    CornerRadius="20"
-                    Margin="20">
-
-                                <Border.Background>
-
-                                    <LinearGradientBrush StartPoint="0.75,0"
+                                <LinearGradientBrush StartPoint="0.75,0"
                                          EndPoint="0,1">
 
-                                        <GradientStop Color="#DF208F"
+                                    <GradientStop Color="#06A4FB"
                                       Offset="0.1" />
 
-                                        <GradientStop Color="#DFCF20"
+                                    <GradientStop Color="#B84EEB"
                                       Offset="0.8" />
 
-                                    </LinearGradientBrush>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Grid>
+                                <Border 
+                                        Background="#FFFFFF"
+                                        Height="180"
+                                        Width="150"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Top"
+                                        CornerRadius="20"
+                                        Opacity="0.3"
+                                        Margin="10,10,30,60" 
+                                    />
 
-                                </Border.Background>
-
-                                <Grid>
-
-                                    <Border Background="#FFFFFF"
-                            Height="200"
-                            Width="180"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top"
-                            CornerRadius="20"
-                            Opacity="0.3"
-                            Margin="10,10,0,0" />
-
-                                    <TextBlock Text="WORKING &#x0a;CAPITAL &#x0a;$392.4K"
-                               Foreground="#FFFFFF"
-                               FontFamily="Oswald"
-                               FontSize="32"
-                               VerticalAlignment="Top"
-                               HorizontalAlignment="Left"
-                               Margin="30,20,0,0" />
-
-                                </Grid>
-
-                            </Border>
-
-                            <!--// Panel 2 //-->
-
-                            <Border Grid.Row="1"
-                    Grid.Column="2"
-                    CornerRadius="20"
-                    Margin="20">
-
-                                <Border.Background>
-
-                                    <LinearGradientBrush StartPoint="0.75,0"
-                                         EndPoint="0,1">
-
-                                        <GradientStop Color="#27BDE9"
-                                      Offset="0.1" />
-
-                                        <GradientStop Color="#ABDB54"
-                                      Offset="0.8" />
-
-                                    </LinearGradientBrush>
-
-                                </Border.Background>
-
-                                <Grid>
-
-                                    <Border Background="#FFFFFF"
-                            Height="200"
-                            Width="180"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top"
-                            CornerRadius="20"
-                            Opacity="0.3"
-                            Margin="10,10,0,0" />
-
-                                    <TextBlock Text="DAILY &#x0a;EXPENSES &#x0a;$15.6K"
-                               Foreground="#FFFFFF"
-                               FontFamily="Oswald"
-                               FontSize="32"
-                               VerticalAlignment="Top"
-                               HorizontalAlignment="Left"
-                               Margin="30,20,0,0" />
-
-                                </Grid>
-
-                            </Border>
-
-                            <!--// Panel 3 //-->
-
-                            <Border Grid.Row="1"
-                    Grid.Column="3"
-                    CornerRadius="20"
-                    Margin="20">
-
-                                <Border.Background>
-
-                                    <LinearGradientBrush StartPoint="0.75,0"
-                                         EndPoint="0,1">
-
-                                        <GradientStop Color="#F96100"
-                                      Offset="0.1" />
-
-                                        <GradientStop Color="#E70B75"
-                                      Offset="0.8" />
-
-                                    </LinearGradientBrush>
-
-                                </Border.Background>
-
-                                <Grid>
-
-                                    <Border Background="#FFFFFF"
-                            Height="200"
-                            Width="180"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top"
-                            CornerRadius="20"
-                            Opacity="0.3"
-                            Margin="10,10,0,0" />
-
-                                    <TextBlock Text="ACCOUNTS &#x0a;PAYABLE &#x0a;$10.7K"
-                               Foreground="#FFFFFF"
-                               FontFamily="Oswald"
-                               FontSize="32"
-                               VerticalAlignment="Top"
-                               HorizontalAlignment="Left"
-                               Margin="30,20,0,0" />
-
-                                </Grid>
-
-                            </Border>
-
-                            <!--// Panel 4 //-->
-
-                            <Border Grid.Row="1"
-                    Grid.Column="4"
-                    CornerRadius="20"
-                    Margin="20">
-
-                                <Border.Background>
-
-                                    <LinearGradientBrush StartPoint="0.75,0"
-                                         EndPoint="0,1">
-
-                                        <GradientStop Color="#06A4FB"
-                                      Offset="0.1" />
-
-                                        <GradientStop Color="#B84EEB"
-                                      Offset="0.8" />
-
-                                    </LinearGradientBrush>
-
-                                </Border.Background>
-
-                                <Grid>
-
-                                    <Border Background="#FFFFFF"
-                            Height="200"
-                            Width="180"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top"
-                            CornerRadius="20"
-                            Opacity="0.3"
-                            Margin="10,10,0,0" />
-
-                                    <TextBlock Text="REVENUE &#x0a;GROWTH &#x0a;$62.8K"
-                               Foreground="#FFFFFF"
-                               FontFamily="Oswald"
-                               FontSize="32"
-                               VerticalAlignment="Top"
-                               HorizontalAlignment="Left"
-                               Margin="30,20,0,0" />
-
-                                </Grid>
-
-                            </Border>
-
-                            <!--// Header //-->
-
-                            <TextBlock Grid.Row="0"
-                       Grid.Column="1"
-                       Grid.ColumnSpan="2"
-                       Text="D E S I G N   T H E   I N T E R F A C E"
-                       Foreground="#A6B8C8"
-                       FontFamily="Roboto"
-                       FontSize="12"
-                       HorizontalAlignment="Right"
-                       VerticalAlignment="Bottom"
-                       Margin="0,0,238,23" />
-
-                            <!--// Footer //-->
-
-                            <Border Grid.Row="3"
-                    Grid.ColumnSpan="6"
-                    CornerRadius="0,0,20,20">
-
-                                <Border.Background>
-
-                                    <LinearGradientBrush StartPoint="0.75,0"
-                                         EndPoint="0,1">
-
-                                        <GradientStop Color="#DF208F"
-                                      Offset="0.1" />
-
-                                        <GradientStop Color="#DFCF20"
-                                      Offset="0.8" />
-
-                                    </LinearGradientBrush>
-
-                                </Border.Background>
-
-                            </Border>
-
-                            <!--// Dock Bar //-->
-
-                            <Grid Grid.Row="2"
-                  Grid.Column="1"
-                  Grid.ColumnSpan="4">
-
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="740" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
+                                <TextBlock
+                                        Foreground="#FFFFFF"
+                                        FontFamily="Oswald"
+                                        FontSize="20"
+                                        VerticalAlignment="Top"
+                                        HorizontalAlignment="Left"
+                                        Margin="30,20,0,0" ><Run Text="CONVERT"/><LineBreak/><Run Text=""/>
+                                </TextBlock>
+                                <TextBlock
+                                       Foreground="#FFFFFF"
+                                       FontFamily="Oswald"
+                                       FontSize="15"
+                                       VerticalAlignment="Top"
+                                       HorizontalAlignment="Left"
+                                       Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
+                                </TextBlock>
+                                <Button x:Name ="XX" Content="BT" Width="70" Height="55" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20, 60" Click="PDFpIMG_Click" Cursor="Hand"/>
 
                             </Grid>
 
-                        </Grid>
+                        </Border>
+                    </StackPanel>
 
-                        <!--// User //-->
+                    <!--// Button XXXXX //-->
+                    <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20" Width="250">
 
-                        <Grid Height="50"
-              Width="50"
-              HorizontalAlignment="Right"
-              VerticalAlignment="Top"
-              Margin="0,30,73,0">
+                            <Border.Background>
 
+                                <LinearGradientBrush StartPoint="0.75,0"
+                                         EndPoint="0,1">
 
+                                    <GradientStop Color="#27BDE9"
+                                      Offset="0.1" />
 
-                        </Grid>
+                                    <GradientStop Color="#ABDB54"
+                                      Offset="0.8" />
 
-                        <!--// Exit Button //-->
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            
+                            <Grid>
+                                <Border 
+                                    Background="#FFFFFF"
+                                    Height="150"
+                                    Width="180"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    CornerRadius="20"
+                                    Opacity="0.3"
+                                    Margin="10,10,20,30" 
+                                />
 
-                    </Grid>
+                                <TextBlock
+                                        Foreground="#FFFFFF"
+                                        FontFamily="Oswald"
+                                        FontSize="20"
+                                        VerticalAlignment="Top"
+                                        HorizontalAlignment="Left"
+                                        Margin="30,20,0,0" ><Run Text="CONVERT"/><LineBreak/><Run Text=""/>
+                                </TextBlock>
+                                <TextBlock
+                                       Foreground="#FFFFFF"
+                                       FontFamily="Oswald"
+                                       FontSize="15"
+                                       VerticalAlignment="Top"
+                                       HorizontalAlignment="Left"
+                                       Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
+                                </TextBlock>
+                                <Button x:Name ="X" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="PDFpIMG_Click" Cursor="Hand"/>
+
+                            </Grid>
+
+                        </Border>
+                    </StackPanel>
+
+                    <!--// Button XXXXX //-->
+                    <!--// 
+                    <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20">
+
+                            <Border.Background>
+
+                                <LinearGradientBrush StartPoint="0.75,0"
+                                         EndPoint="0,1">
+
+                                    <GradientStop Color="#FFD5F900"
+                                      Offset="0.065" />
+
+                                    <GradientStop Color="#E70B75"
+                                      Offset="0.957" />
+
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Grid>
+                                <Border 
+                                    Background="#FFFFFF"
+                                    Height="110"
+                                    Width="150"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    CornerRadius="20"
+                                    Opacity="0.3"
+                                    Margin="10,10,20,30" 
+                                />
+
+                                <TextBlock
+                                        Foreground="#FFFFFF"
+                                        FontFamily="Oswald"
+                                        FontSize="20"
+                                        VerticalAlignment="Top"
+                                        HorizontalAlignment="Left"
+                                        Margin="30,20,0,0" ><Run Text="CONVERT"/><LineBreak/><Run Text=""/>
+                                </TextBlock>
+                                <TextBlock
+                                       Foreground="#FFFFFF"
+                                       FontFamily="Oswald"
+                                       FontSize="15"
+                                       VerticalAlignment="Top"
+                                       HorizontalAlignment="Left"
+                                       Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
+                                </TextBlock>
+                                <Button x:Name ="XXXXX" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="PDFpIMG_Click" Cursor="Hand"/>
+
+                            </Grid>
+
+                        </Border>
+                    </StackPanel>
+                    //-->
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    
                 </Grid>
             </Grid>
         </Grid>
     </Grid>
+    
 </Page>
+    
