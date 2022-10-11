@@ -232,6 +232,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+        <Page Include="Views\ListarCliFormPage.xaml"> 
+      <SubType>Designer</SubType> 
+      <Generator>MSBuild:Compile</Generator> 
+    </Page> 
+
     <Page Include="Views\LoginAdvFormWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -287,6 +292,34 @@
   <ItemGroup>
     <Resource Include="Logo Justice.png" />
   </ItemGroup>
+    <ItemGroup> 
+    <Resource Include="Views\UserICO.png" /> 
+  </ItemGroup> 
+  <ItemGroup> 
+    <Resource Include="Views\useICO.ico" /> 
+  </ItemGroup> 
+  <ItemGroup> 
+    <Resource Include="Imagens\telaUser.jpg" /> 
+  </ItemGroup> 
+  <ItemGroup> 
+    <Resource Include="Views\telaUser.jpg" /> 
+  </ItemGroup> 
+  <ItemGroup> 
+    <Resource Include="Imagens\avatar.jpg" /> 
+  </ItemGroup> 
+  <ItemGroup> 
+    <Resource Include="Imagens\iconDinheiro.png" /> 
+  </ItemGroup> 
+  <ItemGroup> 
+    <Folder Include="Files\Change\" /> 
+    <Folder Include="Files\Finished\" /> 
+    <Folder Include="Files\ListView\" /> 
+  </ItemGroup> 
+  <ItemGroup> 
+    <Resource Include="Imagens\cartoon-woman-pretty.png" /> 
+    <Resource Include="Imagens\IA-logo.png" /> 
+  </ItemGroup> 
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
