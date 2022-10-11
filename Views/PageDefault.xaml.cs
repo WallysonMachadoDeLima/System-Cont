@@ -12,27 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System_Cont.Views;
 
-namespace System_Cont
+namespace System_Cont.Views
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Interação lógica para PageDefault.xam
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageDefault : Page
     {
-        public MainWindow()
+        public PageDefault()
         {
             InitializeComponent();
-          
-            
-        }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            LoginAdvFormWindow view = new LoginAdvFormWindow();
-            view.ShowDialog();
-           
         }
     }
 }
