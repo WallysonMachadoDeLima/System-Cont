@@ -31,6 +31,11 @@ namespace System_Cont.Views
         {
             InitializeComponent();
             RecarregarLista();
+            ImagemViewClick();
+        }
+        public void Image(string local)
+        {
+            
         }
 
         // RECARREGAR LISTA DE ARQUIVOS
@@ -104,6 +109,24 @@ namespace System_Cont.Views
             }
         }
 
+        // VISUALIZAR IMAGEM
+        private void ImagemViewClick()
+        {
+            string saida = Directory.GetCurrentDirectory();
+            saida = saida.Substring(0, saida.Length - 9) + @"Imagens\avatar.jpg";
+
+            imgPhoto.Source = new BitmapImage(new Uri(saida));
+        }
+        private void MostrarImg_Click(object sender, RoutedEventArgs e)
+        {
+            var selected = Listimg.SelectedItem as imgs;
+            imgPhoto.Source = new BitmapImage(new Uri(selected.Local));
+        }
+        private void RemoverView_Click(object sender, RoutedEventArgs e)
+        {
+            ImagemViewClick();
+        }
+
         // BOTÃO EXCLUIR OU MOVER ARQUIVO
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -153,6 +176,14 @@ namespace System_Cont.Views
         {
 
         }
+
+        private void Deletar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 

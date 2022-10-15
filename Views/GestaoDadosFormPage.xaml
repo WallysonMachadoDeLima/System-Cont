@@ -7,8 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="865" d:DesignWidth="1920"
       Title="GestaoDadosFormPage">
-    
-    
+
+
     <Grid Background="#FF1F2121">
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -23,12 +23,33 @@
                     <RowDefinition Height="765"/>
                 </Grid.RowDefinitions>
 
+
+                <Grid Grid.Row="0">
+
+                    <StackPanel >
+
+                        <Border Margin="0, 0, 0, 0" Width="300" Height="100" CornerRadius="0, 0, 50, 0">
+                            <Border.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#0A0D10"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <Grid>
+                                <Button x:Name ="xx" Content="" Width="50" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5, 0, 0,5" Click="Deletar_Click" Cursor="Hand" Background="#FFD90F0F" BorderBrush="#FFD90F0F"/>
+                                <Button x:Name ="xxx" Content="" Width="50" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="60, 0, 0,5" Click="Deletar_Click" Cursor="Hand" Background="#FFD90F0F" BorderBrush="#FFD90F0F"/>
+                                <Button x:Name ="xxxx" Content="" Width="50" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="115, 0, 0,5" Click="MostrarImg_Click" Cursor="Hand" Background="#FF15E939" BorderBrush="#FF15E939"/>
+                            </Grid>
+
+                        </Border>
+                    </StackPanel>
+                </Grid>
+
                 <Grid Grid.Row="1">
                     <StackPanel >
                         <Border Margin="0, 0, 0, 0" Width="300" Height="765" CornerRadius="0, 50, 0, 0">
                             <Border.Background>
                                 <LinearGradientBrush>
-                                    <GradientStop Color="#1C1D31"/>
+                                    <GradientStop Color="#0A0D10"/>
                                 </LinearGradientBrush>
                             </Border.Background>
 
@@ -39,7 +60,7 @@
                                             <GridViewColumn.CellTemplate>
                                                 <DataTemplate>
                                                     <StackPanel FlowDirection="LeftToRight">
-                                                        <Image Source="{Binding Imagem}" Width="150" Height="150"/>
+                                                        <Image Source="{Binding Imagem}" Width="150" Height="150" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                                         <TextBlock Text="{Binding Nome}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                                     </StackPanel>
                                                 </DataTemplate>
@@ -118,7 +139,6 @@
                                        Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
                                 </TextBlock>
                                 <Button x:Name ="PDFpIMG" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="PDFpIMG_Click" Cursor="Hand"/>
-
                             </Grid>
 
                         </Border>
@@ -230,10 +250,10 @@
                 </Grid>
 
                 <Grid Grid.Row="1">
-                    <Button Content="DropZone" Width="700" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0" Background="#1C1D31" FontSize="72" Cursor="Hand" BorderBrush="#FF25252F" Click="SelecionarArquivos_Click"/>
+                    <Button Content="DropZone" Width="700" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0" Background="#0A0D10" FontSize="72" Cursor="Hand" BorderBrush="#FF25252F" Click="SelecionarArquivos_Click"/>
                 </Grid>
             </Grid>
-            
+
             <Grid Grid.Column="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="280"/>
@@ -242,31 +262,17 @@
 
                 <Grid Grid.Row="0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="280"/>
                         <ColumnDefinition Width="300"/>
-                        <ColumnDefinition Width="280"/>
+                        <ColumnDefinition Width="310"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
                     <!--// Button XXXX //-->
                     <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20">
-
-                            <Border.Background>
-
-                                <LinearGradientBrush StartPoint="0.75,0"
-                                         EndPoint="0,1">
-
-                                    <GradientStop Color="#06A4FB"
-                                      Offset="0.1" />
-
-                                    <GradientStop Color="#B84EEB"
-                                      Offset="0.8" />
-
-                                </LinearGradientBrush>
-                            </Border.Background>
+                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20" Background="#0A0D10">
                             <Grid>
                                 <Border 
-                                        Background="#FFFFFF"
+                                        Background="#FF373232"
                                         Height="180"
                                         Width="150"
                                         HorizontalAlignment="Left"
@@ -301,25 +307,11 @@
 
                     <!--// Button XXXXX //-->
                     <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20" Width="250">
+                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20" Width="250" Background="#0A0D10">
 
-                            <Border.Background>
-
-                                <LinearGradientBrush StartPoint="0.75,0"
-                                         EndPoint="0,1">
-
-                                    <GradientStop Color="#27BDE9"
-                                      Offset="0.1" />
-
-                                    <GradientStop Color="#ABDB54"
-                                      Offset="0.8" />
-
-                                </LinearGradientBrush>
-                            </Border.Background>
-                            
                             <Grid>
                                 <Border 
-                                    Background="#FFFFFF"
+                                    Background="#FF373232"
                                     Height="150"
                                     Width="180"
                                     HorizontalAlignment="Left"
@@ -353,66 +345,56 @@
                     </StackPanel>
 
                     <!--// Button XXXXX //-->
-                    <!--// 
-                    <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20">
 
-                            <Border.Background>
+                    <StackPanel Grid.Column="2" VerticalAlignment="Center">
 
-                                <LinearGradientBrush StartPoint="0.75,0"
-                                         EndPoint="0,1">
+                        <Grid VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="30"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
+                                <Border CornerRadius="5" Margin="00, 0, 0, 0" Width="50" Height="50" Background="#DFCF20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                <Border CornerRadius="5" Margin="00, 70, 0, 0" Width="50" Height="50" Background="#B84EEB" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                <Border CornerRadius="5" Margin="0, 140, 0, 0" Width="50" Height="50" Background="#DF208F" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                            </Grid>
 
-                                    <GradientStop Color="#FFD5F900"
-                                      Offset="0.065" />
-
-                                    <GradientStop Color="#E70B75"
-                                      Offset="0.957" />
-
-                                </LinearGradientBrush>
-                            </Border.Background>
-                            <Grid>
-                                <Border 
-                                    Background="#FFFFFF"
-                                    Height="110"
-                                    Width="150"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Top"
-                                    CornerRadius="20"
-                                    Opacity="0.3"
-                                    Margin="10,10,20,30" 
-                                />
-
-                                <TextBlock
-                                        Foreground="#FFFFFF"
-                                        FontFamily="Oswald"
-                                        FontSize="20"
-                                        VerticalAlignment="Top"
-                                        HorizontalAlignment="Left"
-                                        Margin="30,20,0,0" ><Run Text="CONVERT"/><LineBreak/><Run Text=""/>
-                                </TextBlock>
-                                <TextBlock
-                                       Foreground="#FFFFFF"
-                                       FontFamily="Oswald"
-                                       FontSize="15"
-                                       VerticalAlignment="Top"
-                                       HorizontalAlignment="Left"
-                                       Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
-                                </TextBlock>
-                                <Button x:Name ="XXXXX" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="PDFpIMG_Click" Cursor="Hand"/>
+                            <Grid Grid.Column="2">
+                                <Border CornerRadius="5" Margin="0, 0, 5, 0" Width="50" Height="50" Background="#06A4FB" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                                <Border CornerRadius="5" Margin="0, 70, 5, 0" Width="50" Height="50" Background="#27BDE9" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                                <Border CornerRadius="5" Margin="0, 140, 5, 0" Width="50" Height="50" Background="#ABDB54" HorizontalAlignment="Right" VerticalAlignment="Top"/>
 
                             </Grid>
 
-                        </Border>
+                        </Grid>
+
+                        <Grid>
+
+                        </Grid>
                     </StackPanel>
-                    //-->
+
                 </Grid>
 
                 <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Grid Grid.Row="0">
+                        <Image Margin="20" x:Name="imgPhoto"  Stretch="Fill" Grid.Column="1" />
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Button x:Name="bnt_tirar" Content="REMOVER" FontSize="38" Width="500" Height="80" Click="RemoverView_Click"/>
+                    </Grid>
                     
                 </Grid>
             </Grid>
         </Grid>
     </Grid>
-    
+
 </Page>
     
