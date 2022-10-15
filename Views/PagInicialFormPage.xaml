@@ -34,16 +34,9 @@
                                 <TextBlock Text="Lost" Foreground="White" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="SemiBold" FontSize="14" Margin="5 0 20 0" />
                             </StackPanel>
                         </Grid>
+                        
+                        <!--Codigo Grafico-->
 
-                        <lvc:CartesianChart Series="{Binding SeriesCollection}" Foreground="Black" Margin="10 0" Height="200" >
-                            <lvc:CartesianChart.AxisX>
-                                <lvc:Axis Labels="{Binding Labels}" Separator="{x:Static lvc:DefaultAxes.CleanSeparator}" />
-                            </lvc:CartesianChart.AxisX>
-
-                            <lvc:CartesianChart.AxisY>
-                                <lvc:Axis LabelFormatter="{Binding Formatter}" />
-                            </lvc:CartesianChart.AxisY>
-                        </lvc:CartesianChart>
                         </StackPanel>
                 </materialDesign:Card>
 
