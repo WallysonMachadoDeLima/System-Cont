@@ -3,14 +3,256 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:System_Cont.Views"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="CadastroAdvFormWindow" Height="750" Width="650" Padding="3,3,3,3" ResizeMode="NoResize" Background="{x:Null}">
+        Title="CadastroAdvFormWindow" 
+        Height="645" 
+        Width="875" 
+        Padding="3,3,3,3" 
+        ResizeMode="NoResize" 
+        Background="Transparent"
+        FontFamily="{DynamicResource MaterialDesignFont}">
     
+    <Grid Margin="20">
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="30"
+                              ShadowDepth="1"
+                              Opacity="0.4"/>
 
-    <Grid Visibility="Visible">
+        </Grid.Effect>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.22*"/>
+        </Grid.ColumnDefinitions>
         
+        <!--Left Seletion-->
+        <Border Background="#0A0D10"
+                CornerRadius="10 0 0 10"
+                ClipToBounds="True">
+
+            <Border.Clip>
+                <RectangleGeometry Rect="0 0 400 605"
+                                   RadiusX="10"
+                                   RadiusY="10"/>
+            </Border.Clip>
+
+            <Grid>
+                <!--Titles-->
+                <StackPanel Margin="0 120 0 0"
+                        VerticalAlignment="Top">
+
+                    <TextBlock FontSize="46"
+                           FontWeight="Light"
+                           Text="Sign up"
+                           Foreground="#ffffff"
+                           TextAlignment="Center"/>
+
+                    <TextBlock FontWeight="Light"
+                           FontSize="16"
+                           Foreground="#ffffff"
+                           TextAlignment="Center"
+                           Text="to use all features"
+                           Margin="0 15 0 3"/>
+
+                    <TextBlock FontSize="16"
+                           FontWeight="Light"
+                           Text="of the application"
+                           Foreground="#ffffff"
+                           TextAlignment="Center"/>
+                </StackPanel>
+
+                <!--Ellipses-->
+                <Ellipse Width="500" 
+                     Height="500" 
+                     VerticalAlignment="Bottom"
+                     Fill="#5eccb4"
+                     Margin="50 0 0 -200"
+                     Opacity="0.6"/>
+
+                <Ellipse Width="300" 
+                     Height="300" 
+                     VerticalAlignment="Bottom"
+                     Fill="#5bcbb3"
+                     Margin="-450 0 0 30"
+                     Opacity="0.3"/>
+
+                <Ellipse Width="400" 
+                     Height="400" 
+                     VerticalAlignment="Bottom"
+                     Fill="#5eccb4"
+                     Margin="-320 0 0 -120"
+                     Opacity="0.3"/>
+
+                <Ellipse Width="250" 
+                     Height="250" 
+                     VerticalAlignment="Bottom"
+                     Fill="#5bc9b2"
+                     Margin="-380 0 0 -120"/>
+
+                <Ellipse Width="400" 
+                     Height="400" 
+                     VerticalAlignment="Bottom"
+                     Fill="#5eccb4"
+                     Margin="280 0 0 -70"
+                     Opacity="0.8"/>
+
+                <!--Icon-->
+                <Border Background="#fdfdfd"
+                        CornerRadius="100"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        Height="110"
+                        Width="110"
+                        Margin="0 0 0 80">
+
+                    <Grid>
+                        <!--Colored Ellipses-->
+                        <Ellipse Width="100"
+                                 Height="100"
+                                 StrokeThickness="4">
+                            <Ellipse.Stroke>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#e27c53" 
+                                                  Offset="0.15"/>
+
+                                    <GradientStop Color="#dca530" 
+                                                  Offset="0.2"/>
+
+                                    <GradientStop Color="#8bb356" 
+                                                  Offset="0.3"/>
+
+                                    <GradientStop Color="#3bb799" 
+                                                  Offset="0.4"/>
+
+                                    <GradientStop Color="#67cbee" 
+                                                  Offset="0.5"/>
+
+                                    <GradientStop Color="#3699db" 
+                                                  Offset="0.6"/>
+
+                                    <GradientStop Color="#9264aa" 
+                                                  Offset="0.8"/>
+
+                                    <GradientStop Color="#6e94de" 
+                                                  Offset="0.9"/>
+
+                                </LinearGradientBrush>
+                            </Ellipse.Stroke>
+                        </Ellipse>
+
+                        <!--Colored Tick Icon-->
+                        <materialDesign:PackIcon Kind="Tick"
+                                                 Width="70"
+                                                 Height="70"
+                                                 HorizontalAlignment="Center"
+                                                 VerticalAlignment="Center">
+
+                            <materialDesign:PackIcon.Foreground>
+                                <LinearGradientBrush StartPoint="0,1">
+                                    <GradientStop Color="#e27c53" 
+                                                  Offset="0.1"/>
+
+                                    <GradientStop Color="#dca530" 
+                                                  Offset="0.3"/>
+
+                                    <GradientStop Color="#3bb799" 
+                                                  Offset="0.5"/>
+
+                                    <GradientStop Color="#67cbee" 
+                                                  Offset="0.7"/>
+
+                                    <GradientStop Color="#3699db" 
+                                                  Offset="0.8"/>
+                                </LinearGradientBrush>
+                            </materialDesign:PackIcon.Foreground>
+                        </materialDesign:PackIcon>
+                    </Grid>
+                </Border>
+
+
+            </Grid>
+        </Border>
+
+        <!--Right Selecion-->
+        <Border Grid.Column="1"
+                        Background="#ffffff"
+                        CornerRadius="0 10 10 0"
+                        MouseDown="Border_MouseDown">
+
+            <Grid>
+                <!--Close Icon-->
+                <materialDesign:PackIcon Kind="Close"
+                                                 VerticalAlignment="Top"
+                                                 Width="20"
+                                                 Height="20"
+                                                 HorizontalAlignment="Right"
+                                                 Opacity="0.3"
+                                                 Margin="0 13 14 0"/>
+
+                <!--Inputs-->
+                <StackPanel VerticalAlignment="Center"
+                                    Margin="75 0">
+
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
+                                       materialDesign:HintAssist.Hint="Username"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       BorderThickness="0 0 0 1.5"/>
+
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
+                                       materialDesign:HintAssist.Hint="Email"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       Margin="0 27"
+                                       BorderThickness="0 0 0 1.5"/>
+
+                    <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                                       materialDesign:HintAssist.Hint="Password"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       BorderThickness="0 0 0 1.5"/>
+
+                    <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                                       materialDesign:HintAssist.Hint="Repeat Password"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       Margin="0 27 0 0"
+                                       BorderThickness="0 0 0 1.5"/>
+
+                    <CheckBox Margin="0 40 0 20" FontSize="13">
+                        <TextBlock>
+                                    <Run Foreground="#b6b6b6">By sihning I agree with</Run>
+                                    <Run Foreground="#07bf96">terms and conditions</Run>
+                        </TextBlock>
+                    </CheckBox>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="Sign up"
+                                        Background="#05b790"
+                                        Foreground="#ffffff"
+                                        FontSize="18"
+                                        Width="120"
+                                        Height="45"
+                                        materialDesign:ButtonAssist.CornerRadius="22"/>
+
+                        <Button Content="or Login"                                      
+                                        FontSize="16"
+                                        Width="120"
+                                        Height="45"
+                                        Foreground="#05b790"
+                                        Margin="5 0 0 0"
+                                        Style="{StaticResource MaterialDesignFlatButton}"
+                                        materialDesign:ButtonAssist.CornerRadius="22"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+
+    <!--
         <Grid.RowDefinitions>
             <RowDefinition Height="180" OverridesDefaultStyle="False">
                 <RowDefinition.Style>
@@ -31,6 +273,6 @@
 
             <Button x:Name="Cadastrar" Content="Cadastrar-se" FontSize="22" Padding="10" Width="180" Height="50" Margin="0 50 0 0" Cursor="Hand"/>
             <Button x:Name="btnHaveLog" Cursor="Hand" Content="Já possuo uma conta" FontSize="17" Padding="10" Width="200" Height="40" Margin="0 10 0 0" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}"/>
-        </StackPanel>
-    </Grid>
+        </StackPanel>       
+        -->
 </Window>
