@@ -24,16 +24,16 @@ namespace System_Cont.Views
             InitializeComponent();
         }
 
-        private void btnNoAccount_Click(object sender, RoutedEventArgs e)
-        {
-            CadastroAdvFormWindow view = new CadastroAdvFormWindow();
-            view.ShowDialog();
-        }
-
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             NavTopBarFormWindow view = new NavTopBarFormWindow();
             view.ShowDialog();
         }
+
+        private void btnNoAccount_Click(object sender, RoutedEventArgs e)
+        {
+            CadastroAdvFormWindow view = new CadastroAdvFormWindow();
+            view.ShowDialog();
+        }      
     }
 }

@@ -18,5 +18,11 @@ namespace System_Cont.Views
             }
 
         }
+
+        private void btnHaveLog_Click(object sender, RoutedEventArgs e)
+        {
+            NavTopBarFormWindow view = new NavTopBarFormWindow();
+            view.ShowDialog();
+        }
     }
 }

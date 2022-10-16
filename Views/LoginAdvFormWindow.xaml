@@ -3,35 +3,254 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:System_Cont.Views"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="LoginAdvFormWindow" Height="600" Width="500" ResizeMode="NoResize">
-    <Grid Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="180" OverridesDefaultStyle="False" >
-                <RowDefinition.Style>
-                    <Style/>
-                </RowDefinition.Style>
-            </RowDefinition>
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        Title="LoginAdvFormWindow" 
+        Height="545" 
+        Width="775" 
+        Background="Transparent"
+        ResizeMode="NoResize">
+
+    <Grid>
+        <!--Grid Definição de Efeitos-->
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="30"
+                              ShadowDepth="1"
+                              Opacity="0.4"/>
+
+        </Grid.Effect>
+        
+        <!--Grid Definição de Colunas-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.22*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Left Seleção-->
+        <Border Background="#0A0D10"
+                CornerRadius="10 0 0 0"
+                ClipToBounds="True" Margin="0,0,0,0">
+
+            <Border.Clip>
+                <RectangleGeometry Rect="0 0 400 605"
+                                   RadiusX="0"
+                                   RadiusY="0"/>
+            </Border.Clip>
+
+            <Grid>
+                <!--Titulos-->
+                <StackPanel Margin="0 120 0 0"
+                        VerticalAlignment="Top">
+
+                    <TextBlock FontSize="46"
+                           FontWeight="Light"
+                           Text="Welcome back!"
+                           Foreground="#ffffff"
+                           TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="-0.907"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="-0.484"/>
+                            </TransformGroup>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+
+                    <TextBlock FontWeight="Light"
+                           FontSize="16"
+                           Foreground="#ffffff"
+                           TextAlignment="Center"
+                           Text="Por favor, preencha seus dados"
+                           Margin="0 15 0 3"/>
+
+                    <TextBlock FontSize="16"
+                           FontWeight="Light"
+                           Text="de login para prosseguir"
+                           Foreground="#ffffff"
+                           TextAlignment="Center"/>
+                </StackPanel>
+
+                <!--Ellipses-->
+                <Ellipse Width="500" 
+                     Height="500" 
+                     VerticalAlignment="Bottom"
+                     Fill="#0B4357"
+                     Margin="50 0 0 -200"
+                     Opacity="0.6"/>
+
+                <Ellipse Width="300" 
+                     Height="300" 
+                     VerticalAlignment="Bottom"
+                     Fill="#0B4357"
+                     Margin="-450 0 0 30"
+                     Opacity="0.3"/>
+
+                <Ellipse Width="400" 
+                     Height="400" 
+                     VerticalAlignment="Bottom"
+                     Fill="#0B4357"
+                     Margin="-320 0 0 -120"
+                     Opacity="0.3"/>
+
+                <Ellipse Width="250" 
+                     Height="250" 
+                     VerticalAlignment="Bottom"
+                     Fill="#0B4357"
+                     Margin="-380 0 0 -120"/>
+
+                <Ellipse Width="400" 
+                     Height="400" 
+                     VerticalAlignment="Bottom"
+                     Fill="#0B4357"
+                     Margin="280 0 0 -70"
+                     Opacity="0.8"/>
+
+                <!--Iconr-->
+                <Border Background="#fdfdfd"
+                        CornerRadius="100"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        Height="110"
+                        Width="110"
+                        Margin="0 0 0 80">
+
+                    <Grid>
+                        <!--Coloração Ellipses-->
+                        <Ellipse Width="100"
+                                 Height="100"
+                                 StrokeThickness="4">
+                            <Ellipse.Stroke>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#e27c53" 
+                                                  Offset="0.15"/>
+
+                                    <GradientStop Color="#dca530" 
+                                                  Offset="0.2"/>
+
+                                    <GradientStop Color="#8bb356" 
+                                                  Offset="0.3"/>
+
+                                    <GradientStop Color="#3bb799" 
+                                                  Offset="0.4"/>
+
+                                    <GradientStop Color="#67cbee" 
+                                                  Offset="0.5"/>
+
+                                    <GradientStop Color="#3699db" 
+                                                  Offset="0.6"/>
+
+                                    <GradientStop Color="#9264aa" 
+                                                  Offset="0.8"/>
+
+                                    <GradientStop Color="#6e94de" 
+                                                  Offset="0.9"/>
+
+                                </LinearGradientBrush>
+                            </Ellipse.Stroke>
+                        </Ellipse>
+
+                        <!--Coloração Tick Icone-->
+                        <materialDesign:PackIcon Kind="Tick"
+                                                 Width="70"
+                                                 Height="70"
+                                                 HorizontalAlignment="Center"
+                                                 VerticalAlignment="Center">
+
+                            <materialDesign:PackIcon.Foreground>
+                                <LinearGradientBrush StartPoint="0,1">
+                                    <GradientStop Color="#e27c53" 
+                                                  Offset="0.1"/>
+
+                                    <GradientStop Color="#dca530" 
+                                                  Offset="0.3"/>
+
+                                    <GradientStop Color="#3bb799" 
+                                                  Offset="0.5"/>
+
+                                    <GradientStop Color="#67cbee" 
+                                                  Offset="0.7"/>
+
+                                    <GradientStop Color="#3699db" 
+                                                  Offset="0.8"/>
+                                </LinearGradientBrush>
+                            </materialDesign:PackIcon.Foreground>
+                        </materialDesign:PackIcon>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+
+        <!--Right Seleção-->
+        <Border Grid.Column="1"
+                        Background="#ffffff"
+                        CornerRadius="0 0 0 0">
+
+            <Grid>
+                <!--Inputs do Usuário-->
+                <StackPanel VerticalAlignment="Center"
+                                    Margin="75 0">
+
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
+                                       materialDesign:HintAssist.Hint="Username"
+                                       x:Name="txtNomeCompleto"
+                                       Margin="0 0 0 30"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       BorderThickness="0 0 0 1.5"/>
 
 
 
-        <StackPanel Grid.Row="0">
-            <Label Content="Login" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 60 0 0" UseLayoutRounding="False" RenderTransformOrigin="1,0" BorderThickness="1,1,1,1" FontWeight="Bold" FontFamily="Bahnschrift SemiBold" Width="110"/>
-        </StackPanel>
-        <StackPanel Grid.Row="1">
-            <Label Content="Usuário:" FontSize="20" Width="100" Height="40" Margin="70 30 0 0" HorizontalAlignment="Left" />
-            <TextBox x:Name="txtNomeCompleto" Padding="3" Width="350" Margin="0 -5 0 0" BorderThickness="1,1,1,1" Height="32" FontSize="17" Cursor="Arrow"/>
+                    <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                                       materialDesign:HintAssist.Hint="Password"
+                                       x:Name="txtSenha"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       BorderThickness="0 0 0 1.5"/>
 
-            <Label Content="Senha:" FontSize="20" Width="100" Height="40" Margin="70 15 0 0" HorizontalAlignment="Left" />
-            <TextBox x:Name="txtSenha" Padding="3" Width="350" Margin="0 -5 0 0" BorderThickness="1,1,1,1" Height="32" FontSize="17" Cursor="Arrow"/>
 
-            <Button x:Name="btnLogin" Content="Login" FontSize="22" Padding="10" Width="180" Height="50" Margin="0 50 0 0" Cursor="Hand" Click="btnLogin_Click"/>
+                    <CheckBox Margin="0 40 0 20" FontSize="13">
+                        <TextBlock>
+                            <Run Foreground="#b6b6b6">Lembrar Senha</Run>
+                        </TextBlock>
+                    </CheckBox>
 
-            <Button x:Name="btnNoAccount" Content="Não possuo uma conta" FontSize="17" Padding="10" Width="200" Height="45" Margin="0 40 0 0" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}" Click="btnNoAccount_Click" Cursor="Hand"/>
-        </StackPanel>
+                    <!--Buttons-->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Login"
+                                x:Name="btnLogin"
+                                Cursor="Hand"
+                                Margin="0 20 0 0"
+                                BorderBrush="#0B4357"
+                                Background="#0B4357"
+                                Foreground="#ffffff"
+                                FontSize="18"
+                                Width="120"
+                                Height="45"
+                               materialDesign:ButtonAssist.CornerRadius="22" 
+                                Click="btnLogin_Click"/>
+
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="btnNoAccount" 
+                                Content="Não possuo uma conta" 
+                                FontSize="15" 
+                                Padding="10" 
+                                Width="200" 
+                                Height="45" 
+                                Margin="0 30 0 0" 
+                                Background="{x:Null}" 
+                                Foreground="Black" 
+                                BorderBrush="{x:Null}" 
+                                Click="btnNoAccount_Click" 
+                                Cursor="Hand"/>
+
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
