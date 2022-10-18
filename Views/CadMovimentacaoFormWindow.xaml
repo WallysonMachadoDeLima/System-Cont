@@ -3,15 +3,142 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:System_Cont.Views"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="CadMovimentacaoFormWindow" Height="450" Width="800" ResizeMode="NoResize" Background="#FF131419">
+        Title="CadMovimentacaoFormWindow" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        
+         
+        <!--Codigo Em Desenvolvimento-->
+
+        <Border Grid.Column="0" Background="#ffffff" CornerRadius="0 0 0 0">
+
+            <Grid>
+                <!--Inputs do Usuário-->
+
+                <Label Content="Adicionar Recebimento" FontWeight="Light" HorizontalAlignment="Center" FontSize="28" Foreground="Black"/>
+                    
+                <StackPanel VerticalAlignment="Center"
+                                    Margin="75 0">
+
+                  
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
+                                       materialDesign:HintAssist.Hint="Nome"
+                                       x:Name="a"
+                                       Margin="0 0 0 30"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       BorderThickness="0 0 0 1.5"/>
+
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
+                                       materialDesign:HintAssist.Hint="Descrição"
+                                       x:Name="aa"
+                                       Margin="0 0 0 30"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       BorderThickness="0 0 0 1.5"/>
+
+
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
+                                       materialDesign:HintAssist.Hint="Valor"
+                                       x:Name="aaaaa"
+                                       Margin="0 0 0 30"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       BorderThickness="0 0 0 1.5"/>
+
+                    <DatePicker x:Name="sasdf" Background="White" Width="247" Height="31" Margin="0 0 0 0"/>
+
+
+
+                    <!--Buttons-->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Salvar"
+                                x:Name="aaa"
+                                Cursor="Hand"
+                                Margin="0 20 0 0"
+                                BorderBrush="#0B4357"
+                                Background="#0B4357"
+                                Foreground="#ffffff"
+                                FontSize="18"
+                                Width="120"
+                                Height="45"
+                                materialDesign:ButtonAssist.CornerRadius="22" />
+
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+        <Border Grid.Column="1" Background="#ffffff" CornerRadius="0 0 0 0">
+
+            <Grid>
+
+                <Label Content="Adicionar Despesa" FontWeight="Light" HorizontalAlignment="Center" FontSize="28" Foreground="Black"/>
+
+                <!--Inputs do Usuário-->
+                <StackPanel VerticalAlignment="Center"
+                                    Margin="75 0">
+
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
+                                       materialDesign:HintAssist.Hint="Nome"
+                                       x:Name="sss"
+                                       Margin="0 0 0 30"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       BorderThickness="0 0 0 1.5"/>
+
+
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
+                                       materialDesign:HintAssist.Hint="Descrição"
+                                       x:Name="s"
+                                       Margin="0 0 0 30"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"                            
+                                       BorderThickness="0 0 0 1.5"/>
+
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
+                                       materialDesign:HintAssist.Hint="Valor"
+                                       x:Name="ss"
+                                       Margin="0 0 0 30"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       BorderThickness="0 0 0 1.5"/>
+
+                    <DatePicker x:Name="dtpDespesa" Background="White" Width="247" Height="31" Margin="0 0 0 0"/>
+
+
+
+
+                    <!--Buttons-->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Salvar"
+                                x:Name="ssss"
+                                Cursor="Hand"
+                                Margin="0 20 0 0"
+                                BorderBrush="#0B4357"
+                                Background="#0B4357"
+                                Foreground="#ffffff"
+                                FontSize="18"
+                                Width="120"
+                                Height="45"
+                                materialDesign:ButtonAssist.CornerRadius="22"/>
+
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+
+        <!-- Codigo Funcional
 
         <Grid Grid.Column="0">
             <StackPanel>
@@ -50,6 +177,8 @@
                 <Button x:Name="btnSalvarDes" Content="Salvar" FontSize="18" Width="108" Margin="0 45 0 0" Height="35" Click="btnSalvarDes_Click" Cursor="Hand"/>
             </StackPanel>
         </Grid>
+        
+        -->
 
     </Grid>
 </Window>
