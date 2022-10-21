@@ -59,9 +59,9 @@ namespace System_Cont.Views
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+        }  
 
-        private void btnSalvarRec_Click(object sender, RoutedEventArgs e)
+        private void btnSalvarRec_Click_1(object sender, RoutedEventArgs e)
         {
             _recebimento.DescricaoRec = txtDescricaoRec.Text;
             _recebimento.ValorRec = Convert.ToDouble(txtValorRec.Text);
@@ -71,8 +71,8 @@ namespace System_Cont.Views
             {
                 var dao = new RecebimentoDAO();
 
-                    dao.Insert(_recebimento);
-                    MessageBox.Show("Registro Salvo com Sucesso!");
+                dao.Insert(_recebimento);
+                MessageBox.Show("Registro Salvo com Sucesso!");
 
             }
             catch (Exception ex)
@@ -81,7 +81,7 @@ namespace System_Cont.Views
             }
         }
 
-        private void btnSalvarDes_Click(object sender, RoutedEventArgs e)
+        private void btnSalvarDes_Click_1(object sender, RoutedEventArgs e)
         {
             _despesa.DescricaoDes = txtDescricaoDes.Text;
             _despesa.ValorDes = Convert.ToDouble(txtValorDes.Text);

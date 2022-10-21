@@ -13,24 +13,17 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
-         
-        <!--Codigo Em Desenvolvimento-->
 
         <Border Grid.Column="0" Background="#ffffff" CornerRadius="0 0 0 0">
-
             <Grid>
                 <!--Inputs do Usuário-->
-
                 <Label Content="Adicionar Recebimento" FontWeight="Light" HorizontalAlignment="Center" FontSize="28" Foreground="Black"/>
-                    
-                <StackPanel VerticalAlignment="Center"
-                                    Margin="75 0">
 
-                  
+                <StackPanel VerticalAlignment="Center" Margin="75 0">
+                    
                     <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
                                        materialDesign:HintAssist.Hint="Nome"
-                                       x:Name="a"
+                                       x:Name="txtNomeRec"
                                        Margin="0 0 0 30"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
@@ -38,7 +31,7 @@
 
                     <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
                                        materialDesign:HintAssist.Hint="Descrição"
-                                       x:Name="aa"
+                                       x:Name="txtDescricaoRec"
                                        Margin="0 0 0 30"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
@@ -47,20 +40,19 @@
 
                     <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
                                        materialDesign:HintAssist.Hint="Valor"
-                                       x:Name="aaaaa"
+                                       x:Name="txtValorRec"
+                                       Tag="Valor R$"
                                        Margin="0 0 0 30"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
                                        BorderThickness="0 0 0 1.5"/>
 
-                    <DatePicker x:Name="sasdf" Background="White" Width="247" Height="31" Margin="0 0 0 0"/>
-
-
+                    <DatePicker x:Name="dtpRecebimento" Background="White" Width="237" Height="31" Margin="0 0 0 0"/>
 
                     <!--Buttons-->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button Content="Salvar"
-                                x:Name="aaa"
+                                x:Name="btnSalvarRec"
                                 Cursor="Hand"
                                 Margin="0 20 0 0"
                                 BorderBrush="#0B4357"
@@ -69,27 +61,23 @@
                                 FontSize="18"
                                 Width="120"
                                 Height="45"
-                                materialDesign:ButtonAssist.CornerRadius="22" />
+                                materialDesign:ButtonAssist.CornerRadius="22" Click="btnSalvarRec_Click_1" />
 
                     </StackPanel>
                 </StackPanel>
             </Grid>
         </Border>
 
-
         <Border Grid.Column="1" Background="#ffffff" CornerRadius="0 0 0 0">
-
             <Grid>
-
                 <Label Content="Adicionar Despesa" FontWeight="Light" HorizontalAlignment="Center" FontSize="28" Foreground="Black"/>
-
                 <!--Inputs do Usuário-->
                 <StackPanel VerticalAlignment="Center"
                                     Margin="75 0">
 
                     <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
                                        materialDesign:HintAssist.Hint="Nome"
-                                       x:Name="sss"
+                                       x:Name="txtNomeDes"
                                        Margin="0 0 0 30"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
@@ -98,7 +86,7 @@
 
                     <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
                                        materialDesign:HintAssist.Hint="Descrição"
-                                       x:Name="s"
+                                       x:Name="txtDescricaoDes"
                                        Margin="0 0 0 30"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"                            
@@ -106,21 +94,19 @@
 
                     <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
                                        materialDesign:HintAssist.Hint="Valor"
-                                       x:Name="ss"
+                                       x:Name="txtValorDes"
+                                       Tag="Valor R$"                                       
                                        Margin="0 0 0 30"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
                                        BorderThickness="0 0 0 1.5"/>
 
-                    <DatePicker x:Name="dtpDespesa" Background="White" Width="247" Height="31" Margin="0 0 0 0"/>
-
-
-
+                    <DatePicker x:Name="dtpDespesa" Background="White" Width="237" Height="31" Margin="0 0 0 0"/>
 
                     <!--Buttons-->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button Content="Salvar"
-                                x:Name="ssss"
+                                x:Name="btnSalvarDes"
                                 Cursor="Hand"
                                 Margin="0 20 0 0"
                                 BorderBrush="#0B4357"
@@ -129,56 +115,11 @@
                                 FontSize="18"
                                 Width="120"
                                 Height="45"
-                                materialDesign:ButtonAssist.CornerRadius="22"/>
+                                materialDesign:ButtonAssist.CornerRadius="22" Click="btnSalvarDes_Click_1"/>
 
                     </StackPanel>
                 </StackPanel>
             </Grid>
         </Border>
-
-
-
-        <!-- Codigo Funcional
-
-        <Grid Grid.Column="0">
-            <StackPanel>
-                <TextBlock Text="Adicionar Recebimento" FontSize="28" HorizontalAlignment="Center" Margin="0 20 0 0">
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FFFD749B"/>
-                            <GradientStop Color="#FF281AC8" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Foreground>
-                </TextBlock>
-
-                <TextBox x:Name="txtDescricaoRec" Style="{StaticResource Estilo_Placeholder}" Tag="Descrição" FontSize="19" Background="White" Margin="0 70 0 0" Width="316" Height="31" Cursor="Arrow"/>
-                <TextBox x:Name="txtValorRec" Style="{StaticResource Estilo_Placeholder}" Tag="Valor R$" FontSize="19" Background="White" Margin="0 40 0 0" Width="316" Height="31"/>
-                <DatePicker x:Name="dtpRecebimento"  Background="White" Width="316" Height="31" Margin="0 40 0 0"/>
-
-                <Button x:Name="btnSalvarRec" Content="Salvar" FontSize="18" Width="108" Margin="0 45 0 0" Height="35" Click="btnSalvarRec_Click"/>
-            </StackPanel>
-        </Grid>
-
-        <Grid Grid.Column="1">
-            <StackPanel>
-                <TextBlock Text="Adicionar Despesa" FontSize="28" HorizontalAlignment="Center" Margin="0 20 0 0">
-                    <TextBlock.Foreground>
-                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                            <GradientStop Color="#FFFD749B"/>
-                            <GradientStop Color="#FF281AC8" Offset="1"/>
-                        </LinearGradientBrush>
-                    </TextBlock.Foreground>
-                </TextBlock>
-
-                <TextBox x:Name="txtDescricaoDes" Style="{StaticResource Estilo_Placeholder}" Tag="Descrição" FontSize="19" Background="White" Margin="0 70 0 0" Width="316" Height="31" FontWeight="Normal" Visibility="Visible"/>
-                <TextBox x:Name="txtValorDes" Style="{StaticResource Estilo_Placeholder}" Tag="Valor R$" FontSize="19" Background="White" Margin="0 40 0 0" Width="316" Height="31"/>
-                <DatePicker x:Name="dtpDespesa" Background="White" Width="316" Height="31" Margin="0 40 0 0"/>
-
-                <Button x:Name="btnSalvarDes" Content="Salvar" FontSize="18" Width="108" Margin="0 45 0 0" Height="35" Click="btnSalvarDes_Click" Cursor="Hand"/>
-            </StackPanel>
-        </Grid>
-        
-        -->
-
     </Grid>
 </Window>
