@@ -95,24 +95,10 @@
 
                     <!--// Button Converter PDF in IMAGEM //-->
                     <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20">
-
-                            <Border.Background>
-
-                                <LinearGradientBrush StartPoint="0.75,0"
-                                         EndPoint="0,1">
-
-                                    <GradientStop Color="#DF208F"
-                                      Offset="0.1" />
-
-                                    <GradientStop Color="#DFCF20"
-                                      Offset="0.8" />
-
-                                </LinearGradientBrush>
-                            </Border.Background>
+                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20" Background="#0A0D10">
                             <Grid>
                                 <Border 
-                                        Background="#FFFFFF"
+                                        Background="#FF373232"
                                         Height="110"
                                         Width="150"
                                         HorizontalAlignment="Left"
@@ -146,24 +132,10 @@
 
                     <!--// Button XXXXX //-->
                     <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20">
-
-                            <Border.Background>
-
-                                <LinearGradientBrush StartPoint="0.75,0"
-                                         EndPoint="0,1">
-
-                                    <GradientStop Color="#27BDE9"
-                                      Offset="0.1" />
-
-                                    <GradientStop Color="#ABDB54"
-                                      Offset="0.8" />
-
-                                </LinearGradientBrush>
-                            </Border.Background>
+                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20" Background="#0A0D10">
                             <Grid>
                                 <Border 
-                                    Background="#FFFFFF"
+                                    Background="#FF373232"
                                     Height="110"
                                     Width="150"
                                     HorizontalAlignment="Left"
@@ -198,24 +170,10 @@
 
                     <!--// Button XXXXX //-->
                     <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20">
-
-                            <Border.Background>
-
-                                <LinearGradientBrush StartPoint="0.75,0"
-                                         EndPoint="0,1">
-
-                                    <GradientStop Color="#F96100"
-                                      Offset="0.1" />
-
-                                    <GradientStop Color="#E70B75"
-                                      Offset="0.8" />
-
-                                </LinearGradientBrush>
-                            </Border.Background>
+                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20" Background="#0A0D10">
                             <Grid>
                                 <Border 
-                                    Background="#FFFFFF"
+                                    Background="#FF373232"
                                     Height="110"
                                     Width="150"
                                     HorizontalAlignment="Left"
@@ -337,7 +295,7 @@
                                        HorizontalAlignment="Left"
                                        Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
                                 </TextBlock>
-                                <Button x:Name ="X" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="PDFpIMG_Click" Cursor="Hand"/>
+                                <Button x:Name ="X" Content="BT" Width="60" Height="45" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="0, 55, 20,30" Click="PDFpIMG_Click" Cursor="Hand"/>
 
                             </Grid>
 
@@ -382,7 +340,7 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="100"/>
                     </Grid.RowDefinitions>
-                    
+
                     <Grid Grid.Row="0">
                         <Image Margin="20" x:Name="imgPhoto"  Stretch="Fill" Grid.Column="1" />
                     </Grid>
@@ -390,7 +348,7 @@
                     <Grid Grid.Row="1">
                         <Button x:Name="bnt_tirar" Content="REMOVER" FontSize="38" Width="500" Height="80" Click="RemoverView_Click"/>
                     </Grid>
-                    
+
                 </Grid>
             </Grid>
         </Grid>
