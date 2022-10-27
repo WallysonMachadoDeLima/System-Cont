@@ -35,9 +35,37 @@
                             </StackPanel>
                         </Grid>
                         
-                        <!--Codigo Grafico-->
+                        <!--Grafico-->
 
-                        </StackPanel>
+
+                        <lvc:CartesianChart LegendLocation="None" Margin="0 40 0 0" Height="184">
+                            <lvc:CartesianChart.DataTooltip>
+                                <lvc:DefaultTooltip Background="#24336a" Foreground="White"/>
+                            </lvc:CartesianChart.DataTooltip>
+
+                            <lvc:CartesianChart.AxisX>
+                                <lvc:Axis Foreground="White" ShowLabels="True" Labels="Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez">
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator StrokeThickness="0" Step="1"/>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisX>
+
+                            <lvc:CartesianChart.AxisY>
+                                <lvc:Axis Foreground="White" ShowLabels="True" MinValue="0" MaxValue="30">
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator StrokeThickness="0"/>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisY>
+
+                            <lvc:CartesianChart.Series>
+                                <lvc:StackedColumnSeries Fill="#7166f9" MaxColumnWidth="15" Values="11,13,17,20,17,15,16,13,18,11,15,12"/>
+                                <lvc:StackedColumnSeries Fill="#101a28" MaxColumnWidth="15" Values="6,6,5,6,5,6,4,6,6,6,7,5"/>
+                            </lvc:CartesianChart.Series>
+                        </lvc:CartesianChart>
+
+                    </StackPanel>
                 </materialDesign:Card>
 
                 <WrapPanel HorizontalAlignment="Center"  Width="758" Background="#131419">

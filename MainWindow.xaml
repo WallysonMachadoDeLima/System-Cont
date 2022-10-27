@@ -6,20 +6,117 @@
         xmlns:local="clr-namespace:System_Cont"
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized" Padding="0,0,0,0" Margin="4,0,0,0" ToolBar.OverflowMode="AsNeeded">
-    <Grid Background="White">
+    <Grid Background="#1E1E1E">
         <Grid.RowDefinitions>
             <RowDefinition Height="120"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Background="Black">
-            <Label Content="Judicial" Foreground="White" FontSize="40" HorizontalAlignment="Left" FontFamily="Bahnschrift SemiBold SemiCondensed" Margin="80 30 0 0"/>
-            <Button x:Name="btnLogin" Content="Log In" Margin="0 -42 200 0" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="22" Background="Transparent" BorderThickness="0" BorderBrush="White" Cursor="Hand" Click="btnLogin_Click"/>
-            <Button x:Name="btnSobre" Content="Sobre" Margin="0 -42 320 0" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="22" Background="Transparent" BorderThickness="0" BorderBrush="White" Cursor="Hand"/>
-            <Button x:Name="btnServicos" Content="Serviços" Margin="0 -42 440 0" Width="110" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Bahnschrift SemiBold SemiCondensed" FontSize="22" Background="Transparent" BorderThickness="0" BorderBrush="White" Cursor="Hand"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.ColumnSpan="2" Background="Black" >
+            <Label Content="Judicial" 
+                   Foreground="White" 
+                   FontSize="40" 
+                   HorizontalAlignment="Left" 
+                   FontFamily="Font/#Dosis" 
+                   Margin="80 30 0 0"/>
+
+            <Button x:Name="btnLogin" 
+                    Content="Log In" 
+                    Margin="0 -42 200 0" 
+                    Width="100" 
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Top" 
+                    FontFamily="Font/#Dosis" 
+                    FontSize="22" 
+                    Background="Transparent" 
+                    BorderThickness="0" 
+                    BorderBrush="White" 
+                    Height="36" 
+                    Cursor="Hand" 
+                    Click="btnLogin_Click"/>
+
+            <Button x:Name="btnSobre" 
+                    Content="Sobre" 
+                    Margin="0 -42 320 0" 
+                    Width="100" 
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Top" 
+                    FontFamily="Font/#Dosis" 
+                    FontSize="22" 
+                    Background="Transparent" 
+                    BorderThickness="0" 
+                    BorderBrush="White" 
+                    Height="36" 
+                    Cursor="Hand"/>
+
+            <Button x:Name="btnServicos" 
+                    Content="Serviços" 
+                    Margin="0 -42 440 0"
+                    Width="110" 
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Top" 
+                    FontFamily="Font/#Dosis" 
+                    FontSize="22" 
+                    Background="Transparent"
+                    BorderThickness="0" 
+                    BorderBrush="White" 
+                    Height="36" 
+                    Cursor="Hand"/>
+
         </StackPanel>
-        <StackPanel Grid.Row="1" Background="#1E1E1E">
-            
+        <StackPanel Grid.Row="1" Background="#1E1E1E" VerticalAlignment="Center" Margin="80">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 35" >
+                    <Image Source="Imagens/justicia.png" Width="100" Height="100" RenderOptions.BitmapScalingMode="Fant"/>
+
+                    <TextBlock Text="System Count Judicial"
+                           Foreground="White"
+                           Margin="20 0 0 0"
+                           FontSize="35"
+                           FontWeight="Medium"
+                           VerticalAlignment="Center"
+                           FontFamily="Font/#Dosis"/>
+                </StackPanel>
+
+                <TextBlock Text="Nós fornecemos solução fácil"
+                       Foreground="White"
+                       FontSize="40"
+                       FontWeight="Medium"
+                       FontFamily="Font/#Dosis"/>
+
+                <TextBlock Text="para gerenciar seu escritório de"
+                       Foreground="White"
+                       FontSize="40"
+                       FontWeight="Medium"
+                       FontFamily="Font/#Dosis"/>
+
+                <TextBlock Text="advocacia da melhor maneira" Margin="0 0 0 40"
+                       Foreground="White"
+                       FontSize="40"
+                       FontWeight="Medium"
+                       FontFamily="Font/#Dosis"/>
+
+                <TextBlock Text="System Cont Judicial é uma plataforma para gerenciar seu escritório de advocacia com o melhor desempenho, por que não fazer um teste ?"
+                       Foreground="White"
+                       FontSize="24"
+                       FontWeight="Medium"
+                       FontFamily="Font/#Dosis"
+                       TextWrapping="Wrap"/>
+
+            </StackPanel>
         </StackPanel>
+        <Grid Grid.Column="1" Grid.RowSpan="2">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Source="Imagens/Themiss.png" 
+                       Width="700" 
+                       Height="600" 
+                       Margin="0 200 0 0"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
