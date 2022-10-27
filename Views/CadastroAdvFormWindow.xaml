@@ -48,7 +48,7 @@
 
                     <TextBlock FontSize="46"
                            FontWeight="Light"
-                           Text="Sign up"
+                           Text="Cadastre-se"
                            Foreground="#ffffff"
                            TextAlignment="Center"/>
 
@@ -189,14 +189,14 @@
 
                     <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                                        x:Name="txtUsername"
-                                       materialDesign:HintAssist.Hint="Username"
+                                       materialDesign:HintAssist.Hint="Nome"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
                                        BorderThickness="0 0 0 1.5"/>
 
                     <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
                                        x:Name="txtEmail"
-                                       materialDesign:HintAssist.Hint="Email"
+                                       materialDesign:HintAssist.Hint="E-mail"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
                                        Margin="0 27"
@@ -204,14 +204,14 @@
 
                     <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
                                        x:Name="txtPassword"
-                                       materialDesign:HintAssist.Hint="Password"
+                                       materialDesign:HintAssist.Hint="Senha"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
                                        BorderThickness="0 0 0 1.5"/>
 
                     <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
                                        x:Name="txtRepeatPassword"
-                                       materialDesign:HintAssist.Hint="Repeat Password"
+                                       materialDesign:HintAssist.Hint="Confirmar Senha"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
                                        Margin="0 27 0 0"
@@ -226,19 +226,19 @@
 
                     <!--Buttons-->
                     <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                        <Button Content="Sign up"
+                        <Button Content="Cadastrar"
                                 x:Name="Cadastrar"
                                 Cursor="Hand"
                                 Margin="0 10 0 0"
                                 Background="#0B4357"
                                 BorderBrush="#0B4357"
                                 Foreground="#ffffff"
-                                FontSize="17"
+                                FontSize="16"
                                 Width="120"
                                 Height="45"
                                materialDesign:ButtonAssist.CornerRadius="22"/>
 
-                        <Button Content="or Login" 
+                        <Button Content="ou Entrar" 
                                 x:Name="btnHaveLog"
                                 Cursor="Hand"
                                 Margin="5 10 0 0"

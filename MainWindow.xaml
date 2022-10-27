@@ -22,7 +22,7 @@
                    Foreground="White" 
                    FontSize="40" 
                    HorizontalAlignment="Left" 
-                   FontFamily="Font/#Dosis" 
+                   FontFamily="Fonts/#Dosis" 
                    Margin="80 30 0 0"/>
 
             <Button x:Name="btnLogin" 
@@ -31,7 +31,7 @@
                     Width="100" 
                     HorizontalAlignment="Right" 
                     VerticalAlignment="Top" 
-                    FontFamily="Font/#Dosis" 
+                    FontFamily="Fonts/#Dosis" 
                     FontSize="22" 
                     Background="Transparent" 
                     BorderThickness="0" 
@@ -46,7 +46,7 @@
                     Width="100" 
                     HorizontalAlignment="Right" 
                     VerticalAlignment="Top" 
-                    FontFamily="Font/#Dosis" 
+                    FontFamily="Fonts/#Dosis" 
                     FontSize="22" 
                     Background="Transparent" 
                     BorderThickness="0" 
@@ -60,7 +60,7 @@
                     Width="110" 
                     HorizontalAlignment="Right" 
                     VerticalAlignment="Top" 
-                    FontFamily="Font/#Dosis" 
+                    FontFamily="Fonts/#Dosis" 
                     FontSize="22" 
                     Background="Transparent"
                     BorderThickness="0" 
@@ -80,32 +80,32 @@
                            FontSize="35"
                            FontWeight="Medium"
                            VerticalAlignment="Center"
-                           FontFamily="Font/#Dosis"/>
+                           FontFamily="Fonts/#Dosis"/>
                 </StackPanel>
 
                 <TextBlock Text="Nós fornecemos solução fácil"
                        Foreground="White"
                        FontSize="40"
                        FontWeight="Medium"
-                       FontFamily="Font/#Dosis"/>
+                       FontFamily="Fonts/#Dosis"/>
 
                 <TextBlock Text="para gerenciar seu escritório de"
                        Foreground="White"
                        FontSize="40"
                        FontWeight="Medium"
-                       FontFamily="Font/#Dosis"/>
+                       FontFamily="Fonts/#Dosis"/>
 
                 <TextBlock Text="advocacia da melhor maneira" Margin="0 0 0 40"
                        Foreground="White"
                        FontSize="40"
                        FontWeight="Medium"
-                       FontFamily="Font/#Dosis"/>
+                       FontFamily="Fonts/#Dosis"/>
 
                 <TextBlock Text="System Cont Judicial é uma plataforma para gerenciar seu escritório de advocacia com o melhor desempenho, por que não fazer um teste ?"
                        Foreground="White"
                        FontSize="24"
                        FontWeight="Medium"
-                       FontFamily="Font/#Dosis"
+                       FontFamily="Fonts/#Dosis"
                        TextWrapping="Wrap"/>
 
             </StackPanel>

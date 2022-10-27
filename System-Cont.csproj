@@ -315,6 +315,12 @@
     <Resource Include="Imagens\cartoon-woman-pretty.png" />
     <Resource Include="Imagens\IA-logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Themiss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\justicia.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

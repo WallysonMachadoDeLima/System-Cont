@@ -44,9 +44,9 @@
                 <StackPanel Margin="0 120 0 0"
                         VerticalAlignment="Top">
 
-                    <TextBlock FontSize="46"
+                    <TextBlock FontSize="40"
                            FontWeight="Light"
-                           Text="Welcome back!"
+                           Text="Bem-vindo de volta!"
                            Foreground="#ffffff"
                            TextAlignment="Center" RenderTransformOrigin="0.5,0.5">
                         <TextBlock.RenderTransform>
@@ -75,7 +75,7 @@
 
                 <!--Ellipses-->
                 <Ellipse Width="500" 
-                     Height="500" 
+                     Height="480" 
                      VerticalAlignment="Bottom"
                      Fill="#0B4357"
                      Margin="50 0 0 -200"
@@ -194,7 +194,7 @@
                                     Margin="75 0">
 
                     <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
-                                       materialDesign:HintAssist.Hint="Username"
+                                       materialDesign:HintAssist.Hint="Nome"
                                        x:Name="txtNomeCompleto"
                                        Margin="0 0 0 30"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
@@ -204,7 +204,7 @@
 
 
                     <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
-                                       materialDesign:HintAssist.Hint="Password"
+                                       materialDesign:HintAssist.Hint="Senha"
                                        x:Name="txtSenha"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
@@ -219,7 +219,7 @@
 
                     <!--Buttons-->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                        <Button Content="Login"
+                        <Button Content="Entrar"
                                 x:Name="btnLogin"
                                 Cursor="Hand"
                                 Margin="0 20 0 0"
