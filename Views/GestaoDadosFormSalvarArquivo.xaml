@@ -20,7 +20,7 @@
                     </LinearGradientBrush>
                 </Border.Background>
 
-                <ListView x:Name="Listimg" Width="500" Height="230" VerticalAlignment="Center" HorizontalAlignment="Center" SelectionChanged="DataGridImg_SelectionChanged" FlowDirection="RightToLeft" Foreground="#DDFFFFFF">
+                <ListView x:Name="Listimg" Width="670" Height="230" VerticalAlignment="Center" HorizontalAlignment="Center" SelectionChanged="DataGridImg_SelectionChangedXXXX" FlowDirection="RightToLeft" Foreground="#DDFFFFFF">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn>

@@ -33,7 +33,8 @@ namespace System_Cont.Views
             RecarregarLista();
             ImagemViewClick();
         }
-        public void Image(string local)
+
+        private void Deletar_Click(object sender, RoutedEventArgs e)
         {
             
         }
@@ -144,14 +145,10 @@ namespace System_Cont.Views
                 if (resultado == MessageBoxResult.Yes)
                 {
                     string imagemSelecionada = selected.Local;
-
                     string nomefile = imagemSelecionada.Substring(entrada.Length);
 
-                    
                     Listimg.Items.Remove(Listimg.SelectedItem);
                     File.Move(imagemSelecionada, saida + nomefile);
-
-
                 }
             }
             catch (Exception ex)
@@ -177,12 +174,12 @@ namespace System_Cont.Views
 
         }
 
-        private void Deletar_Click(object sender, RoutedEventArgs e)
+
+        private void Button_Click_TesteSalvar(object sender, RoutedEventArgs e)
         {
-
+            GestaoDadosFormSalvarArquivo obj = new GestaoDadosFormSalvarArquivo();
+            obj.ShowDialog();
         }
-
-        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

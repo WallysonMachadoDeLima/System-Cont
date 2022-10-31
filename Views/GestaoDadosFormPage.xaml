@@ -256,7 +256,7 @@
                                        HorizontalAlignment="Left"
                                        Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
                                 </TextBlock>
-                                <Button x:Name ="XX" Content="BT" Width="70" Height="55" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20, 60" Click="PDFpIMG_Click" Cursor="Hand"/>
+                                <Button x:Name ="XX" Content="BT" Width="70" Height="55" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20, 60" Click="Button_Click_TesteSalvar" Cursor="Hand"/>
 
                             </Grid>
 
