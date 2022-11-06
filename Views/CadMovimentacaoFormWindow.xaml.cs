@@ -52,14 +52,15 @@ namespace System_Cont.Views
 
                 var dao2 = new DespesaDAO();
                 List<Despesa> listaDespesa = dao2.List();
-
+                var pica = new EscritorioFormPage();
+                pica.dataGridDespesa.ItemsSource = listaDespesa;
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }  
+        }
 
         private void btnSalvarRec_Click_1(object sender, RoutedEventArgs e)
         {
@@ -93,12 +94,14 @@ namespace System_Cont.Views
 
                 dao.Insert(_despesa);
                 MessageBox.Show("Registro Salvo com Sucesso!");
-
+                CarregarListagem();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
         }
+
     }
 }

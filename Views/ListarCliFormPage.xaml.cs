@@ -22,10 +22,13 @@ namespace System_Cont.Views
     /// </summary>
     public partial class ListarCliFormPage : Page
     {
-        public ListarCliFormPage()
+        private Frame _frame;
+
+        public ListarCliFormPage(Frame fraPaginas)
         {
             InitializeComponent();
             Loaded += ListarCliFormPage_Loaded;
+            _frame = fraPaginas;
         }
 
         private void ListarCliFormPage_Loaded(object sender, RoutedEventArgs e)
@@ -68,6 +71,11 @@ namespace System_Cont.Views
             {
                 MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void btnCliente_Click(object sender, RoutedEventArgs e)
+        {
+            _frame.Content = new CadastroCliFormPage(_frame);
         }
     }
 }

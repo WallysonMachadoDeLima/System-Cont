@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using System_Cont.Models;
 
 namespace System_Cont.Views
 {
@@ -32,6 +33,17 @@ namespace System_Cont.Views
         public PagInicialFormPage()
         {
             InitializeComponent();
+            try
+            {
+                var dao = new DespesaDAO();
+
+                dao.SomaDespesa();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             SeriesCollection = new SeriesCollection
             {
                 new StackedColumnSeries

@@ -314,6 +314,7 @@
     <Resource Include="Imagens\iconDinheiro.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Clientes\" />
     <Folder Include="Files\Change\" />
     <Folder Include="Files\Finished\" />
     <Folder Include="Files\ListView\" />

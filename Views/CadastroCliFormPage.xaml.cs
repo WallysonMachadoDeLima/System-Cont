@@ -22,12 +22,14 @@ namespace System_Cont.Views
     public partial class CadastroCliFormPage : Page
     {
         private Cliente _cliente = new Cliente();
+        private Frame fraPaginas;
 
-        public CadastroCliFormPage()
+        public CadastroCliFormPage(Frame _frame)
         {
             InitializeComponent();
             CarregarListagem();
             Loaded += CadastroCliente_Loaded;
+            fraPaginas = _frame;
         }
 
 
@@ -49,7 +51,6 @@ namespace System_Cont.Views
             {
                 var dao = new ClienteDAO();
                 List<Cliente> listaClientes = dao.List();
-
                 
             }
             catch (Exception ex)
@@ -95,6 +96,16 @@ namespace System_Cont.Views
 
         private void btnListaCliente_Click(object sender, RoutedEventArgs e)
         {
+        }
+
+        private void btnVoltarListCliente_Click(object sender, RoutedEventArgs e)
+        {
+            fraPaginas.Content = new ListarCliFormPage(fraPaginas);
+        }
+
+        private void btnDiretorio_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

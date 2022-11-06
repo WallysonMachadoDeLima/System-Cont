@@ -76,6 +76,26 @@ namespace System_Cont.Models
             }
         }
 
+        public void SomaDespesa()
+        {
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText = "select sum(valor_des) from Despesa";
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                var despesa = new Despesa();
+                despesa.SomaDespesa = DAOHelper.GetDouble(reader, "sum(valor_des)");
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public void Delete(Despesa t)
         {
             try

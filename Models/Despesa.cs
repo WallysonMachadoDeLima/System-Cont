@@ -12,5 +12,6 @@ namespace System_Cont.Models
         public string DescricaoDes { get; set; }
         public double ValorDes { get; set; }
         public DateTime? Data_Despesa { get; set; }
+        public double SomaDespesa { get; set; } 
     }
 }

@@ -112,7 +112,7 @@ namespace System_Cont.Views
 
         // BOTÃO EXCLUIR 
         private void Deletar_Click(object sender, RoutedEventArgs e)
-        {;
+        {
             var resultado = MessageBox.Show($"Deseja realmente excluir o arquivo?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Question);
             try
             {

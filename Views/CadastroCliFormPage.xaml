@@ -18,7 +18,8 @@
 
         <Grid Grid.Column="0">
             <StackPanel>
-                <StackPanel>
+                <Button x:Name="btnVoltarListCliente" Content="⬅️   Voltar" FontSize="25" Width="200" Height="60" VerticalAlignment="Center" Margin="0 60 0 0" Click="btnVoltarListCliente_Click"/>
+                <StackPanel Margin="0 90 0 0">
                     <Border Margin="0, 30, 0, 0" Width="400" Height="450">
                         <Border.Background>
                             <LinearGradientBrush>
@@ -200,6 +201,9 @@
                             </Border.Clip>
                         </Border>
                     </StackPanel>
+                </StackPanel>
+                <StackPanel Height="104">
+                    <Button x:Name="btnDiretorio" Content="Abrir Arquivo do Cliente" FontSize="15" Width="228" Margin="0 50 0 0" Height="48" Click="btnDiretorio_Click"/>
                 </StackPanel>
             </StackPanel>
 

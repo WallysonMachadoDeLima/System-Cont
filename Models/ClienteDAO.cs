@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +38,12 @@ namespace System_Cont.Models
                 if (resultado == 0)
                 {
                     throw new Exception("Ocorreram erros ao salvar as informações");
+                }
+                else
+                {
+                    string saida = Directory.GetCurrentDirectory();
+                    saida = saida.Substring(0, saida.Length - 9) + @"Clientes\";
+                    Directory.CreateDirectory(saida + cliente.NomeCliente);
                 }
 
 
