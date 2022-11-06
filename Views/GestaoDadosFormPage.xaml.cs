@@ -34,12 +34,8 @@ namespace System_Cont.Views
             ImagemViewClick();
         }
 
-<<<<<<< HEAD
         // INDENTIFICA O TIPO DO ARQUIVO
         public void TipoArquivo(string local)
-=======
-        private void Deletar_Click(object sender, RoutedEventArgs e)
->>>>>>> main
         {
             string saida = Directory.GetCurrentDirectory();
             saida = saida.Substring(0, saida.Length - 9) + @"Imagens\";
@@ -169,16 +165,8 @@ namespace System_Cont.Views
             {
                 if (resultado == MessageBoxResult.Yes)
                 {
-<<<<<<< HEAD
                     MoverFiles();
                     // SCRIPT PYHTON
-=======
-                    string imagemSelecionada = selected.Local;
-                    string nomefile = imagemSelecionada.Substring(entrada.Length);
-
-                    Listimg.Items.Remove(Listimg.SelectedItem);
-                    File.Move(imagemSelecionada, saida + nomefile);
->>>>>>> main
                 }
             }
             catch (Exception ex)
@@ -222,30 +210,19 @@ namespace System_Cont.Views
         {
 
         }
-<<<<<<< HEAD
         private void XX_Click(object sender, RoutedEventArgs e)
         {
-=======
 
->>>>>>> main
-
-        private void Button_Click_TesteSalvar(object sender, RoutedEventArgs e)
-        {
-            GestaoDadosFormSalvarArquivo obj = new GestaoDadosFormSalvarArquivo();
-            obj.ShowDialog();
         }
         private void XXX_Click(object sender, RoutedEventArgs e)
         {
 
-<<<<<<< HEAD
         }
         private void Button_Click_TesteSalvar(object sender, RoutedEventArgs e)
         {
             GestaoDadosFormSalvarArquivo obj = new GestaoDadosFormSalvarArquivo();
             obj.ShowDialog();
         }
-=======
->>>>>>> main
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
