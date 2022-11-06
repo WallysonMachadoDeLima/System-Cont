@@ -111,15 +111,14 @@
                                         FontSize="20"
                                         VerticalAlignment="Top"
                                         HorizontalAlignment="Left"
-                                        Margin="30,20,0,0" ><Run Text="CONVERT"/><LineBreak/><Run Text=""/>
-                                </TextBlock>
+                                        Margin="15,20,0,0" ><Run Language="pt-br" Text="CONVERTER"/><LineBreak/><Run/></TextBlock>
                                 <TextBlock
                                        Foreground="#FFFFFF"
                                        FontFamily="Oswald"
                                        FontSize="15"
                                        VerticalAlignment="Top"
                                        HorizontalAlignment="Left"
-                                       Margin="35,25,0,0" ><Run/><LineBreak/><Run Text="IMAGE IN TEXT"/></TextBlock>
+                                       Margin="25,25,0,0" ><Run/><LineBreak/><Run Language="pt-br" Text="IMAGEM EM TEXTO"/></TextBlock>
                                 <Button x:Name ="PDFpIMG" Content="O" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="ImageInText_Click" Cursor="Hand" FontSize="20"/>
                             </Grid>
 
@@ -147,17 +146,15 @@
                                         FontSize="20"
                                         VerticalAlignment="Top"
                                         HorizontalAlignment="Left"
-                                        Margin="30,20,0,0" ><Run Text="CONVERT"/><LineBreak/><Run Text=""/>
-                                </TextBlock>
+                                        Margin="30,20,0,0" ><Run Language="pt-br" Text="RECORTAR"/><LineBreak/><Run Language="pt-br"/></TextBlock>
                                 <TextBlock
                                        Foreground="#FFFFFF"
                                        FontFamily="Oswald"
                                        FontSize="15"
                                        VerticalAlignment="Top"
                                        HorizontalAlignment="Left"
-                                       Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
-                                </TextBlock>
-                                <Button x:Name ="XXXX" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="XX_Click" Cursor="Hand"/>
+                                       Margin="45,25,0,0" ><Run/><LineBreak/><Run Language="pt-br" Text="IMAGEM"/></TextBlock>
+                                <Button x:Name ="XXXX" Content="O" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="RecortarImg_Click" Cursor="Hand" FontSize="20"/>
 
                             </Grid>
 
@@ -185,17 +182,15 @@
                                         FontSize="20"
                                         VerticalAlignment="Top"
                                         HorizontalAlignment="Left"
-                                        Margin="30,20,0,0" ><Run Text="CONVERT"/><LineBreak/><Run Text=""/>
-                                </TextBlock>
+                                        Margin="30,20,0,0" ><Run Text="EDITAR"/><LineBreak/><Run/></TextBlock>
                                 <TextBlock
                                        Foreground="#FFFFFF"
                                        FontFamily="Oswald"
                                        FontSize="15"
                                        VerticalAlignment="Top"
                                        HorizontalAlignment="Left"
-                                       Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
-                                </TextBlock>
-                                <Button x:Name ="XXX" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="XXX_Click" Cursor="Hand"/>
+                                       Margin="35,25,0,0" ><Run/><LineBreak/><Run Language="pt-br" Text="DOCUMENTO"/></TextBlock>
+                                <Button x:Name ="XXX" Content="O" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="EditarDocumento_Click" Cursor="Hand" FontSize="20"/>
 
                             </Grid>
 
@@ -281,17 +276,15 @@
                                         FontSize="20"
                                         VerticalAlignment="Top"
                                         HorizontalAlignment="Left"
-                                        Margin="30,20,0,0" ><Run Text="CONVERT"/><LineBreak/><Run Text=""/>
-                                </TextBlock>
+                                        Margin="30,20,0,0" ><Run Language="pt-br" Text="HISTÓRICO"/><LineBreak/><Run Language="pt-br"/></TextBlock>
                                 <TextBlock
                                        Foreground="#FFFFFF"
                                        FontFamily="Oswald"
                                        FontSize="15"
                                        VerticalAlignment="Top"
                                        HorizontalAlignment="Left"
-                                       Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
-                                </TextBlock>
-                                <Button x:Name ="X" Content="BT" Width="60" Height="45" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="0, 55, 20,30" Click="PDFpIMG_Click" Cursor="Hand"/>
+                                       Margin="45,25,0,0" ><Run/><LineBreak/><Run Language="pt-br" Text="DE EDIÇÃO"/></TextBlock>
+                                <Button x:Name ="X" Content="O" Width="60" Height="45" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="0, 55, 20,30" Click="Historico_Click" Cursor="Hand" FontSize="20"/>
 
                             </Grid>
 

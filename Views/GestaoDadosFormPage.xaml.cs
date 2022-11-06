@@ -113,23 +113,30 @@ namespace System_Cont.Views
         // BOTÃO EXCLUIR 
         private void Deletar_Click(object sender, RoutedEventArgs e)
         {
-            var resultado = MessageBox.Show($"Deseja realmente excluir o arquivo?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            try
+            if (Listimg.SelectedItem != null)
             {
-                if (resultado == MessageBoxResult.Yes)
+                var resultado = MessageBox.Show($"Deseja realmente excluir o arquivo?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                try
                 {
-                    var selected = Listimg.SelectedItem as imgs;
-                    string imagemSelecionada = selected.Local;
-                    Listimg.Items.Remove(Listimg.SelectedItem);
-                    File.Delete(imagemSelecionada);
-                    if ( selected.Imagem == imgview) ImagemViewClick();
+                    if (resultado == MessageBoxResult.Yes)
+                    {
+                        var selected = Listimg.SelectedItem as imgs;
+                        string imagemSelecionada = selected.Local;
+                        Listimg.Items.Remove(Listimg.SelectedItem);
+                        File.Delete(imagemSelecionada);
+                        if (selected.Imagem == imgview) ImagemViewClick();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
-            catch (Exception ex)
+            else
             {
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                MessageBox.Show("Selecione um arquivo", "Selecionar", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
@@ -170,6 +177,13 @@ namespace System_Cont.Views
             }
         }
 
+        // ABRIR HISTÓRICO
+        private void Historico_Click(object sender, RoutedEventArgs e)
+        {
+            GestaoDadosFormSalvarArquivo page = new GestaoDadosFormSalvarArquivo();
+            page.ShowDialog();
+        }
+
         // BOTÕES DE CONVERTER
         private void ImageInText_Click(object sender, RoutedEventArgs e)
         {
@@ -199,6 +213,82 @@ namespace System_Cont.Views
         private void PDFpIMG_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(imagem);
+        }
+
+        private void RecortarImg_Click(object sender, RoutedEventArgs e)
+        {
+            if (Listimg.SelectedItem != null)
+            {
+                var resultado = MessageBox.Show($"Recortar imagem selecionada?", "Confirmar recorte", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                try
+                {
+                    if (resultado == MessageBoxResult.Yes)
+                    {
+                        var selected = Listimg.SelectedItem as imgs;
+                        LimparFinished();
+
+                        string saida = Directory.GetCurrentDirectory();
+                        string entrada = Directory.GetCurrentDirectory();
+                        saida = saida.Substring(0, saida.Length - 9) + @"Files\Finished\";
+                        entrada = entrada.Substring(0, entrada.Length - 9) + @"Files\ListView\";
+
+
+                       
+                        string imagemSelecionada = selected.Local;
+                        string nomefile = imagemSelecionada.Substring(entrada.Length);
+                        Listimg.Items.Remove(Listimg.SelectedItem);
+                        File.Move(imagemSelecionada, saida + nomefile);
+                        filemove = saida + nomefile;
+
+                        System.Diagnostics.Process.Start("explorer.exe", filemove);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um arquivo", "Selecionar", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+
+        private void EditarDocumento_Click(object sender, RoutedEventArgs e)
+        {
+            if (Listimg.SelectedItem != null)
+            {
+                var resultado = MessageBox.Show($"Editar documento selecionado?", "Confirmar edição", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                try
+                {
+                    if (resultado == MessageBoxResult.Yes)
+                    {
+                        var selected = Listimg.SelectedItem as imgs;
+                        LimparFinished();
+
+                        string saida = Directory.GetCurrentDirectory();
+                        string entrada = Directory.GetCurrentDirectory();
+                        saida = saida.Substring(0, saida.Length - 9) + @"Files\Finished\";
+                        entrada = entrada.Substring(0, entrada.Length - 9) + @"Files\ListView\";
+
+                        string imagemSelecionada = selected.Local;
+                        string nomefile = imagemSelecionada.Substring(entrada.Length);
+                        Listimg.Items.Remove(Listimg.SelectedItem);
+                        File.Move(imagemSelecionada, saida + nomefile);
+                        filemove = saida + nomefile;
+
+                        System.Diagnostics.Process.Start("explorer.exe", filemove);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um arquivo", "Selecionar", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         // VISUALIZAR IMAGEM
@@ -234,14 +324,6 @@ namespace System_Cont.Views
 
         }
         private void DataGridImg_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-        private void XX_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void XXX_Click(object sender, RoutedEventArgs e)
         {
 
         }

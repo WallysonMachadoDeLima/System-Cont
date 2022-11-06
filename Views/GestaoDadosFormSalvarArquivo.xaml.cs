@@ -57,6 +57,7 @@ namespace System_Cont.Views
             Listimg.Items.Clear();
             foreach (string file in files)
             {
+                string name = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀";
                 TipoArquivo(file);
                 if (imagem == "")
                 {
@@ -64,7 +65,7 @@ namespace System_Cont.Views
                     {
                         Imagem = file,
                         Local = file,
-                        Nome = file.Substring(saida.Length)
+                        Nome = name
                     });
                 }
                 else
@@ -73,7 +74,7 @@ namespace System_Cont.Views
                     {
                         Imagem = imagem,
                         Local = file,
-                        Nome = file.Substring(saida.Length)
+                        Nome = name
                     });
                     imagem = "";
                 }
@@ -120,6 +121,7 @@ namespace System_Cont.Views
         // MOVER ARQUIVOS
         public void MoverArquivos(string caminho)
         {
+            string name = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀";
             string saida = Directory.GetCurrentDirectory();
             saida = saida.Substring(0, saida.Length - 9) + @"Files\Finished\";
             string[] files = Directory.GetFiles(saida);
@@ -127,7 +129,7 @@ namespace System_Cont.Views
             Listimg.Items.Clear();
             foreach (string file in files)
             {
-               File.Copy(file, caminho + @"\" + file.Substring(saida.Length));
+               File.Copy(file, caminho + @"\" + name + file.Substring(saida.Length));
             }
         }
 
