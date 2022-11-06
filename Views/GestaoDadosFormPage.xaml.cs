@@ -26,7 +26,7 @@ namespace System_Cont.Views
     {
         BackgroundWorker worker = new BackgroundWorker();
 
-        string sourcePath = "", fileName = "", imagem = "", imgview = "";
+        string sourcePath = "", fileName = "", imagem = "", imgview = "", filemove = "";
         public GestaoDadosFormPage()
         {
             InitializeComponent();
@@ -146,34 +146,53 @@ namespace System_Cont.Views
             string nomefile = imagemSelecionada.Substring(entrada.Length);
             Listimg.Items.Remove(Listimg.SelectedItem);
             File.Move(imagemSelecionada, saida + nomefile);
+            filemove = saida + nomefile;
         }
 
         // FUNÇÃO ABRIR FINISHED
         public void OpenFinished()
         {
-            string saida = Directory.GetCurrentDirectory();
-            saida = saida.Substring(0, saida.Length - 9) + @"Files\Change\";
+            File.Delete(filemove);
+            GestaoDadosFormSalvarArquivo page = new GestaoDadosFormSalvarArquivo();
+            page.ShowDialog();
+        }
 
-            //File.Delete()
+        // FUNÇÃO LIMPAR FINISHED
+        public void LimparFinished()
+        {
+            string saida = Directory.GetCurrentDirectory();
+            saida = saida.Substring(0, saida.Length - 9) + @"Files\Finished\";
+            string[] files = Directory.GetFiles(saida);
+            Listimg.Items.Clear();
+            foreach (string file in files)
+            {
+                File.Delete(file);
+            }
         }
 
         // BOTÕES DE CONVERTER
         private void ImageInText_Click(object sender, RoutedEventArgs e)
         {
-            var resultado = MessageBox.Show($"Converter imagem para arquivo de texto?", "Confirmar converção", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            try
+            if (Listimg.SelectedItem != null)
             {
-                if (resultado == MessageBoxResult.Yes)
+                var resultado = MessageBox.Show($"Converter imagem para arquivo de texto?", "Confirmar converção", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                try
                 {
-                    MoverFiles();
-                    // SCRIPT PYHTON
+                    if (resultado == MessageBoxResult.Yes)
+                    {
+                        MoverFiles();
+                        LimparFinished();
+                        // SCRIPT PYHTON
+                        OpenFinished();
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
+            } else
+            {
+                MessageBox.Show("Selecione um arquivo", "Selecionar", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
 
@@ -192,9 +211,17 @@ namespace System_Cont.Views
         }
         private void MostrarImg_Click(object sender, RoutedEventArgs e)
         {
-            var selected = Listimg.SelectedItem as imgs;
-            imgPhoto.Source = new BitmapImage(new Uri(selected.Imagem));
-            imgview = selected.Imagem;
+            
+            if (Listimg.SelectedItem != null)
+            {
+                var selected = Listimg.SelectedItem as imgs;
+                imgPhoto.Source = new BitmapImage(new Uri(selected.Imagem));
+                imgview = selected.Imagem;
+            }
+            else
+            {
+                MessageBox.Show("Selecione um arquivo", "Selecionar", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
         private void RemoverView_Click(object sender, RoutedEventArgs e)
         {
