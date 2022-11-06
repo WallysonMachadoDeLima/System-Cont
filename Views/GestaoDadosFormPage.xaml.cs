@@ -26,50 +26,12 @@ namespace System_Cont.Views
     {
         BackgroundWorker worker = new BackgroundWorker();
 
-        string sourcePath = "", fileName = "", imagem = "";
+        string sourcePath = "", fileName = "", imagem = "", imgview = "";
         public GestaoDadosFormPage()
         {
             InitializeComponent();
             RecarregarLista();
             ImagemViewClick();
-        }
-        public void Image(string local)
-        {
-            
-        }
-
-        // RECARREGAR LISTA DE ARQUIVOS
-        public void RecarregarLista()
-        {
-            string saida = Directory.GetCurrentDirectory();
-            saida = saida.Substring(0, saida.Length - 9) + @"Files\ListView\";
-            string[] files = Directory.GetFiles(saida);
-
-            Listimg.Items.Clear();
-            foreach (string file in files)
-            {
-                TipoArquivo(file);
-                if (imagem == "")
-                {
-                    Listimg.Items.Add(new imgs()
-                    {
-                        Imagem = file,
-                        Local = file,
-                        Nome = file.Substring(saida.Length)
-                    });
-                }
-                else
-                {
-                    Listimg.Items.Add(new imgs()
-                    {
-                        Imagem = imagem,
-                        Local = file,
-                        Nome = file.Substring(saida.Length)
-                    });
-                    imagem = "";
-                }
-            }
-            //if(Directory.GetFiles(saida).Length > 0) Listimg.Items.Add("");
         }
 
         // INDENTIFICA O TIPO DO ARQUIVO
@@ -89,6 +51,45 @@ namespace System_Cont.Views
             if (local.Contains(tipos[3])) imagem = saida + "pptx.jpg";
         }
 
+        // RECARREGAR LISTA DE ARQUIVOS
+        public void RecarregarLista()
+        {
+            string saida = Directory.GetCurrentDirectory();
+            saida = saida.Substring(0, saida.Length - 9) + @"Files\ListView\";
+            string[] files = Directory.GetFiles(saida);
+            string name = "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀";
+
+            Listimg.Items.Clear();
+            foreach (string file in files)
+            {
+                TipoArquivo(file);
+                string clear = file.Substring(saida.Length);
+                string origem = clear.Replace("++", @"\").Replace("!!", @":");
+                if (imagem == "")
+                {
+                    Listimg.Items.Add(new imgs()
+                    {
+                        Imagem = origem,
+                        Local = file,
+                        Nome = name,
+                        Origem = origem
+                    });
+                }
+                else
+                {
+                    Listimg.Items.Add(new imgs()
+                    {
+                        Imagem = imagem,
+                        Local = file,
+                        Nome = name,
+                        Origem = origem
+                    });
+                    imagem = "";
+                }
+            }
+            //if(Directory.GetFiles(saida).Length > 0) Listimg.Items.Add("");
+        }
+
         // ADICIONAR ITEM A LISTA
         private void SelecionarArquivos_Click(object sender, RoutedEventArgs e)
         {
@@ -100,35 +101,40 @@ namespace System_Cont.Views
             {
                 sourcePath = opf.FileName;
                 fileName = opf.SafeFileName;
-
+                string origem = sourcePath.Replace(@"\", "++").Replace(@":", "!!");
                 if (sourcePath != "")
                 {
-                    File.Copy(sourcePath, saida + fileName, true);
+                    File.Copy(sourcePath, saida + origem, true);
                     RecarregarLista();
                 }
             }
         }
 
-        // VISUALIZAR IMAGEM
-        private void ImagemViewClick()
-        {
-            string saida = Directory.GetCurrentDirectory();
-            saida = saida.Substring(0, saida.Length - 9) + @"Imagens\avatar.jpg";
+        // BOTÃO EXCLUIR 
+        private void Deletar_Click(object sender, RoutedEventArgs e)
+        {;
+            var resultado = MessageBox.Show($"Deseja realmente excluir o arquivo?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            try
+            {
+                if (resultado == MessageBoxResult.Yes)
+                {
+                    var selected = Listimg.SelectedItem as imgs;
+                    string imagemSelecionada = selected.Local;
+                    Listimg.Items.Remove(Listimg.SelectedItem);
+                    File.Delete(imagemSelecionada);
+                    if ( selected.Imagem == imgview) ImagemViewClick();
+                }
+            }
+            catch (Exception ex)
+            {
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
 
-            imgPhoto.Source = new BitmapImage(new Uri(saida));
-        }
-        private void MostrarImg_Click(object sender, RoutedEventArgs e)
-        {
-            var selected = Listimg.SelectedItem as imgs;
-            imgPhoto.Source = new BitmapImage(new Uri(selected.Local));
-        }
-        private void RemoverView_Click(object sender, RoutedEventArgs e)
-        {
-            ImagemViewClick();
-        }
-
-        // BOTÃO EXCLUIR OU MOVER ARQUIVO
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        // FUNÇÃO MOVER
+        public void MoverFiles()
         {
             string saida = Directory.GetCurrentDirectory();
             string entrada = Directory.GetCurrentDirectory();
@@ -136,22 +142,31 @@ namespace System_Cont.Views
             entrada = entrada.Substring(0, entrada.Length - 9) + @"Files\ListView\";
 
             var selected = Listimg.SelectedItem as imgs;
+            string imagemSelecionada = selected.Local;
+            string nomefile = imagemSelecionada.Substring(entrada.Length);
+            Listimg.Items.Remove(Listimg.SelectedItem);
+            File.Move(imagemSelecionada, saida + nomefile);
+        }
 
-            var resultado = MessageBox.Show($"Deseja realmente excluir o arquivo?", "Confirmação de Exclusão", MessageBoxButton.YesNo, MessageBoxImage.Question);
+        // FUNÇÃO ABRIR FINISHED
+        public void OpenFinished()
+        {
+            string saida = Directory.GetCurrentDirectory();
+            saida = saida.Substring(0, saida.Length - 9) + @"Files\Change\";
 
+            //File.Delete()
+        }
+
+        // BOTÕES DE CONVERTER
+        private void ImageInText_Click(object sender, RoutedEventArgs e)
+        {
+            var resultado = MessageBox.Show($"Converter imagem para arquivo de texto?", "Confirmar converção", MessageBoxButton.YesNo, MessageBoxImage.Question);
             try
             {
                 if (resultado == MessageBoxResult.Yes)
                 {
-                    string imagemSelecionada = selected.Local;
-
-                    string nomefile = imagemSelecionada.Substring(entrada.Length);
-
-                    
-                    Listimg.Items.Remove(Listimg.SelectedItem);
-                    File.Move(imagemSelecionada, saida + nomefile);
-
-
+                    MoverFiles();
+                    // SCRIPT PYHTON
                 }
             }
             catch (Exception ex)
@@ -167,6 +182,25 @@ namespace System_Cont.Views
             MessageBox.Show(imagem);
         }
 
+        // VISUALIZAR IMAGEM
+        private void ImagemViewClick()
+        {
+            string saida = Directory.GetCurrentDirectory();
+            saida = saida.Substring(0, saida.Length - 9) + @"Imagens\avatar.jpg";
+
+            imgPhoto.Source = new BitmapImage(new Uri(saida));
+        }
+        private void MostrarImg_Click(object sender, RoutedEventArgs e)
+        {
+            var selected = Listimg.SelectedItem as imgs;
+            imgPhoto.Source = new BitmapImage(new Uri(selected.Imagem));
+            imgview = selected.Imagem;
+        }
+        private void RemoverView_Click(object sender, RoutedEventArgs e)
+        {
+            ImagemViewClick();
+        }
+
         // NÃO SABO
         private void Listimg_ScrollChanged(object sender, ScrollChangedEventArgs e)
         {
@@ -176,14 +210,19 @@ namespace System_Cont.Views
         {
 
         }
-
-        private void Deletar_Click(object sender, RoutedEventArgs e)
+        private void XX_Click(object sender, RoutedEventArgs e)
         {
 
         }
+        private void XXX_Click(object sender, RoutedEventArgs e)
+        {
 
-        
-
+        }
+        private void Button_Click_TesteSalvar(object sender, RoutedEventArgs e)
+        {
+            GestaoDadosFormSalvarArquivo obj = new GestaoDadosFormSalvarArquivo();
+            obj.ShowDialog();
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -196,7 +235,8 @@ namespace System_Cont.Views
     public class imgs
     {
         public string Imagem { get; set; }
-        public string Local { get; set; }
+        public string Origem { get; set; }
         public string Nome { get; set; }
+        public string Local { get; set; }
     }
 }

@@ -25,9 +25,7 @@
 
 
                 <Grid Grid.Row="0">
-
                     <StackPanel >
-
                         <Border Margin="0, 0, 0, 0" Width="300" Height="100" CornerRadius="0, 0, 50, 0">
                             <Border.Background>
                                 <LinearGradientBrush>
@@ -39,7 +37,6 @@
                                 <Button x:Name ="xxx" Content="" Width="50" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="60, 0, 0,5" Click="Deletar_Click" Cursor="Hand" Background="#FFD90F0F" BorderBrush="#FFD90F0F"/>
                                 <Button x:Name ="xxxx" Content="" Width="50" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="115, 0, 0,5" Click="MostrarImg_Click" Cursor="Hand" Background="#FF15E939" BorderBrush="#FF15E939"/>
                             </Grid>
-
                         </Border>
                     </StackPanel>
                 </Grid>
@@ -122,9 +119,8 @@
                                        FontSize="15"
                                        VerticalAlignment="Top"
                                        HorizontalAlignment="Left"
-                                       Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
-                                </TextBlock>
-                                <Button x:Name ="PDFpIMG" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="PDFpIMG_Click" Cursor="Hand"/>
+                                       Margin="35,25,0,0" ><Run/><LineBreak/><Run Text="IMAGE IN TEXT"/></TextBlock>
+                                <Button x:Name ="PDFpIMG" Content="O" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="ImageInText_Click" Cursor="Hand" FontSize="20"/>
                             </Grid>
 
                         </Border>
@@ -161,7 +157,7 @@
                                        HorizontalAlignment="Left"
                                        Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
                                 </TextBlock>
-                                <Button x:Name ="XXXX" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="PDFpIMG_Click" Cursor="Hand"/>
+                                <Button x:Name ="XXXX" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="XX_Click" Cursor="Hand"/>
 
                             </Grid>
 
@@ -199,7 +195,7 @@
                                        HorizontalAlignment="Left"
                                        Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
                                 </TextBlock>
-                                <Button x:Name ="XXX" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="PDFpIMG_Click" Cursor="Hand"/>
+                                <Button x:Name ="XXX" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="XXX_Click" Cursor="Hand"/>
 
                             </Grid>
 
@@ -256,7 +252,7 @@
                                        HorizontalAlignment="Left"
                                        Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
                                 </TextBlock>
-                                <Button x:Name ="XX" Content="BT" Width="70" Height="55" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20, 60" Click="PDFpIMG_Click" Cursor="Hand"/>
+                                <Button x:Name ="XX" Content="BT" Width="70" Height="55" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20, 60" Click="Button_Click_TesteSalvar" Cursor="Hand"/>
 
                             </Grid>
 
