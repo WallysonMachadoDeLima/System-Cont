@@ -28,9 +28,9 @@
                Style="{StaticResource MaterialDesignHeadline4TextBlock}"
                Padding="10" Foreground="White"/>
 
-               <Button x:Name="btnCliente" Content=" Cadastrar Cliente" Width="160" Cursor="Hand" Foreground="White" Click="btnCliente_Click" Height="48" Margin="1000 0 0 0"/>
+            <Button x:Name="btnCliente" Content=" Cadastrar Cliente" Width="160" Cursor="Hand" Foreground="White" Click="btnCliente_Click" Height="48" Margin="1000 0 0 0"/>
 
-            
+
         </StackPanel>
 
         <DataGrid Grid.Row="1" Margin="5,5,5,5" x:Name="dataGridCliente" IsReadOnly="true" Foreground="White"

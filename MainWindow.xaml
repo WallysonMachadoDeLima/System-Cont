@@ -27,46 +27,18 @@
 
             <Button x:Name="btnLogin" 
                     Content="Log In" 
-                    Margin="0 -42 200 0" 
+                    Margin="0 -42 110 0" 
                     Width="100" 
                     HorizontalAlignment="Right" 
                     VerticalAlignment="Top" 
                     FontFamily="Fonts/#Dosis" 
-                    FontSize="22" 
+                    FontSize="24" 
                     Background="Transparent" 
                     BorderThickness="0" 
                     BorderBrush="White" 
                     Height="36" 
                     Cursor="Hand" 
                     Click="btnLogin_Click"/>
-
-            <Button x:Name="btnSobre" 
-                    Content="Sobre" 
-                    Margin="0 -42 320 0" 
-                    Width="100" 
-                    HorizontalAlignment="Right" 
-                    VerticalAlignment="Top" 
-                    FontFamily="Fonts/#Dosis" 
-                    FontSize="22" 
-                    Background="Transparent" 
-                    BorderThickness="0" 
-                    BorderBrush="White" 
-                    Height="36" 
-                    Cursor="Hand"/>
-
-            <Button x:Name="btnServicos" 
-                    Content="Serviços" 
-                    Margin="0 -42 440 0"
-                    Width="110" 
-                    HorizontalAlignment="Right" 
-                    VerticalAlignment="Top" 
-                    FontFamily="Fonts/#Dosis" 
-                    FontSize="22" 
-                    Background="Transparent"
-                    BorderThickness="0" 
-                    BorderBrush="White" 
-                    Height="36" 
-                    Cursor="Hand"/>
 
         </StackPanel>
         <StackPanel Grid.Row="1" Background="#1E1E1E" VerticalAlignment="Center" Margin="80">
