@@ -24,5 +24,10 @@ namespace System_Cont.Views
             NavTopBarFormWindow view = new NavTopBarFormWindow();
             view.ShowDialog();
         }
+
+        private void btnCadastrar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -121,7 +121,7 @@
                     <materialDesign:Card Margin="10" Width="225" UniformCornerRadius="20" Background="#0A0D10">
                         <StackPanel Margin="10">
                             <TextBlock Text="Total Despesas" FontSize="14" Foreground="White" TextAlignment="Center" />
-                            <TextBlock Text="{Binding Path = SomaDespesa}" TextAlignment="Center" Margin="0 5" Foreground="Red" FontSize="18" />
+                            <TextBlock x:Name="txtTotalDespesa" TextAlignment="Center" Margin="0 5" Foreground="Red" FontSize="18" />
                             <lvc:CartesianChart Margin="0 5" Series="{Binding LastHourSeries1}" Hoverable="False" DataTooltip="{x:Null}" Height="160" Width="160">
                                 <lvc:CartesianChart.AxisX>
                                     <lvc:Axis MinValue="0" />

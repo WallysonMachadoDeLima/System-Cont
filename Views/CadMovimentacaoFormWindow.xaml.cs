@@ -27,7 +27,6 @@ namespace System_Cont.Views
         public CadMovimentacaoFormWindow()
         {
             InitializeComponent();
-            CarregarListagem();
             Loaded += CadastroMovimentacao_Loaded;
         }
 
@@ -52,8 +51,7 @@ namespace System_Cont.Views
 
                 var dao2 = new DespesaDAO();
                 List<Despesa> listaDespesa = dao2.List();
-                var pica = new EscritorioFormPage();
-                pica.dataGridDespesa.ItemsSource = listaDespesa;
+
 
             }
             catch (Exception ex)

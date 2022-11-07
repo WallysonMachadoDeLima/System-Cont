@@ -202,11 +202,26 @@
                                        Margin="0 27"
                                        BorderThickness="0 0 0 1.5"/>
 
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
+                                       x:Name="txtCpf"
+                                       materialDesign:HintAssist.Hint="Cpf"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       BorderThickness="0 0 0 1.5"/>
+
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
+                                       x:Name="txtRg"
+                                       materialDesign:HintAssist.Hint="E-mail"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       Margin="0 27"
+                                       BorderThickness="0 0 0 1.5"/>
+
                     <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
                                        x:Name="txtPassword"
                                        materialDesign:HintAssist.Hint="Senha"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
-                                       BorderBrush="#c5c8cc"
+                                       BorderBrush="#c5c8cc"            
                                        BorderThickness="0 0 0 1.5"/>
 
                     <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
@@ -214,7 +229,7 @@
                                        materialDesign:HintAssist.Hint="Confirmar Senha"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
-                                       Margin="0 27 0 0"
+                                       Margin="0 27"
                                        BorderThickness="0 0 0 1.5"/>
 
                     <CheckBox Margin="0 40 0 20" FontSize="13">
@@ -227,7 +242,7 @@
                     <!--Buttons-->
                     <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                         <Button Content="Cadastrar"
-                                x:Name="Cadastrar"
+                                x:Name="btnCadastrar"
                                 Cursor="Hand"
                                 Margin="0 10 0 0"
                                 Background="#0B4357"
@@ -236,7 +251,7 @@
                                 FontSize="16"
                                 Width="120"
                                 Height="45"
-                               materialDesign:ButtonAssist.CornerRadius="22"/>
+                               materialDesign:ButtonAssist.CornerRadius="22" Click="btnCadastrar_Click"/>
 
                         <Button Content="ou Entrar" 
                                 x:Name="btnHaveLog"

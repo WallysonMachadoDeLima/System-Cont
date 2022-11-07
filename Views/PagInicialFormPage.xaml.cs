@@ -33,16 +33,7 @@ namespace System_Cont.Views
         public PagInicialFormPage()
         {
             InitializeComponent();
-            try
-            {
-                var dao = new DespesaDAO();
-
-                dao.SomaDespesa();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            Loaded += PagInicialFormPage_Loaded;
 
             SeriesCollection = new SeriesCollection
             {
@@ -102,6 +93,25 @@ namespace System_Cont.Views
             Labels = new[] { "Feb 7", "Feb 8", "Feb 9", "Feb 10" };
             Formatter = value => value.ToString();
             DataContext = this;    
+        }
+
+        private void PagInicialFormPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarListagem();
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new DespesaDAO();
+                
+                txtTotalDespesa.Text = "R$ " + Convert.ToString(dao.SomaDespesa());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
