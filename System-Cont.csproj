@@ -357,6 +357,24 @@
   <ItemGroup>
     <Resource Include="Imagens\justicia.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\lixeira.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\lixeira.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\olho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\olho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\docx.png" />
+    <Resource Include="Imagens\pdf.png" />
+    <Resource Include="Imagens\pptx.png" />
+    <Resource Include="Imagens\txt.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

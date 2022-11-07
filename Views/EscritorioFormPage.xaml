@@ -24,7 +24,7 @@
                 <Grid Grid.Column="0">
                     <StackPanel Margin="0 0 0 0" Height="120">
                         <Border Margin="0, 0, 0, 0" Width="250" Height="120">
-                            <Button x:Name="btnListRecebimento" Content="List" Width="66" Click="btnListRecebimento_Click"/>
+                            <Button x:Name="btnListRecebimento" Content="List" Width="66" Click="btnListRecebimento_Click" Cursor="Hand"/>
                             <Border.Background>
                                 <LinearGradientBrush>
                                     <GradientStop Color="#FF2D2D3A"/>
