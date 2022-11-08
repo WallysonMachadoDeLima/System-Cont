@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System_Cont.Models;
+using LiveCharts.Wpf.Charts.Base;
 
 namespace System_Cont.Views
 {
@@ -104,14 +105,40 @@ namespace System_Cont.Views
         {
             try
             {
-                var dao = new DespesaDAO();
+                var dao = new RecebimentoDAO();
                 
-                txtTotalDespesa.Text = "R$ " + Convert.ToString(dao.SomaDespesa());
+                //txtTotalDespesa.Text = "R$ " + Convert.ToString(dao());
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            
+            try
+            {
+                var dao = new DespesaDAO();
+
+                txtGanhoAnual.Text = "R$ " + Convert.ToString(dao.SomaDespesa());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            //Funçoes do LiveCharts
+
+            GraficoLucroMensal.Series.Clear(); //Limpa os Dados Existentes
+
+
+            GraficoGanhoAnual.Series.Clear();
+            GraficoGanhoAnual.Series[0].Values.AddRange("aaaa", 105);
+            GraficoGanhoAnual.Series[0].Values.AddRange("aaaa",
+                                                        105);
+            GraficoGanhoAnual.Series[0].Values.Add("aaaa", 105);
+            GraficoGanhoAnual.Series[0].Values.Add("aaaa", 105);
+            GraficoGanhoAnual.Series[0].Values.Add("aaaa", 105);
+
+
         }
     }
 }
