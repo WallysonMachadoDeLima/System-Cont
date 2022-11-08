@@ -154,6 +154,7 @@ namespace System_Cont.Views
             Listimg.Items.Remove(Listimg.SelectedItem);
             File.Move(imagemSelecionada, saida + nomefile);
             filemove = saida + nomefile;
+            if (selected.Imagem == imgview) ImagemViewClick();
         }
 
         // FUNÇÃO ABRIR FINISHED
@@ -241,6 +242,7 @@ namespace System_Cont.Views
                         filemove = saida + nomefile;
 
                         System.Diagnostics.Process.Start("explorer.exe", filemove);
+                        if (selected.Imagem == imgview) ImagemViewClick();
                     }
                 }
                 catch (Exception ex)
@@ -277,6 +279,7 @@ namespace System_Cont.Views
                         File.Move(imagemSelecionada, saida + nomefile);
                         filemove = saida + nomefile;
 
+                        if (selected.Imagem == imgview) ImagemViewClick();
                         System.Diagnostics.Process.Start("explorer.exe", filemove);
                     }
                 }
