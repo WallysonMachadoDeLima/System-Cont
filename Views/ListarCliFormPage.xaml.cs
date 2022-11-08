@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -64,6 +65,9 @@ namespace System_Cont.Views
                 {
                     var dao = new ClienteDAO();
                     dao.Delete(clienteSelected);
+                    string saida = Directory.GetCurrentDirectory();
+                    saida = saida.Substring(0, saida.Length - 9) + @"Clientes\";
+                    Directory.Delete(saida + clienteSelected.NomeCliente);
                     CarregarListagem();
                 }
             }

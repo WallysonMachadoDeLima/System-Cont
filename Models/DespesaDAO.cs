@@ -76,19 +76,29 @@ namespace System_Cont.Models
             }
         }
 
-        public void SomaDespesa()
+        public double SomaDespesa()
         {
+            double totalDespesa = 0;
+
             try
             {
                 var comando = _conn.Query();
 
                 comando.CommandText = "select sum(valor_des) from Despesa";
-                MySqlDataReader reader = comando.ExecuteReader();
 
                 var despesa = new Despesa();
-                despesa.SomaDespesa = DAOHelper.GetDouble(reader, "sum(valor_des)");
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    totalDespesa = DAOHelper.GetDouble(reader, "sum(valor_des)");
+
+                }
 
                 reader.Close();
+                return totalDespesa;
             }
             catch (Exception ex)
             {

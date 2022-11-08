@@ -10,24 +10,34 @@
     <ScrollViewer CanContentScroll="True" Width="1380" Height="700">
         <Grid Background="#131419">
             <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Grid Grid.Column="0">
+            <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <StackPanel Grid.Column="0">
-                    <TextBlock Text="Recebimentos" Foreground="White" HorizontalAlignment="Center" FontSize="28" FontFamily="Bahnschrift SemiBold"/>
-                </StackPanel>
-
-                <StackPanel Grid.Column="1">
-                    <TextBlock Text="Despesas" Foreground="White" HorizontalAlignment="Center" FontSize="28" FontWeight="Normal" FontStyle="Normal" FontFamily="Bahnschrift SemiBold"/>
-                </StackPanel>
+                <Grid Grid.Column="0">
+                    <StackPanel Margin="0 0 0 0" Height="120">
+                        <Border Margin="0, 0, 0, 0" Width="250" Height="120">
+                            <Button x:Name="btnListRecebimento" Content="List" Width="66" Click="btnListRecebimento_Click" Cursor="Hand"/>
+                            <Border.Background>
+                                <LinearGradientBrush>
+                                    <GradientStop Color="#FF2D2D3A"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                                <Border.Clip>
+                                    <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,250,120"/>
+                                </Border.Clip>
+                        </Border>
+                    </StackPanel>
+                    
+                </Grid>
+                
             </Grid>
 
             <Grid Grid.Row="1">
@@ -35,93 +45,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-
-                <StackPanel Grid.Column="0" Orientation="Horizontal">
-
-                    <DataGrid Height="430" Width="690" x:Name="dataGridRecebimento" IsReadOnly="true" Foreground="White"
-                      AutoGenerateColumns="False" AlternatingRowBackground="#1E1E1E" AlternationCount="2" Grid.ColumnSpan="2" Background="#FF1E1E1E" FontSize="20" BorderBrush="#FF1F1F1F" 
-                      FontStyle="Normal" FontWeight="Normal">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Descrição" Binding="{Binding DescricaoRec}" Foreground="White" FontSize="18"  Width="160"/>
-                            <DataGridTextColumn Header="Valor" Binding="{Binding ValorRec}" Foreground="White" FontSize="18"  Width="160"/>
-                            <DataGridTextColumn Header="Data de Recebimento" Binding="{Binding Data_Recebimento}" Foreground="White" FontSize="18"  Width="246"/>
-
-                            <DataGridTemplateColumn Header="Ações">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button x:Name="btnExcluirRecebimento_Click" 
-                                        Content="Deletar"
-                                        ToolTip="Excluir Registro" Click="btnExcluirRecebimento_Click" Cursor="Hand"/>
-                                        </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-                        </DataGrid.Columns>
-                    </DataGrid>
-
-                </StackPanel>
-
-                <StackPanel Grid.Column="1" Orientation="Horizontal">
-
-                    <DataGrid Height="432" Width="690" x:Name="dataGridDespesa" IsReadOnly="true" Foreground="White"
-                      AutoGenerateColumns="False" AlternatingRowBackground="#1E1E1E" AlternationCount="2" Grid.ColumnSpan="2" Background="#FF1E1E1E" FontSize="20" BorderBrush="#FF1F1F1F" 
-                      FontStyle="Normal" FontWeight="Normal">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Descrição" Binding="{Binding DescricaoDes}" Foreground="White" FontSize="18"  Width="160"/>
-                            <DataGridTextColumn Header="Valor" Binding="{Binding ValorDes}" Foreground="White" FontSize="18"  Width="160"/>
-                            <DataGridTextColumn Header="Data de Despesa" Binding="{Binding Data_Despesa}" Foreground="White" FontSize="18"  Width="246"/>
-
-                            <DataGridTemplateColumn Header="Ações">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button x:Name="btnExcluirDespesa" 
-                                        Content="Deletar"
-                                        ToolTip="Excluir Registro" Click="btnExcluirDespesa_Click"/>
-                                        </StackPanel>
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-                        </DataGrid.Columns>
-                    </DataGrid>
-
-                </StackPanel>
-
-
-
-            </Grid>
-
-
-            <Grid Grid.Row="2">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="690"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-
-                <StackPanel Grid.Column="0" Margin="0 0 0 0">
-                    <Border Height="432">
-                        <Border.Background>
-                            <LinearGradientBrush>
-                                <GradientStop Color="#FF202025"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
-                        <StackPanel>
-                            <StackPanel Margin="0 100 0 0">
-                                <Button x:Name="btnAdcMovimentacao" Content="+" Margin="0 0 0 20" Height="78" Width="82" BorderBrush="#FF0000FB" Background="Black" FontSize="40" Cursor="Hand" Click="btnAdcMovimentacao_Click"/>
-                            </StackPanel>
-                            <TextBlock Text="Adicionar Recebimento:__________" Foreground="White" HorizontalAlignment="Center" FontSize="30" Margin="0 10 0 0"/>
-                            <TextBlock Text="Adicionar Despesa:_______________" Foreground="White" HorizontalAlignment="Center" FontSize="30" Margin="0 15 0 0"/>
-                        </StackPanel>
-                        <Border.Clip>
-                            <RectangleGeometry RadiusX="30" RadiusY="30" Rect="0,0,690,600"/>
-                        </Border.Clip>
-
-                    </Border>
-
-                </StackPanel>
-
-
+                <Button x:Name="btnAdcMovimentacao" Content="+" Margin="0 0 0 20" Height="78" Width="82" BorderBrush="#FF0000FB" Background="Black" FontSize="40" Cursor="Hand" Click="btnAdcMovimentacao_Click"/>
             </Grid>
         </Grid>
     </ScrollViewer>

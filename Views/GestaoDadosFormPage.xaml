@@ -5,8 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:System_Cont.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="865" d:DesignWidth="1920"
-      Title="GestaoDadosFormPage">
+      Title="GestaoDadosFormPage" Height="920" Width="1920">
 
 
     <Grid Background="#FF1F2121">
@@ -26,16 +25,26 @@
 
                 <Grid Grid.Row="0">
                     <StackPanel >
-                        <Border Margin="0, 0, 0, 0" Width="300" Height="100" CornerRadius="0, 0, 50, 0">
+                        <Border Margin="0, 0, 0, 0" Width="300" Height="155" CornerRadius="0, 0, 50, 0">
                             <Border.Background>
                                 <LinearGradientBrush>
                                     <GradientStop Color="#0A0D10"/>
                                 </LinearGradientBrush>
                             </Border.Background>
                             <Grid>
-                                <Button x:Name ="xx" Content="" Width="50" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="5, 0, 0,5" Click="Deletar_Click" Cursor="Hand" Background="#FFD90F0F" BorderBrush="#FFD90F0F"/>
-                                <Button x:Name ="xxx" Content="" Width="50" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="60, 0, 0,5" Click="Deletar_Click" Cursor="Hand" Background="#FFD90F0F" BorderBrush="#FFD90F0F"/>
-                                <Button x:Name ="xxxx" Content="" Width="50" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="115, 0, 0,5" Click="MostrarImg_Click" Cursor="Hand" Background="#FF15E939" BorderBrush="#FF15E939"/>
+                                <Button x:Name ="xxx" Content="" Width="50" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="60, 0, 0,5" Click="Deletar_Click" Cursor="Hand" BorderBrush="#FF673AB7">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Imagens/lixeira.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                                <Button x:Name ="xxxx" Content="" Width="50" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="160, 0, 0,5" Click="MostrarImg_Click" Cursor="Hand">
+                                    <Button.Foreground>
+                                        <ImageBrush/>
+                                    </Button.Foreground>
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Views/olho.png"/>
+                                    </Button.Background>
+                                </Button>
                             </Grid>
                         </Border>
                     </StackPanel>
@@ -111,15 +120,14 @@
                                         FontSize="20"
                                         VerticalAlignment="Top"
                                         HorizontalAlignment="Left"
-                                        Margin="30,20,0,0" ><Run Text="CONVERT"/><LineBreak/><Run Text=""/>
-                                </TextBlock>
+                                        Margin="15,20,0,0" ><Run Language="pt-br" Text="CONVERTER"/><LineBreak/><Run/></TextBlock>
                                 <TextBlock
                                        Foreground="#FFFFFF"
                                        FontFamily="Oswald"
                                        FontSize="15"
                                        VerticalAlignment="Top"
                                        HorizontalAlignment="Left"
-                                       Margin="35,25,0,0" ><Run/><LineBreak/><Run Text="IMAGE IN TEXT"/></TextBlock>
+                                       Margin="25,25,0,0" ><Run/><LineBreak/><Run Language="pt-br" Text="IMAGEM EM TEXTO"/></TextBlock>
                                 <Button x:Name ="PDFpIMG" Content="O" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="ImageInText_Click" Cursor="Hand" FontSize="20"/>
                             </Grid>
 
@@ -147,17 +155,15 @@
                                         FontSize="20"
                                         VerticalAlignment="Top"
                                         HorizontalAlignment="Left"
-                                        Margin="30,20,0,0" ><Run Text="CONVERT"/><LineBreak/><Run Text=""/>
-                                </TextBlock>
+                                        Margin="30,20,0,0" ><Run Language="pt-br" Text="RECORTAR"/><LineBreak/><Run Language="pt-br"/></TextBlock>
                                 <TextBlock
                                        Foreground="#FFFFFF"
                                        FontFamily="Oswald"
                                        FontSize="15"
                                        VerticalAlignment="Top"
                                        HorizontalAlignment="Left"
-                                       Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
-                                </TextBlock>
-                                <Button x:Name ="XXXX" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="XX_Click" Cursor="Hand"/>
+                                       Margin="45,25,0,0" ><Run/><LineBreak/><Run Language="pt-br" Text="IMAGEM"/></TextBlock>
+                                <Button x:Name ="XXXX" Content="O" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="RecortarImg_Click" Cursor="Hand" FontSize="20"/>
 
                             </Grid>
 
@@ -185,17 +191,15 @@
                                         FontSize="20"
                                         VerticalAlignment="Top"
                                         HorizontalAlignment="Left"
-                                        Margin="30,20,0,0" ><Run Text="CONVERT"/><LineBreak/><Run Text=""/>
-                                </TextBlock>
+                                        Margin="30,20,0,0" ><Run Text="EDITAR"/><LineBreak/><Run/></TextBlock>
                                 <TextBlock
                                        Foreground="#FFFFFF"
                                        FontFamily="Oswald"
                                        FontSize="15"
                                        VerticalAlignment="Top"
                                        HorizontalAlignment="Left"
-                                       Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
-                                </TextBlock>
-                                <Button x:Name ="XXX" Content="BT" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="XXX_Click" Cursor="Hand"/>
+                                       Margin="35,25,0,0" ><Run/><LineBreak/><Run Language="pt-br" Text="DOCUMENTO"/></TextBlock>
+                                <Button x:Name ="XXX" Content="O" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="EditarDocumento_Click" Cursor="Hand" FontSize="20"/>
 
                             </Grid>
 
@@ -204,13 +208,15 @@
                 </Grid>
 
                 <Grid Grid.Row="1">
-                    <Button Content="DropZone" Width="700" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0" Background="#0A0D10" FontSize="72" Cursor="Hand" BorderBrush="#FF25252F" Click="SelecionarArquivos_Click"/>
+                    <Border  CornerRadius="20" Background="#FF373232" Width="730" Height="630">
+                        <Button Content="DropZone" Width="700" Height="600" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0" Background="#0A0D10" FontSize="72" Cursor="Hand" BorderBrush="#FF25252F" Click="SelecionarArquivos_Click"/>
+                    </Border>
                 </Grid>
             </Grid>
 
             <Grid Grid.Column="2">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="280"/>
+                    <RowDefinition Height="180"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
@@ -226,15 +232,15 @@
                         <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20" Background="#0A0D10">
                             <Grid>
                                 <Border 
-                                        Background="#FF373232"
-                                        Height="180"
-                                        Width="150"
-                                        HorizontalAlignment="Left"
-                                        VerticalAlignment="Top"
-                                        CornerRadius="20"
-                                        Opacity="0.3"
-                                        Margin="10,10,30,60" 
-                                    />
+                                    Background="#FF373232"
+                                    Height="110"
+                                    Width="150"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    CornerRadius="20"
+                                    Opacity="0.3"
+                                    Margin="10,10,20,30" 
+                                />
 
                                 <TextBlock
                                         Foreground="#FFFFFF"
@@ -242,17 +248,15 @@
                                         FontSize="20"
                                         VerticalAlignment="Top"
                                         HorizontalAlignment="Left"
-                                        Margin="30,20,0,0" ><Run Text="CONVERT"/><LineBreak/><Run Text=""/>
-                                </TextBlock>
+                                        Margin="30,20,0,0" ><Run Language="pt-br" Text="xxx"/><Run Text="EDITAR"/><LineBreak/><Run/></TextBlock>
                                 <TextBlock
                                        Foreground="#FFFFFF"
                                        FontFamily="Oswald"
                                        FontSize="15"
                                        VerticalAlignment="Top"
                                        HorizontalAlignment="Left"
-                                       Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
-                                </TextBlock>
-                                <Button x:Name ="XX" Content="BT" Width="70" Height="55" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20, 60" Click="Button_Click_TesteSalvar" Cursor="Hand"/>
+                                       Margin="35,25,0,0" ><Run/><LineBreak/><Run Language="pt-br" Text="xxx"/><Run Text="UMENTO"/></TextBlock>
+                                <Button x:Name ="XX" Content="O" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="Button_Click_TesteSalvar" Cursor="Hand" FontSize="20"/>
 
                             </Grid>
 
@@ -261,12 +265,12 @@
 
                     <!--// Button XXXXX //-->
                     <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20" Width="250" Background="#0A0D10">
+                        <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20" Width="250" Background="#0A0D10" Height="170">
 
                             <Grid>
                                 <Border 
                                     Background="#FF373232"
-                                    Height="150"
+                                    Height="130"
                                     Width="180"
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Top"
@@ -281,17 +285,15 @@
                                         FontSize="20"
                                         VerticalAlignment="Top"
                                         HorizontalAlignment="Left"
-                                        Margin="30,20,0,0" ><Run Text="CONVERT"/><LineBreak/><Run Text=""/>
-                                </TextBlock>
+                                        Margin="40,20,0,0" ><Run Language="pt-br" Text="HISTÓRICO"/><LineBreak/><Run Language="pt-br"/></TextBlock>
                                 <TextBlock
                                        Foreground="#FFFFFF"
                                        FontFamily="Oswald"
                                        FontSize="15"
                                        VerticalAlignment="Top"
                                        HorizontalAlignment="Left"
-                                       Margin="35,25,0,0" ><Run Text=""/><LineBreak/><Run Text="PDF IN IMAGE"/>
-                                </TextBlock>
-                                <Button x:Name ="X" Content="BT" Width="60" Height="45" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="0, 55, 20,30" Click="PDFpIMG_Click" Cursor="Hand"/>
+                                       Margin="65,25,0,0" ><Run/><LineBreak/><Run Language="pt-br" Text="DE EDIÇÃO"/></TextBlock>
+                                <Button x:Name ="X" Content="O" Width="60" Height="45" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="-10, 55, 40,30" Click="Historico_Click" Cursor="Hand" FontSize="20"/>
 
                             </Grid>
 
@@ -299,7 +301,6 @@
                     </StackPanel>
 
                     <!--// Button XXXXX //-->
-
                     <StackPanel Grid.Column="2" VerticalAlignment="Center">
 
                         <Grid VerticalAlignment="Center">
@@ -310,15 +311,15 @@
                                 <ColumnDefinition Width="30"/>
                             </Grid.ColumnDefinitions>
                             <Grid Grid.Column="1">
-                                <Border CornerRadius="5" Margin="00, 0, 0, 0" Width="50" Height="50" Background="#DFCF20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                                <Border CornerRadius="5" Margin="00, 70, 0, 0" Width="50" Height="50" Background="#B84EEB" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                                <Border CornerRadius="5" Margin="0, 140, 0, 0" Width="50" Height="50" Background="#DF208F" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                <Border CornerRadius="5" Margin="00, 11, 0, 0" Width="50" Height="50" Background="#DFCF20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                <Border CornerRadius="5" Margin="00, 75, 0, 0" Width="50" Height="50" Background="#B84EEB" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                                <Border CornerRadius="5" Margin="0, 140, 0, 10" Width="50" Height="50" Background="#DF208F" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                             </Grid>
 
                             <Grid Grid.Column="2">
-                                <Border CornerRadius="5" Margin="0, 0, 5, 0" Width="50" Height="50" Background="#06A4FB" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-                                <Border CornerRadius="5" Margin="0, 70, 5, 0" Width="50" Height="50" Background="#27BDE9" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-                                <Border CornerRadius="5" Margin="0, 140, 5, 0" Width="50" Height="50" Background="#ABDB54" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                                <Border CornerRadius="5" Margin="0, 11, 5, 0" Width="50" Height="50" Background="#06A4FB" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                                <Border CornerRadius="5" Margin="0, 75, 5, 0" Width="50" Height="50" Background="#27BDE9" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                                <Border CornerRadius="5" Margin="0, 140, 5, 10" Width="50" Height="50" Background="#ABDB54" HorizontalAlignment="Right" VerticalAlignment="Top"/>
 
                             </Grid>
 
@@ -337,14 +338,17 @@
                         <RowDefinition Height="100"/>
                     </Grid.RowDefinitions>
 
-                    <Grid Grid.Row="0">
-                        <Image Margin="20" x:Name="imgPhoto"  Stretch="Fill" Grid.Column="1" />
+                    <Grid Grid.Row="0" Margin="54" >
+                        <Border  Width="640" CornerRadius="20" Background="#FF373232" Height="530" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image x:Name="imgPhoto"  Stretch="Fill" Grid.Column="1" Width="600" Height="490"/>
+                        </Border>
                     </Grid>
 
                     <Grid Grid.Row="1">
-                        <Button x:Name="bnt_tirar" Content="REMOVER" FontSize="38" Width="500" Height="80" Click="RemoverView_Click"/>
+                        <StackPanel>
+                            <Button x:Name="bnt_tirar" Margin="0 -39 0 0" Content="REMOVER" FontSize="38" Width="500" Height="80" Click="RemoverView_Click"/>
+                        </StackPanel>
                     </Grid>
-
                 </Grid>
             </Grid>
         </Grid>

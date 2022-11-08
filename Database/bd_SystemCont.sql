@@ -20,13 +20,6 @@ descricao_per varchar(300),
 data_egresso date
 );
 
-create table Caixa(
-id_cai int primary key auto_increment,
-saldo_atual_cai double,
-horario_atual time,
-data_atual date
-);
-
 create table Reuniao(
 id_reu int primary key auto_increment,
 status_reu varchar(300),
@@ -57,10 +50,17 @@ senha_fun varchar(300),
 cpf_fun varchar(300),
 rg_fun varchar(300),
 numero_inscricao varchar(300),
-id_cai_fk int,
-foreign key (id_cai_fk) references Caixa (id_cai),
 id_per_fk int,
 foreign key (id_per_fk) references Perfil (id_per)
+);
+
+create table Caixa(
+id_cai int primary key auto_increment,
+saldo_atual_cai double,
+horario_atual time,
+data_atual date,
+id_fun_fk int,
+foreign key (id_fun_fk) references Funcionario (id_fun)
 );
 
 create table Processo(
@@ -144,3 +144,4 @@ foreign key (id_fun_fk) references Funcionario (id_fun),
 id_reu_fk int,
 foreign key (id_reu_fk) references Reuniao (id_reu)
 );
+
