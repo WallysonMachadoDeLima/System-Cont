@@ -16,8 +16,8 @@ namespace System_Cont.Database
         private static string port = "3306";
 
         private static string user = "root";
-        //Star@pixel4862+!  &   root  & Star@pixel4268!(notebook)
-        private static string password = "root";
+        //Star@pixel4862+!  &   root  & Star@pixel4268!(notebook) & f77^&P41mR2(jose)
+        private static string password = "f77^&P41mR2";
 
         private static string dbname = "bd_advocacia";
 
