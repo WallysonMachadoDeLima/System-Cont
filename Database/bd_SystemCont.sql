@@ -9,7 +9,7 @@ telefone_cli varchar (300),
 rg_cli varchar (100),
 cpf_cli varchar (200),
 nacionalidade_cli varchar (100),
-renda_cli varchar (100),
+renda_cli double,
 email_cli varchar (100),
 local_cli varchar (100)
 );
@@ -144,4 +144,15 @@ foreign key (id_fun_fk) references Funcionario (id_fun),
 id_reu_fk int,
 foreign key (id_reu_fk) references Reuniao (id_reu)
 );
+
+
+#Procedimentos
+
+Delimiter $$
+create procedure InserirCliente (nome varchar(300), telefone varchar(300), rg varchar(100), cpf varchar(200), nacionalidade varchar(100), renda double, email varchar(100), localidade varchar)
+begin
+insert into Cliente 
+end;
+$$ Delimiter ;
+
 

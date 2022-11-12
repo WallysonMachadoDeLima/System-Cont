@@ -110,7 +110,7 @@
                         <StackPanel Margin="10">
                             <TextBlock Text="Ganho Anual" FontSize="14" Foreground="White" TextAlignment="Center" />
                             <TextBlock x:Name="txtGanhoAnual" TextAlignment="Center" Margin="0 5" Foreground="Green" FontSize="18" />
-                            <lvc:CartesianChart Margin="0 5" Series="{Binding LastHourSeries}" Hoverable="False" DataTooltip="{x:Null}" Height="160" Width="160">
+                            <lvc:CartesianChart  Margin="0 5" Series="{Binding LastHourSeries}" Hoverable="False" DataTooltip="{x:Null}" Height="160" Width="160" >
                                 <lvc:CartesianChart.AxisX>
                                     <lvc:Axis MinValue="0" />
                                 </lvc:CartesianChart.AxisX>

@@ -118,7 +118,7 @@ namespace System_Cont.Views
             {
                 var dao = new DespesaDAO();
 
-                txtGanhoAnual.Text = "R$ " + Convert.ToString(dao.SomaDespesa());
+                txtTotalDespesa.Text = "R$ " + Convert.ToString(dao.SomaDespesa());
             }
             catch (Exception ex)
             {
@@ -126,17 +126,6 @@ namespace System_Cont.Views
             }
 
             //Funçoes do LiveCharts
-
-            GraficoLucroMensal.Series.Clear(); //Limpa os Dados Existentes
-
-
-            GraficoGanhoAnual.Series.Clear();
-            GraficoGanhoAnual.Series[0].Values.AddRange("aaaa", 105);
-            GraficoGanhoAnual.Series[0].Values.AddRange("aaaa",
-                                                        105);
-            GraficoGanhoAnual.Series[0].Values.Add("aaaa", 105);
-            GraficoGanhoAnual.Series[0].Values.Add("aaaa", 105);
-            GraficoGanhoAnual.Series[0].Values.Add("aaaa", 105);
 
 
         }
