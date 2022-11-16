@@ -3,10 +3,65 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:System_Cont.Views.EscritorioViews"
-        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:System_Cont.Views"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
         Title="CadDespesaFormWindow" Height="450" Width="800">
+
     <Grid Background="#131419">
-        
+        <Border Grid.Column="1" Background="#ffffff" CornerRadius="0 0 0 0">
+            <Grid>
+                <Label Content="Adicionar Despesa" FontWeight="Light" HorizontalAlignment="Center" FontSize="28" Foreground="Black"/>
+                <!--Inputs do Usuário-->
+                <StackPanel VerticalAlignment="Center"
+                                    Margin="75 0">
+
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
+                                       materialDesign:HintAssist.Hint="Nome"
+                                       x:Name="txtNomeDes"
+                                       Margin="0 0 0 30"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       BorderThickness="0 0 0 1.5"/>
+
+
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
+                                       materialDesign:HintAssist.Hint="Descrição"
+                                       x:Name="txtDescricaoDes"
+                                       Margin="0 0 0 30"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"                            
+                                       BorderThickness="0 0 0 1.5"/>
+
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
+                                       materialDesign:HintAssist.Hint="Valor"
+                                       x:Name="txtValorDes"
+                                       Tag="Valor R$"                                       
+                                       Margin="0 0 0 30"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
+                                       BorderThickness="0 0 0 1.5"/>
+
+                    <DatePicker x:Name="dtpDespesa" Background="White" Width="237" Height="31" Margin="0 0 0 0"/>
+
+                    <!--Buttons-->
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Salvar"
+                                x:Name="btnSalvarDespesa"
+                                Cursor="Hand"
+                                Margin="0 20 0 0"
+                                BorderBrush="#0B4357"
+                                Background="#0B4357"
+                                Foreground="#ffffff"
+                                FontSize="18"
+                                Width="120"
+                                Height="45"
+                                materialDesign:ButtonAssist.CornerRadius="22" Click="btnSalvarDespesa_Click"/>
+
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

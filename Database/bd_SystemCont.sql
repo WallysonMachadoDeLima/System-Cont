@@ -139,7 +139,6 @@ id_reu_fk int,
 foreign key (id_reu_fk) references Reuniao (id_reu)
 );
 
-
 #Procedimentos
 
 Delimiter $$

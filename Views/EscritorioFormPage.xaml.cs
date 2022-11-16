@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System_Cont.Models;
-using System_Cont.Views;
+using System_Cont.Views.EscritorioViews;
 
 namespace System_Cont.Views
 {
@@ -36,7 +36,24 @@ namespace System_Cont.Views
 
         private void btnListRecebimento_Click(object sender, RoutedEventArgs e)
         {
-            EscritorioViews.ListRecebimentoFormWindow view = new EscritorioViews.ListRecebimentoFormWindow();
+            ListRecebimentoFormWindow view = new ListRecebimentoFormWindow();
+            view.ShowDialog();
+        }
+        private void btnAdcRecebimento_Click(object sender, RoutedEventArgs e)
+        {
+            CadRecebimentoFormWindow view = new CadRecebimentoFormWindow();
+            view.ShowDialog();
+        }
+
+        private void btnListDespesa_Click(object sender, RoutedEventArgs e)
+        {
+            ListDespesaFormWindow view = new ListDespesaFormWindow();
+            view.ShowDialog();
+        }
+
+        private void btnAdcDespesa_Click(object sender, RoutedEventArgs e)
+        {
+            CadDespesaFormWindow view = new CadDespesaFormWindow();
             view.ShowDialog();
         }
     }
