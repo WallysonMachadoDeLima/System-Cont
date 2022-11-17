@@ -347,9 +347,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Clientes\" />
-    <Folder Include="Files\Change\" />
-    <Folder Include="Files\Finished\" />
-    <Folder Include="Files\ListView\" />
+    <Folder Include="Files\" />
+    <Folder Include="Py\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagens\cartoon-woman-pretty.png" />
