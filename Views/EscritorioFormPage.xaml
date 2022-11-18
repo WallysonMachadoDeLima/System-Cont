@@ -22,22 +22,48 @@
                 </Grid.ColumnDefinitions>
 
                 <Grid Grid.Column="0">
-                    <StackPanel Margin="0 0 0 0" Height="120">
-                        <Border Margin="0, 0, 0, 0" Width="250" Height="120">
-                            <Button x:Name="btnListRecebimento" Content="List" Width="66" Click="btnListRecebimento_Click" Cursor="Hand"/>
-                            <Border.Background>
-                                <LinearGradientBrush>
-                                    <GradientStop Color="#FF2D2D3A"/>
-                                </LinearGradientBrush>
-                            </Border.Background>
-                                <Border.Clip>
-                                    <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,250,120"/>
-                                </Border.Clip>
-                        </Border>
+                    <StackPanel Margin="50 50 50 50">
+                        <Rectangle Width="300" Height="150" Fill="#FF2D2D3A" RadiusX="10" RadiusY="10"/>
+                        <StackPanel Margin="0 -150 0 0">
+                            <TextBlock Text="Recebimentos" FontSize="28" Foreground="White" HorizontalAlignment="Center" Margin="0 -0 0 0" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold"/>
+                        </StackPanel>
+                        <StackPanel Margin="0 -130 0 0" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Name="btnListRecebimento"  Width="52" Click="btnListRecebimento_Click" Cursor="Hand" Height="26" BorderBrush="{x:Null}" BorderThickness="2,1,1,1">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Views/Olho3.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Button x:Name="btnAdcRecebimento" Width="40" Cursor="Hand" Margin="60 0 0 0" Height="38" BorderBrush="{x:Null}" Click="btnAdcRecebimento_Click">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Views/add.png"/>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
                     </StackPanel>
-                    
                 </Grid>
-                
+
+                <Grid Grid.Column="1">
+                    <StackPanel Margin="50 50 50 50">
+                        <Rectangle Width="300" Height="150" Fill="#FF2D2D3A" RadiusX="10" RadiusY="10"/>
+                        <StackPanel Margin="0 -150 0 0">
+                            <TextBlock Text="Despesas" FontSize="28" Foreground="White" HorizontalAlignment="Center" Margin="0 -0 0 0" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold"/>
+                        </StackPanel>
+                        <StackPanel Margin="0 -130 0 0" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Name="btnListDespesa"  Width="52" Cursor="Hand" Height="26" BorderBrush="{x:Null}" BorderThickness="2,1,1,1" Click="btnListDespesa_Click">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Views/Olho3.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Button x:Name="btnAdcDespesa" Width="40" Cursor="Hand" Margin="60 0 0 0" Height="38" BorderBrush="{x:Null}" Click="btnAdcDespesa_Click">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Views/add.png"/>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+
             </Grid>
 
             <Grid Grid.Row="1">
@@ -45,7 +71,83 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="btnAdcMovimentacao" Content="+" Margin="0 0 0 20" Height="78" Width="82" BorderBrush="#FF0000FB" Background="Black" FontSize="40" Cursor="Hand" Click="btnAdcMovimentacao_Click"/>
+
+                <Grid Grid.Column="0">
+                    <StackPanel Margin="50 50 50 50">
+                        <Rectangle Width="300" Height="150" Fill="#FF2D2D3A" RadiusX="10" RadiusY="10"/>
+                        <StackPanel Margin="0 -150 0 0">
+                            <TextBlock Text="Reuniões" FontSize="28" Foreground="White" HorizontalAlignment="Center" Margin="0 -0 0 0" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold"/>
+                        </StackPanel>
+                        <StackPanel Margin="0 -130 0 0" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Name="btnListReuniao"  Width="52" Cursor="Hand" Height="26" BorderBrush="{x:Null}" BorderThickness="2,1,1,1">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Views/Olho3.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Button x:Name="btnAdcReuniao" Width="40" Cursor="Hand" Margin="60 0 0 0" Height="38" BorderBrush="{x:Null}">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Views/add.png"/>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <StackPanel Margin="50 50 50 50">
+                        <Rectangle Width="300" Height="150" Fill="#FF2D2D3A" RadiusX="10" RadiusY="10"/>
+                        <StackPanel Margin="0 -150 0 0">
+                            <TextBlock Text="Processos" FontSize="28" Foreground="White" HorizontalAlignment="Center" Margin="0 -0 0 0" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold"/>
+                        </StackPanel>
+                        <StackPanel Margin="0 -130 0 0" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Name="btnListProcesso"  Width="52" Cursor="Hand" Height="26" BorderBrush="{x:Null}" BorderThickness="2,1,1,1">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Views/Olho3.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Button x:Name="btnAdcProcesso" Width="40" Cursor="Hand" Margin="60 0 0 0" Height="38" BorderBrush="{x:Null}">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Views/add.png"/>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0">
+                    <StackPanel Margin="50 50 50 50">
+                        <Rectangle Width="300" Height="150" Fill="#FF2D2D3A" RadiusX="10" RadiusY="10"/>
+                        <StackPanel Margin="0 -150 0 0">
+                            <TextBlock Text="Pagamentos" FontSize="28" Foreground="White" HorizontalAlignment="Center" Margin="0 -0 0 0" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold"/>
+                        </StackPanel>
+                        <StackPanel Margin="0 -130 0 0" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button x:Name="btnListPagamento"  Width="52" Cursor="Hand" Height="26" BorderBrush="{x:Null}" BorderThickness="2,1,1,1">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Views/Olho3.png"/>
+                                </Button.Background>
+                            </Button>
+                            <Button x:Name="btnAdcPagamento" Width="40" Cursor="Hand" Margin="60 0 0 0" Height="38" BorderBrush="{x:Null}">
+                                <Button.Background>
+                                    <ImageBrush ImageSource="/Views/add.png"/>
+                                </Button.Background>
+                            </Button>
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Button x:Name="btnAdcMovimentacao" Content="+" Margin="0 0 0 20" Height="78" Width="82" BorderBrush="#FF0000FB" Background="Black" FontSize="40" Cursor="Hand" Click="btnAdcMovimentacao_Click"/>
+                </Grid>
+
+
             </Grid>
         </Grid>
     </ScrollViewer>

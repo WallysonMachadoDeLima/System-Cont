@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:System_Cont.Views.EscritorioViews"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="ListDespesaFormWindow" Height="450" Width="800">
     <Grid Background="#131419">
-        <DataGrid Height="432" Width="690" x:Name="dataGridDespesa" IsReadOnly="true" Foreground="White"
-                      AutoGenerateColumns="False" AlternatingRowBackground="#1E1E1E" AlternationCount="2" Grid.ColumnSpan="2" Background="#FF1E1E1E" FontSize="20" BorderBrush="#FF1F1F1F" 
-                      FontStyle="Normal" FontWeight="Normal">
+        <DataGrid Height="432" x:Name="dataGridDespesa" IsReadOnly="true" Foreground="White"
+                      AutoGenerateColumns="False" AlternatingRowBackground="#ffffff" AlternationCount="2" Background="White" FontSize="20" BorderBrush="#FF1F1F1F" 
+                      FontStyle="Normal" FontWeight="Normal" Margin="0,1,0,1">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Descrição" Binding="{Binding DescricaoDes}" Foreground="White" FontSize="18"  Width="160"/>
-                <DataGridTextColumn Header="Valor" Binding="{Binding ValorDes}" Foreground="White" FontSize="18"  Width="160"/>
-                <DataGridTextColumn Header="Data de Despesa" Binding="{Binding Data_Despesa}" Foreground="White" FontSize="18"  Width="246"/>
+                <DataGridTextColumn Header="Descrição" Binding="{Binding DescricaoDes}" Foreground="Black" FontSize="18"  Width="160"/>
+                <DataGridTextColumn Header="Valor" Binding="{Binding ValorDes}" Foreground="Black" FontSize="18"  Width="160"/>
+                <DataGridTextColumn Header="Data de Despesa" Binding="{Binding Data_Despesa}" Foreground="Black" FontSize="18"  Width="246"/>
 
                 <DataGridTemplateColumn Header="Ações">
                     <DataGridTemplateColumn.CellTemplate>

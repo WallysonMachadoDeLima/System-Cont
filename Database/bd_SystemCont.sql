@@ -67,8 +67,11 @@ create table Processo(
 id_pro int primary key auto_increment,
 tipo_pro varchar(300),
 status_pro varchar(300),
+responsavel_pro varchar(300),
 id_cli_fk int,
-foreign key (id_cli_fk) references Cliente (id_cli)
+foreign key (id_cli_fk) references Cliente (id_cli),
+id_fun_fk int,
+foreign key (id_fun_fk) references Funcionario (id_fun)
 );
 
 create table Tarefa(
@@ -117,15 +120,6 @@ id_cai_fk int not null,
 foreign key (id_cai_fk) references Caixa (id_cai)
 );
 
-create table Responsavel(
-id_res int primary key auto_increment,
-nome_res varchar(300),
-id_fun_fk int,
-foreign key (id_fun_fk) references Funcionario (id_fun),
-id_pro_fk int,
-foreign key (id_pro_fk) references Processo (id_pro)
-);
-
 create table Funcionario_Honorario(
 id_fuho int primary key auto_increment,
 valor_fuho double,
@@ -145,14 +139,103 @@ id_reu_fk int,
 foreign key (id_reu_fk) references Reuniao (id_reu)
 );
 
-
 #Procedimentos
 
 Delimiter $$
-create procedure InserirCliente (nome varchar(300), telefone varchar(300), rg varchar(100), cpf varchar(200), nacionalidade varchar(100), renda double, email varchar(100), localidade varchar)
+create procedure InserirCliente (nome varchar(300), telefone varchar(300), rg varchar(100), cpf varchar(200), nacionalidade varchar(100), renda double, email varchar(100), localidade varchar(100))
 begin
-insert into Cliente 
+insert into Cliente values(null, nome, telefone, rg, cpf, nacionalidade, renda, email, localidade);
 end;
 $$ Delimiter ;
 
+Delimiter $$
+create procedure Perfil (descricao varchar(300), dataEgresso date)
+begin
+insert into Perfil values(null, descricao, dataEgresso);
+end;
+$$ Delimiter ;
+
+Delimiter $$
+create procedure Reuniao (statusReuniao varchar(300), dataReuniao date, horarioInicio time, horarioTermino time, resumo varchar(500))
+begin
+insert into Reuniao values(null, statusReuniao, dataReuniao, horarioInicio, horarioTermino, resumo);
+end;
+$$ Delimiter ;
+
+Delimiter $$
+create procedure Endereco (pais varchar(300), estado varchar(300), cidade varchar(300), bairro varchar(300), rua varchar(300), numero varchar(300), idCliente int)
+begin
+insert into Reuniao values(null, pais, estado, cidade, bairro, rua, numero, idCliente);
+end;
+$$ Delimiter ;
+
+Delimiter $$
+create procedure Funcionario (nome varchar(300), email varchar(300), login varchar(300), senha varchar(300), cpf varchar(300), rg varchar(300), numeroInscricao varchar(300), idPerfil int)
+begin
+insert into Funcionario values(null, nome, email, login, senha, cpf, rg, numeroInscricao, idPerfil);
+end;
+$$ Delimiter ;
+
+Delimiter $$
+create procedure Caixa (saldoAtual double, horario time, dataAtual date, idFuncionario int)
+begin
+insert into Caixa values(null, saldoAtual, horario, dataAtual, idFuncionario);
+end;
+$$ Delimiter ;
+
+Delimiter $$
+create procedure Processo (tipo varchar(300), statusProcesso varchar(300), responsavel varchar(300), idCliente int, idFuncionario int)
+begin
+insert into Processo values(null, tipo, statusProcesso, responsavel, idCliente, idFuncionario);
+end;
+$$ Delimiter ;
+
+Delimiter $$
+create procedure Tarefa (dataInicio date, dataTermino date, idFuncionario int, idProcesso int)
+begin
+insert into Tarefa values(null, dataInicio, dataTermino, idFuncionario, idProcesso);
+end;
+$$ Delimiter ;
+
+Delimiter $$
+create procedure Honorario (valor double, descricao varchar(300), idProcesso int)
+begin
+insert into Honorario values(null, valor, descricao, idProcesso);
+end;
+$$ Delimiter ;
+
+Delimiter $$
+create procedure Despesa (descricao varchar(300), valor double, dataDespesa date)
+begin
+insert into Despesa values(null, descricao, valor, dataDespesa);
+end;
+$$ Delimiter ;
+
+Delimiter $$
+create procedure Pagamento (valor double, descricao varchar(300), dataPagamento date, horarioPagamento time, idCaixa int, idDespesa int)
+begin
+insert into Pagamento values(null, valor, descricao, dataPagamento, horarioPagamento, idCaixa, idDespesa);
+end;
+$$ Delimiter ;
+
+Delimiter $$
+create procedure Recebimento (valor double, descricao varchar(300), dataPagamento date, horarioPagamento time, idCaixa int, idDespesa int)
+begin
+insert into Recebimento values(null, valor, descricao, dataPagamento, horarioPagamento, idCaixa, idDespesa);
+end;
+$$ Delimiter ;
+
+Delimiter $$
+create procedure Funcionario_Honorario (valor double, porcentagem double, idFuncionario int, idHonorario int)
+begin
+insert into Funcionario_Honorario values(null, valor, porcentagem, idFuncionario, idHonorario);
+end;
+$$ Delimiter ;
+
+Delimiter $$
+create procedure Reuniao_Funcionario (quantidade int, idFuncionario int, idReuniao int)
+begin
+insert into Reuniao_Funcionario values(null, quantidade, idFuncionario, idReuniao);
+end;
+$$ Delimiter ;
 

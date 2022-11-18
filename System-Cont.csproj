@@ -155,6 +155,10 @@
     <Compile Include="Models\ClienteDAO.cs" />
     <Compile Include="Models\Despesa.cs" />
     <Compile Include="Models\DespesaDAO.cs" />
+    <Compile Include="Models\Funcionario.cs" />
+    <Compile Include="Models\FuncionarioDAO.cs" />
+    <Compile Include="Models\Perfil.cs" />
+    <Compile Include="Models\PerfilDAO.cs" />
     <Compile Include="Models\Recebimento.cs" />
     <Compile Include="Models\RecebimentoDAO.cs" />
     <Compile Include="Views\AjudaFormPage.xaml.cs">
@@ -385,9 +389,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Clientes\" />
-    <Folder Include="Files\Change\" />
-    <Folder Include="Files\Finished\" />
-    <Folder Include="Files\ListView\" />
+    <Folder Include="Files\" />
+    <Folder Include="Py\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagens\cartoon-woman-pretty.png" />
@@ -416,6 +419,15 @@
     <Resource Include="Imagens\pdf.png" />
     <Resource Include="Imagens\pptx.png" />
     <Resource Include="Imagens\txt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Olho2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Olho3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />
