@@ -25,18 +25,10 @@
         <Border Background="#0A0D10" Padding="30">
             <StackPanel VerticalAlignment="Center">
 
-                <Ellipse Width="150" 
-                     Height="150" 
-                     VerticalAlignment="Center"
-                     HorizontalAlignment="Center"
-                     Margin="0 0 0 40"
-                     Fill="#0B4357"
-                     Opacity="0.6"/>
+                <Image Source="/Imagens/Icon-tarefa.png" Width="130" Height="130" Margin="0 0 0 40"/>
 
-                <!--<Image Source="/Imagens/" Width="160" Height="160" Margin="0 0 0 40"/>-->
-
-                <TextBlock Text="Faça o Cadastro de Tarefas!" TextAlignment="Center" FontWeight="Light" FontSize="16" Foreground="White"/>
-                <TextBlock Text="Preencha as Informações Necessárias para o Cadastro" TextAlignment="Center" TextWrapping="Wrap" FontWeight="Light" FontSize="12" Foreground="White"/>
+                <TextBlock Text="Faça o Cadastro de Tarefas" TextAlignment="Center" FontWeight="Light" FontSize="16" Foreground="White"/>
+                <TextBlock Text="Preencha as informações necessárias para o cadastro!" TextAlignment="Center" TextWrapping="Wrap" FontWeight="Light" FontSize="12" Foreground="White"/>
 
             </StackPanel>
         </Border>
@@ -53,7 +45,7 @@
                     <StackPanel  VerticalAlignment="Center" Margin="0 -60 0 50">
 
                         <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                                   x:Name="txtNome"
+                                                   x:Name="txtNomeTar"
                                                    materialDesign:HintAssist.Hint="Nome"
                                                    materialDesign:HintAssist.FloatingOffset="0,-15"
                                                    BorderBrush="#c5c8cc"
@@ -68,17 +60,17 @@
                                                    BorderThickness="0 0 0 1.5"/>
 
                         <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
-                                                   x:Name="txtStatus"
+                                                   x:Name="txtStatusTar"
                                                    materialDesign:HintAssist.Hint="Status"
                                                    materialDesign:HintAssist.FloatingOffset="0,-15"
                                                    BorderBrush="#c5c8cc"
                                                    Margin="0 0 0 30"
                                                    BorderThickness="0 0 0 1.5"/>
 
-                        <DatePicker x:Name="dtpTarefaIni" Background="White" Width="220" Height="31" Margin="0 0"/>
+                        <DatePicker x:Name="dtpTarefaIniTar" Background="White" Width="220" Height="31" Margin="0 0"/>
 
 
-                        <DatePicker x:Name="dtpTarefaTer" Background="White" Width="220" Height="31" Margin="0 20"/>
+                        <DatePicker x:Name="dtpTarefaTerTar" Background="White" Width="220" Height="31" Margin="0 20"/>
 
                         
 
