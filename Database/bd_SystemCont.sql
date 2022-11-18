@@ -86,6 +86,7 @@ create table Honorario(
 id_hon int primary key auto_increment,
 valor_hon double,
 descricao_hon varchar(300),
+data_hon date,
 id_pro_fk int,
 foreign key (id_pro_fk) references Processo (id_pro)
 );
