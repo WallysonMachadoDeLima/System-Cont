@@ -18,7 +18,7 @@ namespace System_Cont.Views.EscritorioViews
     /// <summary>
     /// Interação lógica para CadTarefasFormWindow.xam
     /// </summary>
-    public partial class CadTarefasFormWindow : Page
+    public partial class CadTarefasFormWindow : Window
     {
         public CadTarefasFormWindow()
         {
