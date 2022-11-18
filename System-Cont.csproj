@@ -175,11 +175,29 @@
     <Compile Include="Views\EscritorioViews\CadDespesaFormWindow.xaml.cs">
       <DependentUpon>CadDespesaFormWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\EscritorioViews\CadEnderecoFormWindow.xaml.cs">
+      <DependentUpon>CadEnderecoFormWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EscritorioViews\CadHonorariosFormWindow.xaml.cs">
+      <DependentUpon>CadHonorariosFormWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EscritorioViews\CadProcessoFormWindow.xaml.cs">
+      <DependentUpon>CadProcessoFormWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EscritorioViews\CadRecebimentoFormWindow.xaml.cs">
       <DependentUpon>CadRecebimentoFormWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\EscritorioViews\CadReunioesFormWindow.xaml.cs">
+      <DependentUpon>CadReunioesFormWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EscritorioViews\CadTarefasFormWindow.xaml.cs">
+      <DependentUpon>CadTarefasFormWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\EscritorioViews\ListDespesaFormWindow.xaml.cs">
       <DependentUpon>ListDespesaFormWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EscritorioViews\ListHonorairosFormWindow.xaml.cs">
+      <DependentUpon>ListHonorairosFormWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\EscritorioViews\ListRecebimentoFormWindow.xaml.cs">
       <DependentUpon>ListRecebimentoFormWindow.xaml</DependentUpon>
@@ -247,11 +265,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\EscritorioViews\CadEnderecoFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EscritorioViews\CadHonorariosFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EscritorioViews\CadProcessoFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\EscritorioViews\CadRecebimentoFormWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\EscritorioViews\CadReunioesFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EscritorioViews\CadTarefasFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\EscritorioViews\ListDespesaFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EscritorioViews\ListHonorairosFormWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

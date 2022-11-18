@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:System_Cont.Views"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="CadDespesasFormWindow" 
+        Title="CadTarefasFormWindow" 
         Height="450" 
         Width="700" 
         Padding="3,3,3,3" 
@@ -35,7 +35,7 @@
 
                 <!--<Image Source="/Imagens/" Width="160" Height="160" Margin="0 0 0 40"/>-->
 
-                <TextBlock Text="Faça o Cadastro de Despesas!" TextAlignment="Center" FontWeight="Light" FontSize="16" Foreground="White"/>
+                <TextBlock Text="Faça o Cadastro de Tarefas!" TextAlignment="Center" FontWeight="Light" FontSize="16" Foreground="White"/>
                 <TextBlock Text="Preencha as Informações Necessárias para o Cadastro" TextAlignment="Center" TextWrapping="Wrap" FontWeight="Light" FontSize="12" Foreground="White"/>
 
             </StackPanel>
@@ -50,40 +50,44 @@
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 10 0 0">
 
                     <!--Inputs do Usuário-->
-                    <StackPanel  VerticalAlignment="Center" Margin="0 0 0 50">
+                    <StackPanel  VerticalAlignment="Center" Margin="0 -60 0 50">
 
                         <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                                   x:Name="txtNomeDes"
+                                                   x:Name="txtNome"
                                                    materialDesign:HintAssist.Hint="Nome"
                                                    materialDesign:HintAssist.FloatingOffset="0,-15"
                                                    BorderBrush="#c5c8cc"
                                                    BorderThickness="0 0 0 1.5" Width="224"/>
 
                         <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
-                                                   x:Name="txtDescricaoDes"
+                                                   x:Name="txtDescricaoTar"
                                                    materialDesign:HintAssist.Hint="Descrição"
                                                    materialDesign:HintAssist.FloatingOffset="0,-15"
                                                    BorderBrush="#c5c8cc"
                                                    Margin="0 27"
                                                    BorderThickness="0 0 0 1.5"/>
 
-                        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
-                                       materialDesign:HintAssist.Hint="Valor"
-                                       x:Name="txtValorDes"
-                                       Tag="Valor R$"                                       
-                                       Margin="0 0 0 30"
-                                       materialDesign:HintAssist.FloatingOffset="0,-15"
-                                       BorderBrush="#c5c8cc"
-                                       BorderThickness="0 0 0 1.5"/>
+                        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
+                                                   x:Name="txtStatus"
+                                                   materialDesign:HintAssist.Hint="Status"
+                                                   materialDesign:HintAssist.FloatingOffset="0,-15"
+                                                   BorderBrush="#c5c8cc"
+                                                   Margin="0 0 0 30"
+                                                   BorderThickness="0 0 0 1.5"/>
 
-                        <DatePicker x:Name="dtpDespesas" Background="White" Width="220" Height="31" Margin="0 10 0 0"/>
+                        <DatePicker x:Name="dtpTarefaIni" Background="White" Width="220" Height="31" Margin="0 0"/>
+
+
+                        <DatePicker x:Name="dtpTarefaTer" Background="White" Width="220" Height="31" Margin="0 20"/>
+
+                        
 
                     </StackPanel>
 
                     <!--Buttons-->
                     <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 280 0 10">
                         <Button Content="Cancelar" 
-                                x:Name="btnCancelarDes"
+                                x:Name="btnCancelarTar"
                                 Cursor="Hand"
                                 Margin="5 10 0 0"
                                 FontSize="14"
@@ -94,7 +98,7 @@
                                 materialDesign:ButtonAssist.CornerRadius="10"/>
 
                         <Button Content="Salvar"
-                                x:Name="btnSalvarDes"
+                                x:Name="btnSalvarTar"
                                 Cursor="Hand"
                                 Margin="20 10 0 0"
                                 Background="#0B4357"
