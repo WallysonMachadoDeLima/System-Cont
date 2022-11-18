@@ -79,9 +79,7 @@ id_tar int primary key auto_increment,
 data_inicio_tar date,
 data_termino_tar date,
 id_fun_fk int,
-foreign key (id_fun_fk) references Funcionario (id_fun),
-id_pro_fk int,
-foreign key (id_pro_fk) references Processo (id_pro)
+foreign key (id_fun_fk) references Funcionario (id_fun)
 );
 
 create table Honorario(
@@ -123,7 +121,6 @@ foreign key (id_cai_fk) references Caixa (id_cai)
 create table Funcionario_Honorario(
 id_fuho int primary key auto_increment,
 valor_fuho double,
-porcentagem_fuho double,
 id_fun_fk int,
 foreign key (id_fun_fk) references Funcionario (id_fun),
 id_hon_fk int,
