@@ -37,6 +37,7 @@ cidade_end varchar(300),
 bairro_end varchar(300),
 rua_end varchar(300),
 numero_end varchar(300),
+cep_end varchar(300),
 id_cli_fk int,
 foreign key (id_cli_fk) references Cliente (id_cli)
 );
