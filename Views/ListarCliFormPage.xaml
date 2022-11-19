@@ -49,6 +49,9 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnAtualizarCliente" 
+                                        Content="Atualizar Cliente"
+                                        ToolTip="Atualizar Registro" Margin="0 0 5 0" Click="btnAtualizarCliente_Click" Cursor="Hand" />
                                 <Button x:Name="btnExcluirCliente" 
                                         Content="Deletar Cliente"
                                         ToolTip="Excluir Registro" Click="btnExcluirCliente_Click"/>

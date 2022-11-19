@@ -77,6 +77,12 @@ namespace System_Cont.Views
             }
         }
 
+        private void btnAtualizarCliente_Click(object sender, RoutedEventArgs e)
+        {
+            var clienteSelected = dataGridCliente.SelectedItem as Cliente;
+            _frame.Content = new CadastroCliFormPage(clienteSelected, _frame);
+            CarregarListagem();
+        }
         private void btnCliente_Click(object sender, RoutedEventArgs e)
         {
             _frame.Content = new CadastroCliFormPage(_frame);

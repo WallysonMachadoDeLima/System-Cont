@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace System_Cont.Models
 {
-    internal class Cliente
+    public class Cliente
     {
         public int Id { get; set; }
         public string NomeCliente { get; set; }

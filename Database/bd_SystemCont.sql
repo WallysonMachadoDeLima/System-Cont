@@ -238,3 +238,12 @@ insert into Reuniao_Funcionario values(null, quantidade, idFuncionario, idReunia
 end;
 $$ Delimiter ;
 
+#PROCEDIMENTOS - ATUALIZAR
+
+Delimiter $$
+create procedure AtualizarCliente (nome varchar(300), telefone varchar(300), rg varchar(100), cpf varchar(200), nacionalidade varchar(100), renda double, email varchar(100), localidade varchar(100))
+begin
+insert into Cliente values(null, nome, telefone, rg, cpf, nacionalidade, renda, email, localidade);
+end;
+$$ Delimiter ;
+

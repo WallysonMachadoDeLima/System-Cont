@@ -111,5 +111,42 @@ namespace System_Cont.Models
                 throw e;
             }
         }
+
+        public void Update(Cliente cliente)
+        {
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText = "call AtualizarCliente(@idCliente, @nome, @telefone, @rg, @cpf," +
+                    "@nacionalidade, @renda, @email, @localidade)"; 
+  
+
+
+                comando.Parameters.AddWithValue("@idCliente", cliente.Id);
+                comando.Parameters.AddWithValue("@nome", cliente.NomeCliente);
+                comando.Parameters.AddWithValue("@telefone", cliente.Telefone);
+                comando.Parameters.AddWithValue("@rg", cliente.Rg);
+                comando.Parameters.AddWithValue("@cpf", cliente.Cpf);
+                comando.Parameters.AddWithValue("@nacionalidade", cliente.Nacionalidade);
+                comando.Parameters.AddWithValue("@renda", cliente.Renda);
+                comando.Parameters.AddWithValue("@email", cliente.Email);
+                comando.Parameters.AddWithValue("@localidade", cliente.Local);
+
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if (resultado == 0)
+                {
+                    throw new Exception("Ocorreram erros ao salvar as informações");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

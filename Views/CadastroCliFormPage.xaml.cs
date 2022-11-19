@@ -32,6 +32,15 @@ namespace System_Cont.Views
             fraPaginas = _frame;
         }
 
+        public CadastroCliFormPage(Cliente cliente, Frame _frame)
+        {
+            InitializeComponent();
+            fraPaginas = _frame;
+            Loaded += CadastroCliente_Loaded;
+            CarregarListagem();
+            _cliente = cliente;
+        }
+
 
         private void CadastroCliente_Loaded(object sender, RoutedEventArgs e)
         {
@@ -79,8 +88,16 @@ namespace System_Cont.Views
             {
                 var dao = new ClienteDAO();
 
+                if (_cliente.Id > 0)
+                {
+                    dao.Update(_cliente);
+                    MessageBox.Show("Registro Atualizado com Sucesso!");
+                }
+                else
+                {
                     dao.Insert(_cliente);
                     MessageBox.Show("Registro Salvo com Sucesso!");
+                }
 
             }
             catch (Exception ex)
@@ -94,9 +111,6 @@ namespace System_Cont.Views
 
         }
 
-        private void btnListaCliente_Click(object sender, RoutedEventArgs e)
-        {
-        }
 
         private void btnVoltarListCliente_Click(object sender, RoutedEventArgs e)
         {
