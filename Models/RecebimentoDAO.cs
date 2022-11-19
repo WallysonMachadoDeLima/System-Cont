@@ -74,7 +74,37 @@ namespace System_Cont.Models
                 throw ex;
             }
         }
+  
+          public double SomaRecebimento()
+          {
+            double totalRecebimentoAnual = 0;
 
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText = "select sum(valor_rec) from Recebimento";
+
+                var recebimento = new Recebimento();
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    totalRecebimentoAnual = DAOHelper.GetDouble(reader, "sum(valor_rec)");
+
+                }
+
+                reader.Close();
+                return totalRecebimentoAnual;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+          }
+                                
         public void Delete(Recebimento t)
         {
             try

@@ -107,7 +107,7 @@ namespace System_Cont.Views
             {
                 var dao = new RecebimentoDAO();
 
-                //txtGanhoAnual.Text = "R$ " + Convert.ToString(dao.Metodo());
+                txtGanhoAnual.Text = "R$ " + Convert.ToString(dao.SomaRecebimento());
             }
             catch (Exception ex)
             {

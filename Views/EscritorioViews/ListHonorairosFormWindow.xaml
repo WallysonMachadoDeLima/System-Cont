@@ -3,10 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:System_Cont.Views.EscritorioViews"
         mc:Ignorable="d"
-        Title="ListHonorairosFormWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        WindowStartupLocation="CenterScreen"
+        Title="ListHonorairosFormWindow" 
+         Height="450" 
+        Width="700" 
+        Padding="3,3,3,3" 
+        ResizeMode="NoResize" 
+        Background="White"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    
+     
 </Window>

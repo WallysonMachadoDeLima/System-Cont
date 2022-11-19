@@ -116,9 +116,13 @@ id_rec int primary key auto_increment,
 descricao_rec varchar(300),
 valor_rec double,
 data_recebimento_rec date,
-id_cai_fk int not null,
+id_cai_fk int,
 foreign key (id_cai_fk) references Caixa (id_cai)
 );
+
+insert into Recebimento values (null, null, 50, null, null); 
+
+
 
 create table Funcionario_Honorario(
 id_fuho int primary key auto_increment,
@@ -238,6 +242,7 @@ insert into Reuniao_Funcionario values(null, quantidade, idFuncionario, idReunia
 end;
 $$ Delimiter ;
 
+<<<<<<< Updated upstream
 #PROCEDIMENTOS - ATUALIZAR
 
 Delimiter $$
@@ -246,4 +251,6 @@ begin
 insert into Cliente values(null, nome, telefone, rg, cpf, nacionalidade, renda, email, localidade);
 end;
 $$ Delimiter ;
+=======
+>>>>>>> Stashed changes
 

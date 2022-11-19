@@ -7,7 +7,9 @@
       xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
       xmlns:local="clr-namespace:System_Cont.Views"
       mc:Ignorable="d" 
-      d:DesignHeight="965" d:DesignWidth="1920" Background="#131419"
+      d:DesignHeight="965" 
+      d:DesignWidth="1920" 
+      Background="#131419"
       Title="PagInicialFormPage">
 
     <Grid Background="#131419">
@@ -36,8 +38,6 @@
                         </Grid>
                         
                         <!--Grafico-->
-
-
                         <lvc:CartesianChart LegendLocation="None" Margin="0 40 0 0" Height="184">
                             <lvc:CartesianChart.DataTooltip>
                                 <lvc:DefaultTooltip Background="#24336a" Foreground="White"/>
@@ -87,6 +87,7 @@
                                 <TextBlock Text="Energia" Foreground="White" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold" Height="17" Width="44" />
                                 <TextBlock Text="Água" Foreground="White" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold" Height="17" Width="32" />
                                 <TextBlock Text="Internet" Foreground="White" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" FontWeight="SemiBold" Height="17" Width="48" />
+                               
                                 <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Height="16" Width="128">
                                     <ProgressBar Margin="5 0" Width="100" Height="8" Foreground="#00C4C9" Background="#FFE8E8E8" Value="80" />
                                     <TextBlock Text="4K" Foreground="White" FontWeight="SemiBold" />
