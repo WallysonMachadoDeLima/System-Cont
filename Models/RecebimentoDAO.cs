@@ -19,14 +19,14 @@ namespace System_Cont.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "INSERT INTO Recebimento VALUES " +
-                "(null, @descricao, @valor, @data_recebimento);";
+                comando.CommandText = "call InserirRecebimento " +
+                "(@descricao, @valor, @dataRecebimento, @idCaixa, @idHonorario);";
 
                 comando.Parameters.AddWithValue("@descricao", recebimento.DescricaoRec);
                 comando.Parameters.AddWithValue("@valor", recebimento.ValorRec);
-                comando.Parameters.AddWithValue("@data_recebimento", recebimento.Data_Recebimento?.ToString("yyyy-MM-dd"));
-
-
+                comando.Parameters.AddWithValue("@dataRecebimento", recebimento.Data_Recebimento?.ToString("yyyy-MM-dd"));
+                comando.Parameters.AddWithValue("@idCaixa", recebimento.Caixa.Id);
+                comando.Parameters.AddWithValue("@idHonorario", recebimento.Honorario.Id);
 
                 var resultado = comando.ExecuteNonQuery();
 

@@ -86,7 +86,7 @@
                                 materialDesign:ButtonAssist.CornerRadius="10"/>
 
                         <Button Content="Salvar"
-                                x:Name="btnSalvarRec"
+                                x:Name="btnSalvarRecebimento"
                                 Cursor="Hand"
                                 Margin="20 10 0 0"
                                 Background="#0B4357"
@@ -95,7 +95,7 @@
                                 FontSize="14"
                                 Width="100"
                                 Height="45"
-                               materialDesign:ButtonAssist.CornerRadius="10"/>
+                               materialDesign:ButtonAssist.CornerRadius="10" Click="btnSalvarRecebimento_Click"/>
 
                     </StackPanel>
                 </Grid>

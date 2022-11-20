@@ -200,7 +200,7 @@
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
                                        Margin="0 27"
-                                       BorderThickness="0 0 0 1.5"/>
+                                       BorderThickness="0 0 0 1.5" Cursor="Arrow"/>
 
                     <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
                                        x:Name="txtCpf"
@@ -211,25 +211,31 @@
 
                     <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
                                        x:Name="txtRg"
-                                       materialDesign:HintAssist.Hint="E-mail"
+                                       materialDesign:HintAssist.Hint="RG"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
                                        Margin="0 27"
+                                       BorderThickness="0 0 0 1.5"/>
+                    <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
+                                       x:Name="txtNumeroInscricao"
+                                       materialDesign:HintAssist.Hint="Número de Inscrição"
+                                       materialDesign:HintAssist.FloatingOffset="0,-15"
+                                       BorderBrush="#c5c8cc"
                                        BorderThickness="0 0 0 1.5"/>
 
                     <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
                                        x:Name="txtPassword"
                                        materialDesign:HintAssist.Hint="Senha"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
-                                       BorderBrush="#c5c8cc"            
-                                       BorderThickness="0 0 0 1.5"/>
+                                       BorderBrush="#c5c8cc"
+                                       Margin="0 27"
+                                       BorderThickness="0 0 0 1.5" Cursor="Arrow"/>
 
                     <PasswordBox Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
                                        x:Name="txtRepeatPassword"
                                        materialDesign:HintAssist.Hint="Confirmar Senha"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
-                                       Margin="0 27"
                                        BorderThickness="0 0 0 1.5"/>
 
                     <CheckBox Margin="0 40 0 20" FontSize="13">

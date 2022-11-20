@@ -12,5 +12,7 @@ namespace System_Cont.Models
         public string DescricaoRec { get; set; }
         public double ValorRec { get; set; }
         public DateTime? Data_Recebimento { get; set; }
+        public Caixa Caixa { get; set; }
+        public Honorario Honorario { get; set; }
     }
 }

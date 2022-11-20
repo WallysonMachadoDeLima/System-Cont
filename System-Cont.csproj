@@ -151,16 +151,24 @@
     </ApplicationDefinition>
     <Compile Include="Database\Conexao.cs" />
     <Compile Include="Helpers\DAOHelper.cs" />
+    <Compile Include="Models\Caixa.cs" />
+    <Compile Include="Models\CaixaDAO.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ClienteDAO.cs" />
     <Compile Include="Models\Despesa.cs" />
     <Compile Include="Models\DespesaDAO.cs" />
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\FuncionarioDAO.cs" />
+    <Compile Include="Models\Honorario.cs" />
+    <Compile Include="Models\HonorarioDAO.cs" />
     <Compile Include="Models\Perfil.cs" />
     <Compile Include="Models\PerfilDAO.cs" />
+    <Compile Include="Models\Processo.cs" />
+    <Compile Include="Models\ProcessoDAO.cs" />
     <Compile Include="Models\Recebimento.cs" />
     <Compile Include="Models\RecebimentoDAO.cs" />
+    <Compile Include="Models\Tarefa.cs" />
+    <Compile Include="Models\TarefaDAO.cs" />
     <Compile Include="Views\AjudaFormPage.xaml.cs">
       <DependentUpon>AjudaFormPage.xaml</DependentUpon>
     </Compile>

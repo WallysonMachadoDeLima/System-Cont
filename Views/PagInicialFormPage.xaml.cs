@@ -126,8 +126,6 @@ namespace System_Cont.Views
             }
 
             //Funçoes do LiveCharts
-
-
         }
     }
 }

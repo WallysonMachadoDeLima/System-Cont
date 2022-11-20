@@ -195,11 +195,11 @@
 
                     <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
                                        materialDesign:HintAssist.Hint="Nome"
-                                       x:Name="txtNomeCompleto"
+                                       x:Name="txtNomeFuncionario"
                                        Margin="0 0 0 30"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
-                                       BorderThickness="0 0 0 1.5"/>
+                                       BorderThickness="0 0 0 1.5" Cursor="Arrow"/>
 
 
 

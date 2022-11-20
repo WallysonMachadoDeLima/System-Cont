@@ -41,7 +41,7 @@
                     Click="btnLogin_Click"/>
 
         </StackPanel>
-        <StackPanel Grid.Row="1" Background="#1E1E1E" VerticalAlignment="Center" Margin="80">
+        <StackPanel Grid.Row="1" Background="#1E1E1E" VerticalAlignment="Center" Margin="80,0,80,0">
             <StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 0 0 35" >
                     <Image Source="Imagens/justicia.png" Width="100" Height="100" RenderOptions.BitmapScalingMode="Fant"/>

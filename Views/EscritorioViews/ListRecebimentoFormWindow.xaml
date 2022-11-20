@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="ListRecebimentoFormWindow" Height="450" Width="800">
     <Grid Background="#131419">
-        <DataGrid Height="430" Width="690" x:Name="dataGridRecebimento" IsReadOnly="true" Foreground="White"
-                      AutoGenerateColumns="False" AlternatingRowBackground="#1E1E1E" AlternationCount="2" Grid.ColumnSpan="2" Background="#FF1E1E1E" FontSize="20" BorderBrush="#FF1F1F1F" 
-                      FontStyle="Normal" FontWeight="Normal">
+        <DataGrid Height="430" x:Name="dataGridRecebimento" IsReadOnly="true" Foreground="White"
+                      AutoGenerateColumns="False" AlternatingRowBackground="#1E1E1E" AlternationCount="2" Background="White" FontSize="20" BorderBrush="Black" 
+                      FontStyle="Normal" FontWeight="Normal" Margin="0,2,0,2">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Descrição" Binding="{Binding DescricaoRec}" Foreground="White" FontSize="18"  Width="160"/>
-                <DataGridTextColumn Header="Valor" Binding="{Binding ValorRec}" Foreground="White" FontSize="18"  Width="160"/>
-                <DataGridTextColumn Header="Data de Recebimento" Binding="{Binding Data_Recebimento}" Foreground="White" FontSize="18"  Width="246"/>
+                <DataGridTextColumn Header="Descrição" Binding="{Binding DescricaoRec}" Foreground="Black" FontSize="18"  Width="160"/>
+                <DataGridTextColumn Header="Valor" Binding="{Binding ValorRec}" Foreground="Black" FontSize="18"  Width="160"/>
+                <DataGridTextColumn Header="Data de Recebimento" Binding="{Binding Data_Recebimento}" Foreground="Black" FontSize="18"  Width="246"/>
 
                 <DataGridTemplateColumn Header="Ações">
                     <DataGridTemplateColumn.CellTemplate>

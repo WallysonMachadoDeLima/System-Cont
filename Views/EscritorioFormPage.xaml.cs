@@ -56,5 +56,22 @@ namespace System_Cont.Views
             CadDespesaFormWindow view = new CadDespesaFormWindow();
             view.ShowDialog();
         }
+
+        private void btnAdcProcesso_Click(object sender, RoutedEventArgs e)
+        {
+            CadProcessoFormWindow view = new CadProcessoFormWindow();
+            view.ShowDialog();
+        }
+
+        private void btnAdcReuniao_Click(object sender, RoutedEventArgs e)
+        {
+            CadReunioesFormWindow view = new CadReunioesFormWindow();
+            view.ShowDialog();
+        }
+
+        private void btnAdcPagamento_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

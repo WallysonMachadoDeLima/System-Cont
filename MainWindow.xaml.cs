@@ -45,5 +45,13 @@ namespace System_Cont
             Directory.CreateDirectory(diretory + @"\Finished");
             Directory.CreateDirectory(diretory + @"\ListView");
         }
+
+        public void VerifyLogin(string confirmacao)
+        {
+            if (confirmacao == "Yes")
+            {
+                Close();
+            }
+        }
     }
 }

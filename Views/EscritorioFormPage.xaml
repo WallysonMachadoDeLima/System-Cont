@@ -84,7 +84,7 @@
                                     <ImageBrush ImageSource="/Views/Olho3.png"/>
                                 </Button.Background>
                             </Button>
-                            <Button x:Name="btnAdcReuniao" Width="40" Cursor="Hand" Margin="60 0 0 0" Height="38" BorderBrush="{x:Null}">
+                            <Button x:Name="btnAdcReuniao" Width="40" Cursor="Hand" Margin="60 0 0 0" Height="38" BorderBrush="{x:Null}" Click="btnAdcReuniao_Click">
                                 <Button.Background>
                                     <ImageBrush ImageSource="/Views/add.png"/>
                                 </Button.Background>
@@ -105,7 +105,7 @@
                                     <ImageBrush ImageSource="/Views/Olho3.png"/>
                                 </Button.Background>
                             </Button>
-                            <Button x:Name="btnAdcProcesso" Width="40" Cursor="Hand" Margin="60 0 0 0" Height="38" BorderBrush="{x:Null}">
+                            <Button x:Name="btnAdcProcesso" Width="40" Cursor="Hand" Margin="60 0 0 0" Height="38" BorderBrush="{x:Null}" Click="btnAdcProcesso_Click">
                                 <Button.Background>
                                     <ImageBrush ImageSource="/Views/add.png"/>
                                 </Button.Background>
@@ -134,7 +134,7 @@
                                     <ImageBrush ImageSource="/Views/Olho3.png"/>
                                 </Button.Background>
                             </Button>
-                            <Button x:Name="btnAdcPagamento" Width="40" Cursor="Hand" Margin="60 0 0 0" Height="38" BorderBrush="{x:Null}">
+                            <Button x:Name="btnAdcPagamento" Width="40" Cursor="Hand" Margin="60 0 0 0" Height="38" BorderBrush="{x:Null}" Click="btnAdcPagamento_Click">
                                 <Button.Background>
                                     <ImageBrush ImageSource="/Views/add.png"/>
                                 </Button.Background>

@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace System_Cont.Models
 {
-    internal class Perfil
+    internal class Processo
     {
         public int Id { get; set; }
+        public string Tipo { get; set; }
+        public string Status { get; set; }
         public string Descricao { get; set; }
-        public DateTime? Data_Egresso { get; set; }
-        public Funcionario IdFuncionario { get; set; }
+        public Funcionario Funcionario { get; set; }
+        public Cliente Cliente { get; set; }
     }
 }
