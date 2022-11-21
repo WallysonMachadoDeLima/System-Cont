@@ -77,27 +77,31 @@ namespace System_Cont.Models
 
         public double[] LucroMensal()
         {
-            double[] totalRecebimentoMensal = new double[11];
+            double[] totalRecebimentoMensal = new double[99];
              
             try
             {
                 var comando = _conn.Query();
                 var recebimento = new Recebimento();
-
-                for (int i = 0; i > 12; i++)
+                for (int i = 0; i < 12; i++)
                 {
-                    comando.CommandText = "select sum(valor_rec) from Recebimento where ((data_recebimento_rec > '2022-01-01') and (data_recebimento_rec < '2022-02-01'))";
+
+                    int i2 = i + 1, i3 = i + 2, ano = 2;
+                    if(i3 == 13)
+                    {
+                        ano = 3;
+                        i3 = 1;
+                    }
+                    comando.CommandText = "select sum(valor_rec) from Recebimento where ((data_recebimento_rec > '2022-" + i2 + "-01') and (data_recebimento_rec < '202" + ano + "-" + i3 + "-01'))";
 
                     MySqlDataReader reader = comando.ExecuteReader();
 
-                    if (reader.Read())
+                    while (reader.Read())
                     {
                         totalRecebimentoMensal[i] = DAOHelper.GetDouble(reader, "sum(valor_rec)");
                     }
-                    if (i == 12)
-                    {
-                        reader.Close();
-                    }
+
+                    reader.Close();
                 }
                 return totalRecebimentoMensal;
             }

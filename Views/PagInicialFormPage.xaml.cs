@@ -131,10 +131,15 @@ namespace System_Cont.Views
 
                 double[] listMes = dao.LucroMensal();
 
+                foreach (int x in dao.LucroMensal())
+                {
+                    //MessageBox.Show(Convert.ToString(x));
+                }
+
                 LucroMensal.Values = new ChartValues<double> { listMes[0], listMes[1], listMes[2],
-                    listMes[3], listMes[4], listMes[5], listMes[6]};
+                    listMes[3], listMes[4], listMes[5], listMes[6], listMes[7], listMes[8], listMes[9], listMes[10], listMes[11]};
 
-
+                Console.WriteLine("01");
 
             }
             catch (Exception ex)

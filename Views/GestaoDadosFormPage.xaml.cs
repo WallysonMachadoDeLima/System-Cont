@@ -195,7 +195,19 @@ namespace System_Cont.Views
                 {
                     if (resultado == MessageBoxResult.Yes)
                     {
-                        MoverFiles();
+                        string saida = Directory.GetCurrentDirectory();
+                        saida = saida.Substring(0, saida.Length - 9) + @"Py\";
+
+                        var selected = Listimg.SelectedItem as imgs;
+                        string imagemSelecionada = selected.Local;
+                        Listimg.Items.Remove(Listimg.SelectedItem);
+                        MessageBox.Show(imagemSelecionada + " :::: " + saida + "receba");
+                        File.Move(imagemSelecionada, saida + "receba.jpg");
+                        filemove = saida + "receba";
+                        if (selected.Imagem == imgview) ImagemViewClick();
+
+                        if (File.Exists(saida + "receba")) MessageBox.Show("CU");
+
                         LimparFinished();
                         // SCRIPT PYHTON
                         OpenFinished();
