@@ -60,7 +60,7 @@
                             </lvc:CartesianChart.AxisY>
 
                             <lvc:CartesianChart.Series>
-                                <lvc:StackedColumnSeries Fill="#7166f9" MaxColumnWidth="15" Values="18,13,17,20,17,15,16,13,18,11,15,12"/>
+                                <lvc:StackedColumnSeries x:Name="LucroMensal" Fill="#7166f9" MaxColumnWidth="15" Values="18,13,17,20,17,15,16,13,18,11,15,12"/>
                                 <lvc:StackedColumnSeries Fill="#101a28" MaxColumnWidth="15" Values="12,6,5,6,5,6,4,6,6,6,7,5"/>
                             </lvc:CartesianChart.Series>
                         </lvc:CartesianChart>

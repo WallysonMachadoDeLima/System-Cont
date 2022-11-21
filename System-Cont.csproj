@@ -397,7 +397,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Clientes\" />
-    <Folder Include="Files\" />
     <Folder Include="Py\" />
   </ItemGroup>
   <ItemGroup>

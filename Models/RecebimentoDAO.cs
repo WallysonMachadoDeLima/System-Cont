@@ -74,9 +74,42 @@ namespace System_Cont.Models
                 throw ex;
             }
         }
-  
-          public double SomaRecebimento()
-          {
+
+        public double [] LucroMensal()
+        {
+            double[] totalRecebimentoMensal = new double[11];
+             
+            try
+            {
+                for(int i = 0; i > 12; i++)
+                {
+                    var comando = _conn.Query();
+
+                    comando.CommandText = "select sum(valor_rec) from Recebimento where ((data_recebimento_rec > '2022-"+i+"-01') and (data_recebimento_rec < '2022-"+ i+1 +"-01'))";
+
+
+                    var recebimento = new Recebimento();
+
+                    MySqlDataReader reader = comando.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+
+                        totalRecebimentoMensal[i] = DAOHelper.GetDouble(reader, "sum(valor_rec)");
+
+                    }
+                    reader.Close();
+                }
+                return totalRecebimentoMensal;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public double SomaRecebimento()
+        {
             double totalRecebimentoAnual = 0;
 
             try
@@ -103,7 +136,7 @@ namespace System_Cont.Models
             {
                 throw ex;
             }
-          }
+        }
                                 
         public void Delete(Recebimento t)
         {

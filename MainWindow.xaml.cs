@@ -39,7 +39,7 @@ namespace System_Cont
             string diretory = Directory.GetCurrentDirectory();
             diretory = diretory.Substring(0, diretory.Length - 9) + @"Files";
 
-            Directory.Delete(diretory, true);
+           
             Directory.CreateDirectory(diretory);
             Directory.CreateDirectory(diretory + @"\Change");
             Directory.CreateDirectory(diretory + @"\Finished");

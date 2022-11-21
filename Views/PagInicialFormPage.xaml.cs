@@ -125,6 +125,15 @@ namespace System_Cont.Views
                 MessageBox.Show(ex.Message);
             }
 
+            try
+            {
+                var dao = new RecebimentoDAO();
+                LucroMensal.Values = new ChartValues<double[]> {dao.LucroMensal()};
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             //Funçoes do LiveCharts
         }
     }
