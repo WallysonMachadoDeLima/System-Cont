@@ -31,6 +31,7 @@ namespace System_Cont.Views.EscritorioViews
 
         private void CadDespesaFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            txtNomeDes.Text = _despesa.NomeDes;
             txtDescricaoDes.Text = _despesa.DescricaoDes;
             txtValorDes.Text = Convert.ToString(_despesa.ValorDes);
             dtpDespesa.SelectedDate = _despesa.Data_Despesa;
@@ -51,6 +52,7 @@ namespace System_Cont.Views.EscritorioViews
 
         private void btnSalvarDespesa_Click(object sender, RoutedEventArgs e)
         {
+            _despesa.NomeDes = txtNomeDes.Text;
             _despesa.DescricaoDes = txtDescricaoDes.Text;
             _despesa.ValorDes = Convert.ToDouble(txtValorDes.Text);
             _despesa.Data_Despesa = dtpDespesa.SelectedDate;

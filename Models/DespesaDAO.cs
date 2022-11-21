@@ -21,8 +21,9 @@ namespace System_Cont.Models
                 var comando = _conn.Query();
 
                 comando.CommandText = "INSERT INTO Despesa VALUES " +
-                "(null, @descricao, @valor, @data_despesa);";
+                "(null, @nome, @descricao, @valor, @data_despesa);";
 
+                comando.Parameters.AddWithValue("@nome", despesa.NomeDes);
                 comando.Parameters.AddWithValue("@descricao", despesa.DescricaoDes);
                 comando.Parameters.AddWithValue("@valor", despesa.ValorDes);
                 comando.Parameters.AddWithValue("@data_despesa", despesa.Data_Despesa?.ToString("yyyy-MM-dd"));
@@ -60,6 +61,7 @@ namespace System_Cont.Models
                     var despesa = new Despesa();
 
                     despesa.Id = reader.GetInt32("id_des");
+                    despesa.NomeDes = DAOHelper.GetString(reader, "nome_des");
                     despesa.DescricaoDes = DAOHelper.GetString(reader, "descricao_des");
                     despesa.ValorDes = DAOHelper.GetDouble(reader, "valor_des");
                     despesa.Data_Despesa = DAOHelper.GetDateTime(reader, "data_despesa_des");

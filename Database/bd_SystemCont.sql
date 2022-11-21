@@ -92,7 +92,7 @@ foreign key (id_pro_fk) references Processo (id_pro)
 );
 
 create table Despesa(
-id_des integer not null primary key auto_increment,
+id_des integer primary key auto_increment,
 descricao_des varchar(300),
 valor_des double,
 data_despesa_des date

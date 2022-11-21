@@ -8,5 +8,9 @@ namespace System_Cont.Models
 {
     internal class Tarefa
     {
+        public int Id { get; set; }
+        public DateTime? Data_Inicio { get; set; }
+        public DateTime? Data_Termino { get; set; }
+        public Processo Processo { get; set; }
     }
 }
