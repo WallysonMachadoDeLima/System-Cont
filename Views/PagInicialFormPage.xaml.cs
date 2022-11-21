@@ -140,7 +140,7 @@ namespace System_Cont.Views
                 MessageBox.Show(ex.Message);
             }
 
-            // GRAFICO DE DESPESAS
+            // GRAFICO DE DESPESAS ALUGUEL
             try
             {
                 var dao = new DespesaDAO();
@@ -153,7 +153,45 @@ namespace System_Cont.Views
             {
                 MessageBox.Show(ex.Message);
             }
-            //Funçoes do LiveCharts
+            // GRAFICO DE DESPESAS ENERGIA
+            try
+            {
+                var dao = new DespesaDAO();
+
+                DespesaEnergia.Value = dao.DespesaEnergia();
+                DespesaEnergiaText.Text = dao.DespesaEnergia() + " K";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            // GRAFICO DE DESPESAS AGUA 
+            try
+            {
+                var dao = new DespesaDAO();
+
+                DespesaAgua.Value = dao.DespesaAgua();
+                DespesaAguaText.Text = dao.DespesaAgua() + " K";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            // GRAFICO DE DESPESAS INTERNET
+            try
+            {
+                var dao = new DespesaDAO();
+
+                DespesaInternet.Value = dao.DespesaInternet();
+                DespesaInternetText.Text = dao.DespesaInternet() + " K";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

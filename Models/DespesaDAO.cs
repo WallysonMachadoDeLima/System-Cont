@@ -108,6 +108,96 @@ namespace System_Cont.Models
             }
         }
 
+        public double DespesaEnergia()
+        {
+            double total = 0;
+
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText = "select sum(valor_des) from despesa where nome_des = 'Energia'";
+
+                var recebimento = new Recebimento();
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    total = DAOHelper.GetDouble(reader, "sum(valor_des)");
+
+                }
+
+                reader.Close();
+                return total;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public double DespesaAgua()
+        {
+            double total = 0;
+
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText = "select sum(valor_des) from despesa where nome_des = 'Agua'";
+
+                var recebimento = new Recebimento();
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    total = DAOHelper.GetDouble(reader, "sum(valor_des)");
+
+                }
+
+                reader.Close();
+                return total;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public double DespesaInternet()
+        {
+            double total = 0;
+
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText = "select sum(valor_des) from despesa where nome_des = 'Internet'";
+
+                var recebimento = new Recebimento();
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    total = DAOHelper.GetDouble(reader, "sum(valor_des)");
+
+                }
+
+                reader.Close();
+                return total;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public double SomaDespesa()
         {
             double totalDespesa = 0;
