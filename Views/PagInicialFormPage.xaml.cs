@@ -103,6 +103,54 @@ namespace System_Cont.Views
 
         private void CarregarListagem()
         {
+
+            /*Despesas Mensais*/
+            try
+            {
+                var dao = new DespesaDAO();
+
+               // txtDespAluguel.Text = "R$ " + Convert.ToString(dao.DespesaMensaisAluguel());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            try
+            {
+                var dao = new DespesaDAO();
+
+               // txtDespEnergia.Text = "R$ " + Convert.ToString(dao.DespesaMensaisEnergia());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            try
+            {
+                var dao = new DespesaDAO();
+
+               // txtDespAgua.Text = "R$ " + Convert.ToString(dao.DespesaMensaisAgua());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            try
+            {
+                var dao = new DespesaDAO();
+
+               // txtDespInternet.Text = "R$ " + Convert.ToString(dao.DespesaMensaisInternet());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            /*---------------------------------------------------*/
+
             try
             {
                 var dao = new RecebimentoDAO();
@@ -113,7 +161,7 @@ namespace System_Cont.Views
             {
                 MessageBox.Show(ex.Message);
             }
-            
+       
             try
             {
                 var dao = new DespesaDAO();
@@ -125,6 +173,7 @@ namespace System_Cont.Views
                 MessageBox.Show(ex.Message);
             }
 
+<<<<<<< Updated upstream
             // GRAFICO LUCROS MESAIS
             try
             {
@@ -134,26 +183,47 @@ namespace System_Cont.Views
                 LucroMensal.Values = new ChartValues<double> { listMes[0], listMes[1], listMes[2], listMes[3], listMes[4], listMes[5], listMes[6], listMes[7], listMes[8], listMes[9], listMes[10], listMes[11]};
 
 
+=======
+            try
+            {
+                var dao = new DespesaDAO();
+
+                //Funçoes grafico Despesas
+
+                DespesaAluguel.Value = 10;
+                DespesaAgua.Value = 10;
+                DespesaEnergia.Value = 10;
+                DespesaInternet.Value = 10;
+>>>>>>> Stashed changes
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
 
+<<<<<<< Updated upstream
             // GRAFICO DE DESPESAS
             try
             {
                 var dao = new DespesaDAO();
+=======
+>>>>>>> Stashed changes
 
                 DespesaAluguel.Value = dao.DespesaAlugue();
                 DespesaAluguelText.Text = dao.DespesaAlugue() + " K";
 
+<<<<<<< Updated upstream
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             //Funçoes do LiveCharts
+=======
+
+
+            
+>>>>>>> Stashed changes
         }
     }
 }

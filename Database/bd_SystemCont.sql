@@ -92,11 +92,22 @@ foreign key (id_pro_fk) references Processo (id_pro)
 );
 
 create table Despesa(
+<<<<<<< Updated upstream
 id_des integer primary key auto_increment,
+=======
+id_des integer not null primary key auto_increment,
+nome_des varchar(300),
+>>>>>>> Stashed changes
 descricao_des varchar(300),
 valor_des double,
 data_despesa_des date
 );
+
+insert into Despesa values (null, "aluguel", null, 50, null);
+
+select sum(valor_des ) from Despesa where nome_des = "Aluguel";
+
+select * from Despesa;
 
 create table Pagamento(
 id_pag int primary key auto_increment,
@@ -121,6 +132,18 @@ id_hon_fk int,
 foreign key (id_hon_fk) references Honorario (id_hon)
 );
 
+<<<<<<< Updated upstream
+=======
+
+select sum(valor_rec) from Recebimento where data_recebimento_rec < "2022-02-01";
+
+select sum(valor_rec) from Recebimento;
+
+
+
+
+
+>>>>>>> Stashed changes
 create table Funcionario_Honorario(
 id_fuho int primary key auto_increment,
 valor_fuho double,
@@ -249,5 +272,8 @@ insert into Cliente values(null, nome, telefone, rg, cpf, nacionalidade, renda, 
 end;
 $$ Delimiter ;
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
