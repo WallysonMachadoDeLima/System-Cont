@@ -12,5 +12,5 @@ for file in dirs:
     images = convert_from_path(diretorio_entrada+file)
 
     for image in images:
-        image.save(diretorio_saida+"%s-pagina-%d.jpg" % (file, images.index(image)+1), "JPEG")
+        image.save(diretorio_saida+"%s_pagina_%d.jpg" % ("imagem_pdf",images.index(image)+1), "JPEG")
 

@@ -16,6 +16,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using Microsoft.Scripting.Hosting;
+using IronPython.Hosting;
 
 namespace System_Cont.Views
 {
@@ -195,25 +197,39 @@ namespace System_Cont.Views
                 {
                     if (resultado == MessageBoxResult.Yes)
                     {
-<<<<<<< Updated upstream
                         string saida = Directory.GetCurrentDirectory();
                         saida = saida.Substring(0, saida.Length - 9) + @"Py\";
 
                         var selected = Listimg.SelectedItem as imgs;
                         string imagemSelecionada = selected.Local;
                         Listimg.Items.Remove(Listimg.SelectedItem);
-                        MessageBox.Show(imagemSelecionada + " :::: " + saida + "receba");
+                        if (File.Exists(saida + "receba")) File.Delete(saida+"recaba");
                         File.Move(imagemSelecionada, saida + "receba.jpg");
                         filemove = saida + "receba";
                         if (selected.Imagem == imgview) ImagemViewClick();
-
-                        if (File.Exists(saida + "receba")) MessageBox.Show("CU");
-
-=======
->>>>>>> Stashed changes
                         LimparFinished();
                         // SCRIPT PYHTON
-                        OpenFinished();
+                        ScriptEngine pythonEngine = Python.CreateEngine();
+
+                        // Imprime os caminhos de pesquisa padrão 
+                        System.Console.Out.WriteLine("Search paths:");
+                        ICollection<string> searchPaths = pythonEngine.GetSearchPaths();
+                        foreach ( string caminho in searchPaths)
+                        {
+                            Console.Out.WriteLine(caminho);
+                        }
+                        Console.Out.WriteLine();
+
+                        // Agora modifique os caminhos de pesquisa para incluir o diretório 
+                        // do qual executamos o script 
+                        searchPaths.Add("..\\..\\Py\\");
+                        pythonEngine.SetSearchPaths(searchPaths);
+
+                        // Execute o script
+                        // Executamos este script a partir do Visual Studio
+                        // então o programa será executado a partir de bin\Debug ou bin\Release
+                        ScriptSource pythonScript = pythonEngine.CreateScriptSourceFromFile("..\\..\\Py\\extrair_texto.py");
+                        pythonScript.Execute();
                     }
                 }
                 catch (Exception ex)
@@ -228,7 +244,49 @@ namespace System_Cont.Views
 
         private void PDFpIMG_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(imagem);
+            if (Listimg.SelectedItem != null)
+            {
+                var resultado = MessageBox.Show($"Converter imagem para arquivo de texto?", "Confirmar converção", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                try
+                {
+                    if (resultado == MessageBoxResult.Yes)
+                    {
+
+                        LimparFinished();
+                        // SCRIPT PYHTON
+                        ScriptEngine pythonEngine = Python.CreateEngine();
+
+                        // Imprime os caminhos de pesquisa padrão 
+                        System.Console.Out.WriteLine("Search paths:");
+                        ICollection<string> searchPaths = pythonEngine.GetSearchPaths();
+                        foreach (string caminho in searchPaths)
+                        {
+                            Console.Out.WriteLine(caminho);
+                        }
+                        Console.Out.WriteLine();
+
+                        // Agora modifique os caminhos de pesquisa para incluir o diretório 
+                        // do qual executamos o script 
+                        searchPaths.Add("..\\..\\Py\\");
+                        pythonEngine.SetSearchPaths(searchPaths);
+
+                        // Execute o script
+                        // Executamos este script a partir do Visual Studio
+                        // então o programa será executado a partir de bin\Debug ou bin\Release
+                        ScriptSource pythonScript = pythonEngine.CreateScriptSourceFromFile("..\\..\\Py\\converter_pdf");
+                        pythonScript.Execute();
+                        OpenFinished();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um arquivo", "Selecionar", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void RecortarImg_Click(object sender, RoutedEventArgs e)
