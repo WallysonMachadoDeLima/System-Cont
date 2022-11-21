@@ -111,6 +111,8 @@ namespace System_Cont.Models
             }
         }
 
+       
+
         public double SomaRecebimento()
         {
             double totalRecebimentoAnual = 0;

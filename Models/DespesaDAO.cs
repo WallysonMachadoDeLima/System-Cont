@@ -76,6 +76,36 @@ namespace System_Cont.Models
             }
         }
 
+        public double DespesaAlugue()
+        {
+            double total = 0;
+
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText = "select sum(valor_des) from despesa where nome_des = 'Aluguel'";
+
+                var recebimento = new Recebimento();
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    total = DAOHelper.GetDouble(reader, "sum(valor_des)");
+
+                }
+
+                reader.Close();
+                return total;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public double SomaDespesa()
         {
             double totalDespesa = 0;

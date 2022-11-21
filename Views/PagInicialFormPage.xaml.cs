@@ -125,21 +125,28 @@ namespace System_Cont.Views
                 MessageBox.Show(ex.Message);
             }
 
+            // GRAFICO LUCROS MESAIS
             try
             {
                 var dao = new RecebimentoDAO();
 
                 double[] listMes = dao.LucroMensal();
+                LucroMensal.Values = new ChartValues<double> { listMes[0], listMes[1], listMes[2], listMes[3], listMes[4], listMes[5], listMes[6], listMes[7], listMes[8], listMes[9], listMes[10], listMes[11]};
 
-                foreach (int x in dao.LucroMensal())
-                {
-                    //MessageBox.Show(Convert.ToString(x));
-                }
 
-                LucroMensal.Values = new ChartValues<double> { listMes[0], listMes[1], listMes[2],
-                    listMes[3], listMes[4], listMes[5], listMes[6], listMes[7], listMes[8], listMes[9], listMes[10], listMes[11]};
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
-                Console.WriteLine("01");
+            // GRAFICO DE DESPESAS
+            try
+            {
+                var dao = new DespesaDAO();
+
+                DespesaAluguel.Value = dao.DespesaAlugue();
+                DespesaAluguelText.Text = dao.DespesaAlugue() + " K";
 
             }
             catch (Exception ex)
