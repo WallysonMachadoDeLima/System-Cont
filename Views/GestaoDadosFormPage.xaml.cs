@@ -195,6 +195,7 @@ namespace System_Cont.Views
                 {
                     if (resultado == MessageBoxResult.Yes)
                     {
+<<<<<<< Updated upstream
                         string saida = Directory.GetCurrentDirectory();
                         saida = saida.Substring(0, saida.Length - 9) + @"Py\";
 
@@ -208,6 +209,8 @@ namespace System_Cont.Views
 
                         if (File.Exists(saida + "receba")) MessageBox.Show("CU");
 
+=======
+>>>>>>> Stashed changes
                         LimparFinished();
                         // SCRIPT PYHTON
                         OpenFinished();
