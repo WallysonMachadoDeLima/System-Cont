@@ -78,113 +78,29 @@ namespace System_Cont.Models
             }
         }
 
-<<<<<<< Updated upstream
         public double DespesaAlugue()
         {
             double total = 0;
-=======
-
-        //Progress Bar Aluguel
-        public double DespesaMensaisAluguel()
-        {
-            double DespesaMensaisAluguel = 0;
 
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "select sum(valor_des ) from Despesa where nome_des = \"Aluguel\";";
-
-                var despesa = new Despesa();
-
-                MySqlDataReader reader = comando.ExecuteReader();
-
-                while (reader.Read())
-                {
-
-                    DespesaMensaisAluguel = DAOHelper.GetDouble(reader, "select sum(valor_des)");
-
-                }
-
-                reader.Close();
-                return DespesaMensaisAluguel;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        //Progress Bar Energia
-        public double DespesaMensaisEnergia()
-        {
-            double DespesaMensaisEnergia = 0;
-
-            try
-            {
-                var comando = _conn.Query();
-
-                comando.CommandText = "select sum(valor_des ) from Despesa where nome_des = \"Energia\";";
-
-                var despesa = new Despesa();
-
-                MySqlDataReader reader = comando.ExecuteReader();
-
-                while (reader.Read())
-                {
-
-                    DespesaMensaisEnergia = DAOHelper.GetDouble(reader, "select sum(valor_des)");
-
-                }
-
-                reader.Close();
-                return DespesaMensaisEnergia;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        //Progress Bar Internet
-        public double DespesaMensaisInternet()
-        {
-            double DespesaMensaisInternet = 0;
->>>>>>> Stashed changes
-
-            try
-            {
-                var comando = _conn.Query();
-
-<<<<<<< Updated upstream
                 comando.CommandText = "select sum(valor_des) from despesa where nome_des = 'Aluguel'";
 
                 var recebimento = new Recebimento();
-=======
-                comando.CommandText = "select sum(valor_des ) from Despesa where nome_des = \"Internet\";";
-
-                var despesa = new Despesa();
->>>>>>> Stashed changes
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
                 while (reader.Read())
                 {
 
-<<<<<<< Updated upstream
                     total = DAOHelper.GetDouble(reader, "sum(valor_des)");
-=======
-                    DespesaMensaisInternet = DAOHelper.GetDouble(reader, "select sum(valor_des)");
->>>>>>> Stashed changes
 
                 }
 
                 reader.Close();
-<<<<<<< Updated upstream
                 return total;
-=======
-                return DespesaMensaisInternet;
->>>>>>> Stashed changes
             }
             catch (Exception ex)
             {
@@ -192,41 +108,6 @@ namespace System_Cont.Models
             }
         }
 
-<<<<<<< Updated upstream
-=======
-        //Progress Bar Agua
-        public double DespesaMensaisAgua()
-        {
-            double DespesaMensaisAgua = 0;
-
-            try
-            {
-                var comando = _conn.Query();
-
-                comando.CommandText = "select sum(valor_des ) from Despesa where nome_des = \"Agua\";";
-
-                var despesa = new Despesa();
-
-                MySqlDataReader reader = comando.ExecuteReader();
-
-                while (reader.Read())
-                {
-
-                    DespesaMensaisAgua = DAOHelper.GetDouble(reader, "select sum(valor_des)");
-
-                }
-
-                reader.Close();
-                return DespesaMensaisAgua;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-
->>>>>>> Stashed changes
         public double SomaDespesa()
         {
             double totalDespesa = 0;

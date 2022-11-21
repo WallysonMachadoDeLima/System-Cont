@@ -75,7 +75,6 @@ namespace System_Cont.Models
             }
         }
 
-<<<<<<< Updated upstream
         public double[] LucroMensal()
         {
             double[] totalRecebimentoMensal = new double[99];
@@ -105,53 +104,17 @@ namespace System_Cont.Models
                     reader.Close();
                 }
                 return totalRecebimentoMensal;
-=======
-          public double RecebimentoMensal()
-          {
-            double RecebimentoMensal = 0;
-
-            try
-            {
-                var comando = _conn.Query();
-
-               for(int i = 0; i > 12; i++)
-               {
-                   comando.CommandText = @"select sum(valor_rec) from Recebimento where data_recebimento_rec < 2022-0" + i + "-01";
-               }
-
-                var recebimento = new Recebimento();
-
-                MySqlDataReader reader = comando.ExecuteReader();
-
-                while (reader.Read())
-                {
-
-                    RecebimentoMensal = DAOHelper.GetDouble(reader, "sum(valor_rec)");
-
-                }
-
-                reader.Close();         
-
-                return RecebimentoMensal;
->>>>>>> Stashed changes
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-<<<<<<< Updated upstream
         }
 
        
 
         public double SomaRecebimento()
         {
-=======
-          }               
-
-        public double SomaRecebimento()
-          {
->>>>>>> Stashed changes
             double totalRecebimentoAnual = 0;
 
             try
