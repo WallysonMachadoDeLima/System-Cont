@@ -56,6 +56,7 @@ namespace System_Cont.Views
                 MessageBox.Show(ex.Message);
             }
 
+
         }
 
         private void btnNoAccount_Click(object sender, RoutedEventArgs e)

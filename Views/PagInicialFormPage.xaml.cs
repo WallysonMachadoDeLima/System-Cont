@@ -128,7 +128,14 @@ namespace System_Cont.Views
             try
             {
                 var dao = new RecebimentoDAO();
-                LucroMensal.Values = new ChartValues<double[]> {dao.LucroMensal()};
+
+                double[] listMes = dao.LucroMensal();
+
+                LucroMensal.Values = new ChartValues<double> { listMes[0], listMes[1], listMes[2],
+                    listMes[3], listMes[4], listMes[5], listMes[6]};
+
+
+
             }
             catch (Exception ex)
             {
