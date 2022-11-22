@@ -244,9 +244,9 @@ $$ Delimiter ;
 #PROCEDIMENTOS - ATUALIZAR
 
 Delimiter $$
-create procedure AtualizarCliente (nome varchar(300), telefone varchar(300), rg varchar(100), cpf varchar(200), nacionalidade varchar(100), renda double, email varchar(100), localidade varchar(100))
+create procedure AtualizarCliente (idCliente int, nome varchar(300), telefone varchar(300), rg varchar(100), cpf varchar(200), nacionalidade varchar(100), renda double, email varchar(100), localidade varchar(100))
 begin
-insert into Cliente values(null, nome, telefone, rg, cpf, nacionalidade, renda, email, localidade);
+update Cliente set nome_cli = nome, telefone_cli = telefone, rg_cli = rg, cpf_cli = cpf, nacionalidade_cli = nacionalidade, renda_cli = renda, email_cli = email, local_cli = localidade where idCliente = id_cli;
 end;
 $$ Delimiter ;
 
