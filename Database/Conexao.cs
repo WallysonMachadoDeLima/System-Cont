@@ -13,11 +13,11 @@ namespace System_Cont.Database
     {
         private static string host = "localhost";
         //3306  &  3360
-        private static string port = "3360";
+        private static string port = "3306";
 
         private static string user = "root";
         //Star@pixel4862+!  &   root  & Star@pixel4268!(notebook) & f77^&P41mR2(jose) & r@fa-el.20MySqL05(rafael)
-        private static string password = "f77^&P41mR2";
+        private static string password = "Star@pixel4862+!";
 
         private static string dbname = "bd_advocacia";
 

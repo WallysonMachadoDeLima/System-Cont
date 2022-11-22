@@ -205,9 +205,9 @@ end;
 $$ Delimiter ;
 
 Delimiter $$
-create procedure InserirDespesa (descricao varchar(300), valor double, dataDespesa date)
+create procedure InserirDespesa (nome varchar (300), descricao varchar(300), valor double, dataDespesa date)
 begin
-insert into Despesa values(null, descricao, valor, dataDespesa);
+insert into Despesa values(null, nome, descricao, valor, dataDespesa);
 end;
 $$ Delimiter ;
 
