@@ -54,7 +54,9 @@
                                         ToolTip="Atualizar Registro" Margin="0 0 5 0" Click="btnAtualizarCliente_Click" Cursor="Hand" />
                                 <Button x:Name="btnExcluirCliente" 
                                         Content="Deletar Cliente"
-                                        ToolTip="Excluir Registro" Click="btnExcluirCliente_Click"/>
+                                        ToolTip="Excluir Registro" Margin="0 0 15 0" Click="btnExcluirCliente_Click"/>
+                                <Button x:Name="btnDiretorio" Content="Abrir Arquivo do Cliente"
+                                        Click="btnDiretorio_Click"/>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

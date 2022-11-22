@@ -140,7 +140,12 @@ namespace System_Cont.Models
                 {
                     throw new Exception("Ocorreram erros ao salvar as informações");
                 }
-
+                else
+                {
+                    string saida = Directory.GetCurrentDirectory();
+                    saida = saida.Substring(0, saida.Length - 9) + @"Clientes\";
+                    Directory.Move(saida, saida + cliente.NomeCliente);
+                }
             }
             catch (Exception ex)
             {

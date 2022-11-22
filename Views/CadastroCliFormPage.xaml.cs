@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -115,11 +116,6 @@ namespace System_Cont.Views
         private void btnVoltarListCliente_Click(object sender, RoutedEventArgs e)
         {
             fraPaginas.Content = new ListarCliFormPage(fraPaginas);
-        }
-
-        private void btnDiretorio_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
