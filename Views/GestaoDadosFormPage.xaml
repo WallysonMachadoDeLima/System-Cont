@@ -32,17 +32,17 @@
                                 </LinearGradientBrush>
                             </Border.Background>
                             <Grid>
-                                <Button x:Name ="xxx" Content="" Width="50" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="60, 0, 0,5" Click="Deletar_Click" Cursor="Hand" BorderBrush="#FF673AB7">
+                                <Button x:Name ="xxx" Content="" Width="40" Height="50" BorderBrush="Transparent" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="60, 0, 0,5" Click="Deletar_Click" Cursor="Hand" >
                                     <Button.Background>
                                         <ImageBrush ImageSource="/Imagens/lixeira.png" Stretch="Uniform"/>
                                     </Button.Background>
                                 </Button>
-                                <Button x:Name ="xxxx" Content="" Width="50" Height="35" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="160, 0, 0,5" Click="MostrarImg_Click" Cursor="Hand">
+                                <Button x:Name ="xxxx" Content="" Width="50" Height="50" BorderBrush="Transparent" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="160, 0, 0,5" Click="MostrarImg_Click" Cursor="Hand">
                                     <Button.Foreground>
                                         <ImageBrush/>
                                     </Button.Foreground>
                                     <Button.Background>
-                                        <ImageBrush ImageSource="/Views/olho.png"/>
+                                        <ImageBrush ImageSource="/Imagens/Vizualizar.png"/>
                                     </Button.Background>
                                 </Button>
                             </Grid>
@@ -128,7 +128,7 @@
                                        VerticalAlignment="Top"
                                        HorizontalAlignment="Left"
                                        Margin="25,25,0,0" ><Run/><LineBreak/><Run Language="pt-br" Text="IMAGEM EM TEXTO"/></TextBlock>
-                                <Button x:Name ="PDFpIMG" Content="O" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="ImageInText_Click" Cursor="Hand" FontSize="20"/>
+                                <Button x:Name ="PDFpIMG" Content="O" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Click="ImageInText_Click" Margin="10, 55, 20,30" Cursor="Hand" FontSize="20"/>
                             </Grid>
 
                         </Border>

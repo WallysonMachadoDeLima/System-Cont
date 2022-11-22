@@ -136,7 +136,7 @@
         </Grid >
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
             <Border Margin="40 10" CornerRadius="20" Width="360" Background="#FFFFEEFA">
-                <Image  Stretch="Uniform" Source="/Imagens/cartoon-woman-pretty.png" Height="150" Width="360" OpacityMask="white" />
+                <Image  Stretch="Uniform" Source="/Imagens/painel.png" Height="150" Width="360" OpacityMask="white" />
             </Border>
             <Calendar Margin="45 10" VerticalAlignment="Center"   Width="360" HorizontalAlignment="Center" />
             <materialDesign:Card Margin="20 10" Padding="5" UniformCornerRadius="20" Width="360" HorizontalAlignment="Center">

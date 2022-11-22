@@ -28,8 +28,6 @@
                 <Button x:Name="btnGestaoDeDados" Content="Gestão de Dados" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnGestaoDeDados_Click"/>
 
                 <Button x:Name="btnListaCliente" Content="Lista de Clientes" Width="148" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnListaCliente_Click"/>
-
-                <Button x:Name="btnAjuda" Content="Ajuda" Width="140" Cursor="Hand" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="btnAjuda_Click" HorizontalAlignment="Stretch" VerticalAlignment="Center" FlowDirection="LeftToRight" RenderTransformOrigin="0.5,0.5"/>
             </StackPanel>
             <Rectangle Width="150" Height="50" HorizontalAlignment="Right" Margin="0 0 150 0" RadiusX="20" RadiusY="20" Fill="#FF2D2D3A" Grid.ColumnSpan="2"/>
             <Rectangle Width="40" Height="40" HorizontalAlignment="Right" Margin="0 0 -50 0" RadiusX="10" RadiusY="10" Fill="#FF4447E2"/>

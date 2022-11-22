@@ -57,19 +57,19 @@
 
                 <TextBlock Text="Nós fornecemos solução fácil"
                        Foreground="White"
-                       FontSize="40"
+                       FontSize="35"
                        FontWeight="Medium"
                        FontFamily="Fonts/#Dosis"/>
 
                 <TextBlock Text="para gerenciar seu escritório de"
                        Foreground="White"
-                       FontSize="40"
+                       FontSize="35"
                        FontWeight="Medium"
                        FontFamily="Fonts/#Dosis"/>
 
                 <TextBlock Text="advocacia da melhor maneira" Margin="0 0 0 40"
                        Foreground="White"
-                       FontSize="40"
+                       FontSize="35"
                        FontWeight="Medium"
                        FontFamily="Fonts/#Dosis"/>
 
