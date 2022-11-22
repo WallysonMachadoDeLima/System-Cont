@@ -33,13 +33,14 @@ namespace System_Cont.Views
         {
             string saida = Directory.GetCurrentDirectory();
             saida = saida.Substring(0, saida.Length - 9) + @"Funcionarios/" + VrsGlobais.nomeLogado + "/";
-            string[] files = Directory.GetFiles(saida);
 
-            foreach (string file in files)
+            foreach (string file in Directory.GetFiles(saida))
             {
                 if (file != "")
                 {
-                    imgPerfil.Source = new BitmapImage(new Uri(file));
+                    string clear = file.Substring(saida.Length);
+                    string origem = clear.Replace("++", @"\").Replace("!!", @":");
+                    imgPerfil.Source = new BitmapImage(new Uri(origem));
                 }
             }
 
@@ -68,8 +69,9 @@ namespace System_Cont.Views
 
                 if (sourcePath != "")
                 {
-                    imgPerfil.Source = new BitmapImage(new Uri(imgOriginal));
-                    File.Copy(sourcePath, saida + "ImgPerfil", true);
+                    string origem = sourcePath.Replace(@"\", "++").Replace(@":", "!!");
+                    foreach (string file in Directory.GetFiles(saida))  if (File.Exists(file)) File.Delete(file);
+                    File.Copy(sourcePath, saida + origem);
                     ImagemPerfil();
                 }
             }
