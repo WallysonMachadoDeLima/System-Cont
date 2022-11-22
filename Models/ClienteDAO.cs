@@ -140,12 +140,14 @@ namespace System_Cont.Models
                 {
                     throw new Exception("Ocorreram erros ao salvar as informações");
                 }
+                /* SUPUNHETAMOS QUE DESCUBRA COMO ALTERAR NOME DA PASTA
                 else
                 {
                     string saida = Directory.GetCurrentDirectory();
                     saida = saida.Substring(0, saida.Length - 9) + @"Clientes\";
                     Directory.Move(saida, saida + cliente.NomeCliente);
                 }
+                */
             }
             catch (Exception ex)
             {
