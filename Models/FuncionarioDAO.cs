@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System_Cont.Database;
 using MySql.Data.MySqlClient;
 using System_Cont.Helpers;
+using System.IO;
 
 namespace System_Cont.Models
 {
@@ -35,6 +36,12 @@ namespace System_Cont.Models
                 if (resultado == 0)
                 {
                     throw new Exception("Ocorreram erros ao salvar as informações");
+                }
+                else
+                {
+                    string saida = Directory.GetCurrentDirectory();
+                    saida = saida.Substring(0, saida.Length - 9) + @"Funcionarios\";
+                    Directory.CreateDirectory(saida + funcionario.NomeFuncionario);
                 }
 
 
@@ -104,6 +111,7 @@ namespace System_Cont.Models
                 if (nome == nomeAdv)
                 {
                      confirmacao = "Yes";
+                     VrsGlobais.nomeLogado = nomeAdv;
                 }
 
                 reader.Close();

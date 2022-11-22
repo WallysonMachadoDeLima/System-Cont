@@ -241,6 +241,7 @@
     <Compile Include="Views\PerfilAdvFormPage.xaml.cs">
       <DependentUpon>PerfilAdvFormPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VrsGlobais.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -397,6 +398,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Clientes\" />
+    <Folder Include="Funcionarios\" />
     <Folder Include="Py\" />
   </ItemGroup>
   <ItemGroup>

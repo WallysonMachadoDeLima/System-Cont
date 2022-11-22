@@ -31,7 +31,7 @@ namespace System_Cont.Views
         {
             try
             {
-                /*
+                
                 var dao = new FuncionarioDAO();
                 if (dao.Login(txtNomeFuncionario.Text, txtSenha.Password) == "Yes")
                 {
@@ -45,9 +45,7 @@ namespace System_Cont.Views
                 {
                     
                     MessageBox.Show("Login Incorreto!");
-                }*/
-                NavTopBarFormWindow view = new NavTopBarFormWindow();
-                view.ShowDialog();
+                }
 
 
             }

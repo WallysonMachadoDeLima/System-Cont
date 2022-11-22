@@ -90,9 +90,10 @@ data_hon date,
 id_pro_fk int,
 foreign key (id_pro_fk) references Processo (id_pro)
 );
-
+insert into Recebimento values (null, "", 200, '2022-05-28', null, null);
 create table Despesa(
 id_des integer primary key auto_increment,
+nome_des varchar (300),
 descricao_des varchar(300),
 valor_des double,
 data_despesa_des date
