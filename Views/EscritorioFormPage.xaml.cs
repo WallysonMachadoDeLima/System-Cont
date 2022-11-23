@@ -72,5 +72,11 @@ namespace System_Cont.Views
             ListProcessoFormWindow view = new ListProcessoFormWindow();
             view.ShowDialog();
         }
+
+        private void btnAdcHonorario_Click(object sender, RoutedEventArgs e)
+        {
+            CadHonorariosFormWindow view = new CadHonorariosFormWindow();
+            view.ShowDialog();
+        }
     }
 }

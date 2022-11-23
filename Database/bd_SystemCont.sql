@@ -86,6 +86,7 @@ foreign key (id_fun_fk) references Funcionario (id_fun)
 
 create table Honorario(
 id_hon int primary key auto_increment,
+numero_processo_hon varchar(300),
 valor_hon double,
 descricao_hon varchar(300),
 data_hon date,
