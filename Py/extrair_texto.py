@@ -14,7 +14,7 @@ with open("texto_extraido.doc", "w") as arquivo_doc:
 
 import os
 
-list_arquivos = os.listdir(r"C:\Users\rafag\OneDrive\Documentos\PDS_projeto\System-Cont\Py")
+list_arquivos = os.listdir(r"C:\Users\rafag\OneDrive\Documentos\PDS_projeto\System-Cont\bim\Debug\Py")
 
 for arquivo in list_arquivos:
     if "texto_extraido.doc" in arquivo:

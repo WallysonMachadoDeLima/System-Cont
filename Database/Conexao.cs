@@ -17,7 +17,11 @@ namespace System_Cont.Database
 
         private static string user = "root";
         //Star@pixel4862+!  &   root  & Star@pixel4268!(notebook) & f77^&P41mR2(jose) & r@fa-el.20MySqL05(rafael)
+<<<<<<< Updated upstream
         private static string password = "f77^&P41mR2";
+=======
+        private static string password = "r@fa-el.20MySqL05";
+>>>>>>> Stashed changes
 
         private static string dbname = "bd_advocacia";
 
