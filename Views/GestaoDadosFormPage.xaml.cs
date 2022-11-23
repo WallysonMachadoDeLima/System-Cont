@@ -276,7 +276,6 @@ namespace System_Cont.Views
 
                         LimparFinished();
                         // SCRIPT PYHTON
-                        run_cmd();
                         OpenFinished();
                     }
                 }
