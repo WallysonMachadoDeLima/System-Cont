@@ -26,9 +26,9 @@
                         </LinearGradientBrush>
                     </Border.Background>
                     <StackPanel>
-                        <Image HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" Height="330" Width="320" Source="\Imagens\avatar.jpg"/>
+                        <Image x:Name="imgPerfil" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" Height="330" Width="320" Source="\Imagens\avatar.jpg"/>
                         <StackPanel>
-                            <Button Content="+ Upload new photo" Margin="0 0 0 10" Height="40" Width="300" BorderBrush="#FF2D2D3A" Background="{x:Null}" Click="Button_Click"/>
+                            <Button x:Name="btnInserirImg" Content="+ Upload new photo" Margin="0 0 0 10" Height="40" Width="300" BorderBrush="#FF2D2D3A" Background="{x:Null}" Cursor="Hand" Click="btnInserirImg_Click"/>
                         </StackPanel>
                     </StackPanel>
                     <Border.Clip>

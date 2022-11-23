@@ -23,5 +23,10 @@ namespace System_Cont.Views.EscritorioViews
         {
             InitializeComponent();
         }
+
+        private void btnSalvarHon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

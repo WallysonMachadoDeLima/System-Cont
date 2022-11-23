@@ -58,8 +58,9 @@ namespace System_Cont.Views
                 try
                 {
                     var dao = new FuncionarioDAO();
-
+                    var dao2 = new CaixaDAO();
                     dao.Insert(_funcionario);
+
                     MessageBox.Show("Registro Salvo com Sucesso!");
                     Close();
                     LoginAdvFormWindow view = new LoginAdvFormWindow();

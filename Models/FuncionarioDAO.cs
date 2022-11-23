@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System_Cont.Database;
 using MySql.Data.MySqlClient;
 using System_Cont.Helpers;
+using System.IO;
 
 namespace System_Cont.Models
 {
@@ -35,6 +36,12 @@ namespace System_Cont.Models
                 if (resultado == 0)
                 {
                     throw new Exception("Ocorreram erros ao salvar as informações");
+                }
+                else
+                {
+                    string saida = Directory.GetCurrentDirectory();
+                    saida = saida.Substring(0, saida.Length - 9) + @"Funcionarios\";
+                    Directory.CreateDirectory(saida + funcionario.NomeFuncionario);
                 }
 
 
@@ -83,12 +90,13 @@ namespace System_Cont.Models
         {
             string confirmacao = "No";
             string nomeAdv = null;
+            int idAdv = 0;
 
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "select nome_fun from Funcionario where nome_fun = '"+nome+"' and senha_fun = '"+senha+"'";
+                comando.CommandText = "select id_fun, nome_fun from Funcionario where nome_fun = '"+nome+"' and senha_fun = '"+senha+"'";
 
                 var funcionario = new Funcionario();
 
@@ -96,14 +104,15 @@ namespace System_Cont.Models
 
                 while (reader.Read())
                 {
-
                     nomeAdv = DAOHelper.GetString(reader, "nome_fun");
-
+                    idAdv = DAOHelper.GetInt(reader, "id_fun");
                 }
 
                 if (nome == nomeAdv)
                 {
-                     confirmacao = "Yes";
+                    confirmacao = "Yes";
+                    VrsGlobais.nomeLogado = nomeAdv;
+                    int funcionarioID = idAdv;
                 }
 
                 reader.Close();

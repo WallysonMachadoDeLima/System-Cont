@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -86,6 +87,14 @@ namespace System_Cont.Views
         private void btnCliente_Click(object sender, RoutedEventArgs e)
         {
             _frame.Content = new CadastroCliFormPage(_frame);
+        }
+        private void btnDiretorio_Click(object sender, RoutedEventArgs e)
+        {
+            var clienteSelected = dataGridCliente.SelectedItem as Cliente;
+
+            string saida = Directory.GetCurrentDirectory();
+            string imgOriginal = saida.Substring(0, saida.Length - 9) + @"Clientes/" + clienteSelected.NomeCliente + "/";
+            Process.Start(imgOriginal);
         }
     }
 }

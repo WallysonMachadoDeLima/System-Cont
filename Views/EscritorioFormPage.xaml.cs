@@ -27,13 +27,6 @@ namespace System_Cont.Views
             InitializeComponent();
         }
 
-
-        private void btnAdcMovimentacao_Click(object sender, RoutedEventArgs e)
-        {
-            CadMovimentacaoFormWindow view = new CadMovimentacaoFormWindow();
-            view.ShowDialog();
-        }
-
         private void btnListRecebimento_Click(object sender, RoutedEventArgs e)
         {
             ListRecebimentoFormWindow view = new ListRecebimentoFormWindow();
@@ -72,6 +65,12 @@ namespace System_Cont.Views
         private void btnAdcPagamento_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btnListProcesso_Click(object sender, RoutedEventArgs e)
+        {
+            ListProcessoFormWindow view = new ListProcessoFormWindow();
+            view.ShowDialog();
         }
     }
 }

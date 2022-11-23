@@ -13,5 +13,6 @@ namespace System_Cont
     /// </summary>
     public partial class App : Application
     {
+        
     }
 }

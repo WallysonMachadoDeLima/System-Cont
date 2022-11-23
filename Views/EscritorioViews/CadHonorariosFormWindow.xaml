@@ -44,12 +44,12 @@
                     <!--Inputs do Usuário-->
                     <StackPanel  VerticalAlignment="Center" Margin="0 0 0 50">
 
-                        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                                   x:Name="txtNomeProHon"
-                                                   materialDesign:HintAssist.Hint="Nome do Processo"
+                        <ComboBox
+                                                   x:Name="cmbNumeroProcesso"
+                                                   materialDesign:HintAssist.Hint="Número do Processo:"
                                                    materialDesign:HintAssist.FloatingOffset="0,-15"
                                                    BorderBrush="#c5c8cc"
-                                                   BorderThickness="0 0 0 1.5" Width="224"/>
+                                                   BorderThickness="0 0 0 1.5" Width="224" Cursor="Arrow"/>
 
                         <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
                                                    x:Name="txtDescricaoHon"

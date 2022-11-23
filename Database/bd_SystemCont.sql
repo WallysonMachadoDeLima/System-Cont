@@ -65,9 +65,11 @@ foreign key (id_fun_fk) references Funcionario (id_fun)
 
 create table Processo(
 id_pro int primary key auto_increment,
+numero_pro varchar(300),
 tipo_pro varchar(300),
 status_pro varchar(300),
 responsavel_pro varchar(300),
+cliente_pro varchar(300),
 id_cli_fk int,
 foreign key (id_cli_fk) references Cliente (id_cli),
 id_fun_fk int,
@@ -93,6 +95,7 @@ foreign key (id_pro_fk) references Processo (id_pro)
 
 create table Despesa(
 id_des integer primary key auto_increment,
+nome_des varchar (300),
 descricao_des varchar(300),
 valor_des double,
 data_despesa_des date
@@ -177,16 +180,16 @@ end;
 $$ Delimiter ;
 
 Delimiter $$
-create procedure InserirCaixa (saldoAtual double, horario time, dataAtual date, idFuncionario int)
+create procedure InserirCaixa (saldoAtual double, idFuncionario int)
 begin
-insert into Caixa values(null, saldoAtual, horario, dataAtual, idFuncionario);
+insert into Caixa values(null, saldoAtual, CURTIME(), CURDATE(), idFuncionario);
 end;
 $$ Delimiter ;
 
 Delimiter $$
-create procedure InserirProcesso (tipo varchar(300), statusProcesso varchar(300), responsavel varchar(300), idCliente int, idFuncionario int)
+create procedure InserirProcesso (numeroProcesso varchar(300),tipo varchar(300), statusProcesso varchar(300), responsavel varchar(300), cliente varchar(300), idCliente int, idFuncionario int)
 begin
-insert into Processo values(null, tipo, statusProcesso, responsavel, idCliente, idFuncionario);
+insert into Processo values(null, numeroProcesso, tipo, statusProcesso, responsavel, cliente, idCliente, idFuncionario);
 end;
 $$ Delimiter ;
 
@@ -205,9 +208,9 @@ end;
 $$ Delimiter ;
 
 Delimiter $$
-create procedure InserirDespesa (descricao varchar(300), valor double, dataDespesa date)
+create procedure InserirDespesa (nome varchar (300), descricao varchar(300), valor double, dataDespesa date)
 begin
-insert into Despesa values(null, descricao, valor, dataDespesa);
+insert into Despesa values(null, nome, descricao, valor, dataDespesa);
 end;
 $$ Delimiter ;
 
@@ -243,9 +246,9 @@ $$ Delimiter ;
 #PROCEDIMENTOS - ATUALIZAR
 
 Delimiter $$
-create procedure AtualizarCliente (nome varchar(300), telefone varchar(300), rg varchar(100), cpf varchar(200), nacionalidade varchar(100), renda double, email varchar(100), localidade varchar(100))
+create procedure AtualizarCliente (idCliente int, nome varchar(300), telefone varchar(300), rg varchar(100), cpf varchar(200), nacionalidade varchar(100), renda double, email varchar(100), localidade varchar(100))
 begin
-insert into Cliente values(null, nome, telefone, rg, cpf, nacionalidade, renda, email, localidade);
+update Cliente set nome_cli = nome, telefone_cli = telefone, rg_cli = rg, cpf_cli = cpf, nacionalidade_cli = nacionalidade, renda_cli = renda, email_cli = email, local_cli = localidade where idCliente = id_cli;
 end;
 $$ Delimiter ;
 

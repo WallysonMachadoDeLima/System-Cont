@@ -203,7 +203,7 @@
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Height="104">
-                    <Button x:Name="btnDiretorio" Content="Abrir Arquivo do Cliente" FontSize="15" Width="228" Margin="0 50 0 0" Height="48" Click="btnDiretorio_Click"/>
+                    
                 </StackPanel>
             </StackPanel>
 

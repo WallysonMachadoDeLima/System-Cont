@@ -178,9 +178,6 @@
     <Compile Include="Views\CadastroCliFormPage.xaml.cs">
       <DependentUpon>CadastroCliFormPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CadMovimentacaoFormWindow.xaml.cs">
-      <DependentUpon>CadMovimentacaoFormWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\EscritorioFormPage.xaml.cs">
       <DependentUpon>EscritorioFormPage.xaml</DependentUpon>
     </Compile>
@@ -210,6 +207,9 @@
     </Compile>
     <Compile Include="Views\EscritorioViews\ListHonorairosFormWindow.xaml.cs">
       <DependentUpon>ListHonorairosFormWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EscritorioViews\ListProcessoFormWindow.xaml.cs">
+      <DependentUpon>ListProcessoFormWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\EscritorioViews\ListRecebimentoFormWindow.xaml.cs">
       <DependentUpon>ListRecebimentoFormWindow.xaml</DependentUpon>
@@ -241,6 +241,7 @@
     <Compile Include="Views\PerfilAdvFormPage.xaml.cs">
       <DependentUpon>PerfilAdvFormPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VrsGlobais.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -262,10 +263,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\CadastroCliFormPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\CadMovimentacaoFormWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -306,6 +303,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\EscritorioViews\ListHonorairosFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EscritorioViews\ListProcessoFormWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -397,10 +398,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Clientes\" />
+    <Folder Include="Funcionarios\" />
     <Folder Include="Py\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagens\cartoon-woman-pretty.png" />
     <Resource Include="Imagens\IA-logo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -417,9 +418,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagens\olho.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Views\olho.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagens\docx.png" />
@@ -456,6 +454,33 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagens\Icon-endereco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\painel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Recebimento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Despesas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Pagamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Vizualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Adicionarr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Processos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Reunioes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Movimentacao.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />

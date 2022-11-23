@@ -1,0 +1,35 @@
+﻿<Window x:Class="System_Cont.Views.EscritorioViews.ListProcessoFormWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:System_Cont.Views.EscritorioViews"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="ListProcessoFormWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid Height="432" x:Name="dataGridProcesso" IsReadOnly="true" Foreground="White"
+                      AutoGenerateColumns="False" AlternatingRowBackground="#ffffff" AlternationCount="2" Background="White" FontSize="20" BorderBrush="#FF1F1F1F" 
+                      FontStyle="Normal" FontWeight="Normal" Margin="0,1,0,1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Numero do Processo" Binding="{Binding NumeroProcesso}" Foreground="Black" FontSize="18"  Width="160"/>
+                <DataGridTextColumn Header="Responsável" Binding="{Binding ResponsavelProcesso}" Foreground="Black" FontSize="18"  Width="160"/>
+                <DataGridTextColumn Header="Cliente" Binding="{Binding ClienteProcesso}" Foreground="Black" FontSize="18"  Width="160"/>
+                <DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" Foreground="Black" FontSize="18"  Width="160"/>
+
+                <DataGridTemplateColumn Header="Ações">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnExcluirProcesso" 
+                                        Content="Deletar"
+                                        Click="btnExcluirProcesso_Click"
+                                        ToolTip="Excluir Registro"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

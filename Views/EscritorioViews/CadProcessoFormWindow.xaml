@@ -41,18 +41,30 @@
                     <!--Inputs do Usuário-->
                     <StackPanel  VerticalAlignment="Center" Margin="0 0 0 50">
 
-                        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                                   x:Name="txtClientePro"
+                        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
+                                                   x:Name="txtNumeroProcesso"
+                                                   materialDesign:HintAssist.Hint="Numero do Processo:"
+                                                   materialDesign:HintAssist.FloatingOffset="0,-15"
+                                                   BorderBrush="#c5c8cc"
+                                                   Margin="0 0 0 27"
+                                                   BorderThickness="0 0 0 1.5"/>
+
+                        <ComboBox
+                                                   x:Name="cmbCliente"
                                                    materialDesign:HintAssist.Hint="Cliente"
+                                                   DisplayMemberPath="NomeCliente"
+                                                   SelectedValuePath="Id"
                                                    materialDesign:HintAssist.FloatingOffset="0,-15"
                                                    BorderBrush="#c5c8cc"
                                                    BorderThickness="0 0 0 1.5" Width="224"/>
 
-                        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
-                                                   x:Name="txtResponsavelPro"
+                        <ComboBox    
+                                                   x:Name="cmbFuncionario"
                                                    materialDesign:HintAssist.Hint="Responsável"
                                                    materialDesign:HintAssist.FloatingOffset="0,-15"
                                                    BorderBrush="#c5c8cc"
+                                                   DisplayMemberPath="NomeFuncionario"
+                                                   SelectedValuePath="Id"
                                                    Margin="0 27"
                                                    BorderThickness="0 0 0 1.5"/>
 
@@ -96,7 +108,7 @@
                                 FontSize="14"
                                 Width="100"
                                 Height="45"
-                               materialDesign:ButtonAssist.CornerRadius="10"/>
+                               materialDesign:ButtonAssist.CornerRadius="10" Click="btnSalvarPro_Click"/>
 
                     </StackPanel>
                 </Grid>

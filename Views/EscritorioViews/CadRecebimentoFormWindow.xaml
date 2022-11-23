@@ -49,24 +49,33 @@
                                                    materialDesign:HintAssist.Hint="Nome"
                                                    materialDesign:HintAssist.FloatingOffset="0,-15"
                                                    BorderBrush="#c5c8cc"
-                                                   BorderThickness="0 0 0 1.5" Width="224"/>
+                                                   BorderThickness="0 0 0 1.5" Width="224" Cursor="Arrow"/>
+
+                        <ComboBox 
+                                                   x:Name="cmbHonorarios"
+                                                   materialDesign:HintAssist.Hint="Honorário"
+                                                   materialDesign:HintAssist.FloatingOffset="0,-15"
+                                                   BorderBrush="#c5c8cc"
+                                                   DisplayMemberPath="Descricao"
+                                                   SelectedValuePath="Id"
+                                                   Margin="0 27"
+                                                   BorderThickness="0 0 0 1.5" Width="224" Cursor="Arrow"/>
 
                         <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
                                                    x:Name="txtDescricaoRec"
                                                    materialDesign:HintAssist.Hint="Descrição"
                                                    materialDesign:HintAssist.FloatingOffset="0,-15"
                                                    BorderBrush="#c5c8cc"
-                                                   Margin="0 27"
                                                    BorderThickness="0 0 0 1.5"/>
 
                         <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"                                      
                                        materialDesign:HintAssist.Hint="Valor"
                                        x:Name="txtValorRec"
                                        Tag="Valor R$"                                       
-                                       Margin="0 0 0 30"
+                                       Margin="0 27 0 30"
                                        materialDesign:HintAssist.FloatingOffset="0,-15"
                                        BorderBrush="#c5c8cc"
-                                       BorderThickness="0 0 0 1.5"/>
+                                       BorderThickness="0 0 0 1.5" Cursor="Arrow"/>
 
                         <DatePicker x:Name="dtpRecebimento" Background="White" Width="220" Height="31" Margin="0 10 0 0"/>
 
