@@ -90,12 +90,13 @@ namespace System_Cont.Models
         {
             string confirmacao = "No";
             string nomeAdv = null;
+            int idAdv = 0;
 
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "select nome_fun from Funcionario where nome_fun = '"+nome+"' and senha_fun = '"+senha+"'";
+                comando.CommandText = "select id_fun, nome_fun from Funcionario where nome_fun = '"+nome+"' and senha_fun = '"+senha+"'";
 
                 var funcionario = new Funcionario();
 
@@ -103,15 +104,15 @@ namespace System_Cont.Models
 
                 while (reader.Read())
                 {
-
                     nomeAdv = DAOHelper.GetString(reader, "nome_fun");
-
+                    idAdv = DAOHelper.GetInt(reader, "id_fun");
                 }
 
                 if (nome == nomeAdv)
                 {
-                     confirmacao = "Yes";
-                     VrsGlobais.nomeLogado = nomeAdv;
+                    confirmacao = "Yes";
+                    VrsGlobais.nomeLogado = nomeAdv;
+                    int funcionarioID = idAdv;
                 }
 
                 reader.Close();

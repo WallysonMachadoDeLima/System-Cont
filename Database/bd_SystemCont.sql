@@ -65,9 +65,11 @@ foreign key (id_fun_fk) references Funcionario (id_fun)
 
 create table Processo(
 id_pro int primary key auto_increment,
+numero_pro varchar(300),
 tipo_pro varchar(300),
 status_pro varchar(300),
 responsavel_pro varchar(300),
+cliente_pro varchar(300),
 id_cli_fk int,
 foreign key (id_cli_fk) references Cliente (id_cli),
 id_fun_fk int,
@@ -90,7 +92,7 @@ data_hon date,
 id_pro_fk int,
 foreign key (id_pro_fk) references Processo (id_pro)
 );
-insert into Recebimento values (null, "", 200, '2022-05-28', null, null);
+
 create table Despesa(
 id_des integer primary key auto_increment,
 nome_des varchar (300),
@@ -178,16 +180,16 @@ end;
 $$ Delimiter ;
 
 Delimiter $$
-create procedure InserirCaixa (saldoAtual double, horario time, dataAtual date, idFuncionario int)
+create procedure InserirCaixa (saldoAtual double, idFuncionario int)
 begin
-insert into Caixa values(null, saldoAtual, horario, dataAtual, idFuncionario);
+insert into Caixa values(null, saldoAtual, CURTIME(), CURDATE(), idFuncionario);
 end;
 $$ Delimiter ;
 
 Delimiter $$
-create procedure InserirProcesso (tipo varchar(300), statusProcesso varchar(300), responsavel varchar(300), idCliente int, idFuncionario int)
+create procedure InserirProcesso (numeroProcesso varchar(300),tipo varchar(300), statusProcesso varchar(300), responsavel varchar(300), cliente varchar(300), idCliente int, idFuncionario int)
 begin
-insert into Processo values(null, tipo, statusProcesso, responsavel, idCliente, idFuncionario);
+insert into Processo values(null, numeroProcesso, tipo, statusProcesso, responsavel, cliente, idCliente, idFuncionario);
 end;
 $$ Delimiter ;
 

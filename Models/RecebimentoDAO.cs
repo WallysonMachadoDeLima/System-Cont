@@ -12,11 +12,13 @@ namespace System_Cont.Models
     internal class RecebimentoDAO
     {
         private static Conexao _conn = new Conexao();
+        CaixaDAO dao2 = new CaixaDAO();
 
         public void Insert(Recebimento recebimento)
         {
             try
             {
+                dao2.LastIdCaixa();
                 var comando = _conn.Query();
 
                 comando.CommandText = "call InserirRecebimento " +
@@ -25,8 +27,13 @@ namespace System_Cont.Models
                 comando.Parameters.AddWithValue("@descricao", recebimento.DescricaoRec);
                 comando.Parameters.AddWithValue("@valor", recebimento.ValorRec);
                 comando.Parameters.AddWithValue("@dataRecebimento", recebimento.Data_Recebimento?.ToString("yyyy-MM-dd"));
-                comando.Parameters.AddWithValue("@idCaixa", recebimento.Caixa.Id);
-                comando.Parameters.AddWithValue("@idHonorario", recebimento.Honorario.Id);
+                comando.Parameters.AddWithValue("@idCaixa", VrsGlobais.idCaixa);
+
+                if (recebimento.Honorario != null)
+                {
+                    comando.Parameters.AddWithValue("@idHonorario", recebimento.Honorario.Id);
+                }
+
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -34,7 +41,6 @@ namespace System_Cont.Models
                 {
                     throw new Exception("Ocorreram erros ao salvar as informações");
                 }
-
 
             }
             catch (Exception ex)

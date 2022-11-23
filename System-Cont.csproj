@@ -178,9 +178,6 @@
     <Compile Include="Views\CadastroCliFormPage.xaml.cs">
       <DependentUpon>CadastroCliFormPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\CadMovimentacaoFormWindow.xaml.cs">
-      <DependentUpon>CadMovimentacaoFormWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\EscritorioFormPage.xaml.cs">
       <DependentUpon>EscritorioFormPage.xaml</DependentUpon>
     </Compile>
@@ -210,6 +207,9 @@
     </Compile>
     <Compile Include="Views\EscritorioViews\ListHonorairosFormWindow.xaml.cs">
       <DependentUpon>ListHonorairosFormWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EscritorioViews\ListProcessoFormWindow.xaml.cs">
+      <DependentUpon>ListProcessoFormWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\EscritorioViews\ListRecebimentoFormWindow.xaml.cs">
       <DependentUpon>ListRecebimentoFormWindow.xaml</DependentUpon>
@@ -266,10 +266,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\CadMovimentacaoFormWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\EscritorioFormPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -307,6 +303,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\EscritorioViews\ListHonorairosFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EscritorioViews\ListProcessoFormWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

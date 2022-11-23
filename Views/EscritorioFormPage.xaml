@@ -110,7 +110,7 @@
                             <TextBlock Text="Processos" FontSize="28" Foreground="White" HorizontalAlignment="Center" Margin="0 -0 0 0" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold"/>
                         </StackPanel>
                         <StackPanel Margin="0 -130 0 0" Orientation="Horizontal" HorizontalAlignment="Center">
-                            <Button x:Name="btnListProcesso"  Width="50" Cursor="Hand" Height="50" BorderBrush="{x:Null}" BorderThickness="2,1,1,1">
+                            <Button x:Name="btnListProcesso"  Width="50" Cursor="Hand" Height="50" BorderBrush="{x:Null}" BorderThickness="2,1,1,1" Click="btnListProcesso_Click">
                                 <Button.Background>
                                     <ImageBrush ImageSource="/Imagens/Vizualizar.png"/>
                                 </Button.Background>
