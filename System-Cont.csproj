@@ -169,9 +169,6 @@
     <Compile Include="Models\RecebimentoDAO.cs" />
     <Compile Include="Models\Tarefa.cs" />
     <Compile Include="Models\TarefaDAO.cs" />
-    <Compile Include="Views\AjudaFormPage.xaml.cs">
-      <DependentUpon>AjudaFormPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\CadastroAdvFormWindow.xaml.cs">
       <DependentUpon>CadastroAdvFormWindow.xaml</DependentUpon>
     </Compile>
@@ -232,9 +229,6 @@
     <Compile Include="Views\Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PageDefault.xaml.cs">
-      <DependentUpon>PageDefault.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\PagInicialFormPage.xaml.cs">
       <DependentUpon>PagInicialFormPage.xaml</DependentUpon>
     </Compile>
@@ -254,10 +248,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\AjudaFormPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\CadastroAdvFormWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -338,10 +328,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\PageDefault.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\PagInicialFormPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -388,9 +374,6 @@
     <Resource Include="Imagens\telaUser.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Views\telaUser.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Imagens\avatar.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -398,6 +381,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Clientes\" />
+    <Folder Include="Files\" />
     <Folder Include="Funcionarios\" />
     <Folder Include="Py\" />
   </ItemGroup>
@@ -424,12 +408,6 @@
     <Resource Include="Imagens\pdf.png" />
     <Resource Include="Imagens\pptx.png" />
     <Resource Include="Imagens\txt.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Views\Olho2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Views\Olho3.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Views\add.png" />

@@ -49,6 +49,8 @@
                                                    materialDesign:HintAssist.Hint="Número do Processo:"
                                                    materialDesign:HintAssist.FloatingOffset="0,-15"
                                                    BorderBrush="#c5c8cc"
+                                                   DisplayMemberPath="NumeroProcesso"
+                                                   SelectedValuePath="Id"
                                                    BorderThickness="0 0 0 1.5" Width="224" Cursor="Arrow"/>
 
                         <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
@@ -95,7 +97,7 @@
                                 FontSize="14"
                                 Width="100"
                                 Height="45"
-                               materialDesign:ButtonAssist.CornerRadius="10"/>
+                               materialDesign:ButtonAssist.CornerRadius="10" Click="btnSalvarHon_Click"/>
 
                     </StackPanel>
                 </Grid>

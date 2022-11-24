@@ -21,8 +21,9 @@ namespace System_Cont.Models
                 var comando = _conn.Query();
 
                 comando.CommandText = "call InserirHonorario " +
-                "(@valor, @descricao, @data, @idProcesso);";
+                "(@numero_processo, @valor, @descricao, @data, @idProcesso);";
 
+                comando.Parameters.AddWithValue("@numero_processo", honorario.NumeroProcesso);
                 comando.Parameters.AddWithValue("@valor", honorario.Valor);
                 comando.Parameters.AddWithValue("@descricao", honorario.Descricao);
                 comando.Parameters.AddWithValue("@data", honorario.DataHonorario?.ToString("yyyy-MM-dd"));
@@ -55,15 +56,15 @@ namespace System_Cont.Models
 
                 while (reader.Read())
                 {
-                    var processo = new Honorario();
+                    var honorario = new Honorario();
 
-                    processo.Id = reader.GetInt32("id_hon");
-                    processo.Valor = DAOHelper.GetDouble(reader, "valor_hon");
-                    processo.Descricao = DAOHelper.GetString(reader, "descricao_hon");
-                    processo.DataHonorario = DAOHelper.GetDateTime(reader, "data_hon");
+                    honorario.Id = reader.GetInt32("id_hon");
+                    honorario.NumeroProcesso = DAOHelper.GetString(reader, "numero_processo_hon");
+                    honorario.Valor = DAOHelper.GetDouble(reader, "valor_hon");
+                    honorario.Descricao = DAOHelper.GetString(reader, "descricao_hon");
+                    honorario.DataHonorario = DAOHelper.GetDateTime(reader, "data_hon");
 
-
-                    lista.Add(processo);
+                    lista.Add(honorario);
                 }
                 reader.Close();
                 return lista;
