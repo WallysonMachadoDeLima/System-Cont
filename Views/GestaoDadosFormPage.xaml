@@ -248,14 +248,14 @@
                                         FontSize="20"
                                         VerticalAlignment="Top"
                                         HorizontalAlignment="Left"
-                                        Margin="30,20,0,0" ><Run Language="pt-br" Text="xxx"/><Run Text="EDITAR"/><LineBreak/><Run/></TextBlock>
+                                        Margin="30,20,0,0" ><Run Language="pt-br" /><Run Text="CONVERTER"/><LineBreak/><Run/></TextBlock>
                                 <TextBlock
                                        Foreground="#FFFFFF"
                                        FontFamily="Oswald"
                                        FontSize="15"
                                        VerticalAlignment="Top"
                                        HorizontalAlignment="Left"
-                                       Margin="35,25,0,0" ><Run/><LineBreak/><Run Language="pt-br" Text="xxx"/><Run Text="UMENTO"/></TextBlock>
+                                       Margin="35,25,0,0" ><Run/><LineBreak/><Run Language="pt-br" /><Run Text="PDF EM IMAGEM"/></TextBlock>
                                 <Button x:Name ="XX" Content="O" Width="50" Height="35" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Margin="10, 55, 20,30" Click="PDFpIMG_Click" Cursor="Hand" FontSize="20"/>
 
                             </Grid>

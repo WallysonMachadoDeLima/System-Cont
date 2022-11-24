@@ -163,7 +163,7 @@ namespace System_Cont.Views
         // FUNÇÃO ABRIR FINISHED
         public void OpenFinished()
         {
-            File.Delete(filemove);
+            //File.Delete(filemove);
             GestaoDadosFormSalvarArquivo page = new GestaoDadosFormSalvarArquivo();
             page.ShowDialog();
         }
@@ -209,28 +209,6 @@ namespace System_Cont.Views
                         filemove = saida + "receba";
                         if (selected.Imagem == imgview) ImagemViewClick();
                         LimparFinished();
-                        // SCRIPT PYHTON
-                        ScriptEngine pythonEngine = Python.CreateEngine();
-
-                        // Imprime os caminhos de pesquisa padrão 
-                        Console.Out.WriteLine("Search paths:");
-                        ICollection<string> searchPaths = pythonEngine.GetSearchPaths();
-                        foreach ( string caminho in searchPaths)
-                        {
-                            Console.Out.WriteLine(caminho);
-                        }
-                        Console.Out.WriteLine();
-
-                        // Agora modifique os caminhos de pesquisa para incluir o diretório 
-                        // do qual executamos o script 
-                        searchPaths.Add("..\\..\\Py\\");
-                        pythonEngine.SetSearchPaths(searchPaths);
-
-                        // Execute o script
-                        // Executamos este script a partir do Visual Studio
-                        // então o programa será executado a partir de bin\Debug ou bin\Release
-                        ScriptSource pythonScript = pythonEngine.CreateScriptSourceFromFile("..\\..\\Py\\extrair_texto.py");
-                        pythonScript.Execute();
                     }
                 }
                 catch (Exception ex)
@@ -242,28 +220,7 @@ namespace System_Cont.Views
                 MessageBox.Show("Selecione um arquivo", "Selecionar", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
-        private void run_cmd(string cmd, string args)
-        {
-            string saida = Directory.GetCurrentDirectory();
-            saida = saida.Substring(0, saida.Length - 9) + @"Py";
 
-            ProcessStartInfo start = new ProcessStartInfo();
-            start.FileName = saida + "converter_pdf.py";
-
-
-            start.Arguments = string.Format("{0} {1}", cmd, args);
-            start.UseShellExecute = false;
-            start.RedirectStandardOutput = true;
-            using (Process process = Process.Start(start))
-            {
-                using (StreamReader reader = process.StandardOutput)
-                {
-                    string result = reader.ReadToEnd();
-                    MessageBox.Show(result);
-                }
-            }
-
-        }
         private void PDFpIMG_Click(object sender, RoutedEventArgs e)
         {
             if (Listimg.SelectedItem != null)
@@ -273,9 +230,7 @@ namespace System_Cont.Views
                 {
                     if (resultado == MessageBoxResult.Yes)
                     {
-
-                        LimparFinished();
-                        // SCRIPT PYHTON
+                        MoverFiles();
                         OpenFinished();
                     }
                 }
