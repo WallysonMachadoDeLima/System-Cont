@@ -9,11 +9,35 @@
         WindowStartupLocation="CenterScreen"
         Title="ListHonorairosFormWindow" 
          Height="450" 
-        Width="700" 
+        Width="800" 
         Padding="3,3,3,3" 
         ResizeMode="NoResize" 
         Background="White"
         FontFamily="{DynamicResource MaterialDesignFont}">
-    
-     
+
+    <Grid>
+        <DataGrid Height="432" x:Name="dataGridHonorario" IsReadOnly="true" Foreground="White"
+                      AutoGenerateColumns="False" AlternatingRowBackground="#ffffff" AlternationCount="2" Background="White" FontSize="20" BorderBrush="#FF1F1F1F" 
+                      FontStyle="Normal" FontWeight="Normal" Margin="0,1,0,1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Numero do Processo" Binding="{Binding NumeroProcesso}" Foreground="Black" FontSize="18"  Width="160"/>
+                <DataGridTextColumn Header="Descrição" Binding="{Binding Descricao}" Foreground="Black" FontSize="18"  Width="160"/>
+                <DataGridTextColumn Header="Valor" Binding="{Binding Valor}" Foreground="Black" FontSize="18"  Width="160"/>
+                <DataGridTextColumn Header="Data" Binding="{Binding DataHonorario}" Foreground="Black" FontSize="18"  Width="160"/>
+
+                <DataGridTemplateColumn Header="Ações">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="btnExcluirHonorario" 
+                                        Content="Deletar"
+                                        Click="btnExcluirHonorario_Click"
+                                        ToolTip="Excluir Registro"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
 </Window>

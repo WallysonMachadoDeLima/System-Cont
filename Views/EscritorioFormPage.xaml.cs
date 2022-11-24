@@ -78,5 +78,16 @@ namespace System_Cont.Views
             CadHonorariosFormWindow view = new CadHonorariosFormWindow();
             view.ShowDialog();
         }
+
+        private void btnListHonorario_Click(object sender, RoutedEventArgs e)
+        {
+            ListHonorairosFormWindow view = new ListHonorairosFormWindow();
+            view.ShowDialog();
+        }
+
+        private void btnListHonorario_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

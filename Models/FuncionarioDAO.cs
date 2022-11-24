@@ -107,15 +107,16 @@ namespace System_Cont.Models
                     nomeAdv = DAOHelper.GetString(reader, "nome_fun");
                     idAdv = DAOHelper.GetInt(reader, "id_fun");
                 }
-
+                reader.Close();
                 if (nome == nomeAdv)
                 {
+                    var dao2 = new CaixaDAO();
+
                     confirmacao = "Yes";
                     VrsGlobais.nomeLogado = nomeAdv;
                     int funcionarioID = idAdv;
+                    dao2.Insert(0, idAdv);
                 }
-
-                reader.Close();
                 return confirmacao;
             }
             catch (Exception ex)

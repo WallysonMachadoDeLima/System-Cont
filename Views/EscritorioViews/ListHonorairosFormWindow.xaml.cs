@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System_Cont.Models;
 
 namespace System_Cont.Views.EscritorioViews
 {
@@ -22,6 +23,48 @@ namespace System_Cont.Views.EscritorioViews
         public ListHonorairosFormWindow()
         {
             InitializeComponent();
+            Loaded += ListHonorarioFormWindow_Loaded;
+        }
+
+        private void ListHonorarioFormWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            CarregarListagem();
+        }
+
+        private void CarregarListagem()
+        {
+            try
+            {
+                var dao = new HonorarioDAO();
+                List<Honorario> listaHonorario = dao.List();
+                dataGridHonorario.ItemsSource = listaHonorario;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnExcluirHonorario_Click(object sender, RoutedEventArgs e)
+        {
+            var honorarioSelected = dataGridHonorario.SelectedItem as Honorario;
+
+            var result = MessageBox.Show($"Deseja realmente excluir o Honorário '{honorarioSelected.Descricao}'?", "Confirmação de Exclusão",
+                    MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+            try
+            {
+                if (result == MessageBoxResult.Yes)
+                {
+                    var dao = new HonorarioDAO();
+                    dao.Delete(honorarioSelected);
+                    CarregarListagem();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Exceção", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

@@ -12,12 +12,13 @@ namespace System_Cont.Models
     internal class RecebimentoDAO
     {
         private static Conexao _conn = new Conexao();
-        CaixaDAO dao2 = new CaixaDAO();
+
 
         public void Insert(Recebimento recebimento)
         {
             try
             {
+                CaixaDAO dao2 = new CaixaDAO();
                 dao2.LastIdCaixa();
                 var comando = _conn.Query();
 

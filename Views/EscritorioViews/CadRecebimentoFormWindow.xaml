@@ -83,8 +83,8 @@
 
                     <!--Buttons-->
                     <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 280 0 10">
-                        <Button Content="Cancelar" 
-                                x:Name="btnCancelarRec"
+                        <Button Content="Limpar" 
+                                x:Name="btnLimparRec"
                                 Cursor="Hand"
                                 Margin="5 10 0 0"
                                 FontSize="14"
@@ -92,7 +92,7 @@
                                 Height="45"
                                 Foreground="#0B4357"                               
                                 Style="{StaticResource MaterialDesignFlatButton}"
-                                materialDesign:ButtonAssist.CornerRadius="10"/>
+                                materialDesign:ButtonAssist.CornerRadius="10" Click="btnLimparRec_Click"/>
 
                         <Button Content="Salvar"
                                 x:Name="btnSalvarRecebimento"

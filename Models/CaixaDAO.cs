@@ -45,7 +45,7 @@ namespace System_Cont.Models
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "select id_cai from Caixa where id_cai = last_insert_id()";
+                comando.CommandText = "select max(id_cai) from caixa;";
 
                 var caixa = new Caixa();
 
@@ -53,10 +53,11 @@ namespace System_Cont.Models
 
                 while (reader.Read())
                 {
-                    idCaixaLast = DAOHelper.GetInt(reader, "id_cai");
+                    idCaixaLast = DAOHelper.GetInt(reader, "max(id_cai)");
                 }
                 reader.Close();
                 VrsGlobais.idCaixa = idCaixaLast;
+                
             }
             catch (Exception ex)
             {

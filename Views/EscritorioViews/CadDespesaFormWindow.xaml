@@ -83,7 +83,7 @@
                                 Height="45"
                                 Foreground="#0B4357"                               
                                 Style="{StaticResource MaterialDesignFlatButton}"
-                                materialDesign:ButtonAssist.CornerRadius="10"/>
+                                materialDesign:ButtonAssist.CornerRadius="10" Click="btnLimpar_Click"/>
 
                         <Button Content="Salvar"
                                 x:Name="btnSalvarDespesa"

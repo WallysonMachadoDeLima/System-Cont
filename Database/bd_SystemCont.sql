@@ -30,7 +30,7 @@ status_reu varchar(300),
 data_reu date,
 horario_inicio_reu time,
 horario_termino_reu time,
-resumo_reu varchar(500)
+tema_reu varchar(500)
 );
 
 create table Endereco(
@@ -167,9 +167,9 @@ end;
 $$ Delimiter ;
 
 Delimiter $$
-create procedure InserirReuniao (statusReuniao varchar(300), dataReuniao date, horarioInicio time, horarioTermino time, resumo varchar(500))
+create procedure InserirReuniao (statusReuniao varchar(300), dataReuniao date, horarioInicio time, horarioTermino time, tema varchar(500))
 begin
-insert into Reuniao values(null, statusReuniao, dataReuniao, horarioInicio, horarioTermino, resumo);
+insert into Reuniao values(null, statusReuniao, dataReuniao, horarioInicio, horarioTermino, tema);
 end;
 $$ Delimiter ;
 
@@ -202,9 +202,9 @@ end;
 $$ Delimiter ;
 
 Delimiter $$
-create procedure InserirHonorario (valor double, descricao varchar(300), idProcesso int)
+create procedure InserirHonorario (numeroProcesso varchar (300), valor double, descricao varchar(300), dataHonorario date, idProcesso int)
 begin
-insert into Honorario values(null, valor, descricao, idProcesso);
+insert into Honorario values(null, numeroProcesso, valor, descricao, dataHonorario, idProcesso);
 end;
 $$ Delimiter ;
 

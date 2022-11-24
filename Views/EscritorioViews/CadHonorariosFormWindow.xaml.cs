@@ -33,10 +33,10 @@ namespace System_Cont.Views.EscritorioViews
         {
             try
             {
-                var dao = new HonorarioDAO();
-                List<Honorario> listaHonorario = dao.List();
+                var dao = new ProcessoDAO();
+                List<Processo> listaProcesso = dao.List();
 
-                cmbNumeroProcesso.ItemsSource = listaHonorario;
+                cmbNumeroProcesso.ItemsSource = listaProcesso;
             }
             catch (Exception ex)
             {
@@ -66,6 +66,14 @@ namespace System_Cont.Views.EscritorioViews
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnLimparHon_Click(object sender, RoutedEventArgs e)
+        {
+            cmbNumeroProcesso.Text = null;
+            txtDescricaoHon.Clear();
+            txtValorHon.Clear();
+            dtpHonorarios.SelectedDate = null;
         }
     }
 }

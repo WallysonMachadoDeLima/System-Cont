@@ -77,5 +77,14 @@ namespace System_Cont.Views.EscritorioViews
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnLimparRec_Click(object sender, RoutedEventArgs e)
+        {
+            txtNomeRec.Clear();
+            cmbHonorarios.Text = null;
+            txtDescricaoRec.Clear();
+            txtValorRec.Clear();
+            dtpRecebimento.SelectedDate = null;
+        }
     }
 }

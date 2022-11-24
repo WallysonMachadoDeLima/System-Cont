@@ -8,7 +8,7 @@
         Title="ListRecebimentoFormWindow" Height="450" Width="800">
     <Grid Background="#131419">
         <DataGrid Height="430" x:Name="dataGridRecebimento" IsReadOnly="true" Foreground="White"
-                      AutoGenerateColumns="False" AlternatingRowBackground="#1E1E1E" AlternationCount="2" Background="White" FontSize="20" BorderBrush="Black" 
+                      AutoGenerateColumns="False" AlternatingRowBackground="#ffffff" AlternationCount="2" Background="White" FontSize="20" BorderBrush="Black" 
                       FontStyle="Normal" FontWeight="Normal" Margin="0,2,0,2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Descrição" Binding="{Binding DescricaoRec}" Foreground="Black" FontSize="18"  Width="160"/>

@@ -167,6 +167,8 @@
     <Compile Include="Models\ProcessoDAO.cs" />
     <Compile Include="Models\Recebimento.cs" />
     <Compile Include="Models\RecebimentoDAO.cs" />
+    <Compile Include="Models\Reuniao.cs" />
+    <Compile Include="Models\ReuniaoDAO.cs" />
     <Compile Include="Models\Tarefa.cs" />
     <Compile Include="Models\TarefaDAO.cs" />
     <Compile Include="Views\CadastroAdvFormWindow.xaml.cs">

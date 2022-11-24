@@ -33,6 +33,7 @@ namespace System_Cont.Views
             {
                 
                 var dao = new FuncionarioDAO();
+
                 if (dao.Login(txtNomeFuncionario.Text, txtSenha.Password) == "Yes")
                 {
                     Close();

@@ -70,5 +70,13 @@ namespace System_Cont.Views.EscritorioViews
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnLimpar_Click(object sender, RoutedEventArgs e)
+        {
+            txtNomeDes.Clear();
+            txtDescricaoDes.Clear();
+            txtValorDes.Clear();
+            dtpDespesa.SelectedDate = null;
+        }
     }
 }

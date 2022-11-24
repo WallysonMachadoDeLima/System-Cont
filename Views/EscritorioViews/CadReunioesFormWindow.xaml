@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
         xmlns:local="clr-namespace:System_Cont.Views.EscritorioViews"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
@@ -45,8 +46,8 @@
                     <StackPanel  VerticalAlignment="Center" Margin="0 0 0 0">
 
                         <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                                   x:Name="txtNomeReu"
-                                                   materialDesign:HintAssist.Hint="Nome"
+                                                   x:Name="txtTemaReu"
+                                                   materialDesign:HintAssist.Hint="Tema"
                                                    materialDesign:HintAssist.FloatingOffset="0,-15"
                                                    BorderBrush="#c5c8cc"                                                  
                                                    BorderThickness="0 0 0 1.5" Width="224"/>
@@ -62,28 +63,25 @@
 
                         <DatePicker x:Name="dtpReunioes" Background="White" Width="220" Height="31" Margin="0 "/>
 
-                        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
-                                                   x:Name="txtHorarioIniReu"
-                                                   materialDesign:HintAssist.Hint="Horário de Início"
+                        <materialDesign:TimePicker
+                                                   x:Name="tpHorarioIniReu"
+                                                   materialDesign:HintAssist.Hint="Horário de Inicío"
                                                    materialDesign:HintAssist.FloatingOffset="0,-15"
                                                    BorderBrush="#c5c8cc"
                                                    Margin="0 27"
                                                    BorderThickness="0 0 0 1.5"/>
-
-
-
-                        <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}"   
-                                                   x:Name="txtHorarioTerReu"
+                        <materialDesign:TimePicker
+                                                   x:Name="tpHorarioTerReu"
                                                    materialDesign:HintAssist.Hint="Horário de Término"
                                                    materialDesign:HintAssist.FloatingOffset="0,-15"
                                                    BorderBrush="#c5c8cc"
-                                             
                                                    BorderThickness="0 0 0 1.5"/>
+
 
                         <!--Buttons-->
                         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 20 0 10">
-                            <Button Content="Cancelar" 
-                                x:Name="btnCancelarReu"
+                            <Button Content="Limpar" 
+                                x:Name="btnLimparReu"
                                 Cursor="Hand"
                                 Margin="5 10 0 0"
                                 FontSize="14"
@@ -91,7 +89,7 @@
                                 Height="45"
                                 Foreground="#0B4357"                               
                                 Style="{StaticResource MaterialDesignFlatButton}"
-                                materialDesign:ButtonAssist.CornerRadius="10"/>
+                                materialDesign:ButtonAssist.CornerRadius="10" Click="btnLimparReu_Click"/>
 
                             <Button Content="Salvar"
                                 x:Name="btnSalvarReu"
@@ -103,7 +101,7 @@
                                 FontSize="14"
                                 Width="100"
                                 Height="45"
-                               materialDesign:ButtonAssist.CornerRadius="10"/>
+                               materialDesign:ButtonAssist.CornerRadius="10" Click="btnSalvarReu_Click"/>
 
                         </StackPanel>
                     </StackPanel>

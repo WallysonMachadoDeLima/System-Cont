@@ -77,5 +77,14 @@ namespace System_Cont.Views.EscritorioViews
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnLimparPro_Click(object sender, RoutedEventArgs e)
+        {
+            txtNumeroProcesso.Clear();
+            cmbCliente.Text = null;
+            cmbFuncionario.Text = null;
+            txtTipoPro.Clear();
+            txtStatusPro.Clear();
+        }
     }
 }

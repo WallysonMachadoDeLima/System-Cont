@@ -151,10 +151,10 @@
                         <Rectangle Width="260" Height="250" Fill="#0A0D10" RadiusX="10" RadiusY="10"/>
                         <StackPanel Margin="0 -250 0 0">
                             <Image Source="/Imagens/Movimentacao.png" Height="80" Width="100" Margin="0 0 120 20"/>
-                            <TextBlock Text="honorário" FontSize="28" Foreground="White" HorizontalAlignment="Center" Margin="0 -0 0 0" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold"/>
+                            <TextBlock Text="Honorários" FontSize="28" Foreground="White" HorizontalAlignment="Center" Margin="0 -0 0 0" FontWeight="Normal" FontFamily="Yu Gothic UI Semibold"/>
                         </StackPanel>
                         <StackPanel Margin="0 -130 0 0" Orientation="Horizontal" HorizontalAlignment="Center">
-                            <Button x:Name="btnListRuniao"  Width="50" Cursor="Hand" Height="50" BorderBrush="{x:Null}" BorderThickness="2,1,1,1">
+                            <Button x:Name="btnListHonorario"  Width="50" Cursor="Hand" Height="50" BorderBrush="{x:Null}" BorderThickness="2,1,1,1" Click="btnListHonorario_Click">
                                 <Button.Background>
                                     <ImageBrush ImageSource="/Imagens/Vizualizar.png"/>
                                 </Button.Background>

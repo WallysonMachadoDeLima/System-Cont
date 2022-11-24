@@ -3,31 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 using System_Cont.Database;
+using MySql.Data.MySqlClient;
 using System_Cont.Helpers;
 
 namespace System_Cont.Models
 {
-    internal class HonorarioDAO
+    internal class ReuniaoDAO
     {
-
         private static Conexao _conn = new Conexao();
 
-        public void Insert(Honorario honorario)
+        public void Insert(Reuniao reuniao)
         {
             try
             {
                 var comando = _conn.Query();
 
-                comando.CommandText = "call InserirHonorario " +
-                "(@numero_processo, @valor, @descricao, @data, @idProcesso);";
+                comando.CommandText = "call InserirReuniao " +
+                "(@status, @DataReuniao, @horarioInicio, @horarioTermino, @tema);";
 
-                comando.Parameters.AddWithValue("@numero_processo", honorario.NumeroProcesso);
-                comando.Parameters.AddWithValue("@valor", honorario.Valor);
-                comando.Parameters.AddWithValue("@descricao", honorario.Descricao);
-                comando.Parameters.AddWithValue("@data", honorario.DataHonorario?.ToString("yyyy-MM-dd"));
-                comando.Parameters.AddWithValue("@idProcesso", honorario.Processo.Id);
+                comando.Parameters.AddWithValue("@status", reuniao.Status);
+                comando.Parameters.AddWithValue("@DataReuniao", reuniao.DataReuniao?.ToString("yyyy-MM-dd"));
+                comando.Parameters.AddWithValue("@horarioInicio", reuniao.HorarioIncio?.ToString("hh:mm:ss"));
+                comando.Parameters.AddWithValue("@horarioTermino", reuniao.HorarioTermino?.ToString("hh:mm:ss"));
+                comando.Parameters.AddWithValue("@tema", reuniao.Tema);
 
                 var resultado = comando.ExecuteNonQuery();
 
@@ -36,6 +35,7 @@ namespace System_Cont.Models
                     throw new Exception("Ocorreram erros ao salvar as informações");
                 }
 
+
             }
             catch (Exception ex)
             {
@@ -43,28 +43,28 @@ namespace System_Cont.Models
             }
         }
 
-        public List<Honorario> List()
+        public List<Reuniao> List()
         {
             try
             {
-                var lista = new List<Honorario>();
+                var lista = new List<Reuniao>();
                 var comando = _conn.Query();
 
-                comando.CommandText = "SELECT * FROM Honorario";
+                comando.CommandText = "SELECT * FROM Reuniao";
 
                 MySqlDataReader reader = comando.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    var honorario = new Honorario();
+                    var reuniao = new Reuniao();
 
-                    honorario.Id = reader.GetInt32("id_hon");
-                    honorario.NumeroProcesso = DAOHelper.GetString(reader, "numero_processo_hon");
-                    honorario.Valor = DAOHelper.GetDouble(reader, "valor_hon");
-                    honorario.Descricao = DAOHelper.GetString(reader, "descricao_hon");
-                    honorario.DataHonorario = DAOHelper.GetDateTime(reader, "data_hon");
-
-                    lista.Add(honorario);
+                    reuniao.Id = reader.GetInt32("id_reu");
+                    reuniao.Status = DAOHelper.GetString(reader, "status_reu");
+                    reuniao.DataReuniao = DAOHelper.GetDateTime(reader, "data_reu");
+                    reuniao.HorarioIncio = DAOHelper.GetDateTime(reader, "horario_inicio_reu");
+                    reuniao.HorarioTermino = DAOHelper.GetDateTime(reader, "horario_termino_reu"); 
+                    reuniao.Tema = DAOHelper.GetString(reader, "resumo_reu");
+                    lista.Add(reuniao);
                 }
                 reader.Close();
                 return lista;
@@ -76,12 +76,12 @@ namespace System_Cont.Models
             }
         }
 
-        public void Delete(Honorario t)
+        public void Delete(Reuniao t)
         {
             try
             {
                 var comando = _conn.Query();
-                comando.CommandText = "delete from Honorario where id_hon = @id";
+                comando.CommandText = "delete from Reuniao where id_reu = @id";
 
                 comando.Parameters.AddWithValue("@id", t.Id);
 
