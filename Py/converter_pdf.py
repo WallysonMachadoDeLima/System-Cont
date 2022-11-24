@@ -19,7 +19,6 @@ def rodar():
             cont = cont + 1
             image.save(diretorio_saida+"%s_pagina_%d.jpg" % ("imagem_pdf",images.index(image)+cont), "JPEG")
 
-
 schedule.every(10).seconds.do(rodar)
 
 while True:
