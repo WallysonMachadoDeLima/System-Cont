@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:System_Cont.Views.EscritorioViews"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="ListRecebimentoFormWindow" Height="450" Width="800">
     <Grid Background="#131419">

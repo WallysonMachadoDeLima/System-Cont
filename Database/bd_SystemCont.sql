@@ -243,6 +243,60 @@ insert into Reuniao_Funcionario values(null, quantidade, idFuncionario, idReunia
 end;
 $$ Delimiter ;
 
+call InserirCliente("Renan da Rocha Santos", "(69) 9 9992-1143", "14585278", "781.919.764-12", "Brasileiro", 2000, "renanro919@gmail.com", "Presidente-Médici");
+call InserirCliente("Priscila Catarina Evelyn da Mata", "(79) 3596-9501", "28.970.945-3", "640.264.215-03", "Brasileira", 3500, "priscilacatarinadamata@band.com.br", "Aracaju");
+call InserirCliente("Lorena Elaine Lopes", "(95) 3512-5150", "19.190.522-7 ", "975.387.885-06", "Brasileira", 1700, "lorena_elaine_lopes@institutodainfancia.com.br", "Presidente-Médici");
+call InserirCliente("Mariah Mirella Isadora Castro", "(51) 3998-4295", "20.248.601-1", "048.836.126-51", "Brasileira",  210,  "mariahmirellacastro@yahool.com", "Porto Alegre");
+call InserirCliente("Henrique Edson Diogo das Neves", "(82) 2835-4121", "22.352.785-3", "003.753.621-42", "Brasileira", 1200, "henrique_dasneves@solucao.adm.br", "Maceió");
+
+call InserirFuncionario("Rafael Felipe de Oliveira Aguiar", "rafaaguia@gmail.com", "123", "769.707.609-87", "11.661.639-8", "0123456789");
+call InserirFuncionario("Isis Benedita Aurora das Neves", "risisbeneditadasneves@ppe.ufrj.br", "123", "432.330.703-90", "432.330.703-90", "34712955");
+call InserirFuncionario("Elaine Isis Alves", "elaine_isis_alves@officetectecnologia.com.br", "123", "547.133.277-60", "16.889.373-3", "0123ABVDE");
+call InserirFuncionario("Augusto Alexandre da Luz", "augusto.alexandre.daluz@ritmolog.com.br", "123", "688.282.740-00", "688.282.740-00", "ASDS456789");
+call InserirFuncionario("Marina Vitória Bárbara Vieira", "marina_vieira@yahool.com", "123", "437.473.263-23", "11.375.689-6", "5642170");
+call InserirFuncionario("c", "marina_vieira@yahool.com", "c", "437.473.263-23", "11.375.689-6", "5642170");
+
+call InserirProcesso("4455511", "Criminal", "Em avaliação", "Rafael Felipe de Oliveira Aguiar", "Renan da Rocha Santos", 1, 1);
+call InserirProcesso("33069", "Criminal", "Em aguaardo", "Isis Benedita Aurora das Neves", "Priscila Catarina Evelyn da Mata", 2, 1);
+call InserirProcesso("555766", "Criminal", "Em avaliação", "Elaine Isis Alves", "Lorena Elaine Lopes", 3, 1);
+call InserirProcesso("4552055", "Criminal", "Em aguaardo", "Augusto Alexandre da Luz", "Mariah Mirella Isadora Castro", 4, 1);
+call InserirProcesso("5236748", "Criminal", "Em avaliação", "Marina Vitória Bárbara Vieira", "Henrique Edson Diogo das Neves", 5, 1);
+
+call InserirHonorário("4455511", 300, "Processo de Regulamentação", '2022-04-24', 1);
+call InserirHonorário("33069", 200, "Processo de Ação", '2022-05-24', 1);
+call InserirHonorário("555766", 100, "Processo de Regulamentação", '2022-06-24', 1);
+call InserirHonorário("4552055", 300, "Processo de Compra", '2022-07-24', 1);
+call InserirHonorário("5236748", 230, "Processo de Venda", '2022-08-24', 1);
+call InserirHonorário("504650", 100, "Processo de Aluguel", '2022-09-24', 1);
+call InserirHonorário("745806", 300, "Processo de Danos Morais", '2022-10-24', 1);
+call InserirHonorário("0248404", 1400, "Processo de Difamação", '2022-11-24', 1);
+call InserirHonorário("688074recebimento", 250, "Processo de Regulamentação", '2022-12-24', 1);
+call InserirHonorário("76090", 520, "Processo de Regulamentação", '2022-12-24', 1);
+
+call InserirCaixa(0, 1);
+call InserirCaixa(0, 2);
+call InserirCaixa(0, 3);
+call InserirCaixa(0, 4);
+
+call InserirRecebimento("Recebimento Honorario", 520, '2022-01-24', 1, 1);
+call InserirRecebimento("Recebimento Honorario", 340, '2022-02-24', 1, 1);
+call InserirRecebimento("Recebimento Honorario", 1024, '2022-03-24', 1, 1);
+call InserirRecebimento("Recebimento Honorario", 278, '2022-04-24', 1, 1);
+call InserirRecebimento("Recebimento Honorario", 920, '2022-05-24', 1, 1);
+call InserirRecebimento("Recebimento Honorario", 320, '2022-06-24', 1, 1);
+call InserirRecebimento("Recebimento Honorario", 190, '2022-07-24', 1, 1);
+call InserirRecebimento("Recebimento Honorario", 456, '2022-08-24', 1, 1);
+call InserirRecebimento("Recebimento Honorario", 2200, '2022-09-24', 1, 1);
+call InserirRecebimento("Recebimento Honorario", 960, '2022-10-24', 1, 1);
+call InserirRecebimento("Recebimento Honorario", 452, '2022-11-24', 1, 1);
+call InserirRecebimento("Recebimento Honorario", 650, '2022-12-24', 1, 1);
+
+call InserirDespesa("Água", "Água", 250, '2022-04-21');
+call InserirDespesa("Energia", "Energia", 650, '2022-05-21');
+call InserirDespesa("Aluguel", "Aluguel", 400, '2022-06-21');
+call InserirDespesa("Internet", "Internet", 250, '2022-07-21');
+
+call InserirReuniao("Em aberto", '2022-11-25', '12:00:00', '13:00:00', "Exposição de Softwares");
 
 #PROCEDIMENTOS - ATUALIZAR
 
@@ -252,6 +306,21 @@ begin
 update Cliente set nome_cli = nome, telefone_cli = telefone, rg_cli = rg, cpf_cli = cpf, nacionalidade_cli = nacionalidade, renda_cli = renda, email_cli = email, local_cli = localidade where idCliente = id_cli;
 end;
 $$ Delimiter ;
+
+Delimiter $$
+create procedure AtualizarCaixa (idCaixa int, saldoAtual double, idFuncionario int)
+begin
+update Caixa set id_cai = idCaixa, saldo_atual_cai = saldoAtual, id_fun_fk = idFuncionario where idFuncionario = id_fun;
+end;
+$$ Delimiter ;
+
+Delimiter $$
+create procedure AtualizarDepesa (idDespesa int, nome varchar(300), descricao varchar(300), valor double, dataDesp date)
+begin
+update Caixa set id_des = idDespesa, nome_des = nome, descricao_des = descricao, valor_des = valor, data_despesa_des = dataDesp where idDespesa = id_des;
+end;
+$$ Delimiter ;
+
 
 
 

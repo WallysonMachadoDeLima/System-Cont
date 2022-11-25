@@ -63,6 +63,7 @@ namespace System_Cont.Views.EscritorioViews
 
                 dao.Insert(_despesa);
                 MessageBox.Show("Registro Salvo com Sucesso!");
+
                 CarregarListagem();
             }
             catch (Exception ex)

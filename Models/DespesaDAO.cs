@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System_Cont.Database;
 using System_Cont.Helpers;
+using System_Cont.Views;
 
 namespace System_Cont.Models
 {
@@ -36,7 +37,6 @@ namespace System_Cont.Models
                 {
                     throw new Exception("Ocorreram erros ao salvar as informações");
                 }
-
 
             }
             catch (Exception ex)

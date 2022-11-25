@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using System_Cont.Database;
 using MySql.Data.MySqlClient;
 using System_Cont.Helpers;
+using System_Cont.Views;
 
 namespace System_Cont.Models
 {
     internal class RecebimentoDAO
     {
         private static Conexao _conn = new Conexao();
-
 
         public void Insert(Recebimento recebimento)
         {

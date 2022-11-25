@@ -24,6 +24,13 @@ namespace System_Cont.Views
         public NavTopBarFormWindow()
         {
             InitializeComponent();
+            CarregarSaldo();
+            fraPaginas.Content = new PagInicialFormPage();
+
+        }
+
+        public void CarregarSaldo()
+        {
             txtSaldoConta.Text = "R$ " + Convert.ToString(dao.SaldoAtual());
             if (dao.SaldoAtual() < 0)
             {
@@ -33,8 +40,6 @@ namespace System_Cont.Views
             {
                 txtSaldoConta.Foreground = new SolidColorBrush(Colors.LightGreen);
             }
-            fraPaginas.Content = new PagInicialFormPage();
-
         }
 
         private void btnPagInicial_Click(object sender, RoutedEventArgs e)

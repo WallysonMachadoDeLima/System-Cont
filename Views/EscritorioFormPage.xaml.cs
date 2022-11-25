@@ -89,5 +89,11 @@ namespace System_Cont.Views
         {
 
         }
+
+        private void btnListReuniao_Click(object sender, RoutedEventArgs e)
+        {
+            ListReuniaoFormWindow view = new ListReuniaoFormWindow();
+            view.ShowDialog();
+        }
     }
 }

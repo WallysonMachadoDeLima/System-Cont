@@ -109,7 +109,14 @@ namespace System_Cont.Views
 
         private void btnLimpar_Click(object sender, RoutedEventArgs e)
         {
-
+            txtNomeCli.Clear();
+            txtRgCli.Clear();
+            txtCpfCli.Clear();
+            txtRendaCli.Clear();
+            txtTelefoneCli.Clear();
+            txtEmailCli.Clear();
+            txtNacionalidadeCli.Clear();
+            txtLocalCli.Clear();
         }
 
 

@@ -213,6 +213,9 @@
     <Compile Include="Views\EscritorioViews\ListRecebimentoFormWindow.xaml.cs">
       <DependentUpon>ListRecebimentoFormWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\EscritorioViews\ListReuniaoFormWindow.xaml.cs">
+      <DependentUpon>ListReuniaoFormWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\GestaoDadosFormPage.xaml.cs">
       <DependentUpon>GestaoDadosFormPage.xaml</DependentUpon>
     </Compile>
@@ -303,6 +306,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\EscritorioViews\ListRecebimentoFormWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EscritorioViews\ListReuniaoFormWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

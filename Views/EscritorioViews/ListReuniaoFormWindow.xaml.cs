@@ -16,17 +16,17 @@ using System_Cont.Models;
 namespace System_Cont.Views.EscritorioViews
 {
     /// <summary>
-    /// Lógica interna para ListProcessoFormWindow.xaml
+    /// Lógica interna para ListReuniaoFormWindow.xaml
     /// </summary>
-    public partial class ListProcessoFormWindow : Window
+    public partial class ListReuniaoFormWindow : Window
     {
-        public ListProcessoFormWindow()
+        public ListReuniaoFormWindow()
         {
             InitializeComponent();
-            Loaded += ListProcessoFormWindow_Loaded;
+            Loaded += ListReuniaoFormWindow_Loaded;
         }
 
-        private void ListProcessoFormWindow_Loaded(object sender, RoutedEventArgs e)
+        private void ListReuniaoFormWindow_Loaded(object sender, RoutedEventArgs e)
         {
             CarregarListagem();
         }
@@ -35,9 +35,9 @@ namespace System_Cont.Views.EscritorioViews
         {
             try
             {
-                var dao = new ProcessoDAO();
-                List<Processo> listaProcesso = dao.List();
-                dataGridProcesso.ItemsSource = listaProcesso;
+                var dao = new ReuniaoDAO();
+                List<Reuniao> listaReuniao = dao.List();
+                dataGridReuniao.ItemsSource = listaReuniao;
             }
             catch (Exception ex)
             {
@@ -45,19 +45,19 @@ namespace System_Cont.Views.EscritorioViews
             }
         }
 
-        private void btnExcluirProcesso_Click(object sender, RoutedEventArgs e)
+        private void btnExcluirReuniao_Click(object sender, RoutedEventArgs e)
         {
-            var processoSelected = dataGridProcesso.SelectedItem as Processo;
+            var reuniaoSelected = dataGridReuniao.SelectedItem as Reuniao;
 
-            var result = MessageBox.Show($"Deseja realmente Finalizar o Processo '{processoSelected.NumeroProcesso}'?", "Confirmação de Exclusão",
+            var result = MessageBox.Show($"Deseja realmente excluir a Reuniao '{reuniaoSelected.Tema}'?", "Confirmação de Exclusão",
                     MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
             try
             {
                 if (result == MessageBoxResult.Yes)
                 {
-                    var dao = new ProcessoDAO();
-                    dao.Delete(processoSelected);
+                    var dao = new ReuniaoDAO();
+                    dao.Delete(reuniaoSelected);
                     CarregarListagem();
                 }
             }

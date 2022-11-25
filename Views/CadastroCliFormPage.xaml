@@ -41,7 +41,7 @@
                                     <GradientStop Color="#FF2D2D3A"/>
                                 </LinearGradientBrush>
                             </Border.Background>
-                            <TextBox x:Name="txtNomeCli" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA"/>
+                            <TextBox x:Name="txtNomeCli" TextWrapping="Wrap" VerticalAlignment="Center" Width="380" Height="38" FontSize="22" Foreground="#FFE5E5E5" Background="{x:Null}" BorderBrush="#89FAFAFA" Cursor="Arrow"/>
                             <Border.Clip>
                                 <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,400,70"/>
                             </Border.Clip>

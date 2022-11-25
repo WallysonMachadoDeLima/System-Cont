@@ -49,32 +49,38 @@ namespace System_Cont.Views.EscritorioViews
 
         private void btnSalvarPro_Click(object sender, RoutedEventArgs e)
         {
-            if (cmbCliente.SelectedItem != null)
+            if (cmbCliente.Text != "" && cmbCliente.Text != null)
             {
-                _processo.Cliente = cmbCliente.SelectedItem as Cliente;
-            }
-            if (cmbFuncionario.SelectedItem != null)
+                if (cmbCliente.SelectedItem != null)
+                {
+                    _processo.Cliente = cmbCliente.SelectedItem as Cliente;
+                }
+                if (cmbFuncionario.SelectedItem != null)
+                {
+                    _processo.Funcionario = cmbFuncionario.SelectedItem as Funcionario;
+                }
+
+                _processo.NumeroProcesso = txtNumeroProcesso.Text;
+                _processo.ClienteProcesso = cmbCliente.Text;
+                _processo.ResponsavelProcesso = cmbFuncionario.Text;
+                _processo.Status = txtStatusPro.Text;
+                _processo.Tipo = txtTipoPro.Text;
+
+                try
+                {
+                    var dao = new ProcessoDAO();
+
+                    dao.Insert(_processo);
+                    MessageBox.Show("Registro Salvo com Sucesso!");
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }else
             {
-                _processo.Funcionario = cmbFuncionario.SelectedItem as Funcionario;
-            }
-
-            _processo.NumeroProcesso = txtNumeroProcesso.Text;
-            _processo.ClienteProcesso = cmbCliente.Text;
-            _processo.ResponsavelProcesso = cmbFuncionario.Text;
-            _processo.Status = txtStatusPro.Text;
-            _processo.Tipo = txtTipoPro.Text;
-
-            try
-            {
-                var dao = new ProcessoDAO();
-
-                dao.Insert(_processo);
-                MessageBox.Show("Registro Salvo com Sucesso!");
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("O processo deve estar relacionado a um Cliente!");
             }
         }
 
