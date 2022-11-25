@@ -12,6 +12,7 @@ namespace System_Cont.Models
     internal class CaixaDAO
     {
         private static Conexao _conn = new Conexao();
+        
 
         public void Insert(double saldo, int funcionarioId)
         {
@@ -64,5 +65,16 @@ namespace System_Cont.Models
                 throw ex;
             }
         }
+
+        public double SaldoAtual()
+        {
+            RecebimentoDAO dao1 = new RecebimentoDAO();
+            DespesaDAO dao2 = new DespesaDAO();
+
+            double saldoAtual = dao1.SomaRecebimento() - dao2.SomaDespesa();
+
+            return saldoAtual;
+        }
+
     }
 }

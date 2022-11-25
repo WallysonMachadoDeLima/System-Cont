@@ -27,6 +27,7 @@ namespace System_Cont.Views
         {
             InitializeComponent();
             ImagemPerfil();
+            CarregarInformacoes();
         }
 
         public void ImagemPerfil()
@@ -44,6 +45,31 @@ namespace System_Cont.Views
                 }
             }
 
+        }
+        
+        public void CarregarInformacoes()
+        {
+            FuncionarioDAO dao = new FuncionarioDAO();
+            string[] infoUsuario = dao.InfoUsuario();
+
+            lbNome.Content = infoUsuario[1];
+            if(infoUsuario[4] == "")
+            {
+                lbCpf.Content = "Sem Dado de CPF";
+            }
+            else
+            {
+                lbCpf.Content = infoUsuario[4];
+            }
+
+            if (infoUsuario[2] == "")
+            {
+                lbEmail.Content = "Sem Dado de Email";
+            }
+            else
+            {
+                lbEmail.Content = infoUsuario[2];
+            }
         }
 
         private void Button_BadgeChanged(object sender, RoutedPropertyChangedEventArgs<object> e)

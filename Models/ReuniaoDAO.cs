@@ -24,8 +24,8 @@ namespace System_Cont.Models
 
                 comando.Parameters.AddWithValue("@status", reuniao.Status);
                 comando.Parameters.AddWithValue("@DataReuniao", reuniao.DataReuniao?.ToString("yyyy-MM-dd"));
-                comando.Parameters.AddWithValue("@horarioInicio", reuniao.HorarioIncio?.ToString("hh:mm:ss"));
-                comando.Parameters.AddWithValue("@horarioTermino", reuniao.HorarioTermino?.ToString("hh:mm:ss"));
+                comando.Parameters.AddWithValue("@horarioInicio", reuniao.HorarioIncio?.ToString("HH:mm"));
+                comando.Parameters.AddWithValue("@horarioTermino", reuniao.HorarioTermino?.ToString("HH:mm"));
                 comando.Parameters.AddWithValue("@tema", reuniao.Tema);
 
                 var resultado = comando.ExecuteNonQuery();

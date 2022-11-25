@@ -114,10 +114,42 @@ namespace System_Cont.Models
 
                     confirmacao = "Yes";
                     VrsGlobais.nomeLogado = nomeAdv;
-                    int funcionarioID = idAdv;
-                    dao2.Insert(0, idAdv);
+                    VrsGlobais.idFuncionario = idAdv;
+                    dao2.Insert(dao2.SaldoAtual(), idAdv);
                 }
                 return confirmacao;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public string[] InfoUsuario()
+        {
+            string[] infoFuncionario = new string[99];
+            try
+            {
+                var comando = _conn.Query();
+
+                comando.CommandText = "select * from Funcionario where id_fun = "+VrsGlobais.idFuncionario+"";
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+
+                    infoFuncionario[0] = Convert.ToString(DAOHelper.GetInt(reader, "id_fun"));
+                    infoFuncionario[1] = DAOHelper.GetString(reader, "nome_fun");
+                    infoFuncionario[2] = DAOHelper.GetString(reader, "email_fun");
+                    infoFuncionario[3] = DAOHelper.GetString(reader, "senha_fun");
+                    infoFuncionario[4] = DAOHelper.GetString(reader, "cpf_fun");
+                    infoFuncionario[5] = DAOHelper.GetString(reader, "rg_fun");
+                    infoFuncionario[6] = DAOHelper.GetString(reader, "numero_inscricao_fun");
+                }
+
+                reader.Close();
+                return infoFuncionario;
             }
             catch (Exception ex)
             {

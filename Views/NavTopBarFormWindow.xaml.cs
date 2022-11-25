@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System_Cont.Models;
 
 namespace System_Cont.Views
 {
@@ -19,9 +20,19 @@ namespace System_Cont.Views
     /// </summary>
     public partial class NavTopBarFormWindow : Window
     {
+        CaixaDAO dao = new CaixaDAO();
         public NavTopBarFormWindow()
         {
             InitializeComponent();
+            txtSaldoConta.Text = "R$ " + Convert.ToString(dao.SaldoAtual());
+            if (dao.SaldoAtual() < 0)
+            {
+                txtSaldoConta.Foreground = new SolidColorBrush(Colors.Red);
+            }
+            else
+            {
+                txtSaldoConta.Foreground = new SolidColorBrush(Colors.LightGreen);
+            }
             fraPaginas.Content = new PagInicialFormPage();
 
         }

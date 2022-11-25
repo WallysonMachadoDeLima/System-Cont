@@ -17,7 +17,7 @@
 
 
         <StackPanel Grid.Column="0">
-            <Label Content="Profile" Foreground="White" FontSize="35" Margin="0 50 290 0" Width="153" Height="50" FontWeight="Bold"/>
+            <Label Content="Perfil" Foreground="White" FontSize="35" Margin="0 50 290 0" Width="153" Height="50" FontWeight="Bold"/>
             <StackPanel>
                 <Border Margin="0, 20, 0, 0" Width="390" Height="420">
                     <Border.Background>
@@ -37,7 +37,7 @@
                 </Border>
             </StackPanel>
 
-            <Label Content="Social Media" Foreground="White" FontSize="24" Margin="0 50 200 0" Width="200" Height="50" FontWeight="Bold" FontFamily="Arial"/>
+            <Label Content="Redes Sociais" Foreground="White" FontSize="24" Margin="0 50 200 0" Width="200" Height="50" FontWeight="Bold" FontFamily="Arial"/>
 
             <StackPanel Height="100">
                 <Border Margin="0, 30, 0, 0" Width="390" Height="70">
@@ -76,7 +76,7 @@
                                 <GradientStop Color="#FF2D2D3A"/>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <Label Content="Rafael Felipe de Oliveira Aguiar" VerticalContentAlignment="Center" Margin="0 0 0 0" Width="600" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="24"/>
+                        <Label x:Name="lbNome" Content=""  VerticalContentAlignment="Center" Margin="0 0 0 0" Width="600" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="24"/>
                         <Border.Clip>
                             <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,600,70"/>
                         </Border.Clip>
@@ -92,7 +92,7 @@
                                 <GradientStop Color="#FF2D2D3A"/>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <Label Content="057.661.348-80" VerticalContentAlignment="Center" Margin="0 0 0 0" Width="600" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="24"/>
+                        <Label  x:Name="lbCpf" Content="" VerticalContentAlignment="Center" Margin="0 0 0 0" Width="600" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="24"/>
                         <Border.Clip>
                             <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,600,70"/>
                         </Border.Clip>
@@ -108,7 +108,7 @@
                                 <GradientStop Color="#FF2D2D3A"/>
                             </LinearGradientBrush>
                         </Border.Background>
-                        <Label Content="rafaguiar2005@gmail.com" VerticalContentAlignment="Center" Margin="0 0 0 0" Width="600" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="24"/>
+                        <Label x:Name="lbEmail" Content="" VerticalContentAlignment="Center" Margin="0 0 0 0" Width="600" Height="80" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="24"/>
                         <Border.Clip>
                             <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,600,70"/>
                         </Border.Clip>

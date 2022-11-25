@@ -49,6 +49,16 @@ namespace System_Cont.Helpers
             return value;
         }
 
+        public static TimeSpan? GetTimeSpan(MySqlDataReader reader, string column_name)
+        {
+            TimeSpan? value = null;
+
+            if (!reader.IsDBNull(reader.GetOrdinal(column_name)))
+                value = reader.GetTimeSpan(column_name);
+
+            return value;
+        }
+
         public static bool IsNull(MySqlDataReader reader, string column_name)
         {
             return reader.IsDBNull(reader.GetOrdinal(column_name));
